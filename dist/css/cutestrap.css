@@ -689,6 +689,7 @@ Styleguide 1.0
   display: flex; }
 
 .grid > *:not(.grid) > * {
+  flex: 1;
   -webkit-flex-grow: 4;
   -moz-flex-grow: 4;
   -ms-flex-grow: 4;
