@@ -108,6 +108,7 @@ video {
 
 hr {
   height: 4.8rem;
+  margin-bottom: 2.4rem;
   position: relative; }
   hr:before {
     background-color: #cdcdce;
