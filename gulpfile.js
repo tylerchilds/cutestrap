@@ -128,7 +128,7 @@ gulp.task('sass', ['temp'], function() {
   gulp.src('./temp/sass/**/*.*')
     .pipe(gulp.dest('./dist/scss'));
 
-  return gulp.src('./temp/sass/styleguide.scss')
+  return gulp.src('./temp/sass/cutestrap.scss')
     .pipe(sourcemaps.init())
       .pipe(sass().on('error', sass.logError))
     .pipe(sourcemaps.write('.'))
@@ -136,7 +136,7 @@ gulp.task('sass', ['temp'], function() {
 });
 
 gulp.task('minify', ['sass'], function() {
-  return gulp.src('./dist/css/styleguide.css')
+  return gulp.src('./dist/css/cutestrap.css')
     .pipe(cssmin())
 		.pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('./dist/css'));

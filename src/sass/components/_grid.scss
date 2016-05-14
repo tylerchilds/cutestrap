@@ -35,7 +35,6 @@ Styleguide 1.0
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  margin: 0 -1rem;
 }
 
 // columns
@@ -45,6 +44,14 @@ Styleguide 1.0
   -ms-flex-grow: 4;
   flex-grow: 4;
   padding: 0 1rem;
+
+  &:first-child{
+    margin-left: -1rem;
+  }
+
+  &:last-child{
+    margin-right: -1rem;
+  }
 
   &.column--light{
     -webkit-flex-grow: 2;
