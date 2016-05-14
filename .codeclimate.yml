@@ -1,0 +1,45 @@
+---
+engines:
+  csslint:
+    enabled: true
+  scss-lint:
+    enabled: true
+  duplication:
+    enabled: true
+    config:
+      languages:
+      - ruby
+      - javascript
+      - python
+      - php
+  eslint:
+    enabled: true
+  fixme:
+    enabled: true
+ratings:
+  paths:
+  - "**.css"
+  - "**.inc"
+  - "**.js"
+  - "**.jsx"
+  - "**.module"
+  - "**.php"
+  - "**.py"
+  - "**.rb"
+exclude_paths:
+  - "dist/**/*"
+  - "src/**/*"
+  - "docs/**/*"
+  - "kss-html/**/*"
+  - "**.svg"
+  - "**.ttf"
+  - "**.woff"
+  - "**.woff2"
+  - "**.eot"
+  - "**.otf"
+  - "**.md"
+  - "**.yml"
+  - "**.htm*"
+  - "**.json"
+  - "**.sh"
+  - "**/temp"

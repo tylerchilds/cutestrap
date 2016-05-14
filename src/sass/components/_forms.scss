@@ -1,0 +1,327 @@
+/*
+
+Forms
+
+Markup:
+<form>
+  <label class="textfield">
+    <input type="text" />
+    <span class="textfield__label">Name</span>
+  </label>
+  <label class="radio">
+    <input type="radio" name="example" />
+    <span class="radio__label">Desktop</span>
+  </label>
+  <label class="radio">
+    <input type="radio" name="example" />
+    <span class="radio__label">Mobile</span>
+  </label>
+  <label class="select">
+    <select name="select">
+      <option disabled="disabled" selected="selected">Flavors</option>
+      <option>Chocolate</option>
+    </select>
+    <span class="select__label" for="select">Favorite Ice Cream</span>
+  </label>
+  <label class="textfield">
+    <textarea></textarea>
+    <span class="textfield__label">Comments</span>
+  </label>
+  <label class="checkbox">
+    <input type="checkbox" />
+    <span class="checkbox__label">I Lied</span>
+  </label>
+  <br/>
+  <input type="submit" value="Cross My Heart" />
+</form>
+
+Styleguide 3.0
+
+*/
+
+label{
+  color: $gray3;
+}
+
+.label--side{
+  cursor: pointer;
+  display: inline-block;
+  margin-bottom: 2.4rem;
+  padding: 0 1rem 0 3rem;
+  position: relative;
+}
+
+.label--top{
+  background-color: $white;
+  display: block;
+  margin-top: -2px;
+  margin-bottom: 2.4rem;
+  position: relative;
+}
+
+.label__label--top{
+  font-size: $font-size--small;
+  position: absolute;
+  left: 1px;
+  line-height: 1;
+  padding: .5rem;
+  right: 1px;
+  top: 1px;
+}
+
+/*
+
+Radio
+
+Markup:
+<label class="radio {{modifier_class}}">
+  <input type="radio" />
+  <span class="radio__label">Radio</span>
+</label>
+
+Styleguide 3.1
+
+*/
+
+.radio input[type=radio]{
+  opacity: 0;
+  position: absolute;
+  z-index: $z-index-0;
+}
+
+.radio{
+  @extend .label--side;
+
+  &:before{
+    background-color: #fff;
+    border: .2rem solid $gray3;
+    border-radius: 2rem;
+    content: '';
+    height: 1.6rem;
+    left: 0;
+    margin-top: -1rem;
+    position: absolute;
+    top: 50%;
+    width: 1.6rem;
+  }
+}
+
+.radio__label{
+  color: $gray3;
+  font-size: $font-size--small;
+  line-height: 1;
+
+  &:before{
+    border: .1rem solid $primary;
+    border-radius: .2rem;
+    content: '';
+    height: 1.8rem;
+    left: 0;
+    margin-top: -1rem;
+    position: absolute;
+    top: 50%;
+    visibility: hidden;
+    width: 1.8rem;
+  }
+}
+
+.radio input[type=radio]:focus + .radio__label:before{
+  visibility: visible;
+}
+
+.radio input[type=radio]:checked + .radio__label{
+  &:after{
+    background-color: $primary;
+    border-radius: 10px;
+    content: '';
+    height: 1rem;
+    left: .5rem;
+    margin-top: -.5rem;
+    position: absolute;
+    top: 50%;
+    width: 1rem;
+  }
+}
+
+/*
+
+Checkbox
+
+Markup:
+<label class="checkbox {{modifier_class}}">
+  <input type="checkbox" />
+  <span class="checkbox__label">Checkbox</span>
+</label>
+
+Styleguide 3.2
+
+*/
+
+.checkbox{
+  @extend .label--side;
+}
+
+.checkbox input[type=checkbox]{
+  opacity: 0;
+  position: absolute;
+  z-index: $z-index-0;
+}
+
+.checkbox .checkbox__label {
+  color: $gray3;
+  font-size: $font-size--small;
+  line-height: 1;
+
+  &:before,
+  &:after{
+    border-radius: 2px;
+    content: '';
+    left: 0;
+    position: absolute;
+    top: 50%;
+  }
+
+  &:before{
+    background-color: $white;
+    border: .2rem solid $gray3;
+    height: 1.6rem;
+    margin-top: -1rem;
+    width: 1.6rem;
+  }
+
+  &:after{
+    border: .1rem solid transparent;
+    color: $primary-dark;
+    font-size: 1.4rem;
+    height: 1.4rem;
+    line-height: 1;
+    margin-top: -1rem;
+    padding: .2rem;
+    text-align: center;
+    width: 1.4rem;
+  }
+}
+
+.checkbox input[type=checkbox]:checked + .checkbox__label {
+  &:before{
+    border-color: $gray3;
+  }
+
+  &:after{
+    content: '\2714';
+  }
+}
+
+.checkbox input[type=checkbox]:focus + .checkbox__label:after {
+  border-color: $primary;
+}
+
+/*
+
+Input and text areas
+
+Markup:
+<label class="textfield {{modifier_class}}">
+  <input type="text" />
+  <span class="textfield__label">Input</span>
+</label>
+<label class="textfield {{modifier_class}}">
+  <textarea></textarea>
+  <span class="textfield__label">Textarea</span>
+</label>
+
+Styleguide 3.3
+
+*/
+
+.textfield {
+  @extend .label--top;
+}
+
+.textfield:before {
+  line-height: inherit;
+  position: absolute;
+}
+
+.textfield input,
+.textfield textarea {
+  border: 1px solid $gray3;
+  border-radius: 2px;
+  box-sizing: border-box;
+  padding: 1.8rem .5rem .6rem;
+  width: 100%;
+}
+
+.textfield *:focus{
+  border-color: $primary;
+  outline: none;
+}
+
+.textfield *[disabled]{
+  background-color: $gray6;
+  color: $gray2;
+}
+
+.textfield__label{
+  @extend .label__label--top;
+}
+
+/*
+
+Select
+
+Markup:
+<label class="select {{modifier_class}}">
+  <select>
+    <option disabled="disabled" selected="selected">Select</option>
+    <option>Option 1</option>
+    <option>Option 2</option>
+    <option>Option 3</option>
+  </select>
+  <span class="select__label">Select Label</span>
+</label>
+
+Styleguide 3.4
+
+*/
+
+.select{
+  @extend .label--top;
+
+  &:after{
+  	content: '';
+  	border-left: .6rem solid transparent;
+  	border-right:.6rem solid transparent;
+  	border-top: .6rem solid $gray3;
+    height: 0;
+    margin-top: -.5rem;
+    position: absolute;
+    right: 1rem;
+    bottom: 1.3rem;
+    width: 0;
+  }
+}
+
+.select select {
+  background-color: transparent;
+  border: 1px solid $gray3;
+  border-radius: 2px;
+  box-sizing: border-box;
+  padding: 1.8rem .5rem .6rem;
+  position: relative;
+  width: 100%;
+  z-index: $z-index-1;
+}
+
+.select select:focus{
+  border-color: $primary;
+  outline: none;
+}
+
+.select select:focus + .select__label{
+  border-color: $primary;
+}
+
+.select__label{
+  @extend .label__label--top;
+}

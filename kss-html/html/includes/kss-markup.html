@@ -1,0 +1,44 @@
+
+<nav>
+  <ul>
+    {{#eachRoot}}
+      <li>
+        <a href="section-{{referenceURI}}.html">{{header}}</a>
+      </li>
+    {{/eachRoot}}
+  </ul>
+</nav>
+
+
+<div class="wrapper">
+
+  {{#if homepage}}
+    {{{homepage}}}
+  {{else}}
+    {{#eachSection rootName}}
+      <article class="pattern">
+        {{#ifDepth 1}}
+          <h2 id="{{ referenceURI }}">{{ header }}</h2>
+        {{else}}
+          <h{{ depth }} class="kss-title" id="{{ referenceURI }}">
+            <span class="kss-ref badge pull-right">{{ referenceURI }}</span> {{ header }}
+          </h{{ depth }}>
+        {{/ifDepth}}
+        {{#if description}}
+          <div class="subtitle pattern-description">{{{description}}}</div>
+        {{/if}}
+        {{#if markup}}
+          <section class="example">
+<pre class="">{{markup}}</pre>
+            <div class="kss-example">{{{markup}}}</div>
+            {{#eachModifier}}
+              <hr />
+              <p class="clearfix kss-modifier-title"><code>{{{name}}}</code> <span class="f-right fs-small">{{description}}</span></p>
+              <div class="kss-example">{{{markup}}}</div>
+            {{/eachModifier}}
+          </section>
+        {{/if}}
+      </article>
+    {{/eachSection}}
+  {{/if}}
+</div>

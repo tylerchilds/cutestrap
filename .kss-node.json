@@ -1,0 +1,8 @@
+{
+  "source": "src/sass/",
+  "template": "temp/kss",
+  "destination": "docs",
+  "css": "dist/css/styleguide.css",
+  "js": "dist/css/styleguide.js",
+  "homepage": "../../temp/kss/homepage.md"
+}

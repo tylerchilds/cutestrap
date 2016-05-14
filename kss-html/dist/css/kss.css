@@ -1,0 +1,36 @@
+html.grid--is_active {
+  background: url(http://basehold.it/i/24) repeat left top; }
+  @media (min-width: 960px) {
+    html.grid--is_active {
+      background: url(http://basehold.it/i/30) repeat left top; } }
+
+.kss-modifier-title {
+  color: #7d7d7e; }
+
+header {
+  background-color: #E83FB8;
+  color: #ffffff;
+  padding: 0 1rem; }
+
+header h4 {
+  font-size: 2rem;
+  padding: 0; }
+
+header a:link, header a:visited, header a:hover, header a:focus, header a:active {
+  color: #ffffff;
+  text-decoration: none; }
+
+nav {
+  border-bottom: 1px solid #dededf;
+  margin-top: -1px;
+  padding: 1.2rem;
+  text-align: center; }
+
+nav ul {
+  padding: 0; }
+
+nav li {
+  padding: 0 1.5rem;
+  display: inline-block; }
+
+/*# sourceMappingURL=kss.css.map */

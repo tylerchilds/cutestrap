@@ -1,0 +1,16 @@
+// Font based variables
+//
+// Styleguide
+
+$base-font:       Avenir, 'Avenir Next','Helvetica Neue','Segoe UI', Verdana, sans-serif !default;
+$monospace-font:  'Consolas', 'Monaco', 'Courier New', monospace;
+
+$heading:         $base-font !default;
+$body:            $base-font !default;
+$monospace:       $monospace-font !default;
+
+$font-size: 1.6rem;
+$line-height: 2.4rem;
+
+$font-size--small: 1.2rem;
+$font-size--large: 2rem;
