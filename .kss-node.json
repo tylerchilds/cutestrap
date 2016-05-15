@@ -2,7 +2,6 @@
   "source": "src/sass/",
   "template": "temp/kss",
   "destination": "docs",
-  "css": "dist/css/styleguide.css",
-  "js": "dist/css/styleguide.js",
+  "css": "dist/css/cutestrap.css",
   "homepage": "../../temp/kss/homepage.md"
 }
