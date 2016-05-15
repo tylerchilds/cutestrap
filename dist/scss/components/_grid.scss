@@ -2,23 +2,19 @@
 
 Grid
 
-Basic grid made using flexbox. Direct children of `.grid` are rows and direct children of rows are columns.
+Basic grid made using flexbox. Direct children of `.grid` are columns.
 
 Markup:
 <main class="grid">
-  <article>
-    <section class="{{modifier_class}}">
-      Cell 1
-    </section>
-    <div class="grid">
-      <aside>
-        <p class="grid {{modifier_class}}">
-          Cell 2.1
-        </p>
-        <ul>
-          <li>Cell 2.2</li>
-        </ul>
-      </aside>
+  <section class="{{modifier_class}}">
+    Cell 1
+  </section>
+  <article class="grid">
+    <p class="grid {{modifier_class}}">
+      Cell 2.1
+    </p>
+    <div>
+      <p>Cell 2.2</p>
     </div>
   </article>
 </main>
@@ -31,14 +27,14 @@ Styleguide 1.0
 */
 
 // rows
-.grid > *:not(.grid){
+.grid{
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
 }
 
 // columns
-.grid > *:not(.grid) > *{
+.grid > *{
   flex: 1;
   -webkit-flex-grow: 4;
   -moz-flex-grow: 4;

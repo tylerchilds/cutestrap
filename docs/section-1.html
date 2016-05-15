@@ -51,78 +51,62 @@
 
       <article class="pattern">
           <h2 id="1">Grid</h2>
-          <div class="subtitle pattern-description"><p>Basic grid made using flexbox. Direct children of <code>.grid</code> are rows and direct children of rows are columns.</p>
+          <div class="subtitle pattern-description"><p>Basic grid made using flexbox. Direct children of <code>.grid</code> are columns.</p>
 </div>
           <section class="example">
 <pre class="">&lt;main class=&quot;grid&quot;&gt;
-  &lt;article&gt;
-    &lt;section class=&quot;[modifier class]&quot;&gt;
-      Cell 1
-    &lt;/section&gt;
-    &lt;div class=&quot;grid&quot;&gt;
-      &lt;aside&gt;
-        &lt;p class=&quot;grid [modifier class]&quot;&gt;
-          Cell 2.1
-        &lt;/p&gt;
-        &lt;ul&gt;
-          &lt;li&gt;Cell 2.2&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/aside&gt;
+  &lt;section class=&quot;[modifier class]&quot;&gt;
+    Cell 1
+  &lt;/section&gt;
+  &lt;article class=&quot;grid&quot;&gt;
+    &lt;p class=&quot;grid [modifier class]&quot;&gt;
+      Cell 2.1
+    &lt;/p&gt;
+    &lt;div&gt;
+      &lt;p&gt;Cell 2.2&lt;/p&gt;
     &lt;/div&gt;
   &lt;/article&gt;
 &lt;/main&gt;</pre>
             <div class="kss-example"><main class="grid">
-  <article>
-    <section class="[modifier class]">
-      Cell 1
-    </section>
-    <div class="grid">
-      <aside>
-        <p class="grid [modifier class]">
-          Cell 2.1
-        </p>
-        <ul>
-          <li>Cell 2.2</li>
-        </ul>
-      </aside>
+  <section class="[modifier class]">
+    Cell 1
+  </section>
+  <article class="grid">
+    <p class="grid [modifier class]">
+      Cell 2.1
+    </p>
+    <div>
+      <p>Cell 2.2</p>
     </div>
   </article>
 </main></div>
               <hr />
               <p class="clearfix kss-modifier-title"><code>.column--light</code> <span class="f-right fs-small">Less important column</span></p>
               <div class="kss-example"><main class="grid">
-  <article>
-    <section class="column--light">
-      Cell 1
-    </section>
-    <div class="grid">
-      <aside>
-        <p class="grid column--light">
-          Cell 2.1
-        </p>
-        <ul>
-          <li>Cell 2.2</li>
-        </ul>
-      </aside>
+  <section class="column--light">
+    Cell 1
+  </section>
+  <article class="grid">
+    <p class="grid column--light">
+      Cell 2.1
+    </p>
+    <div>
+      <p>Cell 2.2</p>
     </div>
   </article>
 </main></div>
               <hr />
               <p class="clearfix kss-modifier-title"><code>.column--heavy</code> <span class="f-right fs-small">More important column</span></p>
               <div class="kss-example"><main class="grid">
-  <article>
-    <section class="column--heavy">
-      Cell 1
-    </section>
-    <div class="grid">
-      <aside>
-        <p class="grid column--heavy">
-          Cell 2.1
-        </p>
-        <ul>
-          <li>Cell 2.2</li>
-        </ul>
-      </aside>
+  <section class="column--heavy">
+    Cell 1
+  </section>
+  <article class="grid">
+    <p class="grid column--heavy">
+      Cell 2.1
+    </p>
+    <div>
+      <p>Cell 2.2</p>
     </div>
   </article>
 </main></div>
