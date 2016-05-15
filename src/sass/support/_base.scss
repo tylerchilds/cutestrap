@@ -181,7 +181,7 @@ dd{
 blockquote{
 	margin: 0 0 2.4rem 1.2rem;
 	border-left: .3rem solid $gray4;
-	padding: 1.2rem;
+	padding: 2.4rem 1.2rem;
 
 	p:last-child{
 		padding-bottom: 0;
@@ -253,26 +253,16 @@ table{
   width: 100%;
 
   th{
-    background-color: $gray3;
-    color: $white;
     font-weight: 500;
     text-align: left;
   }
 
   th, td{
-    padding: 1.2rem;
+    padding: 0 .6rem;
   }
 
   td{
     font-size: $font-size--small;
-  }
-
-  tr:nth-child(even) td{
-    background-color: $gray5;
-  }
-
-  tr:nth-child(odd) td{
-    background-color: $gray6;
   }
 }
 

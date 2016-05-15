@@ -147,7 +147,7 @@ dd {
 blockquote {
   margin: 0 0 2.4rem 1.2rem;
   border-left: 0.3rem solid #cdcdce;
-  padding: 1.2rem; }
+  padding: 2.4rem 1.2rem; }
   blockquote p:last-child {
     padding-bottom: 0; }
 
@@ -201,18 +201,12 @@ table {
   margin-bottom: 2.4rem;
   width: 100%; }
   table th {
-    background-color: #7d7d7e;
-    color: #ffffff;
     font-weight: 500;
     text-align: left; }
   table th, table td {
-    padding: 1.2rem; }
+    padding: 0 .6rem; }
   table td {
     font-size: 1.2rem; }
-  table tr:nth-child(even) td {
-    background-color: #dededf; }
-  table tr:nth-child(odd) td {
-    background-color: #efeff0; }
 
 input,
 label,
