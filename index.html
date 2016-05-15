@@ -1,0 +1,350 @@
+---
+layout: default
+title: Cutestrap
+permalink: /
+description: A sassy, opinionated CSS Framework. A tiny alternative to Bootstrap.
+---
+
+<header class="wrapper--large ta-center">
+  <h1>
+    {{ page.title }}
+  </h1>
+  <p>{{ page.description }}</p>
+  <p>
+    <code class="fs-large">bower install cutestrap</code>
+  </p>
+  <p>
+    <a href="https://github.com/cutestrap/cutestrap/raw/master/cutestrap.zip">Download</a> | <a href="https://github.com/cutestrap/cutestrap" target="_blank">Github</a>
+  </p>
+</header>
+
+<section class="wrapper">
+  <article class="grid">
+    <div>
+      <h4>Forms</h4>
+      <p>
+        Beautiful, consistent form controls that don't compromise browser accessibility.
+      </p>
+    </div>
+    <div>
+      <h4>Grid</h4>
+      <p>
+        An "Implicit Grid" created using flexbox. Just a single class to create a grid.
+      </p>
+    </div>
+    <div>
+      <h4>Typography</h4>
+      <p>
+        All elements and components align perfectly to the baseline grid.
+      </p>
+    </div>
+	</article>
+  <article class="grid">
+    <div>
+      <h4>SASS</h4>
+      <p>
+        Easily customize the default variables and include only the files you need.
+      </p>
+    </div>
+    <div>
+      <h4>BEM</h4>
+      <p>
+        The BEM Methodology is used for naming conventions, because it's simple and flexible.
+      </p>
+    </div>
+    <div>
+      <h4>KSS</h4>
+      Documentation is generated using KSS, making cutestrap a simple launching point for your styleguide.
+    </div>
+  </article>
+</section>
+
+
+<section class="wrapper--small">
+  <h3 class="ta-center">Another framework?</h3>
+  <p>
+    There are plenty of amazing front end framworks already, such as, <a href="http://getbootstrap.com/" target="_blank">Bootstrap</a> and <a href="http://foundation.zurb.com/" target="_blank">Foundation</a>. If you're looking for something feature rich with loads of components, those are both great choices.
+  </p>
+  <p>
+    However, if you're looking for something in between <a href="https://necolas.github.io/normalize.css/" target="_blank">normalize.css</a> and a full blown framework, meet Cutestrap. <strong>Cutestrap is only 8kb of CSS.</strong>
+  </p>
+</section>
+
+
+<section class="wrapper">
+  <h2>Forms</h2>
+  <p>
+    Form controls are unified in both their display and in their semantic markup. Because they are modified using only CSS, accessibility doesn't suffer.
+  </p>
+  <form>
+    <label class="textfield">
+      <input type="text" />
+      <span class="textfield__label">Your Name</span>
+    </label>
+    <label class="select">
+      <select name="select">
+        <option disabled="disabled" selected="selected">Flavors</option>
+        <option>Chocolate</option>
+        <option>Vanilla</option>
+      </select>
+      <span class="select__label" for="select">Flavor</span>
+    </label>
+    <label class="radio">
+      <input type="radio" name="example" />
+      <span class="radio__label">Cone</span>
+    </label>
+    <label class="radio">
+      <input type="radio" name="example" />
+      <span class="radio__label">Bowl</span>
+    </label>
+    <label class="textfield">
+      <textarea></textarea>
+      <span class="textfield__label">Special Requests</span>
+    </label>
+    <label class="checkbox">
+      <input type="checkbox" />
+      <span class="checkbox__label">Sprinkles</span>
+    </label>
+    <br/>
+    <input type="submit" value="Place Order" />
+  </form>
+<pre><xmp><form>
+  <label class="textfield">
+    <input type="text" />
+    <span class="textfield__label">Your Name</span>
+  </label>
+  <label class="select">
+    <select name="select">
+      <option disabled="disabled" selected="selected">Flavors</option>
+      <option>Chocolate</option>
+      <option>Vanilla</option>
+    </select>
+    <span class="select__label" for="select">Flavor</span>
+  </label>
+  <label class="radio">
+    <input type="radio" name="example" />
+    <span class="radio__label">Cone</span>
+  </label>
+  <label class="radio">
+    <input type="radio" name="example" />
+    <span class="radio__label">Bowl</span>
+  </label>
+  <label class="textfield">
+    <textarea></textarea>
+    <span class="textfield__label">Special Requests</span>
+  </label>
+  <label class="checkbox">
+    <input type="checkbox" />
+    <span class="checkbox__label">Sprinkles</span>
+  </label>
+  <br/>
+  <input type="submit" value="Place Order" />
+</form></xmp></pre>
+
+  <h3>Buttons</h3>
+  <p>
+    A default button is applied with the <code>.btn</code> class or automatically on <code>button</code> tags or button/submit inputs.
+  </p>
+  <p>
+    <span class="btn">Default</span>
+    <span class="btn btn--secondary">Secondary</span>
+    <span class="btn btn--link">Link</span>
+  </p>
+
+<pre><xmp><span class="btn">Default</span>
+<span class="btn btn--secondary">Secondary</span>
+<span class="btn btn--link">Link</span></xmp></pre>
+  <hr />
+
+  <h2>Grid</h2>
+  <p>
+    The grid is completely implicit, so columns will size themselves to be equal width to their siblings.
+  </p>
+  <section class="grid">
+    <div class="example-column"></div>
+    <div class="example-column"></div>
+  </section>
+  <section class="grid">
+    <div class="example-column"></div>
+    <div class="example-column"></div>
+    <div class="example-column"></div>
+  </section>
+  <section class="grid">
+    <div class="example-column"></div>
+    <div class="example-column"></div>
+    <div class="example-column"></div>
+    <div class="example-column"></div>
+  </section>
+<pre><xmp><section class="grid">
+  <div>25% Column</div>
+  <div>25% Column</div>
+  <div>25% Column</div>
+  <div>25% Column</div>
+</section></xmp></pre>
+
+  <h3>Column Modifiers</h3>
+  <p>
+    There are two modifier classes for columns: <code>.column--light</code> and <code>.column--heavy</code>. They have half and double the "weight" of a standard cell, respectively.
+  </p>
+  <section class="grid">
+    <div class="example-column column--heavy"></div>
+    <div class="example-column"></div>
+  </section>
+  <section class="grid">
+    <div class="example-column column--light"></div>
+    <div class="example-column"></div>
+  </section>
+<pre><xmp><section class="grid">
+  <div class="example-column column--light"></div>
+  <div class="example-column"></div>
+</section></xmp></pre>
+
+  <h3>Wrappers</h3>
+
+  <p>
+    Wrappers are classes that have a max-width and padding. The size of the wrapper, determines max-width and the padding.
+  </p>
+
+  <table>
+    <tr>
+      <th>Class</th>
+      <th>Explanation</th>
+    </tr>
+    <tr>
+      <td><code>.wrapper</code></td>
+      <td>Max width of 960 with top/bottom padding of twice the baseline.</td>
+    </tr>
+    <tr>
+      <td><code>.wrapper--small</code></td>
+      <td>Max width of 640 with top/bottom padding equal to the baseline.</td>
+    </tr>
+    <tr>
+      <td><code>.wrapper</code></td>
+      <td>Max width of 1200 with top/bottom padding of three times the baseline.</td>
+    </tr>
+  </table>
+
+  <hr />
+
+  <h2>Typography</h2>
+
+  <p>
+    All the typography is sized using rems (based on 62.5% by default, going up to 78.125% on screens larger than 960px), to a baseline of 2.4rem by default. Every element adheres to this baseline grid with perfect vertical rhythm.
+  </p>
+
+  <h1>Headline 1</h1>
+  <p>
+    Paragraph
+  </p>
+  <h2>Headline 2</h2>
+  <ul>
+    <li>Unordered item</li>
+    <li>Unordered item</li>
+  </ul>
+  <h3>Headline 3</h3>
+  <ol>
+    <li>Ordered item</li>
+    <li>Ordered item</li>
+  </ol>
+  <h4>Headline 4</h4>
+<pre>
+  Preformatted
+</pre>
+  <h5>Headline 5</h5>
+  <blockquote>
+    Blockquote
+  </blockquote>
+  <h6>Headline 6</h6>
+  <table>
+    <tr>
+      <th>Table Header</th>
+      <th>Table Header</th>
+    </tr>
+    <tr>
+      <td>Table Cell</td>
+      <td>Table Cell</td>
+    </tr>
+  </table>
+
+  <hr />
+
+  <h2>Utilities</h2>
+
+  <table>
+    <tr>
+      <th>Class</th>
+      <th>Explanation</th>
+    </tr>
+    <tr>
+      <td><code>.disabled</code></td>
+      <td>Disables pointer events and lowers the opacity</td>
+    </tr>
+    <tr>
+      <td><code>.clearfix</code></td>
+      <td>Force an element to self clear its children</td>
+    </tr>
+    <tr>
+      <td><code>.f-none</code></td>
+      <td>Set the float property to none</td>
+    </tr>
+    <tr>
+      <td><code>.f-left</code></td>
+      <td>Set the float property to left</td>
+    </tr>
+    <tr>
+      <td><code>.f-right</code></td>
+      <td>Set the float property to right</td>
+    </tr>
+    <tr>
+      <td><code>.ta-left</code></td>
+      <td>Left align the text</td>
+    </tr>
+    <tr>
+      <td><code>.ta-center</code></td>
+      <td>Center align the text</td>
+    </tr>
+    <tr>
+      <td><code>.ta-right</code></td>
+      <td>Right align the text</td>
+    </tr>
+    <tr>
+      <td><code>.fw-light</code></td>
+      <td>Light (300) font weight</td>
+    </tr>
+    <tr>
+      <td><code>.fw-normal</code></td>
+      <td>Normal (400) font weight</td>
+    </tr>
+    <tr>
+      <td><code>.fw-semibold</code></td>
+      <td>Semibold (500) font weight</td>
+    </tr>
+    <tr>
+      <td><code>.fw-bold</code></td>
+      <td>Bold (600) font weight</td>
+    </tr>
+    <tr>
+      <td><code>.fs-small</code></td>
+      <td>Small font size</td>
+    </tr>
+    <tr>
+      <td><code>.fs-base</code></td>
+      <td>Default font size</td>
+    </tr>
+    <tr>
+      <td><code>.fs-large</code></td>
+      <td>Large font size</td>
+    </tr>
+  </table>
+
+</section>
+
+<section class="wrapper--small ta-center">
+  <h3>Feedback</h3>
+  <p>
+    If you notice something is broken or would like to request a feature, please <a href="https://github.com/cutestrap/cutestrap/issues" target="_blank">open an issue on Github</a>. You can also <a href="https://github.com/cutestrap/cutestrap#fork-destination-box">fork the repo</a> and open pull requests, just check the README for guidelines.
+  </p>
+  <p>
+    If you want to chat, <a href="mailto:tyler@cutestrap.com">Shoot me an email</a>.
+  </p>
+</section>

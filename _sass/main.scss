@@ -1,0 +1,15 @@
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
+
+header h1{
+  font-family: 'Pacifico', $base-font;
+  color: $primary;
+}
+
+.example-column:before{
+  background-color: $primary;
+  color: $white;
+  content: 'Column';
+  display: block;
+  margin-bottom: 2.4rem;
+  text-align: center;
+}

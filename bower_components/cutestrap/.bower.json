@@ -1,0 +1,46 @@
+{
+  "name": "identity-styleguide",
+  "version": "1.0.0",
+  "homepage": "http://www.cutestrap.com/",
+  "authors": [
+    "Tyler Childs <tylerwchilds@gmail.com>"
+  ],
+  "description": "A sassy, opinionated CSS Framework. A tiny alternative to Bootstrap.",
+  "private": false,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "src",
+    "temp",
+    "gulpfile.js",
+    "package.json",
+    "README.md",
+    ".kss-node.json",
+    "kss-html",
+    "./index.html",
+    "deploy.sh",
+    ".eslintignore",
+    ".csslintrc",
+    ".codeclimate.yml",
+    ".gitignore",
+    "cutestrap.zip"
+  ],
+  "devDependencies": {
+    "jquery": "latest"
+  },
+  "main": [
+    "dist/css"
+  ],
+  "_release": "1.0.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.0.0",
+    "commit": "61d1c4203f0a7b7e5992efb176ac8482fbb9d1b8"
+  },
+  "_source": "https://github.com/cutestrap/cutestrap.git",
+  "_target": "*",
+  "_originalSource": "cutestrap"
+}
