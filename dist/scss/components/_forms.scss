@@ -113,7 +113,8 @@ Styleguide 3.1
 
   &:before{
     border: .1rem solid $primary;
-    border-radius: .2rem;
+    border-radius: 2rem;
+    box-shadow: 0 1px 2px 1px $gray5 inset;
     content: '';
     height: 1.8rem;
     left: 0;
@@ -214,6 +215,7 @@ Styleguide 3.2
 
 .checkbox input[type=checkbox]:focus + .checkbox__label:after {
   border-color: $primary;
+  box-shadow: 0 1px 2px 1px $gray5 inset;
 }
 
 /*
@@ -254,6 +256,7 @@ Styleguide 3.3
 
 .textfield *:focus{
   border-color: $primary;
+  box-shadow: 0 1px 2px 0 $gray5 inset;
   outline: none;
 }
 
@@ -315,6 +318,7 @@ Styleguide 3.4
 
 .select select:focus{
   border-color: $primary;
+  box-shadow: 0 1px 2px 0 $gray5 inset;
   outline: none;
 }
 

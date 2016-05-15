@@ -494,7 +494,8 @@ Styleguide 3.1
   line-height: 1; }
   .radio__label:before {
     border: 0.1rem solid #E83FB8;
-    border-radius: .2rem;
+    border-radius: 2rem;
+    box-shadow: 0 1px 2px 1px #dededf inset;
     content: '';
     height: 1.8rem;
     left: 0;
@@ -570,7 +571,8 @@ Styleguide 3.2
   content: '\2714'; }
 
 .checkbox input[type=checkbox]:focus + .checkbox__label:after {
-  border-color: #E83FB8; }
+  border-color: #E83FB8;
+  box-shadow: 0 1px 2px 1px #dededf inset; }
 
 /*
 
@@ -603,6 +605,7 @@ Styleguide 3.3
 
 .textfield *:focus {
   border-color: #E83FB8;
+  box-shadow: 0 1px 2px 0 #dededf inset;
   outline: none; }
 
 .textfield *[disabled] {
@@ -651,6 +654,7 @@ Styleguide 3.4
 
 .select select:focus {
   border-color: #E83FB8;
+  box-shadow: 0 1px 2px 0 #dededf inset;
   outline: none; }
 
 .select select:focus + .select__label {
