@@ -44,7 +44,8 @@ Styleguide 1.0
   -moz-flex-grow: 4;
   -ms-flex-grow: 4;
   flex-grow: 4;
-  padding: 0 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 
   &:first-child{
     margin-left: -1rem;
