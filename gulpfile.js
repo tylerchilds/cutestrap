@@ -49,7 +49,6 @@ gulp.task('clean', function() {
       './dist',
       './temp',
       './docs',
-      './kss-html/dist/',
     ])
     .pipe(clean({force: true}));
 });
@@ -100,14 +99,14 @@ gulp.task('kss-html', ['temp'], function(){
           includePaths: ['./src/sass']
         }).on('error', sass.logError))
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('./kss-html/dist/css'));
+    .pipe(gulp.dest('./docs/public/css'));
 
   gulp.src([
       config.bowerDir + '/jquery/jquery.js',
       './kss-html/js/kss.js'
     ])
     .pipe(concat('kss.js'))
-    .pipe(gulp.dest('./kss-html/dist/js'));
+    .pipe(gulp.dest('./docs/public/js'));
 
   gulp.src('./kss-html/fontcustom-preview.html')
     .pipe(replace(/\.\.\/src/g, 'dist'))
@@ -140,11 +139,6 @@ gulp.task('minify', ['sass'], function() {
     .pipe(cssmin())
 		.pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('./dist/css'));
-});
-
-gulp.task('tag', function() {
-  gulp.src('./package.json')
-    .pipe(tag_version());
 });
 
 // Move source over for compiling
