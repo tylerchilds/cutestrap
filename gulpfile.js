@@ -15,7 +15,8 @@ var bump          = require('gulp-bump'),
     sass          = require('gulp-sass'),
     sourcemaps    = require('gulp-sourcemaps'),
     swig          = require('gulp-swig'),
-    tag_version   = require('gulp-tag-version');
+    tag_version   = require('gulp-tag-version'),
+    zip           = require('gulp-zip');;
 
 var config = {
    bowerDir: './bower_components' ,
@@ -40,7 +41,7 @@ gulp.task('bump', function() {
 });
 
 gulp.task('compile', ['clean'], function(){
-  runSequence('sass', 'minify', 'kss-html', 'kss', 'kss-public');
+  runSequence('sass', 'minify', 'kss-html', 'kss', 'kss-public', 'zip');
 });
 
 // Clean build
@@ -49,6 +50,7 @@ gulp.task('clean', function() {
       './dist',
       './temp',
       './docs',
+      './cutestrap.zip'
     ])
     .pipe(clean({force: true}));
 });
@@ -149,6 +151,20 @@ gulp.task('temp', function(){
 
 // Watch Files For Changes
 gulp.task('watch', function() {
-  gulp.watch('./src/sass/**/*.scss', ['sass', 'kss-public']);
-  gulp.watch('./kss-html/**/*.*', ['kss-public']);
+  gulp.watch('./src/sass/**/*.scss', ['sass', 'kss-html', 'kss', 'kss-public']);
+  gulp.watch('./kss-html/**/*.*', ['kss-html', 'kss', 'kss-public']);
+});
+
+gulp.task('zip', ['sass', 'minify', 'kss-html', 'kss', 'kss-public'],function(){
+
+  gulp.src('dist/**/*')
+    .pipe(gulp.dest('./temp/zip/dist'));
+
+  gulp.src('docs/**/*')
+    .pipe(gulp.dest('./temp/zip/docs'));
+
+  return gulp.src('temp/zip/**/*')
+    .pipe(zip('cutestrap.zip'))
+    .pipe(gulp.dest('./'));
+
 });
