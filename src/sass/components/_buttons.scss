@@ -7,8 +7,8 @@ Buttons and their variations
 Markup:
 <a href="#" class="btn {{modifier_class}}">Button</a>
 
-.btn--invisible       - Hardly even a button, but great for alignment
-.btn--block           - 100% width with minimal side padding
+.btn--secondary       - A link that's sized like a button
+.btn--link            - A link that's sized like a button
 
 Styleguide 2.0
 
@@ -47,29 +47,54 @@ Styleguide 2.0
   &:focus{
     outline: .1rem dotted $gray3;
   }
+
+  &:active{
+    background-color: $primary;
+  }
 }
 
-.btn--invisible{
-  background-color: transparent;
-  color: $primary;
-  text-decoration: underline;
+.btn--secondary{
+  background-color: $gray6;
+  color: $gray1;
 
   &:link,
-  &:focus,
   &:visited{
-    color: $primary;
+    color: $gray1;
   }
 
+  &:focus,
   &:hover{
-    color: $primary-dark;
-    background-color: transparent;
+    background-color: $gray5;
+  }
+
+  &:active{
+    color: $gray3;
   }
 }
 
-.btn--block{
-  width: 100%;
-  padding-left: 1rem;
-  padding-right: 1rem;
+.btn--link{
+  background-color: transparent;
+  color: $link;
+  text-decoration: underline;
+
+  &:link{
+    color: $link;
+  }
+
+  &:visited{
+    color: $link--visited;
+  }
+
+  &:focus,
+  &:hover{
+    color: $link--hover;
+    background-color: transparent;
+  }
+
+  &:active{
+    color: $link--active;
+    background-color: transparent;
+  }
 }
 
 [type=button],
