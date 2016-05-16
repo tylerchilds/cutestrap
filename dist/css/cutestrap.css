@@ -746,10 +746,12 @@ Styleguide 1.1
 
 .wrapper--large {
   max-width: 1200px;
+  margin: 0 auto;
   padding: 7.2rem 3rem; }
 
 .wrapper--small {
   max-width: 640px;
+  margin: 0 auto;
   padding: 2.4rem 1rem; }
 
 /*# sourceMappingURL=cutestrap.css.map */
