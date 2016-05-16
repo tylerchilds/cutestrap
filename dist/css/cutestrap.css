@@ -327,8 +327,8 @@ Buttons and their variations
 Markup:
 <a href="#" class="btn {{modifier_class}}">Button</a>
 
-.btn--invisible       - Hardly even a button, but great for alignment
-.btn--block           - 100% width with minimal side padding
+.btn--secondary       - A link that's sized like a button
+.btn--link            - A link that's sized like a button
 
 Styleguide 2.0
 
@@ -370,21 +370,36 @@ button {
   [type=submit]:focus,
   button:focus {
     outline: 0.1rem dotted #7d7d7e; }
+  .btn:active, [type=button]:active,
+  [type=submit]:active,
+  button:active {
+    background-color: #E83FB8; }
 
-.btn--invisible {
+.btn--secondary {
+  background-color: #efeff0;
+  color: #3c3c3d; }
+  .btn--secondary:link, .btn--secondary:visited {
+    color: #3c3c3d; }
+  .btn--secondary:focus, .btn--secondary:hover {
+    background-color: #dededf;
+    color: #3c3c3d; }
+  .btn--secondary:active {
+    color: #7d7d7e; }
+
+.btn--link {
   background-color: transparent;
-  color: #E83FB8;
+  color: #4076D4;
   text-decoration: underline; }
-  .btn--invisible:link, .btn--invisible:focus, .btn--invisible:visited {
-    color: #E83FB8; }
-  .btn--invisible:hover {
-    color: #e528b0;
+  .btn--link:link {
+    color: #4076D4; }
+  .btn--link:visited {
+    color: #9140D4; }
+  .btn--link:focus, .btn--link:hover {
+    color: #2e68cc;
     background-color: transparent; }
-
-.btn--block {
-  width: 100%;
-  padding-left: 1rem;
-  padding-right: 1rem; }
+  .btn--link:active {
+    color: #D44076;
+    background-color: transparent; }
 
 /*
 
