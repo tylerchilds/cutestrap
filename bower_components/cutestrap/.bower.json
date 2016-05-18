@@ -1,6 +1,6 @@
 {
   "name": "identity-styleguide",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "homepage": "http://www.cutestrap.com/",
   "authors": [
     "Tyler Childs <tylerwchilds@gmail.com>"
@@ -26,7 +26,8 @@
     ".csslintrc",
     ".codeclimate.yml",
     ".gitignore",
-    "cutestrap.zip"
+    "cutestrap.zip",
+    "bower.json"
   ],
   "devDependencies": {
     "jquery": "latest"
@@ -34,11 +35,11 @@
   "main": [
     "dist/css"
   ],
-  "_release": "1.1.1",
+  "_release": "1.2.0",
   "_resolution": {
     "type": "version",
-    "tag": "v1.1.1",
-    "commit": "2883cd12e30254d5b4ca6d26a73d2893209cdacf"
+    "tag": "v1.2.0",
+    "commit": "919867c2e9124b935d3ffc6b7933767c49dc6501"
   },
   "_source": "https://github.com/cutestrap/cutestrap.git",
   "_target": "*",
