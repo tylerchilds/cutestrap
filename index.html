@@ -6,6 +6,7 @@ description: A sassy, opinionated CSS Framework. A tiny alternative to Bootstrap
 ---
 
 <header class="wrapper--large ta-center">
+  <a href="javascript:;" class="js-grid-toggle grid-toggle">Toggle Gridlines</a>
   <h1>
     {{ page.title }}
   </h1>
@@ -19,7 +20,7 @@ description: A sassy, opinionated CSS Framework. A tiny alternative to Bootstrap
 </header>
 
 <section class="wrapper">
-  <article class="grid">
+  <article class="grid grid--medium">
     <div>
       <h4>Forms</h4>
       <p>
@@ -39,7 +40,7 @@ description: A sassy, opinionated CSS Framework. A tiny alternative to Bootstrap
       </p>
     </div>
 	</article>
-  <article class="grid">
+  <article class="grid grid--medium">
     <div>
       <h4>SASS</h4>
       <p>
@@ -182,22 +183,69 @@ description: A sassy, opinionated CSS Framework. A tiny alternative to Bootstrap
   <div>25% Column</div>
 </section></xmp></pre>
 
+  <h3>Grid Modifiers</h3>
+  <p>
+    The grid will display on all screens by default. If you'd like the grid to only start on larger screens, you can use these modifier classes. Columns will be stacked on smaller screens.
+  </p>
+
+  <table>
+    <tr>
+      <td><p><code>.grid--medium</code></p></td>
+      <td><p>The grid will start 600px screen width.</p></td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <section class="grid grid--medium">
+          <div class="example-column"></div>
+          <div class="example-column"></div>
+        </section>
+      </td>
+    </tr>
+    <tr>
+      <td><p><code>.grid--large</code></p></td>
+      <td><p>The grid will start at 960px screen width.</p></td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <section class="grid grid--large">
+          <div class="example-column"></div>
+          <div class="example-column"></div>
+        </section>
+      </td>
+    </tr>
+  </table>
+
   <h3>Column Modifiers</h3>
   <p>
-    There are two modifier classes for columns: <code>.column--light</code> and <code>.column--heavy</code>. They have half and double the "weight" of a standard cell, respectively.
+    By adding these modifier classes, you will change the <code>flex-grow</code> property that the columns use to size themselves, effectively changing the <strong>"weight"</strong> of the column. Heavier weighted columns will be wider than lighter columns. If all the weights are equal, the column widths will be equal.
   </p>
-  <section class="grid">
-    <div class="example-column column--heavy"></div>
-    <div class="example-column"></div>
-  </section>
-  <section class="grid">
-    <div class="example-column column--light"></div>
-    <div class="example-column"></div>
-  </section>
-<pre><xmp><section class="grid">
-  <div class="example-column column--light"></div>
-  <div class="example-column"></div>
-</section></xmp></pre>
+
+  <table>
+    <tr>
+      <td><p><code>.column--light</code></p></td>
+      <td><p>Half the weight of the default column.</p></td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <section class="grid">
+          <div class="example-column column--light"></div>
+          <div class="example-column"></div>
+        </section>
+      </td>
+    </tr>
+    <tr>
+      <td><p><code>.column--heavy</code></p></td>
+      <td><p>Twice the weight of the default column.</p></td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <section class="grid">
+          <div class="example-column column--heavy"></div>
+          <div class="example-column"></div>
+        </section>
+      </td>
+    </tr>
+  </table>
 
   <h3>Wrappers</h3>
 
@@ -208,18 +256,18 @@ description: A sassy, opinionated CSS Framework. A tiny alternative to Bootstrap
   <table>
     <tr>
       <th>Class</th>
-      <th>Explanation</th>
+      <th>Effect</th>
+    </tr>
+    <tr>
+      <td><code>.wrapper-small</code></td>
+      <td>Max width of 640 with top/bottom padding equal to the baseline.</td>
     </tr>
     <tr>
       <td><code>.wrapper</code></td>
       <td>Max width of 960 with top/bottom padding of twice the baseline.</td>
     </tr>
     <tr>
-      <td><code>.wrapper--small</code></td>
-      <td>Max width of 640 with top/bottom padding equal to the baseline.</td>
-    </tr>
-    <tr>
-      <td><code>.wrapper--large</code></td>
+      <td><code>.wrapper-large</code></td>
       <td>Max width of 1200 with top/bottom padding of three times the baseline.</td>
     </tr>
   </table>
@@ -273,7 +321,7 @@ description: A sassy, opinionated CSS Framework. A tiny alternative to Bootstrap
   <table>
     <tr>
       <th>Class</th>
-      <th>Explanation</th>
+      <th>Effect</th>
     </tr>
     <tr>
       <td><code>.disabled</code></td>
