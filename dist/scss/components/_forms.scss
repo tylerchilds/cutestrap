@@ -39,19 +39,74 @@ Styleguide 3.0
 
 */
 
-label{
-  color: $gray3;
-}
 
-.label--side{
+//
+// Shared Styles
+//
+// Radio and Checkbox
+//
+
+.radio,
+.checkbox{
   cursor: pointer;
   display: inline-block;
   margin-bottom: 2.4rem;
   padding: 0 1rem 0 3rem;
   position: relative;
+
+  &:before{
+    background-color: #fff;
+    border: 2px solid $gray3;
+    content: '';
+    height: 16px;
+    left: 0;
+    margin-top: -10px;
+    position: absolute;
+    top: 50%;
+    width: 16px;
+  }
 }
 
-.label--top{
+.checkbox input[type=checkbox],
+.radio input[type=radio]{
+  opacity: 0;
+  position: absolute;
+  z-index: $z-index-0;
+}
+
+.radio__label,
+.checkbox__label{
+  color: $gray3;
+  font-size: $font-size--small;
+  line-height: 1;
+}
+
+.radio__label:after,
+.checkbox__label:after{
+  border: 1px solid transparent;
+  content: '';
+  height: 18px;
+  left: 0;
+  margin-top: -10px;
+  position: absolute;
+  top: 50%;
+  width: 18px;
+}
+
+.radio input[type=radio]:focus + .radio__label:after,
+.checkbox input[type=checkbox]:focus + .checkbox__label:after {
+  border-color: $primary;
+  box-shadow: 0 1px 2px 1px $gray5 inset;
+}
+
+//
+// Shared Styles
+//
+// Textfield and Select
+//
+
+.textfield,
+.select{
   background-color: $white;
   display: block;
   margin-top: -2px;
@@ -59,7 +114,8 @@ label{
   position: relative;
 }
 
-.label__label--top{
+.textfield__label,
+.select__label{
   font-size: $font-size--small;
   position: absolute;
   left: 1px;
@@ -67,6 +123,34 @@ label{
   padding: .5rem;
   right: 1px;
   top: 1px;
+}
+
+.textfield input,
+.textfield textarea,
+.select select {
+  background-color: transparent;
+  border: 1px solid $gray3;
+  border-radius: 2px;
+  box-sizing: border-box;
+  padding: 1.8rem .5rem .6rem;
+  position: relative;
+  width: 100%;
+  z-index: $z-index-1;
+}
+
+.textfield *:focus,
+.select select:focus{
+  border-color: $primary;
+  box-shadow: 0 1px 2px 0 $gray5 inset;
+  outline: none;
+}
+
+.textfield,
+.select {
+  *[disabled]{
+    background-color: $gray6;
+    color: $gray2;
+  }
 }
 
 /*
@@ -83,65 +167,21 @@ Styleguide 3.1
 
 */
 
-.radio input[type=radio]{
-  opacity: 0;
+.radio:before,
+.radio__label:after{
+  border-radius: 20px;
+}
+
+.radio input[type=radio]:checked + .radio__label:before{
+  background-color: $primary-dark;
+  border-radius: 20px;
+  content: '';
+  height: 10px;
+  left: 5px;
+  margin-top: -5px;
   position: absolute;
-  z-index: $z-index-0;
-}
-
-.radio{
-  @extend .label--side;
-
-  &:before{
-    background-color: #fff;
-    border: 2px solid $gray3;
-    border-radius: 20px;
-    content: '';
-    height: 16px;
-    left: 0;
-    margin-top: -10px;
-    position: absolute;
-    top: 50%;
-    width: 16px;
-  }
-}
-
-.radio__label{
-  color: $gray3;
-  font-size: $font-size--small;
-  line-height: 1;
-
-  &:before{
-    border: 1px solid $primary;
-    border-radius: 20px;
-    box-shadow: 0 1px 2px 1px $gray5 inset;
-    content: '';
-    height: 18px;
-    left: 0;
-    margin-top: -10px;
-    position: absolute;
-    top: 50%;
-    visibility: hidden;
-    width: 18px;
-  }
-}
-
-.radio input[type=radio]:focus + .radio__label:before{
-  visibility: visible;
-}
-
-.radio input[type=radio]:checked + .radio__label{
-  &:after{
-    background-color: $primary;
-    border-radius: 10px;
-    content: '';
-    height: 10px;
-    left: 5px;
-    margin-top: -5px;
-    position: absolute;
-    top: 50%;
-    width: 10px;
-  }
+  top: 50%;
+  width: 10px;
 }
 
 /*
@@ -158,64 +198,17 @@ Styleguide 3.2
 
 */
 
-.checkbox{
-  @extend .label--side;
+.checkbox:before,
+.checkbox__label:after{
+  border-radius: 2px;
 }
 
-.checkbox input[type=checkbox]{
-  opacity: 0;
-  position: absolute;
-  z-index: $z-index-0;
-}
-
-.checkbox .checkbox__label {
-  color: $gray3;
-  font-size: $font-size--small;
-  line-height: 1;
-
-  &:before,
-  &:after{
-    border-radius: 2px;
-    content: '';
-    left: 0;
-    position: absolute;
-    top: 50%;
-  }
-
-  &:before{
-    background-color: $white;
-    border: 2px solid $gray3;
-    height: 16px;
-    margin-top: -1rem;
-    width: 16px;
-  }
-
-  &:after{
-    border: 1px solid transparent;
-    color: $primary-dark;
-    font-size: 14px;
-    height: 14px;
-    line-height: 1;
-    margin-top: -1rem;
-    padding: 2px;
-    text-align: center;
-    width: 14px;
-  }
-}
-
-.checkbox input[type=checkbox]:checked + .checkbox__label {
-  &:before{
-    border-color: $gray3;
-  }
-
-  &:after{
-    content: '\2714';
-  }
-}
-
-.checkbox input[type=checkbox]:focus + .checkbox__label:after {
-  border-color: $primary;
-  box-shadow: 0 1px 2px 1px $gray5 inset;
+.checkbox input[type=checkbox]:checked + .checkbox__label:after {
+  color: $primary-dark;
+  content: '\2714';
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
 }
 
 /*
@@ -235,39 +228,6 @@ Markup:
 Styleguide 3.3
 
 */
-
-.textfield {
-  @extend .label--top;
-}
-
-.textfield:before {
-  line-height: inherit;
-  position: absolute;
-}
-
-.textfield input,
-.textfield textarea {
-  border: 1px solid $gray3;
-  border-radius: 2px;
-  box-sizing: border-box;
-  padding: 1.8rem .5rem .6rem;
-  width: 100%;
-}
-
-.textfield *:focus{
-  border-color: $primary;
-  box-shadow: 0 1px 2px 0 $gray5 inset;
-  outline: none;
-}
-
-.textfield *[disabled]{
-  background-color: $gray6;
-  color: $gray2;
-}
-
-.textfield__label{
-  @extend .label__label--top;
-}
 
 /*
 
@@ -289,8 +249,6 @@ Styleguide 3.4
 */
 
 .select{
-  @extend .label--top;
-
   &:after{
   	content: '';
   	border-left: .6rem solid transparent;
@@ -303,29 +261,4 @@ Styleguide 3.4
     bottom: 1.3rem;
     width: 0;
   }
-}
-
-.select select {
-  background-color: transparent;
-  border: 1px solid $gray3;
-  border-radius: 2px;
-  box-sizing: border-box;
-  padding: 1.8rem .5rem .6rem;
-  position: relative;
-  width: 100%;
-  z-index: $z-index-1;
-}
-
-.select select:focus{
-  border-color: $primary;
-  box-shadow: 0 1px 2px 0 $gray5 inset;
-  outline: none;
-}
-
-.select select:focus + .select__label{
-  border-color: $primary;
-}
-
-.select__label{
-  @extend .label__label--top;
 }

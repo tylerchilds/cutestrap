@@ -205,8 +205,9 @@ table {
     text-align: left; }
   table th, table td {
     padding: 0 .6rem; }
-  table td {
-    font-size: 1.2rem; }
+
+label {
+  color: #7d7d7e; }
 
 input,
 label,
@@ -441,24 +442,63 @@ Markup:
 Styleguide 3.0
 
 */
-label {
-  color: #7d7d7e; }
-
-.label--side, .radio, .checkbox {
+.radio,
+.checkbox {
   cursor: pointer;
   display: inline-block;
   margin-bottom: 2.4rem;
   padding: 0 1rem 0 3rem;
   position: relative; }
+  .radio:before,
+  .checkbox:before {
+    background-color: #fff;
+    border: 2px solid #7d7d7e;
+    content: '';
+    height: 16px;
+    left: 0;
+    margin-top: -10px;
+    position: absolute;
+    top: 50%;
+    width: 16px; }
 
-.label--top, .textfield, .select {
+.checkbox input[type=checkbox],
+.radio input[type=radio] {
+  opacity: 0;
+  position: absolute;
+  z-index: -1; }
+
+.radio__label,
+.checkbox__label {
+  color: #7d7d7e;
+  font-size: 1.2rem;
+  line-height: 1; }
+
+.radio__label:after,
+.checkbox__label:after {
+  border: 1px solid transparent;
+  content: '';
+  height: 18px;
+  left: 0;
+  margin-top: -10px;
+  position: absolute;
+  top: 50%;
+  width: 18px; }
+
+.radio input[type=radio]:focus + .radio__label:after,
+.checkbox input[type=checkbox]:focus + .checkbox__label:after {
+  border-color: #E83FB8;
+  box-shadow: 0 1px 2px 1px #dededf inset; }
+
+.textfield,
+.select {
   background-color: #ffffff;
   display: block;
   margin-top: -2px;
   margin-bottom: 2.4rem;
   position: relative; }
 
-.label__label--top, .textfield__label, .select__label {
+.textfield__label,
+.select__label {
   font-size: 1.2rem;
   position: absolute;
   left: 1px;
@@ -466,6 +506,29 @@ label {
   padding: .5rem;
   right: 1px;
   top: 1px; }
+
+.textfield input,
+.textfield textarea,
+.select select {
+  background-color: transparent;
+  border: 1px solid #7d7d7e;
+  border-radius: 2px;
+  box-sizing: border-box;
+  padding: 1.8rem .5rem .6rem;
+  position: relative;
+  width: 100%;
+  z-index: 100; }
+
+.textfield *:focus,
+.select select:focus {
+  border-color: #E83FB8;
+  box-shadow: 0 1px 2px 0 #dededf inset;
+  outline: none; }
+
+.textfield *[disabled],
+.select *[disabled] {
+  background-color: #efeff0;
+  color: #5a5a5b; }
 
 /*
 
@@ -480,46 +543,13 @@ Markup:
 Styleguide 3.1
 
 */
-.radio input[type=radio] {
-  opacity: 0;
-  position: absolute;
-  z-index: -1; }
+.radio:before,
+.radio__label:after {
+  border-radius: 20px; }
 
-.radio:before {
-  background-color: #fff;
-  border: 2px solid #7d7d7e;
+.radio input[type=radio]:checked + .radio__label:before {
+  background-color: #e528b0;
   border-radius: 20px;
-  content: '';
-  height: 16px;
-  left: 0;
-  margin-top: -10px;
-  position: absolute;
-  top: 50%;
-  width: 16px; }
-
-.radio__label {
-  color: #7d7d7e;
-  font-size: 1.2rem;
-  line-height: 1; }
-  .radio__label:before {
-    border: 1px solid #E83FB8;
-    border-radius: 20px;
-    box-shadow: 0 1px 2px 1px #dededf inset;
-    content: '';
-    height: 18px;
-    left: 0;
-    margin-top: -10px;
-    position: absolute;
-    top: 50%;
-    visibility: hidden;
-    width: 18px; }
-
-.radio input[type=radio]:focus + .radio__label:before {
-  visibility: visible; }
-
-.radio input[type=radio]:checked + .radio__label:after {
-  background-color: #E83FB8;
-  border-radius: 10px;
   content: '';
   height: 10px;
   left: 5px;
@@ -541,47 +571,16 @@ Markup:
 Styleguide 3.2
 
 */
-.checkbox input[type=checkbox] {
-  opacity: 0;
-  position: absolute;
-  z-index: -1; }
-
-.checkbox .checkbox__label {
-  color: #7d7d7e;
-  font-size: 1.2rem;
-  line-height: 1; }
-  .checkbox .checkbox__label:before, .checkbox .checkbox__label:after {
-    border-radius: 2px;
-    content: '';
-    left: 0;
-    position: absolute;
-    top: 50%; }
-  .checkbox .checkbox__label:before {
-    background-color: #ffffff;
-    border: 2px solid #7d7d7e;
-    height: 16px;
-    margin-top: -1rem;
-    width: 16px; }
-  .checkbox .checkbox__label:after {
-    border: 1px solid transparent;
-    color: #e528b0;
-    font-size: 14px;
-    height: 14px;
-    line-height: 1;
-    margin-top: -1rem;
-    padding: 2px;
-    text-align: center;
-    width: 14px; }
-
-.checkbox input[type=checkbox]:checked + .checkbox__label:before {
-  border-color: #7d7d7e; }
+.checkbox:before,
+.checkbox__label:after {
+  border-radius: 2px; }
 
 .checkbox input[type=checkbox]:checked + .checkbox__label:after {
-  content: '\2714'; }
-
-.checkbox input[type=checkbox]:focus + .checkbox__label:after {
-  border-color: #E83FB8;
-  box-shadow: 0 1px 2px 1px #dededf inset; }
+  color: #e528b0;
+  content: '\2714';
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center; }
 
 /*
 
@@ -600,27 +599,6 @@ Markup:
 Styleguide 3.3
 
 */
-.textfield:before {
-  line-height: inherit;
-  position: absolute; }
-
-.textfield input,
-.textfield textarea {
-  border: 1px solid #7d7d7e;
-  border-radius: 2px;
-  box-sizing: border-box;
-  padding: 1.8rem .5rem .6rem;
-  width: 100%; }
-
-.textfield *:focus {
-  border-color: #E83FB8;
-  box-shadow: 0 1px 2px 0 #dededf inset;
-  outline: none; }
-
-.textfield *[disabled] {
-  background-color: #efeff0;
-  color: #5a5a5b; }
-
 /*
 
 Select
@@ -651,29 +629,31 @@ Styleguide 3.4
   bottom: 1.3rem;
   width: 0; }
 
-.select select {
-  background-color: transparent;
-  border: 1px solid #7d7d7e;
-  border-radius: 2px;
-  box-sizing: border-box;
-  padding: 1.8rem .5rem .6rem;
-  position: relative;
-  width: 100%;
-  z-index: 100; }
-
-.select select:focus {
-  border-color: #E83FB8;
-  box-shadow: 0 1px 2px 0 #dededf inset;
-  outline: none; }
-
-.select select:focus + .select__label {
-  border-color: #E83FB8; }
-
 /*
 
 Grid
 
-Basic grid made using flexbox. Direct children of `.grid` are columns.
+Basic grid made using flexbox. By default, the grid is collapsed on small screens.
+
+Markup:
+<main class="grid {{modifier_class}}">
+  <section class="">
+    Cell 1
+  </section>
+  <article class="grid">
+    Cell 2
+  </article>
+</main>
+
+.grid--medium           - Grid starts at medium sized screens
+.grid--large            - Grid starts at large and up screens
+
+Styleguide 1.0
+
+*/
+/*
+
+Direct children of `.grid` are columns.
 
 Markup:
 <main class="grid">
@@ -693,7 +673,7 @@ Markup:
 .column--light           - Less important column
 .column--heavy           - More important column
 
-Styleguide 1.0
+Styleguide 1.1
 
 */
 .grid {
@@ -724,6 +704,28 @@ Styleguide 1.0
     -ms-flex-grow: 8;
     flex-grow: 8; }
 
+@media (max-width: 599px) {
+  .grid--medium {
+    display: block; }
+  .grid--medium > * {
+    padding-left: 0;
+    padding-right: 0; }
+    .grid--medium > *:first-child {
+      margin-left: 0; }
+    .grid--medium > *:last-child {
+      margin-right: 0; } }
+
+@media (max-width: 959px) {
+  .grid--large {
+    display: block; }
+  .grid--large > * {
+    padding-left: 0;
+    padding-right: 0; }
+    .grid--large > *:first-child {
+      margin-left: 0; }
+    .grid--large > *:last-child {
+      margin-right: 0; } }
+
 /*
 
 Wrappers
@@ -733,25 +735,27 @@ Use wrappers when you need a content area that is a standardized width and cente
 Markup:
 <div class="wrapper {{modifier_class}}">Wrapper</div>
 
-.wrapper--small      - Small Wrapper
-.wrapper--large      - Large Wrapper
+.wrapper-small      - Small Wrapper
+.wrapper-large      - Large Wrapper
 
-Styleguide 1.1
+Styleguide 1.2
 
 */
 .wrapper {
-  max-width: 960px;
   margin: 0 auto;
+  max-width: 960px;
   padding: 4.8rem 2rem; }
 
-.wrapper--large {
-  max-width: 1200px;
+.wrapper--large,
+.wrapper-large {
   margin: 0 auto;
+  max-width: 1200px;
   padding: 7.2rem 3rem; }
 
-.wrapper--small {
-  max-width: 640px;
+.wrapper--small,
+.wrapper-small {
   margin: 0 auto;
+  max-width: 640px;
   padding: 2.4rem 1rem; }
 
 /*# sourceMappingURL=cutestrap.css.map */

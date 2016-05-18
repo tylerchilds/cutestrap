@@ -41,7 +41,7 @@ gulp.task('bump', function() {
 });
 
 gulp.task('compile', ['clean'], function(){
-  runSequence('sass', 'minify', 'kss-html', 'kss', 'kss-public', 'zip');
+  runSequence('sass', 'minify', 'kss-html', 'kss', 'kss-public');
 });
 
 // Clean build
@@ -155,16 +155,24 @@ gulp.task('watch', function() {
   gulp.watch('./kss-html/**/*.*', ['kss-html', 'kss', 'kss-public']);
 });
 
-gulp.task('zip', ['sass', 'minify', 'kss-html', 'kss', 'kss-public'],function(){
-
-  gulp.src('dist/**/*')
-    .pipe(gulp.dest('./temp/zip/dist'));
-
-  gulp.src('docs/**/*')
-    .pipe(gulp.dest('./temp/zip/docs'));
+gulp.task('zip', ['zip-temp-dist', 'zip-temp-docs'], function(){
 
   return gulp.src('temp/zip/**/*')
     .pipe(zip('cutestrap.zip'))
     .pipe(gulp.dest('./'));
+
+});
+
+gulp.task('zip-temp-docs', function(){
+
+  return gulp.src('docs/**/*')
+    .pipe(gulp.dest('./temp/zip/docs'));
+
+});
+
+gulp.task('zip-temp-dist', function(){
+
+  return gulp.src('dist/**/*')
+    .pipe(gulp.dest('./temp/zip/dist'));
 
 });

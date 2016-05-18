@@ -260,10 +260,10 @@ table{
   th, td{
     padding: 0 .6rem;
   }
+}
 
-  td{
-    font-size: $font-size--small;
-  }
+label{
+  color: $gray3;
 }
 
 input,

@@ -12,7 +12,7 @@
     <meta name="apple-touch-fullscreen" content="yes">
 
     
-  <link href="../dist/css/cutestrap.min.css" rel="stylesheet" />
+  <link href="../dist/css/cutestrap.css" rel="stylesheet" />
   <link href="./public/css/kss.css" rel="stylesheet" />
 
   </head>
@@ -51,8 +51,51 @@
 
       <article class="pattern">
           <h2 id="1">Grid</h2>
-          <div class="subtitle pattern-description"><p>Basic grid made using flexbox. Direct children of <code>.grid</code> are columns.</p>
+          <div class="subtitle pattern-description"><p>Basic grid made using flexbox. By default, the grid is collapsed on small screens.</p>
 </div>
+          <section class="example">
+<pre class="">&lt;main class=&quot;grid [modifier class]&quot;&gt;
+  &lt;section class=&quot;&quot;&gt;
+    Cell 1
+  &lt;/section&gt;
+  &lt;article class=&quot;grid&quot;&gt;
+    Cell 2
+  &lt;/article&gt;
+&lt;/main&gt;</pre>
+            <div class="kss-example"><main class="grid [modifier class]">
+  <section class="">
+    Cell 1
+  </section>
+  <article class="grid">
+    Cell 2
+  </article>
+</main></div>
+              <hr />
+              <p class="clearfix kss-modifier-title"><code>.grid--medium</code> <span class="f-right fs-small">Grid starts at medium sized screens</span></p>
+              <div class="kss-example"><main class="grid grid--medium">
+  <section class="">
+    Cell 1
+  </section>
+  <article class="grid">
+    Cell 2
+  </article>
+</main></div>
+              <hr />
+              <p class="clearfix kss-modifier-title"><code>.grid--large</code> <span class="f-right fs-small">Grid starts at large and up screens</span></p>
+              <div class="kss-example"><main class="grid grid--large">
+  <section class="">
+    Cell 1
+  </section>
+  <article class="grid">
+    Cell 2
+  </article>
+</main></div>
+          </section>
+      </article>
+      <article class="pattern">
+          <h2 class="kss-title" id="1-1">
+            <span class="kss-ref badge pull-right">1-1</span> Direct children of &#x60;.grid&#x60; are columns.
+          </h2>
           <section class="example">
 <pre class="">&lt;main class=&quot;grid&quot;&gt;
   &lt;section class=&quot;[modifier class]&quot;&gt;
@@ -113,8 +156,8 @@
           </section>
       </article>
       <article class="pattern">
-          <h2 class="kss-title" id="1-1">
-            <span class="kss-ref badge pull-right">1-1</span> Wrappers
+          <h2 class="kss-title" id="1-2">
+            <span class="kss-ref badge pull-right">1-2</span> Wrappers
           </h2>
           <div class="subtitle pattern-description"><p>Use wrappers when you need a content area that is a standardized width and centered on the page.</p>
 </div>
@@ -122,11 +165,11 @@
 <pre class="">&lt;div class=&quot;wrapper [modifier class]&quot;&gt;Wrapper&lt;/div&gt;</pre>
             <div class="kss-example"><div class="wrapper [modifier class]">Wrapper</div></div>
               <hr />
-              <p class="clearfix kss-modifier-title"><code>.wrapper--small</code> <span class="f-right fs-small">Small Wrapper</span></p>
-              <div class="kss-example"><div class="wrapper wrapper--small">Wrapper</div></div>
+              <p class="clearfix kss-modifier-title"><code>.wrapper-small</code> <span class="f-right fs-small">Small Wrapper</span></p>
+              <div class="kss-example"><div class="wrapper wrapper-small">Wrapper</div></div>
               <hr />
-              <p class="clearfix kss-modifier-title"><code>.wrapper--large</code> <span class="f-right fs-small">Large Wrapper</span></p>
-              <div class="kss-example"><div class="wrapper wrapper--large">Wrapper</div></div>
+              <p class="clearfix kss-modifier-title"><code>.wrapper-large</code> <span class="f-right fs-small">Large Wrapper</span></p>
+              <div class="kss-example"><div class="wrapper wrapper-large">Wrapper</div></div>
           </section>
       </article>
 </div>
