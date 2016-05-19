@@ -1,8 +1,8 @@
 *{
   border: 0;
   font: inherit;
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
   text-rendering: geometricPrecision;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -13,9 +13,9 @@ html{
   font-size: 62.5%;
   height: 100%;
 
-	@media screen and (min-width: 960px){
-		font-size: 78.125%;
-	}
+  @media screen and (min-width: 960px){
+    font-size: 78.125%;
+  }
 }
 
 body{
@@ -43,31 +43,31 @@ h4, h5, h6{
 }
 
 h1{
-	font-size: 3.6rem;
+  font-size: 3.6rem;
 }
 
 h2{
-	font-size: 3.2rem;
+  font-size: 3.2rem;
 }
 
 h3{
-	font-size: 2.8rem;
+  font-size: 2.8rem;
 }
 
 h4{
-	font-size: 2.0rem;
+  font-size: 2.0rem;
 }
 
 h5{
-	font-size: 1.8rem;
+  font-size: 1.8rem;
 }
 
 h6{
-	font-size: 1.6rem;
+  font-size: 1.6rem;
 }
 
 p{
-	padding-bottom: 2.4rem;
+  padding-bottom: 2.4rem;
 }
 
 form{
@@ -152,12 +152,12 @@ hr{
 
 ol,
 ul{
-	margin-left: 2rem;
+  margin-left: 2rem;
   padding: 0 0 2.4rem;
 }
 
 ol{
-	list-style-type: decimal;
+  list-style-type: decimal;
 }
 
 ol ol{
@@ -165,7 +165,7 @@ ol ol{
 }
 
 ul{
-	list-style-type: disc;
+  list-style-type: disc;
 }
 
 ul ul{
@@ -173,20 +173,20 @@ ul ul{
 }
 
 dt{
-	font-style: italic;
+  font-style: italic;
 }
 dd{
-	text-indent: 2rem;
+  text-indent: 2rem;
 }
 
 blockquote{
-	margin: 0 0 2.4rem 1.2rem;
-	border-left: .3rem solid $gray4;
-	padding: 2.4rem 1.2rem;
+  margin: 0 0 2.4rem 1.2rem;
+  border-left: .3rem solid $gray4;
+  padding: 2.4rem 1.2rem;
 
-	p:last-child{
-		padding-bottom: 0;
-	}
+  p:last-child{
+    padding-bottom: 0;
+  }
 }
 
 

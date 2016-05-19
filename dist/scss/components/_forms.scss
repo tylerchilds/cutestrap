@@ -250,10 +250,10 @@ Styleguide 3.4
 
 .select{
   &:after{
-  	content: '';
-  	border-left: .6rem solid transparent;
-  	border-right:.6rem solid transparent;
-  	border-top: .6rem solid $gray3;
+    content: '';
+    border-left: .6rem solid transparent;
+    border-right:.6rem solid transparent;
+    border-top: .6rem solid $gray3;
     height: 0;
     margin-top: -.5rem;
     position: absolute;
