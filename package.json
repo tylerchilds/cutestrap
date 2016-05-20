@@ -20,6 +20,7 @@
     "gulp-cssmin": "latest",
     "gulp-exec": "latest",
     "gulp-git": "latest",
+    "gulp-include": "latest",
     "gulp-rename": "latest",
     "gulp-replace": "latest",
     "gulp-sass": "latest",
@@ -27,7 +28,7 @@
     "gulp-swig": "latest",
     "gulp-tag-version": "latest",
     "gulp-zip": "latest",
-    "kss": "latest",
+    "kss": "^2.1.0",
     "minimist": "latest",
     "run-sequence": "latest"
   }
