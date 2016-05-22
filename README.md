@@ -15,7 +15,11 @@ A sassy, opinionated CSS Framework. A tiny alternative to Bootstrap.
 
 ## Installation
 
-To use the CSS as is, you can install using bower:
+To use the CSS as is, you can install using npm or bower:
+
+```
+npm install cutestrap
+```
 
 ```
 bower install cutestrap
