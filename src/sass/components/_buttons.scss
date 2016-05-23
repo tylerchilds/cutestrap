@@ -31,7 +31,8 @@ Styleguide 2.0
   padding: 0 3rem;
   text-align: center;
   width: auto;
-
+  user-select: none;
+  
   &:link,
   &:visited{
     color: $white;
