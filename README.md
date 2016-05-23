@@ -1,5 +1,7 @@
 # Cutestrap
 
+[![Join the chat at https://gitter.im/cutestrap/cutestrap](https://badges.gitter.im/cutestrap/cutestrap.svg)](https://gitter.im/cutestrap/cutestrap?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 A sassy, opinionated CSS Framework. A tiny alternative to Bootstrap.
 
 [Docs/Demo](https://www.cutestrap.com/)
