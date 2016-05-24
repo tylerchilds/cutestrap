@@ -31,9 +31,9 @@ If you want to create your own styleguide, fork the repository and modify the `s
 
 ### Development
 
-You'll need npm, bower and kss-node installed (`npm install -g kss`).
+After cloning, you'll first need to install dependencies by running `npm run setup`.
 
-After cloning, just run `npm install && bower install && gulp`.
+After that just run `npm start`.
 
 KSS will generate the docs from the `kss-html` folder. The `dist` folder is created from  the `src` folder.
 
