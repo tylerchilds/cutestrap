@@ -251,8 +251,16 @@ Markup:
 Styleguide 4.0
 
 */
-.disabled {
-  opacity: 0.5;
+.disabled, input[disabled],
+input[disabled] + *,
+button[disabled],
+button[disabled] + *,
+textarea[disabled],
+textarea[disabled] + *,
+select[disabled],
+select[disabled] + * {
+  cursor: default;
+  opacity: .5;
   pointer-events: none; }
 
 .f-none {
@@ -353,6 +361,7 @@ button {
   margin: 0 auto;
   padding: 0 3rem;
   text-align: center;
+  user-select: none;
   width: auto; }
   .btn:link, [type=button]:link,
   [type=submit]:link,
@@ -526,11 +535,6 @@ Styleguide 3.0
   box-shadow: 0 1px 2px 0 #dededf inset;
   outline: none; }
 
-.textfield *[disabled],
-.select *[disabled] {
-  background-color: #efeff0;
-  color: #5a5a5b; }
-
 /*
 
 Radio
@@ -629,6 +633,10 @@ Styleguide 3.4
   right: 1rem;
   bottom: 1.3rem;
   width: 0; }
+
+.select option[disabled] {
+  background-color: #efeff0;
+  color: #5a5a5b; }
 
 /*
 
