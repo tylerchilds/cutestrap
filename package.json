@@ -11,6 +11,10 @@
     "type": "git",
     "url": "git://github.com/cutestrap/cutestrap.git"
   },
+  "scripts": {
+    "start": "gulp",
+    "setup": "npm install & bower install"
+  },
   "devDependencies": {
     "bower": "latest",
     "gulp": "latest",
