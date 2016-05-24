@@ -1,5 +1,6 @@
 // Include Our Plugins
-var bump          = require('gulp-bump'),
+var autoprefixer  = require('gulp-autoprefixer'),
+    bump          = require('gulp-bump'),
     clean         = require('gulp-clean'),
     concat        = require('gulp-concat'),
     cssmin        = require('gulp-cssmin'),
@@ -136,7 +137,8 @@ gulp.task('sass', function() {
     }))
     .pipe(sourcemaps.init())
       .pipe(sass().on('error', sass.logError))
-    .pipe(sourcemaps.write('.'))
+    .pipe(sourcemaps.write())
+    .pipe(autoprefixer())
     .pipe(gulp.dest('./dist/css'));
 });
 

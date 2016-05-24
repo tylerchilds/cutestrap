@@ -19,6 +19,7 @@
   "devDependencies": {
     "bower": "latest",
     "gulp": "latest",
+    "gulp-autoprefixer": "latest",
     "gulp-bump": "latest",
     "gulp-clean": "latest",
     "gulp-concat": "latest",
