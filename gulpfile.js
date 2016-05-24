@@ -89,7 +89,7 @@ gulp.task('kss', ['kss-html'], function(cb) {
 
   return gulp.src('./src/sass/**/*.*')
     .pipe(concat('kss'))
-    .pipe(exec('kss-node --config=.kss-node.json', options))
+    .pipe(exec('./node_modules/kss/bin/kss-node --config=.kss-node.json', options))
     .pipe(exec.reporter(reportOptions));
 });
 
