@@ -14,6 +14,7 @@ var bump          = require('gulp-bump'),
     runSequence   = require('run-sequence'),
     sass          = require('gulp-sass'),
     sourcemaps    = require('gulp-sourcemaps'),
+    stylelint     = require('gulp-stylelint'),
     swig          = require('gulp-swig'),
     tag_version   = require('gulp-tag-version'),
     zip           = require('gulp-zip');;
@@ -123,11 +124,16 @@ gulp.task('kss-public', ['kss'], function(){
     .pipe(gulp.dest('./docs/public/js'));
 });
 
-gulp.task('sass', ['temp'], function() {
-  gulp.src('./temp/sass/**/*.*')
+gulp.task('sass', function() {
+  gulp.src('./src/sass/**/*.*')
     .pipe(gulp.dest('./dist/scss'));
 
-  return gulp.src('./temp/sass/cutestrap.scss')
+  return gulp.src('./src/sass/cutestrap.scss')
+    .pipe(stylelint({
+      reporters: [
+        {formatter: 'string', console: true}
+      ]
+    }))
     .pipe(sourcemaps.init())
       .pipe(sass().on('error', sass.logError))
     .pipe(sourcemaps.write('.'))

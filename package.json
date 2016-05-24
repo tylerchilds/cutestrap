@@ -25,11 +25,24 @@
     "gulp-replace": "latest",
     "gulp-sass": "latest",
     "gulp-sourcemaps": "latest",
+    "gulp-stylelint": "latest",
     "gulp-swig": "latest",
     "gulp-tag-version": "latest",
     "gulp-zip": "latest",
     "kss": "^2.1.0",
     "minimist": "latest",
     "run-sequence": "latest"
+  },
+  "stylelint": {
+    "rules": {
+      "block-no-empty": null,
+      "color-no-invalid-hex": true,
+      "declaration-colon-space-after": "always",
+      "indentation": ["tab", {
+        "except": ["value"]
+      }],
+      "max-empty-lines": 2,
+      "unit-whitelist": ["em", "rem", "%", "s"]
+    }
   }
 }
