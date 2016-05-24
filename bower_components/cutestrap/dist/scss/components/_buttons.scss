@@ -30,8 +30,9 @@ Styleguide 2.0
   margin: 0 auto;
   padding: 0 3rem;
   text-align: center;
+  user-select: none;
   width: auto;
-
+  
   &:link,
   &:visited{
     color: $white;

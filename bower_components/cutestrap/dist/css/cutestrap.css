@@ -239,20 +239,28 @@ Markup:
   Example Text
 </div>
 
-.disabled								 - Disable an Element
+.disabled                 - Disable an Element
 .clearfix                - Clear floats to keep the parent container in shape
 .f-none                  - float: none;
 .f-left                  - float: left;
-.f-right           			 - float: right;
+.f-right                  - float: right;
 .ta-left                 - text-align: left;
-.ta-center           		 - text-align: center;
-.ta-right           		 - text-align: right;
+.ta-center                - text-align: center;
+.ta-right                - text-align: right;
 
 Styleguide 4.0
 
 */
-.disabled {
-  opacity: 0.5;
+.disabled, input[disabled],
+input[disabled] + *,
+button[disabled],
+button[disabled] + *,
+textarea[disabled],
+textarea[disabled] + *,
+select[disabled],
+select[disabled] + * {
+  cursor: default;
+  opacity: .5;
   pointer-events: none; }
 
 .f-none {
@@ -289,12 +297,12 @@ Markup:
 </div>
 
 .fs-small            - Smaller than the default font size
-.fs-base           	 - Exactly the default font size
+.fs-base              - Exactly the default font size
 .fs-large            - Larger than the default font size
 .fw-light            - Changes the type to be 300 weight
 .fw-normal           - Changes the type to be 400 weight
 .fw-semibold         - Changes the type to be 500 weight
-.fw-bold		         - Changes the type to be 600 weight
+.fw-bold             - Changes the type to be 600 weight
 
 Styleguide 4.1
 
@@ -353,6 +361,7 @@ button {
   margin: 0 auto;
   padding: 0 3rem;
   text-align: center;
+  user-select: none;
   width: auto; }
   .btn:link, [type=button]:link,
   [type=submit]:link,
@@ -526,11 +535,6 @@ Styleguide 3.0
   box-shadow: 0 1px 2px 0 #dededf inset;
   outline: none; }
 
-.textfield *[disabled],
-.select *[disabled] {
-  background-color: #efeff0;
-  color: #5a5a5b; }
-
 /*
 
 Radio
@@ -629,6 +633,10 @@ Styleguide 3.4
   right: 1rem;
   bottom: 1.3rem;
   width: 0; }
+
+.select option[disabled] {
+  background-color: #efeff0;
+  color: #5a5a5b; }
 
 /*
 
