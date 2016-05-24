@@ -41,6 +41,7 @@ KSS will generate the docs from the `kss-html` folder. The `dist` folder is crea
 
 Contributors are welcome, just follow these few guidelines:
 
+* Avoid checking in compiled files (dist and docs folders) as this will reduce merge conflicts with master
 * BEM for naming conventions
 * Alphabetical properties
 * Only nest for psuedo-elements
