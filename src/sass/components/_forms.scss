@@ -39,6 +39,23 @@ Styleguide 3.0
 
 */
 
+//
+// Shared Styles
+//
+// Radio, Checkbox, Textfield, Select
+//
+
+input,
+button,
+textarea,
+select{
+  &[disabled],
+  &[disabled] + * {
+    @extend .disabled;
+  }
+
+}
+
 
 //
 // Shared Styles
@@ -143,14 +160,6 @@ Styleguide 3.0
   border-color: $primary;
   box-shadow: 0 1px 2px 0 $gray5 inset;
   outline: none;
-}
-
-.textfield,
-.select {
-  *[disabled]{
-    background-color: $gray6;
-    color: $gray2;
-  }
 }
 
 /*
@@ -261,4 +270,9 @@ Styleguide 3.4
     bottom: 1.3rem;
     width: 0;
   }
+}
+
+.select option[disabled]{
+  background-color: $gray6;
+  color: $gray2;
 }
