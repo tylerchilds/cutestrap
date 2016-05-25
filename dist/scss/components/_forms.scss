@@ -33,6 +33,8 @@ Markup:
   </label>
   <br/>
   <input type="submit" value="Cross My Heart" />
+  <button>okay</button>
+  <button>not okay</button>
 </form>
 
 Styleguide 3.0
@@ -42,20 +44,25 @@ Styleguide 3.0
 //
 // Shared Styles
 //
-// Radio, Checkbox, Textfield, Select
+// All form controls
 //
 
-input,
-button,
-textarea,
-select{
-  &[disabled],
-  &[disabled] + * {
+.radio [disabled],
+.checkbox [disabled],
+.select [disabled],
+.textfield [disabled]{
+  @extend .disabled;
+
+  & + * {
     @extend .disabled;
   }
-
 }
 
+[type=button][disabled],
+[type=submit][disabled],
+button[disabled]{
+  @extend .disabled;
+}
 
 //
 // Shared Styles
@@ -133,6 +140,7 @@ select{
 
 .textfield__label,
 .select__label{
+  background-color: $white;
   font-size: $font-size--small;
   position: absolute;
   left: 1px;
@@ -152,7 +160,6 @@ select{
   padding: 1.8rem .5rem .6rem;
   position: relative;
   width: 100%;
-  z-index: $z-index-1;
 }
 
 .textfield *:focus,
@@ -270,6 +277,10 @@ Styleguide 3.4
     bottom: 1.3rem;
     width: 0;
   }
+}
+
+.select select{
+  z-index: $z_index-1;
 }
 
 .select option[disabled]{
