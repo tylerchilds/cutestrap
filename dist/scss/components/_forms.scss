@@ -33,8 +33,6 @@ Markup:
   </label>
   <br/>
   <input type="submit" value="Cross My Heart" />
-  <button>okay</button>
-  <button>not okay</button>
 </form>
 
 Styleguide 3.0
@@ -44,25 +42,20 @@ Styleguide 3.0
 //
 // Shared Styles
 //
-// All form controls
+// Radio, Checkbox, Textfield, Select
 //
 
-.radio [disabled],
-.checkbox [disabled],
-.select [disabled],
-.textfield [disabled]{
-  @extend .disabled;
-
-  & + * {
+input,
+button,
+textarea,
+select{
+  &[disabled],
+  &[disabled] + * {
     @extend .disabled;
   }
+
 }
 
-[type=button][disabled],
-[type=submit][disabled],
-button[disabled]{
-  @extend .disabled;
-}
 
 //
 // Shared Styles
@@ -120,7 +113,7 @@ button[disabled]{
 .radio input[type=radio]:focus + .radio__label:after,
 .checkbox input[type=checkbox]:focus + .checkbox__label:after {
   border-color: $primary;
-  box-shadow: 0 -1px 0 0 $gray5 inset;
+  box-shadow: 0 1px 2px 1px $gray5 inset;
 }
 
 //
@@ -132,7 +125,6 @@ button[disabled]{
 .textfield,
 .select{
   background-color: $white;
-  border: 1px solid $gray3;
   display: block;
   margin-top: -2px;
   margin-bottom: 2.4rem;
@@ -143,29 +135,30 @@ button[disabled]{
 .select__label{
   font-size: $font-size--small;
   position: absolute;
-  left: 0;
+  left: 1px;
   line-height: 1;
   padding: .5rem;
   right: 1px;
-  top: 0;
+  top: 1px;
 }
 
 .textfield input,
 .textfield textarea,
 .select select {
   background-color: transparent;
+  border: 1px solid $gray3;
   border-radius: 2px;
   box-sizing: border-box;
-  margin-top: 1.8rem;
-  padding: 0 .5rem .6rem;
+  padding: 1.8rem .5rem .6rem;
   position: relative;
   width: 100%;
+  z-index: $z-index-1;
 }
 
 .textfield *:focus,
 .select select:focus{
   border-color: $primary;
-  box-shadow: 0 -1px 0 0 $gray5 inset;
+  box-shadow: 0 1px 2px 0 $gray5 inset;
   outline: none;
 }
 
@@ -277,10 +270,6 @@ Styleguide 3.4
     bottom: 1.3rem;
     width: 0;
   }
-}
-
-.select select{
-
 }
 
 .select option[disabled]{
