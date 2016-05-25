@@ -28,12 +28,12 @@ Markup:
     <span class="textfield__label">Comments</span>
   </label>
   <label class="checkbox">
-    <input type="checkbox" disabled />
+    <input type="checkbox" />
     <span class="checkbox__label">I Lied</span>
   </label>
   <br/>
-  <input type="submit" value="Cross My Heart" disabled />
-  <button disabled>okay</button>
+  <input type="submit" value="Cross My Heart" />
+  <button>okay</button>
   <button>not okay</button>
 </form>
 
@@ -47,12 +47,13 @@ Styleguide 3.0
 // All form controls
 //
 
-input[disabled],
-textarea[disabled],
-select[disabled]{
+.radio [disabled],
+.checkbox [disabled],
+.select [disabled],
+.textfield [disabled]{
   @extend .disabled;
 
-  & + span {
+  & + * {
     @extend .disabled;
   }
 }
@@ -139,6 +140,7 @@ button[disabled]{
 
 .textfield__label,
 .select__label{
+  background-color: $white;
   font-size: $font-size--small;
   position: absolute;
   left: 1px;
@@ -158,7 +160,6 @@ button[disabled]{
   padding: 1.8rem .5rem .6rem;
   position: relative;
   width: 100%;
-  z-index: $z-index-1;
 }
 
 .textfield *:focus,
@@ -276,6 +277,10 @@ Styleguide 3.4
     bottom: 1.3rem;
     width: 0;
   }
+}
+
+.select select{
+
 }
 
 .select option[disabled]{
