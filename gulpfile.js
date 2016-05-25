@@ -21,7 +21,7 @@ var autoprefixer  = require('gulp-autoprefixer'),
     zip           = require('gulp-zip');;
 
 var config = {
-   bowerDir: './bower_components' ,
+   packages: './node_modules' ,
   import_path: './src/sass/'
 };
 
@@ -118,7 +118,7 @@ gulp.task('kss-public', ['kss'], function(){
     .pipe(gulp.dest('./docs/public/css'));
 
   return gulp.src([
-      config.bowerDir + '/jquery/jquery.js',
+      config.packages + '/jquery/dist/jquery.js',
       './kss-html/js/kss.js'
     ])
     .pipe(concat('kss.js'))

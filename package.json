@@ -35,6 +35,7 @@
     "gulp-swig": "latest",
     "gulp-tag-version": "latest",
     "gulp-zip": "latest",
+    "jquery": "latest",
     "kss": "^2.1.0",
     "minimist": "latest",
     "run-sequence": "latest"
