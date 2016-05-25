@@ -29,6 +29,10 @@ bower install cutestrap
 
 If you want to create your own styleguide, fork the repository and modify the `src` and `kss-html` folders.
 
+### Gallery
+
+Have you built a site using Cutestrap? I'll be creating a gallery, so email a link and an thumbnail image to [mailto:cutestrap@bamzap.pw](cutestrap@bamzap.pw). The thumbnail should be sized 300px width by 240px height.
+
 ### Development
 
 After cloning, you'll first need to install dependencies by running `npm run setup`.
