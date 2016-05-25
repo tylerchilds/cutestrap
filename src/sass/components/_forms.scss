@@ -28,11 +28,13 @@ Markup:
     <span class="textfield__label">Comments</span>
   </label>
   <label class="checkbox">
-    <input type="checkbox" />
+    <input type="checkbox" disabled />
     <span class="checkbox__label">I Lied</span>
   </label>
   <br/>
-  <input type="submit" value="Cross My Heart" />
+  <input type="submit" value="Cross My Heart" disabled />
+  <button disabled>okay</button>
+  <button>not okay</button>
 </form>
 
 Styleguide 3.0
@@ -42,20 +44,24 @@ Styleguide 3.0
 //
 // Shared Styles
 //
-// Radio, Checkbox, Textfield, Select
+// All form controls
 //
 
-input,
-button,
-textarea,
-select{
-  &[disabled],
-  &[disabled] + * {
+input[disabled],
+textarea[disabled],
+select[disabled]{
+  @extend .disabled;
+
+  & + span {
     @extend .disabled;
   }
-
 }
 
+[type=button][disabled],
+[type=submit][disabled],
+button[disabled]{
+  @extend .disabled;
+}
 
 //
 // Shared Styles
