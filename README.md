@@ -48,4 +48,4 @@ Contributors are welcome, just follow these few guidelines:
 * Avoid checking in compiled files (dist and docs folders) as this will reduce merge conflicts with master
 * BEM for naming conventions
 * Alphabetical properties
-* Only nest for psuedo-elements
+* Only nest for pseudo-elements
