@@ -36,7 +36,6 @@ Styleguide 2.0
   &:link,
   &:visited{
     color: $white;
-    text-decoration: none;
   }
 
   &:focus,
@@ -81,6 +80,7 @@ Styleguide 2.0
 
   &:link{
     color: $link;
+    text-decoration: underline;
   }
 
   &:visited{
