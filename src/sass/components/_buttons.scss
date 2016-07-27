@@ -25,6 +25,7 @@ Styleguide 2.0
   height: 4.8rem;
   line-height: 4.8rem;
   max-width: 100%;
+  text-decoration: none;
   transition-property: background-color;
   transition-duration: 200ms;
   margin: 0 auto;
@@ -36,7 +37,6 @@ Styleguide 2.0
   &:link,
   &:visited{
     color: $white;
-    text-decoration: none;
   }
 
   &:focus,
