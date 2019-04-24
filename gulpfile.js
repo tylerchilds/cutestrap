@@ -21,8 +21,7 @@ var autoprefixer  = require('gulp-autoprefixer'),
     zip           = require('gulp-zip');;
 
 var config = {
-   packages: './node_modules' ,
-  import_path: './src/sass/'
+  packages: './node_modules'
 };
 
 var args = {
@@ -43,7 +42,7 @@ gulp.task('bump', function() {
 });
 
 gulp.task('compile', ['clean'], function(){
-  runSequence('sass', 'minify', 'kss-html', 'kss', 'kss-public');
+  runSequence('distify', 'kss-html', 'kss', 'kss-public');
 });
 
 // Clean build
@@ -88,7 +87,7 @@ gulp.task('kss', ['kss-html'], function(cb) {
 
   });
 
-  return gulp.src('./src/sass/**/*.*')
+  return gulp.src('./src/css/**/*.*')
     .pipe(concat('kss'))
     .pipe(exec('./node_modules/kss/bin/kss-node --config=.kss-node.json', options))
     .pipe(exec.reporter(reportOptions));
@@ -125,25 +124,14 @@ gulp.task('kss-public', ['kss'], function(){
     .pipe(gulp.dest('./docs/public/js'));
 });
 
-gulp.task('sass', function() {
-  gulp.src('./src/sass/**/*.*')
-    .pipe(gulp.dest('./dist/scss'));
-
-  return gulp.src('./src/sass/cutestrap.scss')
-    .pipe(stylelint({
-      reporters: [
-        {formatter: 'string', console: true}
-      ]
-    }))
-    .pipe(sourcemaps.init())
-      .pipe(sass().on('error', sass.logError))
-    .pipe(sourcemaps.write())
-    .pipe(autoprefixer())
-    .pipe(gulp.dest('./dist/css'));
-});
-
-gulp.task('minify', ['sass'], function() {
-  return gulp.src('./dist/css/cutestrap.css')
+gulp.task('distify', function() {
+  gulp.src([
+    'src/css/core.css',
+    'src/css/base.css',
+    'src/css/forms.css',
+    'src/css/utilities.css',
+  ]).pipe(concat('cutestrap.css'))
+    .pipe(gulp.dest('./dist/css/'))
     .pipe(cssmin())
 		.pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('./dist/css'));
@@ -152,15 +140,15 @@ gulp.task('minify', ['sass'], function() {
 // Move source over for compiling
 gulp.task('temp', function(){
   // Sass
-  return gulp.src('./src/sass/**/*.scss')
-    .pipe(gulp.dest('./temp/sass/'));
+  return gulp.src('./src/css/**/*.css')
+    .pipe(gulp.dest('./temp/css/'));
 
 });
 
 // Watch Files For Changes
 gulp.task('watch', function() {
-  gulp.watch('./src/sass/**/*.scss', ['sass', 'kss-html', 'kss', 'kss-public']);
-  gulp.watch('./kss-html/**/*.*', ['kss-html', 'kss', 'kss-public']);
+  gulp.watch('./src/css/**/*.css', ['compile']);
+  gulp.watch('./kss-html/**/*.*', ['compile']);
 });
 
 gulp.task('zip', ['zip-temp-dist', 'zip-temp-docs'], function(){

@@ -87,7 +87,7 @@ Styleguide 4.1
 */
 
 
-.fs-small{
+/* .fs-small{
   font-size: $font-size--small;
 }
 
@@ -97,7 +97,7 @@ Styleguide 4.1
 
 .fs-large{
   font-size: $font-size--large;
-}
+} */
 
 .fw-light{
   font-weight: 300;

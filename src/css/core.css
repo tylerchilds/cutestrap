@@ -1,0 +1,45 @@
+body {
+  --cs-font-family: 'Avenir', 'Avenir Next','Helvetica Neue','Segoe UI', 'Verdana', sans-serif;
+  --cs-font-mono: 'Consolas', 'Monaco', 'Courier New', monospace;
+
+  --cs-font-heading: var(--cs-font-family);
+  --cs-font-body: var(--cs-font-family);
+  --cs-font-mono: var(--cs-font-mono);
+
+  --cs-color-primary: #E83FB8;
+  --cs-color-primary-dark: #e528b0;
+
+  --cs-color-link: #4076D4;
+  --cs-color-link-visited: #9140D4;
+  --cs-color-link-hover: #2e68cc;
+  --cs-color-link-active: #D44076;
+
+  --cs-color-gray1: #3c3c3d;
+  --cs-color-gray2: #5a5a5b;
+  --cs-color-gray3: #7d7d7e;
+  --cs-color-gray4: #cdcdce;
+  --cs-color-gray5: #dededf;
+  --cs-color-gray6: #efeff0;
+
+  --cs-color-white: #ffffff;
+}
+
+.rhythm {
+  --cs-rhythm: 2.4rem;
+  --cs-rhythm-double: calc(2 * var(--cs-rhythm));
+  --cs-rhythm-half: calc((1/2) * var(--cs-rhythm));
+  --cs-rhythm-third: calc((1/3) * var(--cs-rhythm));
+  --cs-rhythm-fourth: calc((1/4) * var(--cs-rhythm));
+  --cs-rhythm-sixth: calc((1/6) * var(--cs-rhythm));
+  --cs-rhythm-eighth: calc((1/8) * var(--cs-rhythm));
+
+  --cs-font-size: calc(var(--cs-rhythm) / 1.4);
+  --cs-line-height: var(--cs-rhythm);
+
+  font-size: var(--cs-font-size);
+  line-height: var(--cs-rhythm);
+}
+
+.new-groove {
+  --cs-rhythm: 1.2rem;
+}

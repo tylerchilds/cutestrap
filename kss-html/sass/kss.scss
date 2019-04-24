@@ -1,5 +1,3 @@
-@import "variables";
-
 html.grid--is_active{
   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAYAQMAAADnK87dAAAABlBMVEX///8AAABVwtN+AAAAAnRSTlMANrkpWKEAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVAiZY2AgCTwAAAEQAOFwuZEGAAAAAElFTkSuQmCC) repeat left top;
 
@@ -8,46 +6,46 @@ html.grid--is_active{
   }
 }
 
-.kss-modifier-title{
-  color: $gray3;
-}
+// .kss-modifier-title{
+//   color: $gray3;
+// }
 
 
-header{
-  background-color: $primary;
-  color: $white;
-  padding: 0 1rem;
-}
+// header{
+//   background-color: $primary;
+//   color: $white;
+//   padding: 0 1rem;
+// }
 
-header h3{
-  font-size: $font-size--large;
-  padding: 0;
-}
+// header h3{
+//   font-size: $font-size--large;
+//   padding: 0;
+// }
 
-header a{
-  &:link,
-  &:visited,
-  &:hover,
-  &:focus,
-  &:active{
-    color: $white;
-    text-decoration: none;
-  }
-}
+// header a{
+//   &:link,
+//   &:visited,
+//   &:hover,
+//   &:focus,
+//   &:active{
+//     color: $white;
+//     text-decoration: none;
+//   }
+// }
 
 
-nav{
-  border-bottom: 1px solid $gray5;
-  margin-top: -1px;
-  padding: 1.2rem;
-  text-align: center;
-}
+// nav{
+//   border-bottom: 1px solid $gray5;
+//   margin-top: -1px;
+//   padding: 1.2rem;
+//   text-align: center;
+// }
 
-nav ul{
-  padding: 0;
-}
+// nav ul{
+//   padding: 0;
+// }
 
-nav li{
-  padding: 0 1.5rem;
-  display: inline-block;
-}
+// nav li{
+//   padding: 0 1.5rem;
+//   display: inline-block;
+// }
