@@ -6,7 +6,7 @@
 <h2>Typography</h2>
 
 <p>
-  All the typography is sized using rems to baseline of 24px by default and 30px above 960 width viewport. Every element adheres to this baseline grid with perfect vertical rhythm.
+  All the typography is <span class="fs-small">sized using rems</span> to baseline of <span class="fs-large">24px by default</span> and 30px above 960 width viewport. Every element adheres to this baseline grid with perfect vertical rhythm.
 </p>
 
 <h1>Headline 1</h1>

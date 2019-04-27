@@ -1,6 +1,6 @@
 *{
   border: 0;
-  /* font: inherit; */
+  font: inherit;
   margin: 0;
   padding: 0;
   text-rendering: geometricPrecision;
@@ -269,10 +269,15 @@ select,
 button,
 textarea
 {
+  padding: var(--cs-rhythm-half);
   display: block;
   resize: none;
   -webkit-appearance: none;
   -moz-appearance: none;
+}
+
+label {
+  padding: 0;
 }
 
 /* remove yellow from chrome auto-fill background */

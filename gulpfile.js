@@ -111,13 +111,12 @@ gulp.task('kss-public', ['kss'], function(){
   gulp.src('./kss-html/sass/kss.scss')
     .pipe(sourcemaps.init())
       .pipe(sass({
-          includePaths: ['./src/sass']
+          includePaths: ['./src/css']
         }).on('error', sass.logError))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('./docs/public/css'));
 
   return gulp.src([
-      config.packages + '/jquery/dist/jquery.js',
       './kss-html/js/kss.js'
     ])
     .pipe(concat('kss.js'))
@@ -128,6 +127,7 @@ gulp.task('distify', function() {
   gulp.src([
     'src/css/core.css',
     'src/css/base.css',
+    'src/css/buttons.css',
     'src/css/forms.css',
     'src/css/utilities.css',
   ]).pipe(concat('cutestrap.css'))

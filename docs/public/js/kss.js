@@ -10587,17 +10587,23 @@ if ( !noGlobal ) {
 return jQuery;
 } );
 
-if(localStorage.getItem('grid') === "true"){
-  $('html').addClass('grid--is_active');
-}
+(function(){
+  const $html = document.querySelector('html');
+  const $gridToggle = document.querySelector('.js-grid-toggle');
 
-$(function(){
-  $("form").on('submit', function(e){
-    e.preventDefault();
+  $gridToggle.addEventListener('click', function(){
+    localStorage.setItem('grid', 
+      $html.classList.toggle('grid--is_active') // returns true or false
+    );
   });
-});
 
-$(document).on('click', '.js-grid-toggle', function(){
-  $('html').toggleClass('grid--is_active');
-  localStorage.setItem('grid', $('html').is('.grid--is_active'));
-});
+  if(localStorage.getItem('grid') === "true"){
+    $html.classList.add('grid--is_active');
+  }
+
+  document.querySelectorAll('form').forEach(function(node) {
+    node.addEventListener('submit', function(e){
+      e.preventDefault();
+    }); 
+  });
+})();

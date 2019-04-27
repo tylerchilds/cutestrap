@@ -87,17 +87,17 @@ Styleguide 4.1
 */
 
 
-/* .fs-small{
-  font-size: $font-size--small;
+.fs-small{
+  font-size: var(--cs-font-size-small);
 }
 
 .fs-base{
-  font-size: $font-size;
+  font-size: var(--cs-font-size);
 }
 
 .fs-large{
-  font-size: $font-size--large;
-} */
+  font-size: var(--cs-font-size-large);
+}
 
 .fw-light{
   font-weight: 300;

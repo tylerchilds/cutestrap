@@ -1,5 +1,5 @@
 {
-  "source": "src/sass/",
+  "source": "src/css/",
   "template": "temp/kss",
   "destination": "docs",
   "css": "dist/css/cutestrap.css",

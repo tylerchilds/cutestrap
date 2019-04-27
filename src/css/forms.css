@@ -49,7 +49,7 @@ Styleguide 3.0
 .radio [disabled],
 .checkbox [disabled],
 .select [disabled],
-.textfield [disabled]
+.textfield [disabled],
 .radio [disabled] + *,
 .checkbox [disabled] + *,
 .select [disabled]+ *,
@@ -73,21 +73,21 @@ button[disabled]{
   cursor: pointer;
   display: inline-block;
   margin-bottom: var(--cs-rhythm);
-  padding: 0 1rem 0 2.25rem;
+  padding: 0 var(--cs-rhythm-half) 0 var(--cs-rhythm);;
   position: relative;
 }
 
 .radio:before,
 .checkbox:before{
   background-color: var(--cs-color-white);
-  border: 2px solid var(--cs-color-gray3);
+  border: var(--cs-rhythm-twelfth) solid var(--cs-color-gray3);
   content: '';
-  height: 16px;
+  height: var(--cs-rhythm-half);
   left: 0;
-  margin-top: -10px;
+  margin-top: calc(-1 * var(--cs-rhythm-third));
   position: absolute;
   top: 50%;
-  width: 16px;
+  width: var(--cs-rhythm-half);
 }
 
 .checkbox input[type=checkbox],
@@ -108,18 +108,18 @@ button[disabled]{
 .checkbox__label:after{
   border: 1px solid transparent;
   content: '';
-  height: 18px;
+  height: calc(var(--cs-rhythm-half) + var(--cs-rhythm-twelfth));
   left: 0;
-  margin-top: -10px;
+  margin-top: calc(-1 * var(--cs-rhythm-third));
   position: absolute;
   top: 50%;
-  width: 18px;
+  width: calc(var(--cs-rhythm-half) + var(--cs-rhythm-twelfth));
 }
 
 .radio input[type=radio]:focus + .radio__label:after,
 .checkbox input[type=checkbox]:focus + .checkbox__label:after {
   border-color: var(--cs-color-primary);
-  box-shadow: 0 1px 2px 1px var(--cs-color-gray5) inset;
+  /* box-shadow: 0 1px 2px 1px var(--cs-color-gray5) inset; */
 }
 
 /*
@@ -131,7 +131,7 @@ button[disabled]{
 .select{
   background-color: var(--cs-color-white);
   display: block;
-  margin-top: -2px;
+  margin-top: calc(-1 * var(--cs-rhythm-sixteenth));
   margin-bottom: var(--cs-rhythm);
   position: relative;
 }
@@ -141,21 +141,21 @@ button[disabled]{
   background-color: var(--cs-color-white);
   font-size: var(--cs-rhythm-half);
   position: absolute;
-  left: 1px;
+  left: var(--cs-rhythm-sixteenth);
   line-height: 1;
   padding: .5rem;
-  right: 1px;
-  top: 1px;
+  right: var(--cs-rhythm-sixteenth);
+  top: var(--cs-rhythm-sixteenth);
 }
 
 .textfield input,
 .textfield textarea,
 .select select {
   background-color: transparent;
-  border: 1px solid var(--cs-color-gray3);
+  border: var(--cs-rhythm-sixteenth) solid var(--cs-color-gray3);
   border-radius: 2px;
   box-sizing: border-box;
-  padding: calc(3 * var(--cs-rhythm-fourth)) var(--cs-rhythm-fourth) var(--cs-rhythm-fourth);
+  padding: calc(3 * var(--cs-rhythm-third)) var(--cs-rhythm-third) var(--cs-rhythm-third);
   position: relative;
   width: 100%;
 }
@@ -163,7 +163,7 @@ button[disabled]{
 .textfield *:focus,
 .select select:focus{
   border-color: var(--cs-color-primary);
-  box-shadow: 0 1px 2px 0 var(--cs-color-gray5) inset;
+  box-shadow: 0 var(--cs-rhythm-sixteenth) var(--cs-rhythm-eigth) 0 var(--cs-color-gray5) inset;
   outline: none;
 }
 
@@ -190,12 +190,12 @@ Styleguide 3.1
   background-color: var(--cs-color-primary-dark);
   border-radius: 20px;
   content: '';
-  height: 10px;
-  left: 5px;
-  margin-top: -5px;
+  height: var(--cs-rhythm-third);
+  left: var(--cs-rhythm-sixth);
+  margin-top: calc(-.5 * var(--cs-rhythm-third));
   position: absolute;
   top: 50%;
-  width: 10px;
+  width: var(--cs-rhythm-third);
 }
 
 /*
@@ -221,7 +221,7 @@ Styleguide 3.2
   color: var(--cs-color-primary-dark);
   content: '\2714';
   font-size: 14px;
-  line-height: 18px;
+  line-height: var(--cs-rhythm-third);
   text-align: center;
 }
 
