@@ -1,6 +1,9 @@
 .rhythm {
   background: repeat left top; }
 
+html.grid--is_hidden .rhythm {
+  background: none !important; }
+
 .wrapper {
   padding: var(--cs-rhythm); }
 

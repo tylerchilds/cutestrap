@@ -74,7 +74,7 @@ Preformatted
 
 
 
-<div class="rhythm new-groove">	
+<div class="">	
 	<header>
 		<h1>Base Stylesheet</h1>
 	</header>
@@ -197,7 +197,7 @@ p q r s t u v w x y z { | } ~</pre>
   <p>Figures are usually used to refer to images:</p>
   <div class="example">
     <figure>
-      <img src="http://www.fillmurray.com/300/200" alt="Example image"/>
+      <img src="http://www.fillmurray.com/300/224" alt="Example image"/>
       <figcaption>
         This is a placeholder image, with supporting caption.
       </figcaption>

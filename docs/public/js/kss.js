@@ -23,7 +23,7 @@ function createRhythmBackgroundImage(node) {
 
   $gridToggle.addEventListener('click', function(){
     localStorage.setItem('grid', 
-      $html.classList.toggle('grid--is_active') // returns true or false
+      $html.classList.toggle('grid--is_hidden') // returns true or false
     );
   });
 

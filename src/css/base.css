@@ -195,14 +195,28 @@ figure img{
 
 small,
 sub,
-sup{
-  font-size: var(--cs-font-size)--small;
-  line-height: 1;
+sup,
+caption,
+figcaption {
+  font-size: calc(2 * var(--cs-rhythm-third));
+  vertical-align: top;
+}
+
+sub,
+sup {
+  position: relative;
+}
+
+sub {
+  top: var(--cs-rhythm-third);
+}
+
+sup {
+  bottom: var(--cs-rhythm-third);
 }
 
 caption,
 figcaption{
-  font-size: var(--cs-font-size)--small;
   font-style: italic;
   text-align: center;
 }

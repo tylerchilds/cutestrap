@@ -2,7 +2,7 @@
 
 Grid
 
-Buttons and their variations
+A simple grid with automatic columns
 
 Markup:
 <div class="grid">
@@ -18,9 +18,9 @@ Styleguide 4.0
 */
 
 .grid {
-  --cs-grid-min: 15rem;
+  --cs-grid-column-min: 15rem;
 
   display: grid;
   grid-gap: var(--cs-rhythm);
-  grid-template-columns: repeat(auto-fit, minmax(var(--cs-grid-min), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(var(--cs-grid-column-min), 1fr));
 }
