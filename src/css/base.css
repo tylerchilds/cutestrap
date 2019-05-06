@@ -8,16 +8,9 @@
 
 html{
   box-sizing: border-box;
-  /* font-size: 62.5%; */
   color: var(--cs-color-gray1);
   height: 100%;
 }
-
-/* @media screen and (min-width: 960px){
-  html {
-    font-size: 78.125%;
-  }
-} */
 
 body{
   box-sizing: border-box;
@@ -82,14 +75,14 @@ kbd{
 code,
 samp,
 kbd{
-  border-radius: 2px;
+  border-radius: var(--cs-border-radius);
   overflow-y: hidden;
   overflow-x: auto;
   padding: var(--cs-rhythm-sixth);
 }
 
 pre{
-  border-radius: 2px;
+  border-radius: var(--cs-border-radius);
   line-height: var(--cs-line-height);
   overflow-y: hidden;
   overflow-x: auto;
@@ -252,7 +245,7 @@ abbr{
 }
 
 table{
-  border-radius: 2px;
+  border-radius: var(--cs-border-radius);
   border-collapse: separate;
   border-spacing: 0;
   margin-bottom: var(--cs-rhythm);
