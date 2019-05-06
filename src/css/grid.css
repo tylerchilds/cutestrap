@@ -1,0 +1,26 @@
+/*
+
+Grid
+
+Buttons and their variations
+
+Markup:
+<div class="grid">
+  <div>Column</div>
+  <div>Column</div>
+  <div>Column</div>
+  <div>Column</div>
+  <div>Column</div>
+</div>
+
+Styleguide 4.0
+
+*/
+
+.grid {
+  --cs-grid-min: 15rem;
+
+  display: grid;
+  grid-gap: var(--cs-rhythm);
+  grid-template-columns: repeat(auto-fit, minmax(var(--cs-grid-min), 1fr));
+}

@@ -28,8 +28,8 @@ Styleguide 2.0
   --font-size: var(--cs-font-size);
   --line-height: var(--cs-rhythm);
   --margin: 0 var(--cs-rhythm-twelfth);
-  --min-height: calc(2 * var(--cs-rhythm););
-  --padding: var(--cs-rhythm-half) var(--cs-rhythm);
+  --min-height: calc(2 * var(--cs-rhythm));
+  --padding: calc(5 * var(--cs-rhythm-twelfth)) var(--cs-rhythm);
   --text-color: var(--cs-color-white);
   --text-color-hover: var(--cs-color-white);
 
@@ -45,9 +45,9 @@ Styleguide 2.0
   font-size: var(--font-size);
   justify-content: center;
   line-height: var(--line-height);
-  min-height: var(--min-height);
   margin: var(--margin);
   max-width: 100%;
+  min-height: var(--min-height);
   padding: var(--padding);
   text-align: center;
   transition-duration: 250ms;
@@ -116,15 +116,18 @@ Styleguide 2.0
 }
 
 .button.-small {
+  --cs-sub-rhythm: calc(14 * var(--cs-rhythm-sixteenth));
   --border-thickness: var(--cs-rhythm-sixteenth);
-  --font-size: var(--cs-font-size-small);
-  --min-height: 32px;
-  --padding: var(--cs-rhythm-fourth) var(--cs-rhythm-half);
+  --font-size: var(--cs-font-size);
+  --line-height: var(--cs-line-height);
+  --min-height: var(--cs-sub-rhythm);
+  --padding: 0 var(--cs-rhythm-half);
+  margin-top: calc(-2 * var(--cs-rhythm-sixteenth));
 }
 
 .button.-large {
   --border-thickness: var(--cs-rhythm-eighth);
   --font-size: var(--cs-font-size-large);
-  --min-height: calc(3 * var(--cs-rhythm););
-  --padding: var(--cs-rhythm) calc(2 * var(--cs-rhythm));
+  --min-height: calc(3 * var(--cs-rhythm));
+  --padding: calc(3 * var(--cs-rhythm-eighth)) calc(2 * var(--cs-rhythm));
 }

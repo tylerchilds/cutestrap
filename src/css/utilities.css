@@ -19,7 +19,7 @@ Markup:
 .ta-center               - text-align: center;
 .ta-right                - text-align: right;
 
-Styleguide 4.0
+Styleguide 5.0
 
 */
 
@@ -74,30 +74,15 @@ Markup:
   The quick brown fox jumps over the lazy dog.
 </div>
 
-.fs-small            - Smaller than the default font size
-.fs-base             - Exactly the default font size
-.fs-large            - Larger than the default font size
 .fw-light            - Changes the type to be 300 weight
 .fw-normal           - Changes the type to be 400 weight
 .fw-semibold         - Changes the type to be 600 weight
 .fw-bold             - Changes the type to be 700 weight
 
-Styleguide 4.1
+Styleguide 5.1
 
 */
 
-
-.fs-small{
-  font-size: var(--cs-font-size-small);
-}
-
-.fs-base{
-  font-size: var(--cs-font-size);
-}
-
-.fs-large{
-  font-size: var(--cs-font-size-large);
-}
 
 .fw-light{
   font-weight: 300;

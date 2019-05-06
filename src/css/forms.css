@@ -5,36 +5,35 @@ Forms
 Markup:
 <form>
   <label class="textfield">
+    <span class="label">Name</span>
     <input type="text" />
-    <span class="textfield__label">Name</span>
   </label>
   <label class="radio">
     <input type="radio" name="example" />
-    <span class="radio__label">Desktop</span>
+    <span class="label">Desktop</span>
   </label>
   <label class="radio">
     <input type="radio" name="example" />
-    <span class="radio__label">Mobile</span>
+    <span class="label">Mobile</span>
   </label>
-  <label class="select">
+  <label for="select" class="select">
+    <span class="label">Favorite Ice Cream</span>
     <select name="select">
       <option disabled="disabled" selected="selected">Flavors</option>
       <option>Chocolate</option>
     </select>
-    <span class="select__label" for="select">Favorite Ice Cream</span>
   </label>
   <label class="textfield">
+    <span class="label">Comments</span>
     <textarea></textarea>
-    <span class="textfield__label">Comments</span>
   </label>
   <label class="checkbox">
     <input type="checkbox" />
-    <span class="checkbox__label">I Lied</span>
+    <span class="label">I Lied</span>
   </label>
   <br/>
   <input type="submit" value="Cross My Heart" />
   <button>okay</button>
-  <button>not okay</button>
 </form>
 
 Styleguide 3.0
@@ -97,28 +96,30 @@ button[disabled]{
   z-index: 0;
 }
 
-.radio__label,
-.checkbox__label{
+.radio .label,
+.checkbox .label{
   color: var(--cs-color-gray3);
   font-size: var(--cs-rhythm-half);
   line-height: 1;
 }
 
-.radio__label:after,
-.checkbox__label:after{
-  border: 1px solid transparent;
+.radio .label:before,
+.radio .label:after,
+.checkbox .label:after{
+  border: var(--cs-rhythm-twelfth) solid transparent;
   content: '';
-  height: calc(var(--cs-rhythm-half) + var(--cs-rhythm-twelfth));
+  height: var(--cs-rhythm-half);
   left: 0;
   margin-top: calc(-1 * var(--cs-rhythm-third));
   position: absolute;
   top: 50%;
-  width: calc(var(--cs-rhythm-half) + var(--cs-rhythm-twelfth));
+  width: var(--cs-rhythm-half);
 }
 
-.radio input[type=radio]:focus + .radio__label:after,
-.checkbox input[type=checkbox]:focus + .checkbox__label:after {
-  border-color: var(--cs-color-primary);
+.radio input[type=radio]:focus + .label:after,
+.checkbox input[type=checkbox]:focus + .label:after {
+  outline: var(--cs-rhythm-twelfth) dotted #f00;
+  outline-offset: var(--cs-rhythm-twelfth);
   /* box-shadow: 0 1px 2px 1px var(--cs-color-gray5) inset; */
 }
 
@@ -131,19 +132,18 @@ button[disabled]{
 .select{
   background-color: var(--cs-color-white);
   display: block;
-  margin-top: calc(-1 * var(--cs-rhythm-sixteenth));
   margin-bottom: var(--cs-rhythm);
   position: relative;
 }
 
-.textfield__label,
-.select__label{
+.textfield .label,
+.select .label{
   background-color: var(--cs-color-white);
   font-size: var(--cs-rhythm-half);
   position: absolute;
   left: var(--cs-rhythm-sixteenth);
   line-height: 1;
-  padding: .5rem;
+  padding: var(--cs-rhythm-fourth);
   right: var(--cs-rhythm-sixteenth);
   top: var(--cs-rhythm-sixteenth);
 }
@@ -155,7 +155,7 @@ button[disabled]{
   border: var(--cs-rhythm-sixteenth) solid var(--cs-color-gray3);
   border-radius: 2px;
   box-sizing: border-box;
-  padding: calc(3 * var(--cs-rhythm-third)) var(--cs-rhythm-third) var(--cs-rhythm-third);
+  padding: calc(3 * var(--cs-rhythm-fourth)) var(--cs-rhythm-fourth) calc(2 * var(--cs-rhythm-sixteenth));
   position: relative;
   width: 100%;
 }
@@ -174,7 +174,7 @@ Radio
 Markup:
 <label class="radio {{modifier_class}}">
   <input type="radio" />
-  <span class="radio__label">Radio</span>
+  <span class="label">Radio</span>
 </label>
 
 Styleguide 3.1
@@ -182,20 +182,19 @@ Styleguide 3.1
 */
 
 .radio:before,
-.radio__label:after{
-  border-radius: 20px;
+.radio .label:before,
+.radio .label:after{
+  border-radius: var(--cs-rhythm);
 }
 
-.radio input[type=radio]:checked + .radio__label:before{
+.radio input[type=radio]:checked + .label:before{
   background-color: var(--cs-color-primary-dark);
-  border-radius: 20px;
+  top: var(--cs-rhythm-third);
   content: '';
-  height: var(--cs-rhythm-third);
+  height: var(--cs-rhythm-sixth);
   left: var(--cs-rhythm-sixth);
-  margin-top: calc(-.5 * var(--cs-rhythm-third));
-  position: absolute;
-  top: 50%;
-  width: var(--cs-rhythm-third);
+  margin-top: 0;
+  width: var(--cs-rhythm-sixth);
 }
 
 /*
@@ -205,7 +204,7 @@ Checkbox
 Markup:
 <label class="checkbox {{modifier_class}}">
   <input type="checkbox" />
-  <span class="checkbox__label">Checkbox</span>
+  <span class="label">Checkbox</span>
 </label>
 
 Styleguide 3.2
@@ -213,15 +212,13 @@ Styleguide 3.2
 */
 
 .checkbox:before,
-.checkbox__label:after{
+.checkbox .label:after{
   border-radius: 2px;
 }
 
-.checkbox input[type=checkbox]:checked + .checkbox__label:after {
+.checkbox input[type=checkbox]:checked + .label:after {
   color: var(--cs-color-primary-dark);
   content: '\2714';
-  font-size: 14px;
-  line-height: var(--cs-rhythm-third);
   text-align: center;
 }
 
@@ -231,17 +228,21 @@ Input and text areas
 
 Markup:
 <label class="textfield {{modifier_class}}">
+  <span class="label">Input</span>
   <input type="text" />
-  <span class="textfield__label">Input</span>
 </label>
 <label class="textfield {{modifier_class}}">
+  <span class="label">Textarea</span>
   <textarea></textarea>
-  <span class="textfield__label">Textarea</span>
 </label>
 
 Styleguide 3.3
 
 */
+
+.textfield textarea {
+  min-height: calc(4 * var(--cs-rhythm));
+}
 
 /*
 
@@ -255,7 +256,7 @@ Markup:
     <option>Option 2</option>
     <option>Option 3</option>
   </select>
-  <span class="select__label">Select Label</span>
+  <span class="label">Select Label</span>
 </label>
 
 Styleguide 3.4
@@ -264,14 +265,13 @@ Styleguide 3.4
 
 .select:after{
   content: '';
-  border-left: .6rem solid transparent;
-  border-right:.6rem solid transparent;
-  border-top: .6rem solid var(--cs-color-gray3);
+  border-left: var(--cs-rhythm-fourth) solid transparent;
+  border-right: var(--cs-rhythm-fourth) solid transparent;
+  border-top: var(--cs-rhythm-fourth) solid var(--cs-color-gray3);
   height: 0;
-  margin-top: -.5rem;
   position: absolute;
-  right: 1rem;
-  bottom: 1.3rem;
+  right: var(--cs-rhythm-half);
+  bottom: calc(2 * var(--cs-rhythm-third));
   width: 0;
 }
 
@@ -282,4 +282,11 @@ Styleguide 3.4
 .select option[disabled]{
   background-color: var(--cs-color-gray6);
   color: var(--cs-color-gray2);
+}
+
+/* Firefox detection for keeping exact rhythm */ 
+@-moz-document url-prefix() { 
+  .select {
+    margin-top: -2px;
+  }
 }

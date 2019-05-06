@@ -38,7 +38,10 @@
         <a href="section-3.html">Forms</a>
       </li>
       <li>
-        <a href="section-4.html">Utilities</a>
+        <a href="section-4.html">Grid</a>
+      </li>
+      <li>
+        <a href="section-5.html">Utilities</a>
       </li>
   </ul>
 </nav>
@@ -51,69 +54,67 @@
           <section class="example">
 <pre class="">&lt;form&gt;
   &lt;label class=&quot;textfield&quot;&gt;
+    &lt;span class=&quot;label&quot;&gt;Name&lt;/span&gt;
     &lt;input type=&quot;text&quot; /&gt;
-    &lt;span class=&quot;textfield__label&quot;&gt;Name&lt;/span&gt;
   &lt;/label&gt;
   &lt;label class=&quot;radio&quot;&gt;
     &lt;input type=&quot;radio&quot; name=&quot;example&quot; /&gt;
-    &lt;span class=&quot;radio__label&quot;&gt;Desktop&lt;/span&gt;
+    &lt;span class=&quot;label&quot;&gt;Desktop&lt;/span&gt;
   &lt;/label&gt;
   &lt;label class=&quot;radio&quot;&gt;
     &lt;input type=&quot;radio&quot; name=&quot;example&quot; /&gt;
-    &lt;span class=&quot;radio__label&quot;&gt;Mobile&lt;/span&gt;
+    &lt;span class=&quot;label&quot;&gt;Mobile&lt;/span&gt;
   &lt;/label&gt;
-  &lt;label class=&quot;select&quot;&gt;
+  &lt;label for=&quot;select&quot; class=&quot;select&quot;&gt;
+    &lt;span class=&quot;label&quot;&gt;Favorite Ice Cream&lt;/span&gt;
     &lt;select name=&quot;select&quot;&gt;
       &lt;option disabled=&quot;disabled&quot; selected=&quot;selected&quot;&gt;Flavors&lt;/option&gt;
       &lt;option&gt;Chocolate&lt;/option&gt;
     &lt;/select&gt;
-    &lt;span class=&quot;select__label&quot; for=&quot;select&quot;&gt;Favorite Ice Cream&lt;/span&gt;
   &lt;/label&gt;
   &lt;label class=&quot;textfield&quot;&gt;
+    &lt;span class=&quot;label&quot;&gt;Comments&lt;/span&gt;
     &lt;textarea&gt;&lt;/textarea&gt;
-    &lt;span class=&quot;textfield__label&quot;&gt;Comments&lt;/span&gt;
   &lt;/label&gt;
   &lt;label class=&quot;checkbox&quot;&gt;
     &lt;input type=&quot;checkbox&quot; /&gt;
-    &lt;span class=&quot;checkbox__label&quot;&gt;I Lied&lt;/span&gt;
+    &lt;span class=&quot;label&quot;&gt;I Lied&lt;/span&gt;
   &lt;/label&gt;
   &lt;br/&gt;
   &lt;input type=&quot;submit&quot; value=&quot;Cross My Heart&quot; /&gt;
   &lt;button&gt;okay&lt;/button&gt;
-  &lt;button&gt;not okay&lt;/button&gt;
 &lt;/form&gt;</pre>
             <div class="kss-example"><form>
   <label class="textfield">
+    <span class="label">Name</span>
     <input type="text" />
-    <span class="textfield__label">Name</span>
   </label>
   <label class="radio">
     <input type="radio" name="example" />
-    <span class="radio__label">Desktop</span>
+    <span class="label">Desktop</span>
   </label>
   <label class="radio">
     <input type="radio" name="example" />
-    <span class="radio__label">Mobile</span>
+    <span class="label">Mobile</span>
   </label>
-  <label class="select">
+  <label for="select" class="select">
+    <span class="label">Favorite Ice Cream</span>
     <select name="select">
       <option disabled="disabled" selected="selected">Flavors</option>
       <option>Chocolate</option>
     </select>
-    <span class="select__label" for="select">Favorite Ice Cream</span>
   </label>
   <label class="textfield">
+    <span class="label">Comments</span>
     <textarea></textarea>
-    <span class="textfield__label">Comments</span>
   </label>
   <label class="checkbox">
     <input type="checkbox" />
-    <span class="checkbox__label">I Lied</span>
+    <span class="label">I Lied</span>
   </label>
   <br/>
   <input type="submit" value="Cross My Heart" />
   <button>okay</button>
-  <button>not okay</button>
 </form></div>
           </section>
       </article>
@@ -124,11 +125,11 @@
           <section class="example">
 <pre class="">&lt;label class=&quot;radio &quot;&gt;
   &lt;input type=&quot;radio&quot; /&gt;
-  &lt;span class=&quot;radio__label&quot;&gt;Radio&lt;/span&gt;
+  &lt;span class=&quot;label&quot;&gt;Radio&lt;/span&gt;
 &lt;/label&gt;</pre>
             <div class="kss-example"><label class="radio ">
   <input type="radio" />
-  <span class="radio__label">Radio</span>
+  <span class="label">Radio</span>
 </label></div>
           </section>
       </article>
@@ -139,11 +140,11 @@
           <section class="example">
 <pre class="">&lt;label class=&quot;checkbox &quot;&gt;
   &lt;input type=&quot;checkbox&quot; /&gt;
-  &lt;span class=&quot;checkbox__label&quot;&gt;Checkbox&lt;/span&gt;
+  &lt;span class=&quot;label&quot;&gt;Checkbox&lt;/span&gt;
 &lt;/label&gt;</pre>
             <div class="kss-example"><label class="checkbox ">
   <input type="checkbox" />
-  <span class="checkbox__label">Checkbox</span>
+  <span class="label">Checkbox</span>
 </label></div>
           </section>
       </article>
@@ -153,20 +154,20 @@
           </h2>
           <section class="example">
 <pre class="">&lt;label class=&quot;textfield &quot;&gt;
+  &lt;span class=&quot;label&quot;&gt;Input&lt;/span&gt;
   &lt;input type=&quot;text&quot; /&gt;
-  &lt;span class=&quot;textfield__label&quot;&gt;Input&lt;/span&gt;
 &lt;/label&gt;
 &lt;label class=&quot;textfield &quot;&gt;
+  &lt;span class=&quot;label&quot;&gt;Textarea&lt;/span&gt;
   &lt;textarea&gt;&lt;/textarea&gt;
-  &lt;span class=&quot;textfield__label&quot;&gt;Textarea&lt;/span&gt;
 &lt;/label&gt;</pre>
             <div class="kss-example"><label class="textfield ">
+  <span class="label">Input</span>
   <input type="text" />
-  <span class="textfield__label">Input</span>
 </label>
 <label class="textfield ">
+  <span class="label">Textarea</span>
   <textarea></textarea>
-  <span class="textfield__label">Textarea</span>
 </label></div>
           </section>
       </article>
@@ -182,7 +183,7 @@
     &lt;option&gt;Option 2&lt;/option&gt;
     &lt;option&gt;Option 3&lt;/option&gt;
   &lt;/select&gt;
-  &lt;span class=&quot;select__label&quot;&gt;Select Label&lt;/span&gt;
+  &lt;span class=&quot;label&quot;&gt;Select Label&lt;/span&gt;
 &lt;/label&gt;</pre>
             <div class="kss-example"><label class="select ">
   <select>
@@ -191,7 +192,7 @@
     <option>Option 2</option>
     <option>Option 3</option>
   </select>
-  <span class="select__label">Select Label</span>
+  <span class="label">Select Label</span>
 </label></div>
           </section>
       </article>

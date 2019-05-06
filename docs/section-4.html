@@ -38,7 +38,10 @@
         <a href="section-3.html">Forms</a>
       </li>
       <li>
-        <a href="section-4.html">Utilities</a>
+        <a href="section-4.html">Grid</a>
+      </li>
+      <li>
+        <a href="section-5.html">Utilities</a>
       </li>
   </ul>
 </nav>
@@ -47,110 +50,23 @@
 <div class="wrapper">
 
       <article class="pattern">
-          <h2 id="4">Utilities</h2>
-          <div class="subtitle pattern-description"><p>These utility classes have one or two CSS properties that are meant to save you from creating several identical classes to do the same thing, like just centering some text.</p>
+          <h2 id="4">Grid</h2>
+          <div class="subtitle pattern-description"><p>Buttons and their variations</p>
 </div>
           <section class="example">
-<pre class="">&lt;div class=&quot;[modifier class]&quot; style=&quot;background-color: #ddd&quot;&gt;
-  Example Text
+<pre class="">&lt;div class=&quot;grid&quot;&gt;
+  &lt;div&gt;Column&lt;/div&gt;
+  &lt;div&gt;Column&lt;/div&gt;
+  &lt;div&gt;Column&lt;/div&gt;
+  &lt;div&gt;Column&lt;/div&gt;
+  &lt;div&gt;Column&lt;/div&gt;
 &lt;/div&gt;</pre>
-            <div class="kss-example"><div class="[modifier class]" style="background-color: #ddd">
-  Example Text
-</div></div>
-              <hr />
-              <p class="clearfix kss-modifier-title"><code>.disabled</code> <span class="f-right fs-small">Disable an Element</span></p>
-              <div class="kss-example"><div class="disabled" style="background-color: #ddd">
-  Example Text
-</div></div>
-              <hr />
-              <p class="clearfix kss-modifier-title"><code>.smooth</code> <span class="f-right fs-small">Smoothed font rendering</span></p>
-              <div class="kss-example"><div class="smooth" style="background-color: #ddd">
-  Example Text
-</div></div>
-              <hr />
-              <p class="clearfix kss-modifier-title"><code>.clearfix</code> <span class="f-right fs-small">Clear floats to keep the parent container in shape</span></p>
-              <div class="kss-example"><div class="clearfix" style="background-color: #ddd">
-  Example Text
-</div></div>
-              <hr />
-              <p class="clearfix kss-modifier-title"><code>.f-none</code> <span class="f-right fs-small">float: none;</span></p>
-              <div class="kss-example"><div class="f-none" style="background-color: #ddd">
-  Example Text
-</div></div>
-              <hr />
-              <p class="clearfix kss-modifier-title"><code>.f-left</code> <span class="f-right fs-small">float: left;</span></p>
-              <div class="kss-example"><div class="f-left" style="background-color: #ddd">
-  Example Text
-</div></div>
-              <hr />
-              <p class="clearfix kss-modifier-title"><code>.f-right</code> <span class="f-right fs-small">float: right;</span></p>
-              <div class="kss-example"><div class="f-right" style="background-color: #ddd">
-  Example Text
-</div></div>
-              <hr />
-              <p class="clearfix kss-modifier-title"><code>.ta-left</code> <span class="f-right fs-small">text-align: left;</span></p>
-              <div class="kss-example"><div class="ta-left" style="background-color: #ddd">
-  Example Text
-</div></div>
-              <hr />
-              <p class="clearfix kss-modifier-title"><code>.ta-center</code> <span class="f-right fs-small">text-align: center;</span></p>
-              <div class="kss-example"><div class="ta-center" style="background-color: #ddd">
-  Example Text
-</div></div>
-              <hr />
-              <p class="clearfix kss-modifier-title"><code>.ta-right</code> <span class="f-right fs-small">text-align: right;</span></p>
-              <div class="kss-example"><div class="ta-right" style="background-color: #ddd">
-  Example Text
-</div></div>
-          </section>
-      </article>
-      <article class="pattern">
-          <h2 class="kss-title" id="4-1">
-            <span class="kss-ref badge pull-right">4-1</span> Type Utilities
-          </h2>
-          <div class="subtitle pattern-description"><p>These are specific typography related utilities</p>
-</div>
-          <section class="example">
-<pre class="">&lt;div class=&quot;type [modifier class]&quot;&gt;
-  The quick brown fox jumps over the lazy dog.
-&lt;/div&gt;</pre>
-            <div class="kss-example"><div class="type [modifier class]">
-  The quick brown fox jumps over the lazy dog.
-</div></div>
-              <hr />
-              <p class="clearfix kss-modifier-title"><code>.fs-small</code> <span class="f-right fs-small">Smaller than the default font size</span></p>
-              <div class="kss-example"><div class="type fs-small">
-  The quick brown fox jumps over the lazy dog.
-</div></div>
-              <hr />
-              <p class="clearfix kss-modifier-title"><code>.fs-base</code> <span class="f-right fs-small">Exactly the default font size</span></p>
-              <div class="kss-example"><div class="type fs-base">
-  The quick brown fox jumps over the lazy dog.
-</div></div>
-              <hr />
-              <p class="clearfix kss-modifier-title"><code>.fs-large</code> <span class="f-right fs-small">Larger than the default font size</span></p>
-              <div class="kss-example"><div class="type fs-large">
-  The quick brown fox jumps over the lazy dog.
-</div></div>
-              <hr />
-              <p class="clearfix kss-modifier-title"><code>.fw-light</code> <span class="f-right fs-small">Changes the type to be 300 weight</span></p>
-              <div class="kss-example"><div class="type fw-light">
-  The quick brown fox jumps over the lazy dog.
-</div></div>
-              <hr />
-              <p class="clearfix kss-modifier-title"><code>.fw-normal</code> <span class="f-right fs-small">Changes the type to be 400 weight</span></p>
-              <div class="kss-example"><div class="type fw-normal">
-  The quick brown fox jumps over the lazy dog.
-</div></div>
-              <hr />
-              <p class="clearfix kss-modifier-title"><code>.fw-semibold</code> <span class="f-right fs-small">Changes the type to be 600 weight</span></p>
-              <div class="kss-example"><div class="type fw-semibold">
-  The quick brown fox jumps over the lazy dog.
-</div></div>
-              <hr />
-              <p class="clearfix kss-modifier-title"><code>.fw-bold</code> <span class="f-right fs-small">Changes the type to be 700 weight</span></p>
-              <div class="kss-example"><div class="type fw-bold">
-  The quick brown fox jumps over the lazy dog.
+            <div class="kss-example"><div class="grid">
+  <div>Column</div>
+  <div>Column</div>
+  <div>Column</div>
+  <div>Column</div>
+  <div>Column</div>
 </div></div>
           </section>
       </article>

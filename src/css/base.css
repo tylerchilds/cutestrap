@@ -28,40 +28,36 @@ body{
 
 h1, h2, h3, h4, h5, h6{
   font-family: var(--cs-font-heading);
-  font-weight: 500;
-}
-
-h1, h2, h3{
-  line-height: var(--cs-rhythm-double);
-  padding: var(--cs-rhythm-third) 0 calc(2 * var(--cs-rhythm-third));
-}
-
-h4, h5, h6{
-  padding: var(--cs-rhythm) 0;
+  font-size: var(--cs-font-size);
+  line-height: var(--cs-line-height);
+  margin: var(--cs-rhythm) 0;
 }
 
 h1{
-  font-size: calc(1.5 * var(--cs-rhythm));
+  --cs-sub-rhythm: var(--cs-rhythm-quadruple);
+  font-weight: 700;
 }
 
 h2{
-  font-size: 3.2rem;
+  --cs-sub-rhythm: var(--cs-rhythm-quadruple);
 }
 
 h3{
-  font-size: 2.8rem;
+  --cs-sub-rhythm: var(--cs-rhythm-triple);
+  font-weight: 700;
 }
 
 h4{
-  font-size: 2.0rem;
+  --cs-sub-rhythm: var(--cs-rhythm-triple);
 }
 
 h5{
-  font-size: 1.8rem;
+  --cs-sub-rhythm: var(--cs-rhythm-double);
+  font-weight: 700;
 }
 
 h6{
-  font-size: 1.6rem;
+  font-weight: 700;
 }
 
 p{
@@ -150,7 +146,7 @@ hr:before {
 
 ol,
 ul{
-  margin-left: 2rem;
+  margin-left: var(--cs-rhythm);
   padding: 0 0 var(--cs-rhythm);
 }
 
@@ -174,7 +170,7 @@ dt{
   font-style: italic;
 }
 dd{
-  padding-left: 2rem;
+  padding-left: var(--cs-rhythm);
 }
 
 blockquote{
@@ -237,7 +233,7 @@ q > q{
 
 dfn,
 abbr{
-  border-bottom: .1rem dotted var(--cs-color-gray2);
+  border-bottom: var(--cs-rhythm-sixteenth) dotted var(--cs-color-gray2);
   cursor: default;
 }
 
@@ -276,15 +272,11 @@ textarea
   -moz-appearance: none;
 }
 
-label {
-  padding: 0;
+select:-moz-focusring {
+  /* color: transparent;
+  text-shadow: 0 0 0 #f00; */
 }
 
-/* remove yellow from chrome auto-fill background */
-input:-webkit-autofill,
-textarea:-webkit-autofill,
-select:-webkit-autofill {
-  color: var(--cs-color-gray1);
-  -webkit-text-fill-color: var(--cs-color-gray1);
-  -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+label {
+  padding: 0;
 }
