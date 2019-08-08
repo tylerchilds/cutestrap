@@ -8,6 +8,36 @@ html.grid--is_active{
   }
 }
 
+body {
+  margin-top: 4.8rem;
+}
+
+.banner {
+  background-color: hsla(348, 79, 61, 1);
+  color: hsla(348, 79, 20, 1);
+  padding: 1.2rem 2.4rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.banner-link {
+  &:link,
+  &:visited {
+    color: hsla(348, 79, 100, 1);
+  }
+  &:hover,
+  &:focus {
+    color: hsla(348, 79, 90, 1);
+  }
+  &:active {
+    color: hsla(348, 79, 100, 1);
+    text-decoration: none;
+  }
+}
+
 header h1{
   font-family: 'Pacifico', $base-font;
   color: $primary;
@@ -15,9 +45,9 @@ header h1{
 
 .grid-toggle{
   font-size: $font-size--small;
-  position: fixed;
-  right: 2rem;
-  top: 2.4rem;
+  position: absolute;
+  right: 2.4rem;
+  bottom: -4.8rem;
   z-index: $z_index-2;
 }
 
