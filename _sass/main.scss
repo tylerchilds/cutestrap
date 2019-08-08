@@ -59,3 +59,8 @@ header h1{
   margin-bottom: 2.4rem;
   text-align: center;
 }
+
+.foo:before {
+  // just trying to force sass to compile
+  content: 'bar';
+}
