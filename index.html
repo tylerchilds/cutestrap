@@ -1,16 +1,26 @@
 ---
-layout: default
+layout: landing
 title: Cutestrap
 permalink: /
 description: A sassy, opinionated CSS Framework. A tiny alternative to Bootstrap.
 ---
-<div class="banner">
-  Cutestrap 2.0 is in development. If you're interested in providing feedback, <a href="mailto:cutestrap@bamzap.pw" class="banner-link">please email me</a>.
-  <a href="javascript:;" class="js-grid-toggle grid-toggle">Toggle Gridlines</a>
+<div class="toolbar">
+  Size:
+  {% include components/toolbar-button.html label="Small" %}
+  {% include components/toolbar-button.html label="Normal" %}
+  {% include components/toolbar-button.html label="Large" %}
+
+  Theme:
+  {% include components/toolbar-button.html label="Light" %}
+  {% include components/toolbar-button.html label="Dark" %}
+  {% include components/toolbar-button.html label="Legal Pad" %}
+
+  Gridlines:
+  {% include components/toolbar-button.html label="Toggle Lines" %}
 </div>
 <header class="wrapper-large ta-center">
-  <h1>
-    {{ page.title }}
+  <h1 class="logo">
+    Cutestrap Two
   </h1>
   <p>{{ page.description }}</p>
   <p>
@@ -82,7 +92,7 @@ description: A sassy, opinionated CSS Framework. A tiny alternative to Bootstrap
   <form>
     <label class="textfield">
       <input type="text" />
-      <span class="textfield__label">Your Name</span>
+      <span class="label">Your Name</span>
     </label>
     <label class="select">
       <select>
@@ -90,19 +100,19 @@ description: A sassy, opinionated CSS Framework. A tiny alternative to Bootstrap
         <option>Chocolate</option>
         <option>Vanilla</option>
       </select>
-      <span class="select__label" for="select">Flavor</span>
+      <span class="label" for="select">Flavor</span>
     </label>
     <label class="radio">
       <input type="radio" name="example" />
-      <span class="radio__label">Cone</span>
+      <span class="label">Cone</span>
     </label>
     <label class="radio">
       <input type="radio" name="example" />
-      <span class="radio__label">Bowl</span>
+      <span class="label">Bowl</span>
     </label>
     <label class="textfield">
       <textarea></textarea>
-      <span class="textfield__label">Special Requests</span>
+      <span class="label">Special Requests</span>
     </label>
     <label class="checkbox">
       <input type="checkbox" />
@@ -114,7 +124,7 @@ description: A sassy, opinionated CSS Framework. A tiny alternative to Bootstrap
 <pre><xmp><form>
   <label class="textfield">
     <input type="text" />
-    <span class="textfield__label">Your Name</span>
+    <span class="label">Your Name</span>
   </label>
   <label class="select">
     <select>
@@ -122,19 +132,19 @@ description: A sassy, opinionated CSS Framework. A tiny alternative to Bootstrap
       <option>Chocolate</option>
       <option>Vanilla</option>
     </select>
-    <span class="select__label" for="select">Flavor</span>
+    <span class="label" for="select">Flavor</span>
   </label>
   <label class="radio">
     <input type="radio" name="example" />
-    <span class="radio__label">Cone</span>
+    <span class="label">Cone</span>
   </label>
   <label class="radio">
     <input type="radio" name="example" />
-    <span class="radio__label">Bowl</span>
+    <span class="label">Bowl</span>
   </label>
   <label class="textfield">
     <textarea></textarea>
-    <span class="textfield__label">Special Requests</span>
+    <span class="label">Special Requests</span>
   </label>
   <label class="checkbox">
     <input type="checkbox" />

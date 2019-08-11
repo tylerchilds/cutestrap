@@ -1,0 +1,12 @@
+---
+layout: default
+---
+
+<section class="wrapper">
+  <div class="post-list">
+    {% for post in site.posts %}
+      {% include blog/snippet.html post=post %}
+    {% endfor %}
+  </div>
+</section>
+  

@@ -1,0 +1,299 @@
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
+
+/*
+  0. Head CSS Cacheables
+*/
+
+html {
+  --breakpoint: 900px;
+  --gutter-width: var(--cs-rhythm);
+  --border-radius: var(--cs-rhythm-half);
+}
+
+body {
+  box-sizing: border-box;
+  position: relative;
+  overflow-x: hidden;
+  margin-top: var(--cs-rhythm);
+}
+
+header {
+  text-align: center;
+  margin: 1.2rem 1.2rem 2.4rem;
+}
+
+main {
+  margin: 0 1.2rem;
+}
+
+footer {
+  padding: 2.4rem 1.2rem;
+}
+
+.site-nav {
+  border-top: 1px solid var(--gray5);
+  border-bottom: 1px solid var(--gray5);
+  display: inline-block;
+  max-width: 100%;
+}
+
+@media screen and (min-width: 45rem){
+  .site-nav {
+    padding: 0 4.8rem;
+  }
+}
+
+.nav-item-wrapper {
+  display: inline-block;
+}
+
+.nav-item {
+  display: inline-block;
+  padding: 1.2rem 2.4rem;
+}
+
+/*
+  1. General
+*/
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  text-decoration: none;
+}
+
+.sidebar a {
+  text-decoration: none;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+/*
+  1.1 Page Styles
+*/
+
+.page-header{
+  padding: 4.8rem 0;
+  text-align: center;
+}
+
+.page-header h1 {
+  font-weight: 100;
+  letter-spacing: 2px;
+  padding: 0;
+}
+
+@media (min-width: 55rem) {
+  .page-header h1 {
+    font-size: 9.6rem;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 11rem;
+  }  
+}
+
+.page-meta {
+  color: var(--gray3);
+}
+
+.page-navigation {
+  display: grid;
+  column-gap: var(--gutter-width);
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 2.4rem;
+}
+
+.page-previous {
+  text-align: right;
+}
+
+/*
+  2: Layout
+*/
+
+body {
+  margin: auto;
+  max-width: initial;
+}
+
+footer {
+  display: grid;
+  column-gap: var(--gutter-width);
+  grid-template-columns: repeat(2, 1fr);
+  background-color: var(--gray6);
+}
+
+/*
+  2.1: Header
+*/
+
+.site-title:link,
+.site-title:visited,
+.site-title:hover,
+.site-title:focus,
+.site-title:active {
+  color: var(--gray1);
+  font-family: monospace;
+  text-decoration: none;
+}
+
+.logo {
+  color: var(--cs-color-primary);
+  font-family: 'Pacifico', 'Avenir', 'Avenir Next','Helvetica Neue','Segoe UI', 'Verdana', sans-serif;
+  font-weight: normal;
+}
+
+
+/*
+  2.1.1: Toolbar
+*/
+
+.toolbar {
+  padding: var(--cs-rhythm-eighth);
+}
+
+.toolbar-button {
+  display: inline-block;
+  padding: var(--cs-rhythm-eighth) var(--cs-rhythm-fourth);
+}
+
+/*
+  2.2 Sidebar
+*/
+
+.sidebar h4 {
+  color: var(--gray3);
+  text-transform: uppercase;
+  padding: 0 0 1.2rem;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding-bottom: 1.2rem;
+  margin-left: 0;
+}
+
+@media (min-width: 55rem) {
+  .sidebar h4 {
+    font-size: var(--font-size);
+  }
+}
+
+.sidebar a {
+  display: inline-block;
+  margin-bottom: 1.2rem;
+}
+
+/*
+  2.3: Homepage Layout
+*/
+
+.layout-homepage {
+  display: grid;
+  grid-template-areas: "promoted promoted recent"
+                       "featured basics categories";
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.area-promoted {
+  grid-area: promoted;
+}
+
+.area-recent {
+  grid-area: recent;
+}
+
+.area-featured {
+  grid-area: featured;
+}
+
+.area-basics {
+  grid-area: basics;
+}
+
+.area-categories {
+  grid-area: categories;
+}
+
+/*
+  2.4: Two Column Layout
+*/
+
+.layout-two-column {
+  display: grid;
+  grid-template-areas:  "title"
+                        "main"
+                        "sidebar";
+  max-width: 85rem;
+  margin: 0 auto;
+}
+
+@media (min-width: 55rem) {
+  .layout-two-column {
+    grid-template-areas: "sidebar main";
+    grid-template-columns: minmax(20rem, auto) minmax(60vw, 65rem);
+    column-gap: var(--gutter-width);
+    row-gap: var(--gutter-width);
+  }
+}
+
+.area-sidebar {
+  grid-area: sidebar;
+  padding: 2.4rem 0 4.8rem;
+}
+
+@media (min-width: 55rem) {
+  .area-sidebar {
+    text-align: right;
+    border-right: 1px solid var(--gray5);
+    padding-right: var(--gutter-width);
+  }
+}
+
+.area-main {
+  grid-area: main;
+  width: 100%;
+  max-width: 65rem;
+  padding-top: 2.4rem;
+  padding-bottom: 4.8rem;
+}
+
+/*
+  3: Post Lists
+*/  
+
+.snippet {
+  margin-bottom: 2.4rem;
+  position: relative;
+}
+
+.snippet:last-child {
+  margin-bottom: 0;
+}
+
+.snippet::after {
+  border-bottom: 1px solid var(--gray5);
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: calc(-1 * var(--gutter-width));
+  right: 0;
+}
+
+.snippet:last-child::after {
+  content: none;
+}
+
+/*
+  4: Posts
+*/
+
+.post {
+  margin-bottom: 4.8rem;
+}

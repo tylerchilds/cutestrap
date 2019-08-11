@@ -1,0 +1,19 @@
+{
+  "name": "cutestrap.github.io",
+  "author": "Tyler Childs",
+  "contributors": [
+    "Tyler Childs <tylerwchilds@gmail.com>"
+  ],
+  "license": "MIT",
+  "description": "Website for promoting Cutestrap and related projects.",
+  "homepage": "https://www.cutestrap.com/",
+  "version": "2.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/tylerchilds/cutestrap.github.io.git"
+  },
+  "scripts": {
+    "start": "bundle exec jekyll serve",
+    "copy": "cp ../cutestrap/dist/css/cutestrap.css ./css/versions/cutestrap.2.0.0.beta.min.css"
+  }
+}

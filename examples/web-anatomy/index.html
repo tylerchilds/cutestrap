@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Counter for A Bouncer</title>
+
+    <style type="text/css">
+      html {
+        background-color: #f9f9f9;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        height: 100vh;
+        margin: 0;
+        padding: 20px 10px;
+        box-sizing: border-box;
+      }
+
+      body {
+        text-align: center;
+        border: 1px solid #ccc;
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 20px 10px 40px;
+        max-width: 600px;
+        margin: 0 auto;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      h1 {
+        font-size: 72px;
+        margin: 10px 0 20px 0;
+      }
+
+      .subtitle {
+        color: #555;
+      }
+
+      .headcount-paragraph {
+        font-size: 32px;
+      }
+
+      .counter-button {
+        width: 30%;
+        font-size: 16px;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Counter</h1>
+    <p class="subtitle">
+      This counter allows you to keep track of the club's occupancy.
+    </p>
+
+    <!--
+      The aria-live attribute is for screen readers.
+      It will re-read this paragraph when it changes.
+    -->
+    <p class="headcount-paragraph" aria-live="polite">
+      The club currently has <strong id="headcount">0</strong> people.
+    </p>
+    
+    <button class="counter-button" id="minusButton">
+      Minus 1
+    </button>
+    <button class="counter-button" id="addButton">
+      Add 1
+    </button>
+
+    <script type="text/javascript">
+      let count = 0;
+      const minimum = 0;
+      const maximum = 10;
+
+      const minusButton = document.getElementById('minusButton');
+      const addButton = document.getElementById('addButton');
+
+      const headcount = document.getElementById('headcount');
+
+      function updateCount(newCount){
+        count = newCount;
+
+        headcount.innerText = count;
+      }
+
+      function minus() {
+        const newCount = count - 1;
+
+        if(newCount >= minimum) {
+          updateCount(newCount);
+        }
+      };
+
+      function add(){
+        const newCount = count + 1;
+
+        if(newCount <= maximum) {
+          updateCount(newCount);
+        }
+      };
+
+      addButton.addEventListener('click', add);
+      minusButton.addEventListener('click', minus);
+    </script>
+  </body>
+</html>

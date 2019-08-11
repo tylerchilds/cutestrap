@@ -1,54 +1,33 @@
-var $ = function(selector){
-  return document.querySelectorAll(selector);
-};
+const activeClass = '-active';
 
-$html = $('html')[0];
+function handleBrowserTabs(tabs, tabContents, event) {
+    tabs.forEach(x =>
+        x.classList.remove(activeClass)
+    );
+    tabContents.forEach(x =>
+        x.classList.remove(activeClass)
+    );
 
-var demo = {
-  start: function(){
-    if(localStorage.getItem('gridlines') === "true"){
-      if ($html.classList)
-        $html.classList.add('grid--is_active');
-      else
-        $html.className += ' ' + 'grid--is_active';
-    }
-  },
+    const tab = event.target;
+    const id = tab.dataset.id;
+    const tabContent = document.getElementById(id);
 
-  toggle_grid: function(){
-    
-    if ($html.classList) {
-      $html.classList.toggle('grid--is_active');
-      localStorage.setItem('gridlines', $html.classList.contains('grid--is_active'));
-    } else {
-      var classes = $html.className.split(' ');
-      var existingIndex = classes.indexOf('grid--is_active');
+    tab.classList.add(activeClass);
+    tabContent.classList.add(activeClass);
+}
 
-      if (existingIndex >= 0)
-        classes.splice(existingIndex, 1);
-      else
-        classes.push('grid--is_active');
 
-      $html.className = classes.join(' ');
-      localStorage.setItem('gridlines', new RegExp('(^| )' + 'grid--is_active' + '( |$)', 'gi').test($html.className));
-    }
-
-  },
-
-  prevent_form_submission: function(e){
-    e.preventDefault();
-  }
-};
+function bindBrowserTabs() {
+    const tabs = document.querySelectorAll('.example-tab');
+    const tabContents = document.querySelectorAll('.example-tab-content');
+    tabs.forEach(x => 
+        x.addEventListener('click', handleBrowserTabs.bind(null, tabs, tabContents))
+    );
+}
 
 (function(){
+    // document.querySelectorAll('.js-print').addEventListener('click', window.print);
+    
 
-  demo.start();
-
-  for (var i = 0; i < $('form').length; i++) {
-    $('form')[i].addEventListener('submit', demo.prevent_form_submission);
-  }
-
-  for (var i = 0; i < $('.js-grid-toggle').length; i++) {
-    $('.js-grid-toggle')[i].addEventListener('click', demo.toggle_grid);
-  }
-
+    bindBrowserTabs();
 })();
