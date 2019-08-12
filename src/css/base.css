@@ -27,26 +27,26 @@ h1, h2, h3, h4, h5, h6{
 }
 
 h1{
-  --cs-sub-rhythm: var(--cs-rhythm-quadruple);
+  --cs-sub-rhythm: var(--cs-rhythm-triple);
   font-weight: 700;
 }
 
 h2{
-  --cs-sub-rhythm: var(--cs-rhythm-quadruple);
+  --cs-sub-rhythm: var(--cs-rhythm-triple);
 }
 
 h3{
   --cs-sub-rhythm: var(--cs-rhythm-triple);
-  font-weight: 700;
+  font-weight: 100;
 }
 
 h4{
-  --cs-sub-rhythm: var(--cs-rhythm-triple);
+  --cs-sub-rhythm: var(--cs-rhythm-double);
+  font-weight: 700;
 }
 
 h5{
   --cs-sub-rhythm: var(--cs-rhythm-double);
-  font-weight: 700;
 }
 
 h6{
