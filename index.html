@@ -6,17 +6,16 @@ description: A sassy, opinionated CSS Framework. A tiny alternative to Bootstrap
 ---
 <div class="toolbar">
   Size:
-  {% include components/toolbar-button.html label="Small" %}
-  {% include components/toolbar-button.html label="Normal" %}
-  {% include components/toolbar-button.html label="Large" %}
+  {% include components/toolbar-button.html label="Small" classList="js-rhythm-toggle" attributes="data-rhythm='small'" %}
+  {% include components/toolbar-button.html label="Normal" classList="js-rhythm-toggle" attributes="data-rhythm='normal'" %}
+  {% include components/toolbar-button.html label="Large" classList="js-rhythm-toggle" attributes="data-rhythm='large'" %}
 
   Theme:
-  {% include components/toolbar-button.html label="Light" %}
-  {% include components/toolbar-button.html label="Dark" %}
-  {% include components/toolbar-button.html label="Legal Pad" %}
+  {% include components/toolbar-button.html label="Light" classList="js-theme-toggle" attributes="data-theme='light'" %}
+  {% include components/toolbar-button.html label="Dark" classList="js-theme-toggle" attributes="data-theme='dark'" %}
 
   Gridlines:
-  {% include components/toolbar-button.html label="Toggle Lines" %}
+  {% include components/toolbar-button.html label="Toggle Lines" classList="js-grid-toggle" %}
 </div>
 <header class="wrapper-large ta-center">
   <h1 class="logo">
@@ -116,10 +115,10 @@ description: A sassy, opinionated CSS Framework. A tiny alternative to Bootstrap
     </label>
     <label class="checkbox">
       <input type="checkbox" />
-      <span class="checkbox__label">Sprinkles</span>
+      <span class="label">Sprinkles</span>
     </label>
     <br/>
-    <input type="submit" value="Place Order" />
+    <input type="submit" class="button" value="Place Order" />
   </form>
 <pre><xmp><form>
   <label class="textfield">
@@ -148,10 +147,10 @@ description: A sassy, opinionated CSS Framework. A tiny alternative to Bootstrap
   </label>
   <label class="checkbox">
     <input type="checkbox" />
-    <span class="checkbox__label">Sprinkles</span>
+    <span class="label">Sprinkles</span>
   </label>
   <br/>
-  <input type="submit" value="Place Order" />
+  <input type="submit" class="button" value="Place Order" />
 </form></xmp></pre>
 
   <h3>Buttons</h3>
@@ -159,14 +158,14 @@ description: A sassy, opinionated CSS Framework. A tiny alternative to Bootstrap
     A default button is applied with the <code>.btn</code> class or automatically on <code>button</code> tags or button/submit inputs.
   </p>
   <p>
-    <button>Default</button>
-    <button class="btn--secondary">Secondary</button>
-    <a class="btn btn--link" href="#">Link</a>
+    <button class="button">Default</button>
+    <button class="button -secondary">Secondary</button>
+    <a class="button -link" href="#">Link</a>
   </p>
 
-<pre><xmp><button>Default</button>
-<button class="btn--secondary">Secondary</button>
-<a class="btn btn--link" href="#">Link</a></xmp></pre>
+<pre><xmp><button class="button">Default</button>
+<button class="button -secondary">Secondary</button>
+<a class="button -link" href="#">Link</a></xmp></pre>
   <hr />
 
   <h2>Grid</h2>
