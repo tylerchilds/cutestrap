@@ -6,7 +6,7 @@ These utility classes have one or two CSS properties that are meant to save you 
 
 Markup:
 <div class="{{modifier_class}}" style="background-color: #ddd">
-  Example Text
+    Example Text
 </div>
 
 .disabled                - Disable an Element
@@ -24,43 +24,43 @@ Styleguide 5.0
 */
 
 .disabled{
-  cursor: default;
-  opacity: .5;
-  pointer-events: none;
+    cursor: default;
+    opacity: .5;
+    pointer-events: none;
 }
 
 .smooth{
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .f-none{
-  float: none;
+    float: none;
 }
 
 .f-left{
-  float: left;
+    float: left;
 }
 
 .f-right{
-  float: right;
+    float: right;
 }
 
 .clearfix{
-  clear: both;
-  overflow: hidden;
+    clear: both;
+    overflow: hidden;
 }
 
 .ta-left{
-  text-align: left;
+    text-align: left;
 }
 
 .ta-center{
-  text-align: center;
+    text-align: center;
 }
 
 .ta-right{
-  text-align: right;
+    text-align: right;
 }
 
 /*
@@ -71,7 +71,7 @@ These are specific typography related utilities
 
 Markup:
 <div class="type {{modifier_class}}">
-  The quick brown fox jumps over the lazy dog.
+    The quick brown fox jumps over the lazy dog.
 </div>
 
 .fw-light            - Changes the type to be 300 weight
@@ -85,17 +85,17 @@ Styleguide 5.1
 
 
 .fw-light{
-  font-weight: 300;
+    font-weight: 300;
 }
 
 .fw-normal{
-  font-weight: 400;
+    font-weight: 400;
 }
 
 .fw-semibold{
-  font-weight: 600;
+    font-weight: 600;
 }
 
 .fw-bold{
-  font-weight: 700;
+    font-weight: 700;
 }

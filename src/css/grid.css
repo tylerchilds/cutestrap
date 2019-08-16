@@ -6,11 +6,11 @@ A simple grid with automatic columns
 
 Markup:
 <div class="grid">
-  <div>Column</div>
-  <div>Column</div>
-  <div>Column</div>
-  <div>Column</div>
-  <div>Column</div>
+    <div>Column</div>
+    <div>Column</div>
+    <div>Column</div>
+    <div>Column</div>
+    <div>Column</div>
 </div>
 
 Styleguide 4.0
@@ -18,9 +18,12 @@ Styleguide 4.0
 */
 
 .grid {
-  --cs-grid-column-min: 15rem;
+    --cs-grid-column-min: 15rem;
 
-  display: grid;
-  grid-gap: var(--cs-rhythm);
-  grid-template-columns: repeat(auto-fit, minmax(var(--cs-grid-column-min), 1fr));
+    display: grid;
+    grid-gap: var(--cs-rhythm);
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(var(--cs-grid-column-min),1fr)
+    );
 }

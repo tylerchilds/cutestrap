@@ -4,33 +4,33 @@ Forms
 
 Markup:
 <form>
-  <label class="textfield">
-    <span class="label">Name</span>
-    <input type="text" />
-  </label>
-  <label class="radio">
-    <input type="radio" name="example" />
-    <span class="label">Desktop</span>
-  </label>
-  <label class="radio">
-    <input type="radio" name="example" />
-    <span class="label">Mobile</span>
-  </label>
-  <label for="select" class="select">
-    <span class="label">Favorite Ice Cream</span>
-    <select name="select">
-      <option disabled="disabled" selected="selected">Flavors</option>
-      <option>Chocolate</option>
-    </select>
-  </label>
-  <label class="textfield">
-    <span class="label">Comments</span>
-    <textarea></textarea>
-  </label>
-  <label class="checkbox">
-    <input type="checkbox" />
-    <span class="label">I Lied</span>
-  </label>
+    <label class="textfield">
+        <span class="label">Name</span>
+        <input type="text" />
+    </label>
+    <label class="radio">
+        <input type="radio" name="example" />
+        <span class="label">Desktop</span>
+    </label>
+    <label class="radio">
+        <input type="radio" name="example" />
+        <span class="label">Mobile</span>
+    </label>
+    <label for="select" class="select">
+        <span class="label">Favorite Ice Cream</span>
+        <select name="select">
+            <option disabled="disabled" selected="selected">Flavors</option>
+            <option>Chocolate</option>
+        </select>
+    </label>
+    <label class="textfield">
+        <span class="label">Comments</span>
+        <textarea></textarea>
+    </label>
+    <label class="checkbox">
+        <input type="checkbox" />
+        <span class="label">I Lied</span>
+    </label>
 </form>
 
 Styleguide 3.0
@@ -38,8 +38,8 @@ Styleguide 3.0
 */
 
 /*
-  Shared Styles
-  All form controls
+    Shared Styles
+    All form controls
 */
 
 .radio [disabled],
@@ -54,113 +54,113 @@ Styleguide 3.0
 [type=reset][disabled],
 [type=submit][disabled],
 button[disabled]{
-  cursor: default;
-  opacity: .5;
-  pointer-events: none;
+    cursor: default;
+    opacity: .5;
+    pointer-events: none;
 }
 
 /*
-  Shared Styles
-  Radio and Checkbox
+    Shared Styles
+    Radio and Checkbox
 */
 
 .radio,
 .checkbox{
-  cursor: pointer;
-  display: inline-block;
-  margin-bottom: var(--cs-rhythm);
-  padding: 0 var(--cs-rhythm-half) 0 var(--cs-rhythm);;
-  position: relative;
+    cursor: pointer;
+    display: inline-block;
+    margin-bottom: var(--cs-rhythm);
+    padding: 0 var(--cs-rhythm-half) 0 var(--cs-rhythm);;
+    position: relative;
 }
 
 .radio:before,
 .checkbox:before{
-  background-color: var(--cs-color-white);
-  border: var(--cs-rhythm-twelfth) solid var(--cs-color-gray3);
-  content: '';
-  height: var(--cs-rhythm-half);
-  left: 0;
-  margin-top: calc(-1 * var(--cs-rhythm-third));
-  position: absolute;
-  top: 50%;
-  width: var(--cs-rhythm-half);
+    background-color: var(--cs-color-white);
+    border: var(--cs-rhythm-twelfth) solid var(--cs-color-gray3);
+    content: '';
+    height: var(--cs-rhythm-half);
+    left: 0;
+    margin-top: calc(-1 * var(--cs-rhythm-third));
+    position: absolute;
+    top: 50%;
+    width: var(--cs-rhythm-half);
 }
 
 .checkbox input[type=checkbox],
 .radio input[type=radio]{
-  opacity: 0;
-  position: absolute;
-  z-index: 0;
+    opacity: 0;
+    position: absolute;
+    z-index: 0;
 }
 
 .radio .label,
 .checkbox .label{
-  color: var(--cs-color-gray3);
-  font-size: var(--cs-rhythm-half);
-  line-height: 1;
+    color: var(--cs-color-gray3);
+    font-size: var(--cs-rhythm-half);
+    line-height: 1;
 }
 
 .radio .label:before,
 .radio .label:after,
 .checkbox .label:after{
-  border: var(--cs-rhythm-twelfth) solid transparent;
-  content: '';
-  height: var(--cs-rhythm-half);
-  left: 0;
-  margin-top: calc(-1 * var(--cs-rhythm-third));
-  position: absolute;
-  top: 50%;
-  width: var(--cs-rhythm-half);
+    border: var(--cs-rhythm-twelfth) solid transparent;
+    content: '';
+    height: var(--cs-rhythm-half);
+    left: 0;
+    margin-top: calc(-1 * var(--cs-rhythm-third));
+    position: absolute;
+    top: 50%;
+    width: var(--cs-rhythm-half);
 }
 
 .radio input[type=radio]:focus + .label:after,
 .checkbox input[type=checkbox]:focus + .label:after {
-  outline: var(--cs-rhythm-twelfth) dotted #f00;
-  outline-offset: var(--cs-rhythm-twelfth);
+    outline: var(--cs-rhythm-twelfth) dotted #f00;
+    outline-offset: var(--cs-rhythm-twelfth);
 }
 
 /*
-  Shared Styles
-  Textfield and Select
+    Shared Styles
+    Textfield and Select
 */
 
 .textfield,
 .select{
-  background-color: var(--cs-color-white);
-  display: block;
-  margin-bottom: var(--cs-rhythm);
-  position: relative;
+    background-color: var(--cs-color-white);
+    display: block;
+    margin-bottom: var(--cs-rhythm);
+    position: relative;
 }
 
 .textfield .label,
 .select .label{
-  background-color: var(--cs-color-white);
-  font-size: var(--cs-rhythm-half);
-  position: absolute;
-  left: var(--cs-rhythm-sixteenth);
-  line-height: 1;
-  padding: var(--cs-rhythm-fourth);
-  right: var(--cs-rhythm-sixteenth);
-  top: var(--cs-rhythm-sixteenth);
+    background-color: var(--cs-color-white);
+    font-size: var(--cs-rhythm-half);
+    position: absolute;
+    left: var(--cs-rhythm-sixteenth);
+    line-height: 1;
+    padding: var(--cs-rhythm-fourth);
+    right: var(--cs-rhythm-sixteenth);
+    top: var(--cs-rhythm-sixteenth);
 }
 
 .textfield input,
 .textfield textarea,
 .select select {
-  background-color: transparent;
-  border: var(--cs-rhythm-sixteenth) solid var(--cs-color-gray3);
-  border-radius: var(--cs-border-radius);
-  box-sizing: border-box;
-  padding: calc(3 * var(--cs-rhythm-fourth)) var(--cs-rhythm-fourth) calc(2 * var(--cs-rhythm-sixteenth));
-  position: relative;
-  width: 100%;
+    background-color: transparent;
+    border: var(--cs-rhythm-sixteenth) solid var(--cs-color-gray3);
+    border-radius: var(--cs-border-radius);
+    box-sizing: border-box;
+    padding: calc(3 * var(--cs-rhythm-fourth)) var(--cs-rhythm-fourth) calc(2 * var(--cs-rhythm-sixteenth));
+    position: relative;
+    width: 100%;
 }
 
 .textfield *:focus,
 .select select:focus{
-  border-color: var(--cs-color-primary);
-  box-shadow: 0 var(--cs-rhythm-sixteenth) var(--cs-rhythm-eigth) 0 var(--cs-color-gray5) inset;
-  outline: none;
+    border-color: var(--cs-color-primary);
+    box-shadow: 0 var(--cs-rhythm-sixteenth) var(--cs-rhythm-eigth) 0 var(--cs-color-gray5) inset;
+    outline: none;
 }
 
 /*
@@ -169,8 +169,8 @@ Radio
 
 Markup:
 <label class="radio {{modifier_class}}">
-  <input type="radio" />
-  <span class="label">Radio</span>
+    <input type="radio" />
+    <span class="label">Radio</span>
 </label>
 
 Styleguide 3.1
@@ -180,18 +180,15 @@ Styleguide 3.1
 .radio:before,
 .radio .label:before,
 .radio .label:after{
-  border-radius: var(--cs-rhythm);
+    border-radius: var(--cs-rhythm);
 }
 
-.radio input[type=radio]:checked + .label:before{
-  background-color: var(--cs-color-primary-dark);
-  top: var(--cs-rhythm-third);
-  content: '';
-  height: var(--cs-rhythm-sixth);
-  left: var(--cs-rhythm-sixth);
-  margin-top: 0;
-  width: var(--cs-rhythm-sixth);
+.radio input[type=radio]:checked + .label:after {
+    color: var(--cs-color-primary-dark);
+    content: '\2022';
+    text-align: center;
 }
+
 
 /*
 
@@ -199,8 +196,8 @@ Checkbox
 
 Markup:
 <label class="checkbox {{modifier_class}}">
-  <input type="checkbox" />
-  <span class="label">Checkbox</span>
+    <input type="checkbox" />
+    <span class="label">Checkbox</span>
 </label>
 
 Styleguide 3.2
@@ -209,13 +206,13 @@ Styleguide 3.2
 
 .checkbox:before,
 .checkbox .label:after{
-  border-radius: var(--cs-border-radius);
+    border-radius: var(--cs-border-radius);
 }
 
 .checkbox input[type=checkbox]:checked + .label:after {
-  color: var(--cs-color-primary-dark);
-  content: '\2714';
-  text-align: center;
+    color: var(--cs-color-primary-dark);
+    content: '\2714';
+    text-align: center;
 }
 
 /*
@@ -224,12 +221,12 @@ Input and text areas
 
 Markup:
 <label class="textfield {{modifier_class}}">
-  <span class="label">Input</span>
-  <input type="text" />
+    <span class="label">Input</span>
+    <input type="text" />
 </label>
 <label class="textfield {{modifier_class}}">
-  <span class="label">Textarea</span>
-  <textarea></textarea>
+    <span class="label">Textarea</span>
+    <textarea></textarea>
 </label>
 
 Styleguide 3.3
@@ -237,7 +234,7 @@ Styleguide 3.3
 */
 
 .textfield textarea {
-  min-height: calc(4 * var(--cs-rhythm));
+    min-height: calc(4 * var(--cs-rhythm));
 }
 
 /*
@@ -246,13 +243,13 @@ Select
 
 Markup:
 <label class="select {{modifier_class}}">
-  <select>
-    <option disabled="disabled" selected="selected">Select</option>
-    <option>Option 1</option>
-    <option>Option 2</option>
-    <option>Option 3</option>
-  </select>
-  <span class="label">Select Label</span>
+    <select>
+        <option disabled="disabled" selected="selected">Select</option>
+        <option>Option 1</option>
+        <option>Option 2</option>
+        <option>Option 3</option>
+    </select>
+    <span class="label">Select Label</span>
 </label>
 
 Styleguide 3.4
@@ -260,29 +257,29 @@ Styleguide 3.4
 */
 
 .select:after{
-  content: '';
-  border-left: var(--cs-rhythm-fourth) solid transparent;
-  border-right: var(--cs-rhythm-fourth) solid transparent;
-  border-top: var(--cs-rhythm-fourth) solid var(--cs-color-gray3);
-  height: 0;
-  position: absolute;
-  right: var(--cs-rhythm-half);
-  bottom: calc(2 * var(--cs-rhythm-third));
-  width: 0;
+    content: '';
+    border-left: var(--cs-rhythm-fourth) solid transparent;
+    border-right: var(--cs-rhythm-fourth) solid transparent;
+    border-top: var(--cs-rhythm-fourth) solid var(--cs-color-gray3);
+    height: 0;
+    position: absolute;
+    right: var(--cs-rhythm-half);
+    bottom: calc(2 * var(--cs-rhythm-third));
+    width: 0;
 }
 
 .select select{
-  z-index: 1;
+    z-index: 1;
 }
 
 .select option[disabled]{
-  background-color: var(--cs-color-gray6);
-  color: var(--cs-color-gray2);
+    background-color: var(--cs-color-gray6);
+    color: var(--cs-color-gray2);
 }
 
 /* Firefox detection for keeping exact rhythm */ 
 @-moz-document url-prefix() { 
-  .select {
-    margin-top: -2px;
-  }
+    .select {
+      margin-top: -2px;
+    }
 }
