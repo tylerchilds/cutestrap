@@ -22,8 +22,9 @@ Styleguide 4.0
 
     display: grid;
     grid-gap: var(--cs-rhythm);
-    grid-template-columns: repeat(
-        auto-fit,
-        minmax(var(--cs-grid-column-min),1fr)
-    );
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(var(--cs-grid-column-min), 1fr)
+        );
 }

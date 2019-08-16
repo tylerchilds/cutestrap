@@ -57,6 +57,10 @@ Styleguide 2.0
     vertical-align: middle;
 }
 
+.button::-moz-focus-inner {
+    border: 0;
+}
+
 .button:link,
 .button:visited {
     color: var(--text-color);
@@ -82,10 +86,6 @@ Styleguide 2.0
 .button:disabled {
     opacity: .5;
     pointer-events: none;
-}
-
-.button::-moz-focus-inner {
-    border: 0;
 }
 
 .button.-outlined {
@@ -122,6 +122,7 @@ Styleguide 2.0
     --line-height: var(--cs-line-height);
     --min-height: var(--cs-sub-rhythm);
     --padding: 0 var(--cs-rhythm-half);
+
     margin-top: calc(-2 * var(--cs-rhythm-sixteenth));
 }
 

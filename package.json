@@ -14,7 +14,9 @@
   },
   "scripts": {
     "start": "gulp",
-    "setup": "npm install"
+    "setup": "npm install",
+    "lint": "stylelint src/**/*.css",
+    "lint-fix": "stylelint src/**/*.css --fix"
   },
   "devDependencies": {
     "bower": "latest",
@@ -39,6 +41,7 @@
     "kss": "^2.1.0",
     "minimist": "latest",
     "run-sequence": "latest",
+    "stylelint": "^10.1.0",
     "stylelint-config-standard": "^18.3.0"
   }
 }

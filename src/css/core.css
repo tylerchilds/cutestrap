@@ -10,9 +10,7 @@
     --cs-rhythm-eighth: calc((1/8) * var(--cs-rhythm));
     --cs-rhythm-twelfth: calc((1/12) * var(--cs-rhythm));
     --cs-rhythm-sixteenth: calc((1/16) * var(--cs-rhythm));
-
     --cs-line-height-ratio: 1.4;
-
     --cs-font-size: calc(var(--cs-sub-rhythm, var(--cs-rhythm)) / var(--cs-line-height-ratio));
     --cs-line-height: var(--cs-sub-rhythm, var(--cs-rhythm));
 }
@@ -24,33 +22,26 @@
 }
 
 html {
-    --cs-font-family: 'Avenir', 'Avenir Next','Helvetica Neue','Segoe UI', 'Verdana', sans-serif;
+    --cs-font-family: 'Avenir', 'Avenir Next', 'Helvetica Neue', 'Segoe UI', 'Verdana', sans-serif;
     --cs-font-mono: 'Consolas', 'Monaco', 'Courier New', monospace;
-
     --cs-font-heading: var(--cs-font-family);
     --cs-font-body: var(--cs-font-family);
     --cs-font-mono: var(--cs-font-mono);
-
     --cs-border-radius: 4px;
-
     --cs-color-primary: #ea4c6b;
     --cs-color-primary-dark: #bb3c55;
-
     --cs-color-link: #4c6bea;
     --cs-color-link-visited: #7c4cea;
     --cs-color-link-hover: #3c55bb;
     --cs-color-link-active: #bb3c55;
-
-    --cs-color-black: #000000;
-
+    --cs-color-black: #000;
     --cs-color-gray1: #3c3c3d;
     --cs-color-gray2: #5a5a5b;
     --cs-color-gray3: #7d7d7e;
     --cs-color-gray4: #cdcdce;
     --cs-color-gray5: #dededf;
     --cs-color-gray6: #efeff0;
-
-    --cs-color-white: #ffffff;
+    --cs-color-white: #fff;
 }
 
 body {

@@ -23,43 +23,43 @@ Styleguide 5.0
 
 */
 
-.disabled{
+.disabled {
     cursor: default;
     opacity: .5;
     pointer-events: none;
 }
 
-.smooth{
+.smooth {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
-.f-none{
+.f-none {
     float: none;
 }
 
-.f-left{
+.f-left {
     float: left;
 }
 
-.f-right{
+.f-right {
     float: right;
 }
 
-.clearfix{
+.clearfix {
     clear: both;
     overflow: hidden;
 }
 
-.ta-left{
+.ta-left {
     text-align: left;
 }
 
-.ta-center{
+.ta-center {
     text-align: center;
 }
 
-.ta-right{
+.ta-right {
     text-align: right;
 }
 
@@ -84,18 +84,18 @@ Styleguide 5.1
 */
 
 
-.fw-light{
+.fw-light {
     font-weight: 300;
 }
 
-.fw-normal{
+.fw-normal {
     font-weight: 400;
 }
 
-.fw-semibold{
+.fw-semibold {
     font-weight: 600;
 }
 
-.fw-bold{
+.fw-bold {
     font-weight: 700;
 }

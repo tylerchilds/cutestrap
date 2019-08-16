@@ -1,4 +1,4 @@
-*{
+* {
     border: 0;
     font: inherit;
     margin: 0;
@@ -6,12 +6,12 @@
     text-rendering: geometricPrecision;
 }
 
-html{
+html {
     box-sizing: border-box;
     height: 100%;
 }
 
-body{
+body {
     box-sizing: border-box;
     background-color: var(--cs-color-white);
     color: var(--cs-color-gray1);
@@ -20,52 +20,60 @@ body{
     position: relative;
 }
 
-h1, h2, h3, h4, h5, h6{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: var(--cs-font-heading);
     font-size: var(--cs-font-size);
     line-height: var(--cs-line-height);
     margin: var(--cs-rhythm) 0;
 }
 
-h1{
+h1 {
     --cs-sub-rhythm: var(--cs-rhythm-triple);
+
     font-weight: 700;
 }
 
-h2{
+h2 {
     --cs-sub-rhythm: var(--cs-rhythm-triple);
 }
 
-h3{
+h3 {
     --cs-sub-rhythm: var(--cs-rhythm-triple);
+
     font-weight: 100;
 }
 
-h4{
+h4 {
     --cs-sub-rhythm: var(--cs-rhythm-double);
+
     font-weight: 700;
 }
 
-h5{
+h5 {
     --cs-sub-rhythm: var(--cs-rhythm-double);
 }
 
-h6{
+h6 {
     font-weight: 700;
 }
 
-p{
+p {
     padding-bottom: var(--cs-rhythm);
 }
 
-form{
+form {
     padding: var(--cs-rhythm) 0;
 }
 
 pre,
 code,
 samp,
-kbd{
+kbd {
     background-color: var(--cs-color-gray6);
     font-size: var(--cs-font-size);
     color: var(--cs-color-primary-dark);
@@ -75,14 +83,14 @@ kbd{
 
 code,
 samp,
-kbd{
+kbd {
     border-radius: var(--cs-border-radius);
     overflow-y: hidden;
     overflow-x: auto;
     padding: var(--cs-rhythm-sixth);
 }
 
-pre{
+pre {
     border-radius: var(--cs-border-radius);
     line-height: var(--cs-line-height);
     overflow-y: hidden;
@@ -93,96 +101,97 @@ pre{
 
 pre code,
 pre samp,
-pre kbd{
+pre kbd {
     background-color: transparent;
     border: none;
     border-radius: 0;
     padding: 0;
 }
 
-a:link{
+a:link {
     color: var(--cs-color-link);
 }
 
-a:visited{
+a:visited {
     color: var(--cs-color-link-visited);
 }
 
 a:hover,
-a:focus{
+a:focus {
     color: var(--cs-color-link-hover);
 }
 
-a:active{
+a:active {
     color: var(--cs-color-link-active);
 }
 
 img,
-video{
+video {
     max-width: 100%;
     display: table;
 }
 
-hr{
+hr {
     height: var(--cs-rhythm-double);
     margin-bottom: var(--cs-rhythm);
     position: relative;
 }
 
-hr:before {
+hr::before {
     background-color: var(--cs-color-gray4);
-      content: '';
-      height: 1px;
-      position: absolute;
-      top: 50%;
-      width: 100%;
+    content: '';
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    width: 100%;
 }
 
 ol,
-ul{
+ul {
     margin-left: var(--cs-rhythm);
     padding: 0 0 var(--cs-rhythm);
 }
 
-ol{
+ol {
     list-style-type: decimal;
 }
 
-ol ol{
+ol ol {
     padding-bottom: 0;
 }
 
-ul{
+ul {
     list-style-type: disc;
 }
 
-ul ul{
+ul ul {
     padding-bottom: 0;
 }
 
-dt{
+dt {
     font-style: italic;
 }
-dd{
+
+dd {
     padding-left: var(--cs-rhythm);
 }
 
-blockquote{
+blockquote {
     margin: 0 0 var(--cs-rhythm) var(--cs-rhythm-half);
     border-left: var(--cs-rhythm-eighth) solid var(--cs-color-gray4);
     padding: var(--cs-rhythm) var(--cs-rhythm-half);
 }
 
-blockquote p:last-child{
+blockquote p:last-child {
     padding-bottom: 0;
 }
 
-figure{
+figure {
     margin: 0 auto;
     padding-bottom: var(--cs-rhythm);
 }
 
-figure img{
+figure img {
     display: table;
     margin: 0 auto;
 }
@@ -210,42 +219,42 @@ sup {
 }
 
 caption,
-figcaption{
+figcaption {
     font-style: italic;
     text-align: center;
 }
 
 em,
 cite,
-i{
+i {
     font-style: italic;
 }
 
 strong,
 var,
-b{
+b {
     font-weight: bold;
 }
 
-q:before{
+q::before {
     content: "'";
 }
 
-q:after{
+q::after {
     content: "'";
 }
 
-q > q{
+q > q {
     font-style: italic;
 }
 
 dfn,
-abbr{
+abbr {
     border-bottom: var(--cs-rhythm-sixteenth) dotted var(--cs-color-gray2);
     cursor: default;
 }
 
-table{
+table {
     border-radius: var(--cs-border-radius);
     border-collapse: separate;
     border-spacing: 0;
@@ -253,26 +262,21 @@ table{
     width: 100%;
 }
 
-table th{
+table th {
     font-weight: 500;
     text-align: left;
 }
 
 table th,
-table td{
+table td {
     padding: 0 var(--cs-rhythm-fourth);
-}
-
-label{
-    color: var(--cs-color-gray3);
 }
 
 input,
 label,
 select,
 button,
-textarea
-{
+textarea {
     padding: var(--cs-rhythm-half);
     display: block;
     resize: none;
@@ -286,5 +290,6 @@ select:-moz-focusring {
 }
 
 label {
+    color: var(--cs-color-gray3);
     padding: 0;
 }

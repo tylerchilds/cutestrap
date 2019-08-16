@@ -48,12 +48,12 @@ Styleguide 3.0
 .textfield [disabled],
 .radio [disabled] + *,
 .checkbox [disabled] + *,
-.select [disabled]+ *,
-.textfield [disabled] + *
+.select [disabled] + *,
+.textfield [disabled] + *,
 [type=button][disabled],
 [type=reset][disabled],
 [type=submit][disabled],
-button[disabled]{
+button[disabled] {
     cursor: default;
     opacity: .5;
     pointer-events: none;
@@ -65,16 +65,16 @@ button[disabled]{
 */
 
 .radio,
-.checkbox{
+.checkbox {
     cursor: pointer;
     display: inline-block;
     margin-bottom: var(--cs-rhythm);
-    padding: 0 var(--cs-rhythm-half) 0 var(--cs-rhythm);;
+    padding: 0 var(--cs-rhythm-half) 0 var(--cs-rhythm);
     position: relative;
 }
 
-.radio:before,
-.checkbox:before{
+.radio::before,
+.checkbox::before {
     background-color: var(--cs-color-white);
     border: var(--cs-rhythm-twelfth) solid var(--cs-color-gray3);
     content: '';
@@ -87,22 +87,22 @@ button[disabled]{
 }
 
 .checkbox input[type=checkbox],
-.radio input[type=radio]{
+.radio input[type=radio] {
     opacity: 0;
     position: absolute;
     z-index: 0;
 }
 
 .radio .label,
-.checkbox .label{
+.checkbox .label {
     color: var(--cs-color-gray3);
     font-size: var(--cs-rhythm-half);
     line-height: 1;
 }
 
-.radio .label:before,
-.radio .label:after,
-.checkbox .label:after{
+.radio .label::before,
+.radio .label::after,
+.checkbox .label::after {
     border: var(--cs-rhythm-twelfth) solid transparent;
     content: '';
     height: var(--cs-rhythm-half);
@@ -113,8 +113,8 @@ button[disabled]{
     width: var(--cs-rhythm-half);
 }
 
-.radio input[type=radio]:focus + .label:after,
-.checkbox input[type=checkbox]:focus + .label:after {
+.radio input[type=radio]:focus + .label::after,
+.checkbox input[type=checkbox]:focus + .label::after {
     outline: var(--cs-rhythm-twelfth) dotted #f00;
     outline-offset: var(--cs-rhythm-twelfth);
 }
@@ -125,7 +125,7 @@ button[disabled]{
 */
 
 .textfield,
-.select{
+.select {
     background-color: var(--cs-color-white);
     display: block;
     margin-bottom: var(--cs-rhythm);
@@ -133,7 +133,7 @@ button[disabled]{
 }
 
 .textfield .label,
-.select .label{
+.select .label {
     background-color: var(--cs-color-white);
     font-size: var(--cs-rhythm-half);
     position: absolute;
@@ -157,7 +157,7 @@ button[disabled]{
 }
 
 .textfield *:focus,
-.select select:focus{
+.select select:focus {
     border-color: var(--cs-color-primary);
     box-shadow: 0 var(--cs-rhythm-sixteenth) var(--cs-rhythm-eigth) 0 var(--cs-color-gray5) inset;
     outline: none;
@@ -177,18 +177,17 @@ Styleguide 3.1
 
 */
 
-.radio:before,
-.radio .label:before,
-.radio .label:after{
+.radio::before,
+.radio .label::before,
+.radio .label::after {
     border-radius: var(--cs-rhythm);
 }
 
-.radio input[type=radio]:checked + .label:after {
+.radio input[type=radio]:checked + .label::after {
     color: var(--cs-color-primary-dark);
-    content: '\2022';
+    content: '\26ab';
     text-align: center;
 }
-
 
 /*
 
@@ -204,12 +203,12 @@ Styleguide 3.2
 
 */
 
-.checkbox:before,
-.checkbox .label:after{
+.checkbox::before,
+.checkbox .label::after {
     border-radius: var(--cs-border-radius);
 }
 
-.checkbox input[type=checkbox]:checked + .label:after {
+.checkbox input[type=checkbox]:checked + .label::after {
     color: var(--cs-color-primary-dark);
     content: '\2714';
     text-align: center;
@@ -256,7 +255,7 @@ Styleguide 3.4
 
 */
 
-.select:after{
+.select::after {
     content: '';
     border-left: var(--cs-rhythm-fourth) solid transparent;
     border-right: var(--cs-rhythm-fourth) solid transparent;
@@ -268,18 +267,18 @@ Styleguide 3.4
     width: 0;
 }
 
-.select select{
+.select select {
     z-index: 1;
 }
 
-.select option[disabled]{
+.select option[disabled] {
     background-color: var(--cs-color-gray6);
     color: var(--cs-color-gray2);
 }
 
-/* Firefox detection for keeping exact rhythm */ 
-@-moz-document url-prefix() { 
+/* Firefox detection for keeping exact rhythm */
+@-moz-document url-prefix() {
     .select {
-      margin-top: -2px;
+        margin-top: -2px;
     }
 }
