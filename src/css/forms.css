@@ -156,6 +156,10 @@ button[disabled] {
     width: 100%;
 }
 
+.select select {
+    z-index: 1;
+}
+
 .textfield *:focus,
 .select select:focus {
     border-color: var(--cs-color-primary);
@@ -179,7 +183,7 @@ Styleguide 3.1
 
 .radio::before,
 .radio .label::before,
-.radio .label::after {
+.radio .label::after { /* stylelint-disable-line */
     border-radius: var(--cs-rhythm);
 }
 
@@ -204,7 +208,7 @@ Styleguide 3.2
 */
 
 .checkbox::before,
-.checkbox .label::after {
+.checkbox .label::after { /* stylelint-disable-line */
     border-radius: var(--cs-border-radius);
 }
 
@@ -265,10 +269,6 @@ Styleguide 3.4
     right: var(--cs-rhythm-half);
     bottom: calc(2 * var(--cs-rhythm-third));
     width: 0;
-}
-
-.select select {
-    z-index: 1;
 }
 
 .select option[disabled] {
