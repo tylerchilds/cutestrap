@@ -39,6 +39,8 @@ function initThemeToggles() {
 
     if(localStorage.getItem('theme')){
         html.dataset.theme = localStorage.getItem('theme');
+    } else {
+        localStorage.setItem('theme', 'light');
     }
 }
 
@@ -60,6 +62,8 @@ function initRhythmToggles() {
 
     if(localStorage.getItem('rhythm')){
         html.dataset.rhythm = localStorage.getItem('rhythm');
+    } else {
+        localStorage.setItem('rhythm', 'normal');
     }
 }
 

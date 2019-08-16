@@ -4,19 +4,7 @@ title: Cutestrap
 permalink: /
 description: A sassy, opinionated CSS Framework. A tiny alternative to Bootstrap.
 ---
-<div class="toolbar">
-  Size:
-  {% include components/toolbar-button.html label="Small" classList="js-rhythm-toggle" attributes="data-rhythm='small'" %}
-  {% include components/toolbar-button.html label="Normal" classList="js-rhythm-toggle" attributes="data-rhythm='normal'" %}
-  {% include components/toolbar-button.html label="Large" classList="js-rhythm-toggle" attributes="data-rhythm='large'" %}
 
-  Theme:
-  {% include components/toolbar-button.html label="Light" classList="js-theme-toggle" attributes="data-theme='light'" %}
-  {% include components/toolbar-button.html label="Dark" classList="js-theme-toggle" attributes="data-theme='dark'" %}
-
-  Gridlines:
-  {% include components/toolbar-button.html label="Toggle Lines" classList="js-grid-toggle" %}
-</div>
 <header class="wrapper-large ta-center">
   <h1 class="logo">
     Cutestrap Two
@@ -30,43 +18,46 @@ description: A sassy, opinionated CSS Framework. A tiny alternative to Bootstrap
   </p>
 </header>
 
+
 <section class="wrapper">
   <article class="grid grid--medium">
     <div>
-      <h4>Forms</h4>
+      <h4>Rhythm</h4>
       <p>
-        Beautiful, consistent form controls that don't compromise browser accessibility.
-      </p>
-    </div>
-    <div>
-      <h4>Grid</h4>
-      <p>
-        An "Implicit Grid" created using flexbox. Just a single class to create a grid.
+		Vertical Rhythm is easier to customize and can be changed during runtime
       </p>
     </div>
     <div>
       <h4>Typography</h4>
       <p>
-        All elements and components align perfectly to the baseline grid.
+		Typography has been set against the baseline grid
+      </p>
+    </div>
+    <div>
+      <h4>Forms</h4>
+      <p>
+		Beautiful, consistent form controls that don't compromise browser accessibility
       </p>
     </div>
 	</article>
   <article class="grid grid--medium">
     <div>
-      <h4>Sass</h4>
+      <h4>Pure CSS</h4>
       <p>
-        Easily customize the default variables and include only the files you need.
+		Upgraded to not require a preprocessor for compilation and levaraging CSS Variables
       </p>
     </div>
     <div>
-      <h4>BEM</h4>
+      <h4>Popsicle</h4>
       <p>
-        The BEM Methodology is used for naming conventions, because it's simple and flexible.
+		Uses a new CSS naming convention for low-enough specificity and high readability
       </p>
     </div>
     <div>
-      <h4>KSS</h4>
-      Documentation is generated using KSS, making cutestrap a simple launching point for your styleguide.
+      <h4>Styleguide</h4>
+	  <p>
+		Leverage KSS to automatically generate documentation for your CSS
+	  </p>
     </div>
   </article>
 </section>

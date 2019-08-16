@@ -664,7 +664,7 @@ Styleguide 3.1
 .radio .label:after{
   border-radius: var(--cs-rhythm);
 }
-
+/*
 .radio input[type=radio]:checked + .label:before{
   background-color: var(--cs-color-primary-dark);
   top: var(--cs-rhythm-third);
@@ -674,6 +674,14 @@ Styleguide 3.1
   margin-top: 0;
   width: var(--cs-rhythm-sixth);
 }
+*/
+
+.radio input[type=radio]:checked + .label:after {
+  color: var(--cs-color-primary-dark);
+  content: '\26AB';
+  text-align: center;
+}
+
 
 /*
 
@@ -768,6 +776,7 @@ Styleguide 3.4
     margin-top: -2px;
   }
 }
+
 /*
 
 Grid

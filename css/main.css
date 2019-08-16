@@ -190,13 +190,94 @@ footer {
   2.1.1: Toolbar
 */
 
+body {
+  padding-top: var(--cs-rhythm-double)
+}
+
 .toolbar {
-  padding: var(--cs-rhythm-eighth);
+  background-color: var(--cs-color-white);
+  border-bottom: 1px solid var(--cs-color-gray4);
+  padding: var(--cs-rhythm-fourth);
+  position: fixed;
+  left: 0;
+  right: 0;
+  text-align: right;
+  top: 0;
+}
+
+.toolbar,
+.toolbar * {
+  --cs-rhythm: 1.5rem;
+}
+
+.toolbar-label {
+  font-size: var(--cs-font-size);
+  padding-left: var(--cs-rhythm);
 }
 
 .toolbar-button {
+  border: 1px solid var(--cs-color-gray4);
+  background-color: var(--cs-color-gray6);
+  border-radius: 2px;
+  color: var(--cs-color-gray1);
+  cursor: pointer;
   display: inline-block;
-  padding: var(--cs-rhythm-eighth) var(--cs-rhythm-fourth);
+  padding: var(--cs-rhythm-eighth) var(--cs-rhythm-half);
+  transition: all 200ms ease-in-out;
+  vertical-align: middle;
+}
+
+.toolbar-button:hover,
+.toolbar-button:focus {
+  background-color: var(--cs-color-gray5);
+}
+
+.toolbar-button.-small {
+  --cs-line-height-ratio: 2;
+  font-size: var(--cs-font-size);
+}
+
+.toolbar-button.-large {
+  --cs-line-height-ratio: 1;
+  font-size: var(--cs-font-size);
+}
+
+.toolbar-button.-light {
+  background-color: var(--cs-color-white);
+  color: var(--cs-color-gray2);
+}
+
+.toolbar-button.-dark {
+  background-color: var(--cs-color-gray2);
+  color: var(--cs-color-white);
+}
+
+html[data-theme="dark"] .toolbar-button.-light {
+  background-color: var(--cs-color-gray2);
+  color: var(--cs-color-white);
+}
+
+html[data-theme="dark"] .toolbar-button.-dark {
+  background-color: var(--cs-color-white);
+  color: var(--cs-color-gray2);
+}
+
+html[data-rhythm="small"] .toolbar-button.-small,
+html[data-rhythm="normal"] .toolbar-button.-normal,
+html[data-rhythm="large"] .toolbar-button.-large,
+html[data-theme="light"] .toolbar-button.-light,
+html[data-theme="dark"] .toolbar-button.-dark {
+  cursor: normal;
+  opacity: .5;
+  pointer-events: none;
+}
+
+.toolbar-button.-grid {
+  text-decoration: none;
+}
+
+.hide-gridlines .toolbar-button.-grid {
+  text-decoration: underline overline;
 }
 
 /*
