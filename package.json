@@ -39,28 +39,6 @@
     "kss": "^2.1.0",
     "minimist": "latest",
     "run-sequence": "latest",
-    "stylelint": "^10.0.1"
-  },
-  "stylelint": {
-    "rules": {
-      "block-no-empty": null,
-      "color-no-invalid-hex": true,
-      "declaration-colon-space-after": "always",
-      "indentation": [
-        "tab",
-        {
-          "except": [
-            "value"
-          ]
-        }
-      ],
-      "max-empty-lines": 2,
-      "unit-whitelist": [
-        "em",
-        "rem",
-        "%",
-        "s"
-      ]
-    }
+    "stylelint-config-standard": "^18.3.0"
   }
 }
