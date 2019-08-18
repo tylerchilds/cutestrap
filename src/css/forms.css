@@ -68,22 +68,22 @@ button[disabled] {
 .checkbox {
     cursor: pointer;
     display: inline-block;
-    margin-bottom: var(--cs-rhythm);
-    padding: 0 var(--cs-rhythm-half) 0 var(--cs-rhythm);
+    margin-bottom: var(--rhythm);
+    padding: 0 var(--rhythm-half) 0 var(--rhythm);
     position: relative;
 }
 
 .radio::before,
 .checkbox::before {
-    background-color: var(--cs-color-white);
-    border: var(--cs-rhythm-twelfth) solid var(--cs-color-gray3);
+    background-color: var(--color-white);
+    border: var(--rhythm-twelfth) solid var(--color-gray3);
     content: '';
-    height: var(--cs-rhythm-half);
+    height: var(--rhythm-half);
     left: 0;
-    margin-top: calc(-1 * var(--cs-rhythm-third));
+    margin-top: calc(-1 * var(--rhythm-third));
     position: absolute;
     top: 50%;
-    width: var(--cs-rhythm-half);
+    width: var(--rhythm-half);
 }
 
 .checkbox input[type=checkbox],
@@ -95,28 +95,28 @@ button[disabled] {
 
 .radio .label,
 .checkbox .label {
-    color: var(--cs-color-gray3);
-    font-size: var(--cs-rhythm-half);
+    color: var(--color-gray3);
+    font-size: var(--rhythm-half);
     line-height: 1;
 }
 
 .radio .label::before,
 .radio .label::after,
 .checkbox .label::after {
-    border: var(--cs-rhythm-twelfth) solid transparent;
+    border: var(--rhythm-twelfth) solid transparent;
     content: '';
-    height: var(--cs-rhythm-half);
+    height: var(--rhythm-half);
     left: 0;
-    margin-top: calc(-1 * var(--cs-rhythm-third));
+    margin-top: calc(-1 * var(--rhythm-third));
     position: absolute;
     top: 50%;
-    width: var(--cs-rhythm-half);
+    width: var(--rhythm-half);
 }
 
 .radio input[type=radio]:focus + .label::after,
 .checkbox input[type=checkbox]:focus + .label::after {
-    outline: var(--cs-rhythm-twelfth) dotted #f00;
-    outline-offset: var(--cs-rhythm-twelfth);
+    outline: var(--rhythm-twelfth) dotted #f00;
+    outline-offset: var(--rhythm-twelfth);
 }
 
 /*
@@ -126,32 +126,32 @@ button[disabled] {
 
 .textfield,
 .select {
-    background-color: var(--cs-color-white);
+    background-color: var(--color-white);
     display: block;
-    margin-bottom: var(--cs-rhythm);
+    margin-bottom: var(--rhythm);
     position: relative;
 }
 
 .textfield .label,
 .select .label {
-    background-color: var(--cs-color-white);
-    font-size: var(--cs-rhythm-half);
+    background-color: var(--color-white);
+    font-size: var(--rhythm-half);
     position: absolute;
-    left: var(--cs-rhythm-sixteenth);
+    left: var(--rhythm-sixteenth);
     line-height: 1;
-    padding: var(--cs-rhythm-fourth);
-    right: var(--cs-rhythm-sixteenth);
-    top: var(--cs-rhythm-sixteenth);
+    padding: var(--rhythm-fourth);
+    right: var(--rhythm-sixteenth);
+    top: var(--rhythm-sixteenth);
 }
 
 .textfield input,
 .textfield textarea,
 .select select {
     background-color: transparent;
-    border: var(--cs-rhythm-sixteenth) solid var(--cs-color-gray3);
-    border-radius: var(--cs-border-radius);
+    border: var(--rhythm-sixteenth) solid var(--color-gray3);
+    border-radius: var(--border-radius);
     box-sizing: border-box;
-    padding: calc(3 * var(--cs-rhythm-fourth)) var(--cs-rhythm-fourth) calc(2 * var(--cs-rhythm-sixteenth));
+    padding: calc(3 * var(--rhythm-fourth)) var(--rhythm-fourth) calc(2 * var(--rhythm-sixteenth));
     position: relative;
     width: 100%;
 }
@@ -162,8 +162,8 @@ button[disabled] {
 
 .textfield *:focus,
 .select select:focus {
-    border-color: var(--cs-color-primary);
-    box-shadow: 0 var(--cs-rhythm-sixteenth) var(--cs-rhythm-eigth) 0 var(--cs-color-gray5) inset;
+    border-color: var(--color-primary);
+    box-shadow: 0 var(--rhythm-sixteenth) var(--rhythm-eigth) 0 var(--color-gray5) inset;
     outline: none;
 }
 
@@ -184,11 +184,11 @@ Styleguide 3.1
 .radio::before,
 .radio .label::before,
 .radio .label::after { /* stylelint-disable-line */
-    border-radius: var(--cs-rhythm);
+    border-radius: var(--rhythm);
 }
 
 .radio input[type=radio]:checked + .label::after {
-    color: var(--cs-color-primary-dark);
+    color: var(--color-primary-dark);
     content: '\26ab';
     text-align: center;
 }
@@ -209,11 +209,11 @@ Styleguide 3.2
 
 .checkbox::before,
 .checkbox .label::after { /* stylelint-disable-line */
-    border-radius: var(--cs-border-radius);
+    border-radius: var(--border-radius);
 }
 
 .checkbox input[type=checkbox]:checked + .label::after {
-    color: var(--cs-color-primary-dark);
+    color: var(--color-primary-dark);
     content: '\2714';
     text-align: center;
 }
@@ -237,7 +237,7 @@ Styleguide 3.3
 */
 
 .textfield textarea {
-    min-height: calc(4 * var(--cs-rhythm));
+    min-height: calc(4 * var(--rhythm));
 }
 
 /*
@@ -261,19 +261,19 @@ Styleguide 3.4
 
 .select::after {
     content: '';
-    border-left: var(--cs-rhythm-fourth) solid transparent;
-    border-right: var(--cs-rhythm-fourth) solid transparent;
-    border-top: var(--cs-rhythm-fourth) solid var(--cs-color-gray3);
+    border-left: var(--rhythm-fourth) solid transparent;
+    border-right: var(--rhythm-fourth) solid transparent;
+    border-top: var(--rhythm-fourth) solid var(--color-gray3);
     height: 0;
     position: absolute;
-    right: var(--cs-rhythm-half);
-    bottom: calc(2 * var(--cs-rhythm-third));
+    right: var(--rhythm-half);
+    bottom: calc(2 * var(--rhythm-third));
     width: 0;
 }
 
 .select option[disabled] {
-    background-color: var(--cs-color-gray6);
-    color: var(--cs-color-gray2);
+    background-color: var(--color-gray6);
+    color: var(--color-gray2);
 }
 
 /* Firefox detection for keeping exact rhythm */

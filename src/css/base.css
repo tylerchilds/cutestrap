@@ -13,9 +13,9 @@ html {
 
 body {
     box-sizing: border-box;
-    background-color: var(--cs-color-white);
-    color: var(--cs-color-gray1);
-    font-family: var(--cs-font-body);
+    background-color: var(--color-white);
+    color: var(--color-gray1);
+    font-family: var(--font-body);
     min-height: 100%;
     position: relative;
 }
@@ -26,36 +26,36 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: var(--cs-font-heading);
-    font-size: var(--cs-font-size);
-    line-height: var(--cs-line-height);
-    margin: var(--cs-rhythm) 0;
+    font-family: var(--font-heading);
+    font-size: var(--font-size);
+    line-height: var(--line-height);
+    margin: var(--rhythm) 0;
 }
 
 h1 {
-    --cs-sub-rhythm: var(--cs-rhythm-triple);
+    --sub-rhythm: var(--rhythm-triple);
 
     font-weight: 700;
 }
 
 h2 {
-    --cs-sub-rhythm: var(--cs-rhythm-triple);
+    --sub-rhythm: var(--rhythm-triple);
 }
 
 h3 {
-    --cs-sub-rhythm: var(--cs-rhythm-triple);
+    --sub-rhythm: var(--rhythm-triple);
 
     font-weight: 100;
 }
 
 h4 {
-    --cs-sub-rhythm: var(--cs-rhythm-double);
+    --sub-rhythm: var(--rhythm-double);
 
     font-weight: 700;
 }
 
 h5 {
-    --cs-sub-rhythm: var(--cs-rhythm-double);
+    --sub-rhythm: var(--rhythm-double);
 }
 
 h6 {
@@ -63,40 +63,40 @@ h6 {
 }
 
 p {
-    padding-bottom: var(--cs-rhythm);
+    padding-bottom: var(--rhythm);
 }
 
 form {
-    padding: var(--cs-rhythm) 0;
+    padding: var(--rhythm) 0;
 }
 
 pre,
 code,
 samp,
 kbd {
-    background-color: var(--cs-color-gray6);
-    font-size: var(--cs-font-size);
-    color: var(--cs-color-primary-dark);
-    font-family: var(--cs-font-mono);
+    background-color: var(--color-gray6);
+    font-size: var(--font-size);
+    color: var(--color-primary-dark);
+    font-family: var(--font-mono);
     line-height: 1;
 }
 
 code,
 samp,
 kbd {
-    border-radius: var(--cs-border-radius);
+    border-radius: var(--border-radius);
     overflow-y: hidden;
     overflow-x: auto;
-    padding: var(--cs-rhythm-sixth);
+    padding: var(--rhythm-sixth);
 }
 
 pre {
-    border-radius: var(--cs-border-radius);
-    line-height: var(--cs-line-height);
+    border-radius: var(--border-radius);
+    line-height: var(--line-height);
     overflow-y: hidden;
     overflow-x: auto;
-    padding: var(--cs-rhythm-half);
-    margin: 0 0 var(--cs-rhythm);
+    padding: var(--rhythm-half);
+    margin: 0 0 var(--rhythm);
 }
 
 pre code,
@@ -109,20 +109,20 @@ pre kbd {
 }
 
 a:link {
-    color: var(--cs-color-link);
+    color: var(--color-link);
 }
 
 a:visited {
-    color: var(--cs-color-link-visited);
+    color: var(--color-link-visited);
 }
 
 a:hover,
 a:focus {
-    color: var(--cs-color-link-hover);
+    color: var(--color-link-hover);
 }
 
 a:active {
-    color: var(--cs-color-link-active);
+    color: var(--color-link-active);
 }
 
 img,
@@ -132,13 +132,13 @@ video {
 }
 
 hr {
-    height: var(--cs-rhythm-double);
-    margin-bottom: var(--cs-rhythm);
+    height: var(--rhythm-double);
+    margin-bottom: var(--rhythm);
     position: relative;
 }
 
 hr::before {
-    background-color: var(--cs-color-gray4);
+    background-color: var(--color-gray4);
     content: '';
     height: 1px;
     position: absolute;
@@ -148,8 +148,8 @@ hr::before {
 
 ol,
 ul {
-    margin-left: var(--cs-rhythm);
-    padding: 0 0 var(--cs-rhythm);
+    margin-left: var(--rhythm);
+    padding: 0 0 var(--rhythm);
 }
 
 ol {
@@ -173,13 +173,13 @@ dt {
 }
 
 dd {
-    padding-left: var(--cs-rhythm);
+    padding-left: var(--rhythm);
 }
 
 blockquote {
-    margin: 0 0 var(--cs-rhythm) var(--cs-rhythm-half);
-    border-left: var(--cs-rhythm-eighth) solid var(--cs-color-gray4);
-    padding: var(--cs-rhythm) var(--cs-rhythm-half);
+    margin: 0 0 var(--rhythm) var(--rhythm-half);
+    border-left: var(--rhythm-eighth) solid var(--color-gray4);
+    padding: var(--rhythm) var(--rhythm-half);
 }
 
 blockquote p:last-child {
@@ -188,7 +188,7 @@ blockquote p:last-child {
 
 figure {
     margin: 0 auto;
-    padding-bottom: var(--cs-rhythm);
+    padding-bottom: var(--rhythm);
 }
 
 figure img {
@@ -201,7 +201,7 @@ sub,
 sup,
 caption,
 figcaption {
-    font-size: calc(2 * var(--cs-rhythm-third));
+    font-size: calc(2 * var(--rhythm-third));
     vertical-align: top;
 }
 
@@ -211,11 +211,11 @@ sup {
 }
 
 sub {
-    top: var(--cs-rhythm-third);
+    top: var(--rhythm-third);
 }
 
 sup {
-    bottom: var(--cs-rhythm-third);
+    bottom: var(--rhythm-third);
 }
 
 caption,
@@ -250,15 +250,15 @@ q > q {
 
 dfn,
 abbr {
-    border-bottom: var(--cs-rhythm-sixteenth) dotted var(--cs-color-gray2);
+    border-bottom: var(--rhythm-sixteenth) dotted var(--color-gray2);
     cursor: default;
 }
 
 table {
-    border-radius: var(--cs-border-radius);
+    border-radius: var(--border-radius);
     border-collapse: separate;
     border-spacing: 0;
-    margin-bottom: var(--cs-rhythm);
+    margin-bottom: var(--rhythm);
     width: 100%;
 }
 
@@ -269,7 +269,7 @@ table th {
 
 table th,
 table td {
-    padding: 0 var(--cs-rhythm-fourth);
+    padding: 0 var(--rhythm-fourth);
 }
 
 input,
@@ -277,7 +277,7 @@ label,
 select,
 button,
 textarea {
-    padding: var(--cs-rhythm-half);
+    padding: var(--rhythm-half);
     display: block;
     resize: none;
     -webkit-appearance: none;
@@ -290,6 +290,6 @@ select:-moz-focusring {
 }
 
 label {
-    color: var(--cs-color-gray3);
+    color: var(--color-gray3);
     padding: 0;
 }

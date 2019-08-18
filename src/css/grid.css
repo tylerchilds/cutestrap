@@ -18,13 +18,13 @@ Styleguide 4.0
 */
 
 .grid {
-    --cs-grid-column-min: 15rem;
+    --grid-column-min: 15rem;
 
     display: grid;
-    grid-gap: var(--cs-rhythm);
+    grid-gap: var(--rhythm);
     grid-template-columns:
         repeat(
             auto-fit,
-            minmax(var(--cs-grid-column-min), 1fr)
+            minmax(var(--grid-column-min), 1fr)
         );
 }
