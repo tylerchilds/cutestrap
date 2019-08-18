@@ -368,15 +368,9 @@ Styleguide 2.0
 .button {
     --border-color: transparent;
     --border-color-hover: transparent;
-    --border-radius: var(--cs-border-radius);
     --border-thickness: var(--cs-rhythm-twelfth);
     --background-color: var(--cs-color-primary);
     --background-color-hover: var(--cs-color-primary-dark);
-    --font-size: var(--cs-font-size);
-    --line-height: var(--cs-rhythm);
-    --margin: 0 var(--cs-rhythm-twelfth);
-    --min-height: calc(2 * var(--cs-rhythm));
-    --padding: calc(5 * var(--cs-rhythm-twelfth)) var(--cs-rhythm);
     --text-color: var(--cs-color-white);
     --text-color-hover: var(--cs-color-white);
 
@@ -384,18 +378,18 @@ Styleguide 2.0
     align-content: center;
     background-color: var(--background-color);
     border: var(--border-thickness) solid var(--border-color);
-    border-radius: var(--border-radius);
+    border-radius: var(--cs-border-radius);
     box-sizing: border-box;
     color: var(--text-color);
     cursor: pointer;
     display: inline-flex;
-    font-size: var(--font-size);
+    font-size: var(--cs-font-size);
     justify-content: center;
-    line-height: var(--line-height);
-    margin: var(--margin);
+    line-height: var(--cs-rhythm);
+    margin: 0 var(--cs-rhythm-twelfth);
     max-width: 100%;
-    min-height: var(--min-height);
-    padding: var(--padding);
+    min-height: calc(2 * var(--cs-rhythm));
+    padding: calc(5 * var(--cs-rhythm-twelfth)) var(--cs-rhythm);
     text-align: center;
     transition-duration: 250ms;
     transition-property: all;
@@ -465,19 +459,20 @@ Styleguide 2.0
 .button.-small {
     --cs-sub-rhythm: calc(14 * var(--cs-rhythm-sixteenth));
     --border-thickness: var(--cs-rhythm-sixteenth);
-    --font-size: var(--cs-font-size);
-    --line-height: var(--cs-line-height);
-    --min-height: var(--cs-sub-rhythm);
-    --padding: 0 var(--cs-rhythm-half);
 
+    font-size: var(--cs-font-size);
+    line-height: var(--cs-line-height);
     margin-top: calc(-2 * var(--cs-rhythm-sixteenth));
+    min-height: var(--cs-sub-rhythm);
+    padding: 0 var(--cs-rhythm-half);
 }
 
 .button.-large {
     --border-thickness: var(--cs-rhythm-eighth);
-    --font-size: var(--cs-font-size-large);
-    --min-height: calc(3 * var(--cs-rhythm));
-    --padding: calc(3 * var(--cs-rhythm-eighth)) calc(2 * var(--cs-rhythm));
+
+    font-size: var(--cs-font-size-large);
+    min-height: calc(3 * var(--cs-rhythm));
+    padding: calc(3 * var(--cs-rhythm-eighth)) calc(2 * var(--cs-rhythm));
 }
 
 /*
