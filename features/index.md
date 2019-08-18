@@ -1,5 +1,6 @@
 ---
 layout: page
+title: Features
 permalink: /features/
 weight: 10
 ---
@@ -13,12 +14,47 @@ trying to solve and jump in there. What do you need to do?
 
 ### Customize a Theme
 
+The first thing you'll probably want to do is get rid of the default Cutepink
+color. And maybe the grays are also a little bland for your taste. I totally
+get it and that's exactly why it's so easy to theme Cutestrap.
+
+[/features/themes](Learn about creating themes)
+
 ### Build Forms
 
-### Create a Styleguide
+Forms are a hassle. They are always just wrong enough that it's annoying, but
+just right enough that you're not going to fix it. Cutestrap takes care of
+this, so you can focus on building your actual product.
+
+[/features/forms](Figure out forms)
 
 ### Alter Typography
 
+A baseline grid provides a consistent Vertical Rhythm, or consistent vertical
+spacing between elements. All spacing in Cutestrap subscribes to the rhythm
+allowing for easily altering the size of the entire page contents.
+
+[/features/typography](Discover the power of Vertical Rhythm)
+
+### Create a Styleguide
+
+KSS builds a styleguide using comments from CSS source code. If you fork
+Cutestrap, you can easily add your own components and generate living
+documentation of your styles.
+
+[/features/styleguide](Extend the styleguide)
+
 ### Choose Your Own Bundle
 
+Instead of using the full version of Cutestrap, you can choose each piece a la
+carte to get the smallest footprint for your project.
+
+[/features/bundle](Pick only what you need)
+
 ### Learn the Popsicle Convention
+
+There are a lot of great options and patterns available for naming your
+CSS Selectors, but Popsicle gives you concise, safe modifiers with only a
+small increase in specificity.
+
+[/features/popsicle](Dial-in your selectors)

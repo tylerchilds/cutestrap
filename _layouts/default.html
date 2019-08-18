@@ -5,26 +5,16 @@
 
   <body>
     {% include components/toolbar.html %}
-    {% include header.html %}
+    {% include nav.html %}
 
-    <main class="page-content">
-      <div class="page-header">
-        {% if site.data.cats[page.cat].name %}
-          {% assign page_title = site.data.cats[page.cat].name %}
-        {% else %}
-          {% assign page_title = page.title %}
-        {% endif %}
-        <h1 class="page-title" itemprop="name headline">{{ page_title }}</h1>
-      </div>
-      <div class="layout-two-column">
-        <div class="area-main">
+    <article class="page">
+      <header class="page-header">
+        <h1 class="page-title" itemprop="name headline">{{ page.title }}</h1>
+      </header>
+      <main class="page-content">
           {{ content }}
-        </div>
-        <div class="area-sidebar sidebar">
-          {% include sidebar.html %}
-        </div>
-      </div>
-    </main>
+      </main>
+    </article>
 
     {% include footer.html %}
     {% include scripts.html %}

@@ -25,11 +25,11 @@ html[data-theme="dark"] {
   --cs-color-white: #000;
 }
 
-html[data-rhythm="small"] * {
+[data-rhythm="small"] * {
   --cs-rhythm: 1.5rem;
 }
 
-html[data-rhythm="large"] * {
+[data-rhythm="large"] * {
   --cs-rhythm: 2.5rem;
 }
 
@@ -54,11 +54,6 @@ body {
   margin-top: var(--cs-rhythm);
 }
 
-header {
-  text-align: center;
-  margin: var(--cs-rhythm-half) var(--cs-rhythm-half) var(--cs-rhythm);
-}
-
 main {
   margin: 0 var(--cs-rhythm-half);
 }
@@ -68,9 +63,9 @@ footer {
 }
 
 .site-nav {
-  border-top: 1px solid var(--gray5);
-  border-bottom: 1px solid var(--gray5);
-  display: inline-block;
+  --cs-grid-column-min: 7rem;
+
+  grid-gap: 0;
   max-width: 100%;
 }
 
@@ -81,7 +76,9 @@ footer {
 }
 
 .nav-item-wrapper {
-  display: inline-block;
+    border-bottom: 1px solid var(--cs-color-gray5);
+    margin-bottom: -1px;
+    text-align: center;
 }
 
 .nav-item {
@@ -115,22 +112,18 @@ nav a {
 */
 
 .page-header{
-  padding: var(--cs-rhythm-double) 0;
+  padding: var(--cs-rhythm) 0;
   text-align: center;
 }
 
 .page-header h1 {
   font-weight: 100;
   letter-spacing: 2px;
-  padding: 0;
 }
 
 @media (min-width: 55rem) {
   .page-header h1 {
-    font-size: 9.6rem;
-    font-weight: bold;
     letter-spacing: 0;
-    line-height: 11rem;
   }  
 }
 
@@ -185,24 +178,54 @@ footer {
   font-weight: normal;
 }
 
+.logo:link,
+.logo:visited,
+.logo:active {
+    color: var(--cs-color-primary);
+}
+.logo:hover,
+.logo:focus {
+    color: var(--cs-color-primary-dark);
+}
+
+@media (max-width: 30em) {
+    .logo.-hide-small {
+        display: none;
+    }
+}
+
+.logo.-show-small {
+    display: none;
+}
+
+@media (max-width: 30em) {
+    .logo.-show-small {
+        display: inline;
+    }
+}
+
+
 
 /*
   2.1.1: Toolbar
 */
 
-body {
-  padding-top: var(--cs-rhythm-double)
+html {
+  margin-top: 3.5rem;
 }
 
 .toolbar {
   background-color: var(--cs-color-white);
   border-bottom: 1px solid var(--cs-color-gray4);
-  padding: var(--cs-rhythm-fourth);
+  font-size: var(--cs-font-size);
+  line-height: var(--cs-line-height);
+  padding: var(--cs-rhythm-half) var(--cs-rhythm);
   position: fixed;
+  overflow: hidden;
   left: 0;
   right: 0;
-  text-align: right;
   top: 0;
+  z-index: 100;
 }
 
 .toolbar,
@@ -210,9 +233,33 @@ body {
   --cs-rhythm: 1.5rem;
 }
 
-.toolbar-label {
+.toolbar-logo {
+  --cs-sub-rhythm: 2rem;
+
+  float: left;
   font-size: var(--cs-font-size);
-  padding-left: var(--cs-rhythm);
+  line-height: var(--cs-line-height);
+  margin: 0;
+}
+
+.toolbar-controls {
+    float: right;
+    text-align: right;
+}
+
+.toolbar-label {
+    display: none;
+    padding-left: var(--cs-rhythm-half);
+}
+
+@media (min-width: 55rem) {
+    .toolbar-label {
+      display: inline-block;
+    }
+}
+
+.toolbar-label + .toolbar-button {
+    margin-left: var(--cs-rhythm-half);
 }
 
 .toolbar-button {
@@ -223,7 +270,6 @@ body {
   cursor: pointer;
   display: inline-block;
   padding: var(--cs-rhythm-eighth) var(--cs-rhythm-half);
-  transition: all 200ms ease-in-out;
   vertical-align: middle;
 }
 
@@ -252,21 +298,21 @@ body {
   color: var(--cs-color-white);
 }
 
-html[data-theme="dark"] .toolbar-button.-light {
+[data-theme="dark"] .toolbar-button.-light {
   background-color: var(--cs-color-gray2);
   color: var(--cs-color-white);
 }
 
-html[data-theme="dark"] .toolbar-button.-dark {
+[data-theme="dark"] .toolbar-button.-dark {
   background-color: var(--cs-color-white);
   color: var(--cs-color-gray2);
 }
 
-html[data-rhythm="small"] .toolbar-button.-small,
-html[data-rhythm="normal"] .toolbar-button.-normal,
-html[data-rhythm="large"] .toolbar-button.-large,
-html[data-theme="light"] .toolbar-button.-light,
-html[data-theme="dark"] .toolbar-button.-dark {
+[data-rhythm="small"] .toolbar-button.-small,
+[data-rhythm="normal"] .toolbar-button.-normal,
+[data-rhythm="large"] .toolbar-button.-large,
+[data-theme="light"] .toolbar-button.-light,
+[data-theme="dark"] .toolbar-button.-dark {
   cursor: normal;
   opacity: .5;
   pointer-events: none;
@@ -336,49 +382,6 @@ html[data-theme="dark"] .toolbar-button.-dark {
 
 .area-categories {
   grid-area: categories;
-}
-
-/*
-  2.4: Two Column Layout
-*/
-
-.layout-two-column {
-  display: grid;
-  grid-template-areas:  "title"
-                        "main"
-                        "sidebar";
-  max-width: 85rem;
-  margin: 0 auto;
-}
-
-@media (min-width: 55rem) {
-  .layout-two-column {
-    grid-template-areas: "sidebar main";
-    grid-template-columns: minmax(20rem, auto) minmax(60vw, 65rem);
-    column-gap: var(--gutter-width);
-    row-gap: var(--gutter-width);
-  }
-}
-
-.area-sidebar {
-  grid-area: sidebar;
-  padding: var(--cs-rhythm) 0 var(--cs-rhythm-double);
-}
-
-@media (min-width: 55rem) {
-  .area-sidebar {
-    text-align: right;
-    border-right: 1px solid var(--gray5);
-    padding-right: var(--gutter-width);
-  }
-}
-
-.area-main {
-  grid-area: main;
-  width: 100%;
-  max-width: 65rem;
-  padding-top: var(--cs-rhythm);
-  padding-bottom: var(--cs-rhythm-double);
 }
 
 /*

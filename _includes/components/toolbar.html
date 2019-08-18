@@ -1,13 +1,18 @@
 <div class="toolbar">
-  <span class="toolbar-label">Size:</span>
-  {% include components/toolbar-button.html label="Small" classList="js-rhythm-toggle -small" attributes="data-rhythm='small'" %}
-  {% include components/toolbar-button.html label="Normal" classList="js-rhythm-toggle -normal" attributes="data-rhythm='normal'" %}
-  {% include components/toolbar-button.html label="Large" classList="js-rhythm-toggle -large" attributes="data-rhythm='large'" %}
+  <h2 class="toolbar-logo">
+      <a href="/" class="logo">C<span class="logo -hide-small">utestrap</span><span class="logo -show-small">s</span></a>
+  </h2>
+  <div class="toolbar-controls">
+    <span class="toolbar-label">Size:</span>
+    {% include components/toolbar-button.html label="Small" classList="js-rhythm-toggle -small" attributes="data-rhythm='small'" %}
+    {% include components/toolbar-button.html label="Normal" classList="js-rhythm-toggle -normal" attributes="data-rhythm='normal'" %}
+    {% include components/toolbar-button.html label="Large" classList="js-rhythm-toggle -large" attributes="data-rhythm='large'" %}
 
-  <span class="toolbar-label">Theme:</span>
-  {% include components/toolbar-button.html label="Light" classList="js-theme-toggle -light" attributes="data-theme='light'" %}
-  {% include components/toolbar-button.html label="Dark" classList="js-theme-toggle -dark" attributes="data-theme='dark'" %}
+    <span class="toolbar-label">Theme:</span>
+    {% include components/toolbar-button.html label="Light" classList="js-theme-toggle -light" attributes="data-theme='light'" %}
+    {% include components/toolbar-button.html label="Dark" classList="js-theme-toggle -dark" attributes="data-theme='dark'" %}
 
-  <span class="toolbar-label">Gridlines:</span>
-  {% include components/toolbar-button.html label="Toggle Lines" classList="js-grid-toggle -grid" %}
+    <span class="toolbar-label">Gridlines:</span>
+    {% include components/toolbar-button.html label="Toggle Lines" classList="js-grid-toggle -grid" %}
+  </div>
 </div>
