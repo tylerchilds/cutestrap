@@ -1,55 +1,11 @@
 .rhythm {
-  background: repeat left top;
+    background: repeat left top;
 }
 
 html.grid--is_hidden .rhythm {
-  background: none !important;
+    background: none !important;
 }
 
 .wrapper {
-  padding: var(--cs-rhythm);
+    padding: var(--cs-rhythm);
 }
-
-// .kss-modifier-title{
-//   color: $gray3;
-// }
-
-
-// header{
-//   background-color: $primary;
-//   color: $white;
-//   padding: 0 1rem;
-// }
-
-// header h3{
-//   font-size: $font-size--large;
-//   padding: 0;
-// }
-
-// header a{
-//   &:link,
-//   &:visited,
-//   &:hover,
-//   &:focus,
-//   &:active{
-//     color: $white;
-//     text-decoration: none;
-//   }
-// }
-
-
-// nav{
-//   border-bottom: 1px solid $gray5;
-//   margin-top: -1px;
-//   padding: 1.2rem;
-//   text-align: center;
-// }
-
-// nav ul{
-//   padding: 0;
-// }
-
-// nav li{
-//   padding: 0 1.5rem;
-//   display: inline-block;
-// }
