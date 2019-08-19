@@ -263,6 +263,8 @@ table {
 }
 
 table th {
+    background-color: var(--color-primary);
+    color: var(--color-white);
     font-weight: 500;
     text-align: left;
 }
@@ -270,6 +272,14 @@ table th {
 table th,
 table td {
     padding: 0 var(--rhythm-fourth);
+}
+
+table tr:nth-child(odd) {
+    background-color: var(--color-white);
+}
+
+table tr:nth-child(even) {
+    background-color: var(--color-gray6);
 }
 
 input,
