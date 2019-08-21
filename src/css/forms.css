@@ -4,9 +4,9 @@ Forms
 
 Markup:
 <form>
-    <label class="textfield">
-        <span class="label">Name</span>
+    <label class="field">
         <input type="text" />
+        <span class="label">Name</span>
     </label>
     <label class="radio">
         <input type="radio" name="example" />
@@ -16,16 +16,16 @@ Markup:
         <input type="radio" name="example" />
         <span class="label">Mobile</span>
     </label>
-    <label for="select" class="select">
-        <span class="label">Favorite Ice Cream</span>
+    <label for="select" class="field">
         <select name="select">
             <option disabled="disabled" selected="selected">Flavors</option>
             <option>Chocolate</option>
         </select>
+        <span class="label">Favorite Ice Cream</span>
     </label>
-    <label class="textfield">
-        <span class="label">Comments</span>
+    <label class="field">
         <textarea></textarea>
+        <span class="label">Comments</span>
     </label>
     <label class="checkbox">
         <input type="checkbox" />
@@ -44,12 +44,10 @@ Styleguide 3.0
 
 .radio [disabled],
 .checkbox [disabled],
-.select [disabled],
-.textfield [disabled],
+.field [disabled],
 .radio [disabled] + *,
 .checkbox [disabled] + *,
-.select [disabled] + *,
-.textfield [disabled] + *,
+.field [disabled] + *,
 [type=button][disabled],
 [type=reset][disabled],
 [type=submit][disabled],
@@ -64,45 +62,42 @@ button[disabled] {
     Textfield and Select
 */
 
-.textfield,
-.select {
+.field {
     background-color: var(--color-white);
     display: block;
     margin-bottom: var(--rhythm);
     position: relative;
 }
 
-.textfield .label,
-.select .label {
+.field .label {
     background-color: var(--color-white);
     font-size: var(--rhythm-half);
     position: absolute;
     left: var(--rhythm-sixteenth);
     line-height: 1;
-    padding: var(--rhythm-fourth);
+    padding: var(--rhythm-fourth) var(--rhythm-fourth) 0;
     right: var(--rhythm-sixteenth);
     top: var(--rhythm-sixteenth);
 }
 
-.textfield input,
-.textfield textarea,
-.select select {
+.field input,
+.field textarea,
+.field select {
     background-color: transparent;
     border: 1px solid var(--color-gray3);
     border-radius: var(--border-radius);
     box-sizing: border-box;
     margin-top: -2px;
-    padding: calc(3 * var(--rhythm-fourth)) var(--rhythm-fourth) var(--rhythm-fourth);
+    padding: calc(7 * var(--rhythm-eighth)) var(--rhythm-fourth) var(--rhythm-eighth);
     position: relative;
     width: 100%;
 }
 
-.select select {
+.field select {
     z-index: 1;
 }
 
-.textfield *:focus,
-.select select:focus {
+.field *:focus {
     border-color: var(--color-primary);
     box-shadow: 0 var(--rhythm-sixteenth) var(--rhythm-eigth) 0 var(--color-gray5) inset;
     outline: none;
@@ -113,7 +108,7 @@ button[disabled] {
 Select
 
 Markup:
-<label class="select {{modifier_class}}">
+<label class="field {{modifier_class}}">
     <select>
         <option disabled="disabled" selected="selected">Select</option>
         <option>Option 1</option>
@@ -127,7 +122,7 @@ Styleguide 3.4
 
 */
 
-.select .label::after {
+.field select + .label::after {
     content: '';
     border-left: var(--rhythm-fourth) solid transparent;
     border-right: var(--rhythm-fourth) solid transparent;
@@ -135,11 +130,11 @@ Styleguide 3.4
     height: 0;
     position: absolute;
     right: var(--rhythm-half);
-    bottom: calc(-1 * var(--rhythm-third));
+    bottom: calc(-2 * var(--rhythm-third));
     width: 0;
 }
 
-.select option[disabled] {
+.field option[disabled] {
     background-color: var(--color-gray6);
     color: var(--color-gray2);
 }
@@ -258,20 +253,20 @@ Styleguide 3.2
 Input and text areas
 
 Markup:
-<label class="textfield {{modifier_class}}">
-    <span class="label">Input</span>
+<label class="field {{modifier_class}}">
     <input type="text" />
+    <span class="label">Input</span>
 </label>
-<label class="textfield {{modifier_class}}">
-    <span class="label">Textarea</span>
+<label class="field {{modifier_class}}">
     <textarea></textarea>
+    <span class="label">Textarea</span>
 </label>
 
 Styleguide 3.3
 
 */
 
-.textfield textarea {
+.field textarea {
     min-height: calc(4 * var(--rhythm));
 }
 
