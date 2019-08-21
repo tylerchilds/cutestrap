@@ -495,11 +495,11 @@ Markup:
         <input type="text" />
         <span class="label">Name</span>
     </label>
-    <label class="inline-field">
+    <label class="field-inline">
         <input type="radio" name="example" />
         <span class="label">Desktop</span>
     </label>
-    <label class="inline-field">
+    <label class="field-inline">
         <input type="radio" name="example" />
         <span class="label">Mobile</span>
     </label>
@@ -514,7 +514,7 @@ Markup:
         <textarea></textarea>
         <span class="label">Comments</span>
     </label>
-    <label class="inline-field">
+    <label class="field-inline">
         <input type="checkbox" />
         <span class="label">I Lied</span>
     </label>
@@ -530,9 +530,9 @@ Styleguide 3.0
 */
 
 .field [disabled],
-.inline-field [disabled],
+.field-inline [disabled],
 .field [disabled] + *,
-.inline-field [disabled] + *,
+.field-inline [disabled] + *,
 [type=button][disabled],
 [type=reset][disabled],
 [type=submit][disabled],
@@ -603,7 +603,7 @@ Markup:
     <span class="label">Select Label</span>
 </label>
 
-Styleguide 3.4
+Styleguide 3.1
 
 */
 
@@ -629,7 +629,7 @@ Styleguide 3.4
     Radio and Checkbox
 */
 
-.inline-field {
+.field-inline {
     cursor: pointer;
     display: inline-block;
     margin-bottom: var(--rhythm);
@@ -637,20 +637,20 @@ Styleguide 3.4
     position: relative;
 }
 
-.inline-field input[type=checkbox],
-.inline-field input[type=radio] {
+.field-inline [type=checkbox],
+.field-inline [type=radio] {
     opacity: 0;
     position: absolute;
     z-index: 0;
 }
 
-.inline-field .label {
+.field-inline .label {
     color: var(--color-gray3);
     font-size: var(--rhythm-half);
     line-height: 1;
 }
 
-.inline-field .label::before {
+.field-inline .label::before {
     background-color: var(--color-white);
     border: 2px solid var(--color-gray3);
     content: '';
@@ -662,7 +662,7 @@ Styleguide 3.4
     width: var(--rhythm-half);
 }
 
-.inline-field .label::after {
+.field-inline .label::after { /* stylelint-disable-line */
     border: 2px solid transparent;
     content: '';
     height: var(--rhythm-half);
@@ -673,8 +673,8 @@ Styleguide 3.4
     width: var(--rhythm-half);
 }
 
-.inline-field input[type=radio]:focus + .label::after,
-.inline-field input[type=checkbox]:focus + .label::after {
+.field-inline [type=radio]:focus + .label::after,
+.field-inline [type=checkbox]:focus + .label::after {
     outline: var(--rhythm-twelfth) dotted #f00;
     outline-offset: var(--rhythm-twelfth);
 }
@@ -684,21 +684,21 @@ Styleguide 3.4
 Radio
 
 Markup:
-<label class="inline-field {{modifier_class}}">
+<label class="field-inline {{modifier_class}}">
     <input type="radio" />
     <span class="label">Radio</span>
 </label>
 
-Styleguide 3.1
+Styleguide 3.2
 
 */
 
-.inline-field [type=radio] + .label::before,
-.inline-field [type=radio] + .label::after { /* stylelint-disable-line */
+.field-inline [type=radio] + .label::before,
+.field-inline [type=radio] + .label::after { /* stylelint-disable-line */
     border-radius: var(--rhythm);
 }
 
-.inline-field [type=radio]:checked + .label::after {
+.field-inline [type=radio]:checked + .label::after { /* stylelint-disable-line */
     color: var(--color-primary-dark);
     content: '\26ab';
     text-align: center;
@@ -709,21 +709,21 @@ Styleguide 3.1
 Checkbox
 
 Markup:
-<label class="inline-field {{modifier_class}}">
+<label class="field-inline {{modifier_class}}">
     <input type="checkbox" />
     <span class="label">Checkbox</span>
 </label>
 
-Styleguide 3.2
+Styleguide 3.3
 
 */
 
-.inline-field [type=checkbox] + .label::before,
-.inline-field [type=checkbox] + .label::after { /* stylelint-disable-line */
+.field-inline [type=checkbox] + .label::before,
+.field-inline [type=checkbox] + .label::after { /* stylelint-disable-line */
     border-radius: var(--border-radius);
 }
 
-.inline-field [type=checkbox]:checked + .label::after {
+.field-inline [type=checkbox]:checked + .label::after { /* stylelint-disable-line */
     color: var(--color-primary-dark);
     content: '\2714';
     text-align: center;
@@ -743,7 +743,7 @@ Markup:
     <span class="label">Textarea</span>
 </label>
 
-Styleguide 3.3
+Styleguide 3.4
 
 */
 
