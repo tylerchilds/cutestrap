@@ -16,20 +16,20 @@
   <link href="./public/css/kss.css" rel="stylesheet" />
 
   </head>
-  <body class="language-markup rhythm">
+  <body class="language-markup dashboard-layout">
 
-      <header>
-  <h3>
-    <a href="javascript:;" class="js-grid-toggle grid-toggle fs-base f-right">Grid</a>
+      <header class="header">
+  <a href="javascript:;" class="js-grid-toggle f-right">Grid</a>
+  <h2 class="title">
     <a href="./index.html">Cutestrap</a>
-  </h3>
+  </h2>
 </header>
 
 
       
 
 
-<nav>
+<nav class="navigation">
   <ul>
       <li>
         <a href="section-2.html">Buttons</a>
@@ -47,16 +47,13 @@
 </nav>
 
 
-<div class="wrapper">
+<main class="content">
 
       <article class="pattern">
           <h2 id="5">Utilities</h2>
           <div class="subtitle pattern-description"><p>These utility classes have one or two CSS properties that are meant to save you from creating several identical classes to do the same thing, like just centering some text.</p>
 </div>
           <section class="example">
-<pre class="">&lt;div class=&quot;[modifier class]&quot; style=&quot;background-color: #ddd&quot;&gt;
-    Example Text
-&lt;/div&gt;</pre>
             <div class="kss-example"><div class="[modifier class]" style="background-color: #ddd">
     Example Text
 </div></div>
@@ -105,6 +102,9 @@
               <div class="kss-example"><div class="ta-right" style="background-color: #ddd">
     Example Text
 </div></div>
+<pre class="">&lt;div class=&quot;[modifier class]&quot; style=&quot;background-color: #ddd&quot;&gt;
+    Example Text
+&lt;/div&gt;</pre>
           </section>
       </article>
       <article class="pattern">
@@ -114,9 +114,6 @@
           <div class="subtitle pattern-description"><p>These are specific typography related utilities</p>
 </div>
           <section class="example">
-<pre class="">&lt;div class=&quot;type [modifier class]&quot;&gt;
-    The quick brown fox jumps over the lazy dog.
-&lt;/div&gt;</pre>
             <div class="kss-example"><div class="type [modifier class]">
     The quick brown fox jumps over the lazy dog.
 </div></div>
@@ -140,9 +137,12 @@
               <div class="kss-example"><div class="type fw-bold">
     The quick brown fox jumps over the lazy dog.
 </div></div>
+<pre class="">&lt;div class=&quot;type [modifier class]&quot;&gt;
+    The quick brown fox jumps over the lazy dog.
+&lt;/div&gt;</pre>
           </section>
       </article>
-</div>
+</main>
 
 
 

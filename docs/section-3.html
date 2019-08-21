@@ -16,20 +16,20 @@
   <link href="./public/css/kss.css" rel="stylesheet" />
 
   </head>
-  <body class="language-markup rhythm">
+  <body class="language-markup dashboard-layout">
 
-      <header>
-  <h3>
-    <a href="javascript:;" class="js-grid-toggle grid-toggle fs-base f-right">Grid</a>
+      <header class="header">
+  <a href="javascript:;" class="js-grid-toggle f-right">Grid</a>
+  <h2 class="title">
     <a href="./index.html">Cutestrap</a>
-  </h3>
+  </h2>
 </header>
 
 
       
 
 
-<nav>
+<nav class="navigation">
   <ul>
       <li>
         <a href="section-2.html">Buttons</a>
@@ -47,40 +47,11 @@
 </nav>
 
 
-<div class="wrapper">
+<main class="content">
 
       <article class="pattern">
           <h2 id="3">Forms</h2>
           <section class="example">
-<pre class="">&lt;form&gt;
-    &lt;label class=&quot;textfield&quot;&gt;
-        &lt;span class=&quot;label&quot;&gt;Name&lt;/span&gt;
-        &lt;input type=&quot;text&quot; /&gt;
-    &lt;/label&gt;
-    &lt;label class=&quot;radio&quot;&gt;
-        &lt;input type=&quot;radio&quot; name=&quot;example&quot; /&gt;
-        &lt;span class=&quot;label&quot;&gt;Desktop&lt;/span&gt;
-    &lt;/label&gt;
-    &lt;label class=&quot;radio&quot;&gt;
-        &lt;input type=&quot;radio&quot; name=&quot;example&quot; /&gt;
-        &lt;span class=&quot;label&quot;&gt;Mobile&lt;/span&gt;
-    &lt;/label&gt;
-    &lt;label for=&quot;select&quot; class=&quot;select&quot;&gt;
-        &lt;span class=&quot;label&quot;&gt;Favorite Ice Cream&lt;/span&gt;
-        &lt;select name=&quot;select&quot;&gt;
-            &lt;option disabled=&quot;disabled&quot; selected=&quot;selected&quot;&gt;Flavors&lt;/option&gt;
-            &lt;option&gt;Chocolate&lt;/option&gt;
-        &lt;/select&gt;
-    &lt;/label&gt;
-    &lt;label class=&quot;textfield&quot;&gt;
-        &lt;span class=&quot;label&quot;&gt;Comments&lt;/span&gt;
-        &lt;textarea&gt;&lt;/textarea&gt;
-    &lt;/label&gt;
-    &lt;label class=&quot;checkbox&quot;&gt;
-        &lt;input type=&quot;checkbox&quot; /&gt;
-        &lt;span class=&quot;label&quot;&gt;I Lied&lt;/span&gt;
-    &lt;/label&gt;
-&lt;/form&gt;</pre>
             <div class="kss-example"><form>
     <label class="textfield">
         <span class="label">Name</span>
@@ -110,6 +81,35 @@
         <span class="label">I Lied</span>
     </label>
 </form></div>
+<pre class="">&lt;form&gt;
+    &lt;label class=&quot;textfield&quot;&gt;
+        &lt;span class=&quot;label&quot;&gt;Name&lt;/span&gt;
+        &lt;input type=&quot;text&quot; /&gt;
+    &lt;/label&gt;
+    &lt;label class=&quot;radio&quot;&gt;
+        &lt;input type=&quot;radio&quot; name=&quot;example&quot; /&gt;
+        &lt;span class=&quot;label&quot;&gt;Desktop&lt;/span&gt;
+    &lt;/label&gt;
+    &lt;label class=&quot;radio&quot;&gt;
+        &lt;input type=&quot;radio&quot; name=&quot;example&quot; /&gt;
+        &lt;span class=&quot;label&quot;&gt;Mobile&lt;/span&gt;
+    &lt;/label&gt;
+    &lt;label for=&quot;select&quot; class=&quot;select&quot;&gt;
+        &lt;span class=&quot;label&quot;&gt;Favorite Ice Cream&lt;/span&gt;
+        &lt;select name=&quot;select&quot;&gt;
+            &lt;option disabled=&quot;disabled&quot; selected=&quot;selected&quot;&gt;Flavors&lt;/option&gt;
+            &lt;option&gt;Chocolate&lt;/option&gt;
+        &lt;/select&gt;
+    &lt;/label&gt;
+    &lt;label class=&quot;textfield&quot;&gt;
+        &lt;span class=&quot;label&quot;&gt;Comments&lt;/span&gt;
+        &lt;textarea&gt;&lt;/textarea&gt;
+    &lt;/label&gt;
+    &lt;label class=&quot;checkbox&quot;&gt;
+        &lt;input type=&quot;checkbox&quot; /&gt;
+        &lt;span class=&quot;label&quot;&gt;I Lied&lt;/span&gt;
+    &lt;/label&gt;
+&lt;/form&gt;</pre>
           </section>
       </article>
       <article class="pattern">
@@ -117,14 +117,14 @@
             <span class="kss-ref badge pull-right">3-1</span> Radio
           </h2>
           <section class="example">
-<pre class="">&lt;label class=&quot;radio &quot;&gt;
-    &lt;input type=&quot;radio&quot; /&gt;
-    &lt;span class=&quot;label&quot;&gt;Radio&lt;/span&gt;
-&lt;/label&gt;</pre>
             <div class="kss-example"><label class="radio ">
     <input type="radio" />
     <span class="label">Radio</span>
 </label></div>
+<pre class="">&lt;label class=&quot;radio &quot;&gt;
+    &lt;input type=&quot;radio&quot; /&gt;
+    &lt;span class=&quot;label&quot;&gt;Radio&lt;/span&gt;
+&lt;/label&gt;</pre>
           </section>
       </article>
       <article class="pattern">
@@ -132,14 +132,14 @@
             <span class="kss-ref badge pull-right">3-2</span> Checkbox
           </h2>
           <section class="example">
-<pre class="">&lt;label class=&quot;checkbox &quot;&gt;
-    &lt;input type=&quot;checkbox&quot; /&gt;
-    &lt;span class=&quot;label&quot;&gt;Checkbox&lt;/span&gt;
-&lt;/label&gt;</pre>
             <div class="kss-example"><label class="checkbox ">
     <input type="checkbox" />
     <span class="label">Checkbox</span>
 </label></div>
+<pre class="">&lt;label class=&quot;checkbox &quot;&gt;
+    &lt;input type=&quot;checkbox&quot; /&gt;
+    &lt;span class=&quot;label&quot;&gt;Checkbox&lt;/span&gt;
+&lt;/label&gt;</pre>
           </section>
       </article>
       <article class="pattern">
@@ -147,14 +147,6 @@
             <span class="kss-ref badge pull-right">3-3</span> Input and text areas
           </h2>
           <section class="example">
-<pre class="">&lt;label class=&quot;textfield &quot;&gt;
-    &lt;span class=&quot;label&quot;&gt;Input&lt;/span&gt;
-    &lt;input type=&quot;text&quot; /&gt;
-&lt;/label&gt;
-&lt;label class=&quot;textfield &quot;&gt;
-    &lt;span class=&quot;label&quot;&gt;Textarea&lt;/span&gt;
-    &lt;textarea&gt;&lt;/textarea&gt;
-&lt;/label&gt;</pre>
             <div class="kss-example"><label class="textfield ">
     <span class="label">Input</span>
     <input type="text" />
@@ -163,6 +155,14 @@
     <span class="label">Textarea</span>
     <textarea></textarea>
 </label></div>
+<pre class="">&lt;label class=&quot;textfield &quot;&gt;
+    &lt;span class=&quot;label&quot;&gt;Input&lt;/span&gt;
+    &lt;input type=&quot;text&quot; /&gt;
+&lt;/label&gt;
+&lt;label class=&quot;textfield &quot;&gt;
+    &lt;span class=&quot;label&quot;&gt;Textarea&lt;/span&gt;
+    &lt;textarea&gt;&lt;/textarea&gt;
+&lt;/label&gt;</pre>
           </section>
       </article>
       <article class="pattern">
@@ -170,15 +170,6 @@
             <span class="kss-ref badge pull-right">3-4</span> Select
           </h2>
           <section class="example">
-<pre class="">&lt;label class=&quot;select &quot;&gt;
-    &lt;select&gt;
-        &lt;option disabled=&quot;disabled&quot; selected=&quot;selected&quot;&gt;Select&lt;/option&gt;
-        &lt;option&gt;Option 1&lt;/option&gt;
-        &lt;option&gt;Option 2&lt;/option&gt;
-        &lt;option&gt;Option 3&lt;/option&gt;
-    &lt;/select&gt;
-    &lt;span class=&quot;label&quot;&gt;Select Label&lt;/span&gt;
-&lt;/label&gt;</pre>
             <div class="kss-example"><label class="select ">
     <select>
         <option disabled="disabled" selected="selected">Select</option>
@@ -188,9 +179,18 @@
     </select>
     <span class="label">Select Label</span>
 </label></div>
+<pre class="">&lt;label class=&quot;select &quot;&gt;
+    &lt;select&gt;
+        &lt;option disabled=&quot;disabled&quot; selected=&quot;selected&quot;&gt;Select&lt;/option&gt;
+        &lt;option&gt;Option 1&lt;/option&gt;
+        &lt;option&gt;Option 2&lt;/option&gt;
+        &lt;option&gt;Option 3&lt;/option&gt;
+    &lt;/select&gt;
+    &lt;span class=&quot;label&quot;&gt;Select Label&lt;/span&gt;
+&lt;/label&gt;</pre>
           </section>
       </article>
-</div>
+</main>
 
 
 

@@ -61,66 +61,6 @@ button[disabled] {
 
 /*
     Shared Styles
-    Radio and Checkbox
-*/
-
-.radio,
-.checkbox {
-    cursor: pointer;
-    display: inline-block;
-    margin-bottom: var(--rhythm);
-    padding: 0 var(--rhythm-half) 0 var(--rhythm);
-    position: relative;
-}
-
-.radio::before,
-.checkbox::before {
-    background-color: var(--color-white);
-    border: 2px solid var(--color-gray3);
-    content: '';
-    height: var(--rhythm-half);
-    left: 0;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: var(--rhythm-half);
-}
-
-.checkbox input[type=checkbox],
-.radio input[type=radio] {
-    opacity: 0;
-    position: absolute;
-    z-index: 0;
-}
-
-.radio .label,
-.checkbox .label {
-    color: var(--color-gray3);
-    font-size: var(--rhythm-half);
-    line-height: 1;
-}
-
-.radio .label::before,
-.radio .label::after,
-.checkbox .label::after {
-    border: 2px solid transparent;
-    content: '';
-    height: var(--rhythm-half);
-    left: 0;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: var(--rhythm-half);
-}
-
-.radio input[type=radio]:focus + .label::after,
-.checkbox input[type=checkbox]:focus + .label::after {
-    outline: var(--rhythm-twelfth) dotted #f00;
-    outline-offset: var(--rhythm-twelfth);
-}
-
-/*
-    Shared Styles
     Textfield and Select
 */
 
@@ -170,6 +110,101 @@ button[disabled] {
 
 /*
 
+Select
+
+Markup:
+<label class="select {{modifier_class}}">
+    <select>
+        <option disabled="disabled" selected="selected">Select</option>
+        <option>Option 1</option>
+        <option>Option 2</option>
+        <option>Option 3</option>
+    </select>
+    <span class="label">Select Label</span>
+</label>
+
+Styleguide 3.4
+
+*/
+
+.select .label::after {
+    content: '';
+    border-left: var(--rhythm-fourth) solid transparent;
+    border-right: var(--rhythm-fourth) solid transparent;
+    border-top: var(--rhythm-fourth) solid var(--color-gray3);
+    height: 0;
+    position: absolute;
+    right: var(--rhythm-half);
+    bottom: calc(-1 * var(--rhythm-third));
+    width: 0;
+}
+
+.select option[disabled] {
+    background-color: var(--color-gray6);
+    color: var(--color-gray2);
+}
+
+/*
+    Shared Styles
+    Radio and Checkbox
+*/
+
+.radio,
+.checkbox {
+    cursor: pointer;
+    display: inline-block;
+    margin-bottom: var(--rhythm);
+    padding: 0 var(--rhythm-half) 0 var(--rhythm);
+    position: relative;
+}
+
+.checkbox input[type=checkbox],
+.radio input[type=radio] {
+    opacity: 0;
+    position: absolute;
+    z-index: 0;
+}
+
+.radio .label,
+.checkbox .label {
+    color: var(--color-gray3);
+    font-size: var(--rhythm-half);
+    line-height: 1;
+}
+
+.radio .label::before,
+.checkbox .label::before {
+    background-color: var(--color-white);
+    border: 2px solid var(--color-gray3);
+    content: '';
+    height: var(--rhythm-half);
+    left: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: var(--rhythm-half);
+}
+
+.radio .label::after,
+.checkbox .label::after {
+    border: 2px solid transparent;
+    content: '';
+    height: var(--rhythm-half);
+    left: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: var(--rhythm-half);
+}
+
+.radio input[type=radio]:focus + .label::after,
+.checkbox input[type=checkbox]:focus + .label::after {
+    outline: var(--rhythm-twelfth) dotted #f00;
+    outline-offset: var(--rhythm-twelfth);
+}
+
+/*
+
 Radio
 
 Markup:
@@ -182,7 +217,6 @@ Styleguide 3.1
 
 */
 
-.radio::before,
 .radio .label::before,
 .radio .label::after { /* stylelint-disable-line */
     border-radius: var(--rhythm);
@@ -208,7 +242,7 @@ Styleguide 3.2
 
 */
 
-.checkbox::before,
+.checkbox .label::before,
 .checkbox .label::after { /* stylelint-disable-line */
     border-radius: var(--border-radius);
 }
@@ -239,42 +273,6 @@ Styleguide 3.3
 
 .textfield textarea {
     min-height: calc(4 * var(--rhythm));
-}
-
-/*
-
-Select
-
-Markup:
-<label class="select {{modifier_class}}">
-    <select>
-        <option disabled="disabled" selected="selected">Select</option>
-        <option>Option 1</option>
-        <option>Option 2</option>
-        <option>Option 3</option>
-    </select>
-    <span class="label">Select Label</span>
-</label>
-
-Styleguide 3.4
-
-*/
-
-.select::after {
-    content: '';
-    border-left: var(--rhythm-fourth) solid transparent;
-    border-right: var(--rhythm-fourth) solid transparent;
-    border-top: var(--rhythm-fourth) solid var(--color-gray3);
-    height: 0;
-    position: absolute;
-    right: var(--rhythm-half);
-    bottom: calc(2 * var(--rhythm-third));
-    width: 0;
-}
-
-.select option[disabled] {
-    background-color: var(--color-gray6);
-    color: var(--color-gray2);
 }
 
 /* Firefox detection for keeping exact rhythm */

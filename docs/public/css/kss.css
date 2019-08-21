@@ -1,10 +1,42 @@
-.rhythm {
-  background: repeat left top; }
+/*
+    Dashboard Basic Layout
+*/
+.dashboard-layout {
+  display: grid;
+  grid-template-areas: "header     header" "navigation content";
+  grid-template-columns: 10em 1fr; }
 
-html.grid--is_hidden .rhythm {
-  background: none !important; }
+/* Header styles */
+.header {
+  /* --rhythm: 1.5rem; */
+  grid-area: header;
+  padding: var(--rhythm-half); }
 
-.wrapper {
-  padding: var(--cs-rhythm); }
+.title {
+  --sub-rhythm: 2rem;
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  margin: 0; }
+
+/* Navigation Styles */
+.navigation {
+  background-color: var(--color-gray1);
+  grid-area: navigation;
+  padding: var(--rhythm) var(--rhythm-half); }
+
+.navigation ul {
+  list-style-type: none;
+  margin-left: 0; }
+
+/* Content Styles */
+.content {
+  grid-area: content;
+  padding: 0 var(--rhythm-half); }
+
+/*
+    Cutestrap Styleguide Specific Items
+*/
+.hide-gridlines {
+  background-image: none !important; }
 
 /*# sourceMappingURL=kss.css.map */
