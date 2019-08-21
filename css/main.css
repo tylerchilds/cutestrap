@@ -44,7 +44,6 @@ html[data-theme="dark"] {
 html {
   --breakpoint: 900px;
   --gutter-width: var(--rhythm);
-  --border-radius: var(--rhythm-half);
 }
 
 body {

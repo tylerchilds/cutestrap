@@ -314,6 +314,8 @@ table {
 }
 
 table th {
+    background-color: var(--color-primary);
+    color: var(--color-white);
     font-weight: 500;
     text-align: left;
 }
@@ -321,6 +323,14 @@ table th {
 table th,
 table td {
     padding: 0 var(--rhythm-fourth);
+}
+
+table tr:nth-child(odd) {
+    background-color: var(--color-white);
+}
+
+table tr:nth-child(even) {
+    background-color: var(--color-gray6);
 }
 
 input,
@@ -481,30 +491,30 @@ Forms
 
 Markup:
 <form>
-    <label class="textfield">
-        <span class="label">Name</span>
+    <label class="field">
         <input type="text" />
+        <span class="label">Name</span>
     </label>
-    <label class="radio">
+    <label class="field-inline">
         <input type="radio" name="example" />
         <span class="label">Desktop</span>
     </label>
-    <label class="radio">
+    <label class="field-inline">
         <input type="radio" name="example" />
         <span class="label">Mobile</span>
     </label>
-    <label for="select" class="select">
-        <span class="label">Favorite Ice Cream</span>
+    <label for="select" class="field">
         <select name="select">
             <option disabled="disabled" selected="selected">Flavors</option>
             <option>Chocolate</option>
         </select>
+        <span class="label">Favorite Ice Cream</span>
     </label>
-    <label class="textfield">
-        <span class="label">Comments</span>
+    <label class="field">
         <textarea></textarea>
+        <span class="label">Comments</span>
     </label>
-    <label class="checkbox">
+    <label class="field-inline">
         <input type="checkbox" />
         <span class="label">I Lied</span>
     </label>
@@ -519,14 +529,10 @@ Styleguide 3.0
     All form controls
 */
 
-.radio [disabled],
-.checkbox [disabled],
-.select [disabled],
-.textfield [disabled],
-.radio [disabled] + *,
-.checkbox [disabled] + *,
-.select [disabled] + *,
-.textfield [disabled] + *,
+.field [disabled],
+.field-inline [disabled],
+.field [disabled] + *,
+.field-inline [disabled] + *,
 [type=button][disabled],
 [type=reset][disabled],
 [type=submit][disabled],
@@ -538,107 +544,45 @@ button[disabled] {
 
 /*
     Shared Styles
-    Radio and Checkbox
-*/
-
-.radio,
-.checkbox {
-    cursor: pointer;
-    display: inline-block;
-    margin-bottom: var(--rhythm);
-    padding: 0 var(--rhythm-half) 0 var(--rhythm);
-    position: relative;
-}
-
-.radio::before,
-.checkbox::before {
-    background-color: var(--color-white);
-    border: var(--rhythm-twelfth) solid var(--color-gray3);
-    content: '';
-    height: var(--rhythm-half);
-    left: 0;
-    margin-top: calc(-1 * var(--rhythm-third));
-    position: absolute;
-    top: 50%;
-    width: var(--rhythm-half);
-}
-
-.checkbox input[type=checkbox],
-.radio input[type=radio] {
-    opacity: 0;
-    position: absolute;
-    z-index: 0;
-}
-
-.radio .label,
-.checkbox .label {
-    color: var(--color-gray3);
-    font-size: var(--rhythm-half);
-    line-height: 1;
-}
-
-.radio .label::before,
-.radio .label::after,
-.checkbox .label::after {
-    border: var(--rhythm-twelfth) solid transparent;
-    content: '';
-    height: var(--rhythm-half);
-    left: 0;
-    margin-top: calc(-1 * var(--rhythm-third));
-    position: absolute;
-    top: 50%;
-    width: var(--rhythm-half);
-}
-
-.radio input[type=radio]:focus + .label::after,
-.checkbox input[type=checkbox]:focus + .label::after {
-    outline: var(--rhythm-twelfth) dotted #f00;
-    outline-offset: var(--rhythm-twelfth);
-}
-
-/*
-    Shared Styles
     Textfield and Select
 */
 
-.textfield,
-.select {
+.field {
     background-color: var(--color-white);
     display: block;
     margin-bottom: var(--rhythm);
     position: relative;
 }
 
-.textfield .label,
-.select .label {
+.field .label {
     background-color: var(--color-white);
     font-size: var(--rhythm-half);
     position: absolute;
     left: var(--rhythm-sixteenth);
     line-height: 1;
-    padding: var(--rhythm-fourth);
+    padding: var(--rhythm-fourth) var(--rhythm-fourth) 0;
     right: var(--rhythm-sixteenth);
     top: var(--rhythm-sixteenth);
 }
 
-.textfield input,
-.textfield textarea,
-.select select {
+.field input,
+.field textarea,
+.field select {
     background-color: transparent;
-    border: var(--rhythm-sixteenth) solid var(--color-gray3);
+    border: 1px solid var(--color-gray3);
     border-radius: var(--border-radius);
     box-sizing: border-box;
-    padding: calc(3 * var(--rhythm-fourth)) var(--rhythm-fourth) calc(2 * var(--rhythm-sixteenth));
+    margin-top: -2px;
+    padding: calc(7 * var(--rhythm-eighth)) var(--rhythm-fourth) var(--rhythm-eighth);
     position: relative;
     width: 100%;
 }
 
-.select select {
+.field select {
     z-index: 1;
 }
 
-.textfield *:focus,
-.select select:focus {
+.field *:focus {
     border-color: var(--color-primary);
     box-shadow: 0 var(--rhythm-sixteenth) var(--rhythm-eigth) 0 var(--color-gray5) inset;
     outline: none;
@@ -646,25 +590,115 @@ button[disabled] {
 
 /*
 
-Radio
+Select
 
 Markup:
-<label class="radio {{modifier_class}}">
-    <input type="radio" />
-    <span class="label">Radio</span>
+<label class="field {{modifier_class}}">
+    <select>
+        <option disabled="disabled" selected="selected">Select</option>
+        <option>Option 1</option>
+        <option>Option 2</option>
+        <option>Option 3</option>
+    </select>
+    <span class="label">Select Label</span>
 </label>
 
 Styleguide 3.1
 
 */
 
-.radio::before,
-.radio .label::before,
-.radio .label::after { /* stylelint-disable-line */
+.field select + .label::after {
+    content: '';
+    border-left: var(--rhythm-fourth) solid transparent;
+    border-right: var(--rhythm-fourth) solid transparent;
+    border-top: var(--rhythm-fourth) solid var(--color-gray3);
+    height: 0;
+    position: absolute;
+    right: var(--rhythm-half);
+    bottom: calc(-2 * var(--rhythm-third));
+    width: 0;
+}
+
+.field option[disabled] {
+    background-color: var(--color-gray6);
+    color: var(--color-gray2);
+}
+
+/*
+    Shared Styles
+    Radio and Checkbox
+*/
+
+.field-inline {
+    cursor: pointer;
+    display: inline-block;
+    margin-bottom: var(--rhythm);
+    padding: 0 var(--rhythm-half) 0 var(--rhythm);
+    position: relative;
+}
+
+.field-inline [type=checkbox],
+.field-inline [type=radio] {
+    opacity: 0;
+    position: absolute;
+    z-index: 0;
+}
+
+.field-inline .label {
+    color: var(--color-gray3);
+    font-size: var(--rhythm-half);
+    line-height: 1;
+}
+
+.field-inline .label::before {
+    background-color: var(--color-white);
+    border: 2px solid var(--color-gray3);
+    content: '';
+    height: var(--rhythm-half);
+    left: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: var(--rhythm-half);
+}
+
+.field-inline .label::after { /* stylelint-disable-line */
+    border: 2px solid transparent;
+    content: '';
+    height: var(--rhythm-half);
+    left: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: var(--rhythm-half);
+}
+
+.field-inline [type=radio]:focus + .label::after,
+.field-inline [type=checkbox]:focus + .label::after {
+    outline: var(--rhythm-twelfth) dotted #f00;
+    outline-offset: var(--rhythm-twelfth);
+}
+
+/*
+
+Radio
+
+Markup:
+<label class="field-inline {{modifier_class}}">
+    <input type="radio" />
+    <span class="label">Radio</span>
+</label>
+
+Styleguide 3.2
+
+*/
+
+.field-inline [type=radio] + .label::before,
+.field-inline [type=radio] + .label::after { /* stylelint-disable-line */
     border-radius: var(--rhythm);
 }
 
-.radio input[type=radio]:checked + .label::after {
+.field-inline [type=radio]:checked + .label::after { /* stylelint-disable-line */
     color: var(--color-primary-dark);
     content: '\26ab';
     text-align: center;
@@ -675,21 +709,21 @@ Styleguide 3.1
 Checkbox
 
 Markup:
-<label class="checkbox {{modifier_class}}">
+<label class="field-inline {{modifier_class}}">
     <input type="checkbox" />
     <span class="label">Checkbox</span>
 </label>
 
-Styleguide 3.2
+Styleguide 3.3
 
 */
 
-.checkbox::before,
-.checkbox .label::after { /* stylelint-disable-line */
+.field-inline [type=checkbox] + .label::before,
+.field-inline [type=checkbox] + .label::after { /* stylelint-disable-line */
     border-radius: var(--border-radius);
 }
 
-.checkbox input[type=checkbox]:checked + .label::after {
+.field-inline [type=checkbox]:checked + .label::after { /* stylelint-disable-line */
     color: var(--color-primary-dark);
     content: '\2714';
     text-align: center;
@@ -700,57 +734,21 @@ Styleguide 3.2
 Input and text areas
 
 Markup:
-<label class="textfield {{modifier_class}}">
-    <span class="label">Input</span>
+<label class="field {{modifier_class}}">
     <input type="text" />
+    <span class="label">Input</span>
 </label>
-<label class="textfield {{modifier_class}}">
-    <span class="label">Textarea</span>
+<label class="field {{modifier_class}}">
     <textarea></textarea>
-</label>
-
-Styleguide 3.3
-
-*/
-
-.textfield textarea {
-    min-height: calc(4 * var(--rhythm));
-}
-
-/*
-
-Select
-
-Markup:
-<label class="select {{modifier_class}}">
-    <select>
-        <option disabled="disabled" selected="selected">Select</option>
-        <option>Option 1</option>
-        <option>Option 2</option>
-        <option>Option 3</option>
-    </select>
-    <span class="label">Select Label</span>
+    <span class="label">Textarea</span>
 </label>
 
 Styleguide 3.4
 
 */
 
-.select::after {
-    content: '';
-    border-left: var(--rhythm-fourth) solid transparent;
-    border-right: var(--rhythm-fourth) solid transparent;
-    border-top: var(--rhythm-fourth) solid var(--color-gray3);
-    height: 0;
-    position: absolute;
-    right: var(--rhythm-half);
-    bottom: calc(2 * var(--rhythm-third));
-    width: 0;
-}
-
-.select option[disabled] {
-    background-color: var(--color-gray6);
-    color: var(--color-gray2);
+.field textarea {
+    min-height: calc(4 * var(--rhythm));
 }
 
 /* Firefox detection for keeping exact rhythm */

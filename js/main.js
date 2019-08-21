@@ -72,7 +72,7 @@ function updateRhythmBackgroundImage() {
     const ctx = canvas.getContext('2d');
   
     const rhythm = parseFloat(window.getComputedStyle(body).getPropertyValue('line-height'));
-    const color =  window.getComputedStyle(body).getPropertyValue('--cs-color-gray5');
+    const color =  window.getComputedStyle(body).getPropertyValue('--color-gray5');
     canvas.height = rhythm;
     console.log(rhythm)
     canvas.width = rhythm;
