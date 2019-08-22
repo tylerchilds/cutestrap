@@ -8,11 +8,11 @@ Markup:
         <input type="text" />
         <span class="label">Name</span>
     </label>
-    <label class="field-inline">
+    <label class="field -inline">
         <input type="radio" name="example" />
         <span class="label">Desktop</span>
     </label>
-    <label class="field-inline">
+    <label class="field -inline">
         <input type="radio" name="example" />
         <span class="label">Mobile</span>
     </label>
@@ -27,7 +27,7 @@ Markup:
         <textarea></textarea>
         <span class="label">Comments</span>
     </label>
-    <label class="field-inline">
+    <label class="field">
         <input type="checkbox" />
         <span class="label">I Lied</span>
     </label>
@@ -43,9 +43,7 @@ Styleguide 3.0
 */
 
 .field [disabled],
-.field-inline [disabled],
 .field [disabled] + *,
-.field-inline [disabled] + *,
 [type=button][disabled],
 [type=reset][disabled],
 [type=submit][disabled],
@@ -61,10 +59,22 @@ button[disabled] {
 */
 
 .field {
-    background-color: var(--color-white);
     display: block;
     margin-bottom: var(--rhythm);
     position: relative;
+}
+
+.field .label {
+    z-index: 2;
+}
+
+.field [type=checkbox] + .label,
+.field [type=radio] + .label {
+    color: var(--color-gray3);
+    cursor: pointer;
+    font-size: var(--rhythm-half);
+    line-height: 1;
+    padding-left: var(--rhythm);
 }
 
 .field *:not([type=radio]):not([type=checkbox]) + .label {
@@ -81,7 +91,7 @@ button[disabled] {
 .field input,
 .field textarea,
 .field select {
-    background-color: transparent;
+    background-color: var(--color-white);
     border: 1px solid var(--color-gray3);
     border-radius: var(--border-radius);
     box-sizing: border-box;
@@ -142,30 +152,20 @@ Styleguide 3.1
     Radio and Checkbox
 */
 
-.field-inline {
-    cursor: pointer;
+.field.-inline {
     display: inline-block;
-    margin-bottom: var(--rhythm);
-    padding: 0 var(--rhythm-half) 0 var(--rhythm);
-    position: relative;
+    margin-right: var(--rhythm-half);
 }
 
-.field-inline [type=checkbox],
-.field-inline [type=radio] {
+.field [type=checkbox],
+.field [type=radio] {
     opacity: 0;
     position: absolute;
     z-index: 0;
 }
 
-.field-inline [type=checkbox] + .label,
-.field-inline [type=radio] + .label {
-    color: var(--color-gray3);
-    font-size: var(--rhythm-half);
-    line-height: 1;
-}
-
-.field-inline [type=checkbox] + .label::before,
-.field-inline [type=radio] + .label::before {
+.field [type=checkbox] + .label::before,
+.field [type=radio] + .label::before {
     background-color: var(--color-white);
     border: 2px solid var(--color-gray3);
     content: '';
@@ -177,8 +177,8 @@ Styleguide 3.1
     width: var(--rhythm-half);
 }
 
-.field-inline [type=checkbox] + .label::after,
-.field-inline [type=radio] + .label::after {
+.field [type=checkbox] + .label::after,
+.field [type=radio] + .label::after {
     border: 2px solid transparent;
     content: '';
     height: var(--rhythm-half);
@@ -189,8 +189,8 @@ Styleguide 3.1
     width: var(--rhythm-half);
 }
 
-.field-inline [type=radio]:focus + .label::after,
-.field-inline [type=checkbox]:focus + .label::after {
+.field [type=radio]:focus + .label::after,
+.field [type=checkbox]:focus + .label::after {
     outline: var(--rhythm-twelfth) dotted #f00;
     outline-offset: var(--rhythm-twelfth);
 }
@@ -200,7 +200,7 @@ Styleguide 3.1
 Radio
 
 Markup:
-<label class="field-inline {{modifier_class}}">
+<label class="field {{modifier_class}}">
     <input type="radio" />
     <span class="label">Radio</span>
 </label>
@@ -209,12 +209,12 @@ Styleguide 3.2
 
 */
 
-.field-inline [type=radio] + .label::before,
-.field-inline [type=radio] + .label::after { /* stylelint-disable-line */
+.field [type=radio] + .label::before,
+.field [type=radio] + .label::after { /* stylelint-disable-line */
     border-radius: var(--rhythm);
 }
 
-.field-inline [type=radio]:checked + .label::after { /* stylelint-disable-line */
+.field [type=radio]:checked + .label::after { /* stylelint-disable-line */
     color: var(--color-primary-dark);
     content: '\26ab';
     text-align: center;
@@ -225,7 +225,7 @@ Styleguide 3.2
 Checkbox
 
 Markup:
-<label class="field-inline {{modifier_class}}">
+<label class="field {{modifier_class}}">
     <input type="checkbox" />
     <span class="label">Checkbox</span>
 </label>
@@ -234,12 +234,12 @@ Styleguide 3.3
 
 */
 
-.field-inline [type=checkbox] + .label::before,
-.field-inline [type=checkbox] + .label::after { /* stylelint-disable-line */
+.field [type=checkbox] + .label::before,
+.field [type=checkbox] + .label::after { /* stylelint-disable-line */
     border-radius: var(--border-radius);
 }
 
-.field-inline [type=checkbox]:checked + .label::after { /* stylelint-disable-line */
+.field [type=checkbox]:checked + .label::after { /* stylelint-disable-line */
     color: var(--color-primary-dark);
     content: '\2714';
     text-align: center;
