@@ -554,7 +554,7 @@ button[disabled] {
     position: relative;
 }
 
-.field .label {
+.field *:not([type=radio]):not([type=checkbox]) + .label {
     background-color: var(--color-white);
     font-size: var(--rhythm-half);
     position: absolute;
@@ -644,13 +644,15 @@ Styleguide 3.1
     z-index: 0;
 }
 
-.field-inline .label {
+.field-inline [type=checkbox] + .label,
+.field-inline [type=radio] + .label {
     color: var(--color-gray3);
     font-size: var(--rhythm-half);
     line-height: 1;
 }
 
-.field-inline .label::before {
+.field-inline [type=checkbox] + .label::before,
+.field-inline [type=radio] + .label::before {
     background-color: var(--color-white);
     border: 2px solid var(--color-gray3);
     content: '';
@@ -662,7 +664,8 @@ Styleguide 3.1
     width: var(--rhythm-half);
 }
 
-.field-inline .label::after { /* stylelint-disable-line */
+.field-inline [type=checkbox] + .label::after,
+.field-inline [type=radio] + .label::after {
     border: 2px solid transparent;
     content: '';
     height: var(--rhythm-half);
