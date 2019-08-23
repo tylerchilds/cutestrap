@@ -338,16 +338,19 @@ label,
 select,
 button,
 textarea {
-    padding: var(--rhythm-half);
+    color: var(--color-black);
     display: block;
+    padding: var(--rhythm-half);
     resize: none;
     -webkit-appearance: none;
     -moz-appearance: none;
 }
 
-select:-moz-focusring {
-    /* color: transparent;
-    text-shadow: 0 0 0 #f00; */
+/* Firefox detection for keeping exact rhythm */
+@-moz-document url-prefix() {
+    select {
+        line-height: calc(var(--rhythm) - 2px);
+    }
 }
 
 label {
@@ -396,7 +399,6 @@ Styleguide 2.0
     font-size: var(--font-size);
     justify-content: center;
     line-height: var(--rhythm);
-    margin: 0 var(--rhythm-twelfth);
     max-width: 100%;
     min-height: calc(2 * var(--rhythm));
     padding: calc(5 * var(--rhythm-twelfth)) var(--rhythm);
@@ -559,6 +561,7 @@ button[disabled] {
 .field [type=radio] + .label {
     color: var(--color-gray3);
     cursor: pointer;
+    display: inline-block;
     font-size: var(--rhythm-half);
     line-height: 1;
     padding-left: var(--rhythm);
@@ -751,14 +754,8 @@ Styleguide 3.4
 */
 
 .field textarea {
+    margin-top: 0;
     min-height: calc(4 * var(--rhythm));
-}
-
-/* Firefox detection for keeping exact rhythm */
-@-moz-document url-prefix() {
-    .select {
-        margin-top: -2px;
-    }
 }
 
 /*

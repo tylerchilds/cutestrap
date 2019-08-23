@@ -287,16 +287,19 @@ label,
 select,
 button,
 textarea {
-    padding: var(--rhythm-half);
+    color: var(--color-black);
     display: block;
+    padding: var(--rhythm-half);
     resize: none;
     -webkit-appearance: none;
     -moz-appearance: none;
 }
 
-select:-moz-focusring {
-    /* color: transparent;
-    text-shadow: 0 0 0 #f00; */
+/* Firefox detection for keeping exact rhythm */
+@-moz-document url-prefix() {
+    select {
+        line-height: calc(var(--rhythm) - 2px);
+    }
 }
 
 label {

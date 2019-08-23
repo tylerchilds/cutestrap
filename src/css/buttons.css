@@ -39,7 +39,6 @@ Styleguide 2.0
     font-size: var(--font-size);
     justify-content: center;
     line-height: var(--rhythm);
-    margin: 0 var(--rhythm-twelfth);
     max-width: 100%;
     min-height: calc(2 * var(--rhythm));
     padding: calc(5 * var(--rhythm-twelfth)) var(--rhythm);

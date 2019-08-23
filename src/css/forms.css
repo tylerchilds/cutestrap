@@ -72,6 +72,7 @@ button[disabled] {
 .field [type=radio] + .label {
     color: var(--color-gray3);
     cursor: pointer;
+    display: inline-block;
     font-size: var(--rhythm-half);
     line-height: 1;
     padding-left: var(--rhythm);
@@ -264,12 +265,6 @@ Styleguide 3.4
 */
 
 .field textarea {
+    margin-top: 0;
     min-height: calc(4 * var(--rhythm));
-}
-
-/* Firefox detection for keeping exact rhythm */
-@-moz-document url-prefix() {
-    .select {
-        margin-top: -2px;
-    }
 }

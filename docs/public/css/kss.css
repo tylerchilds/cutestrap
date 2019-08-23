@@ -1,10 +1,27 @@
+html {
+  --color-primary: #ea4c6b;
+  --color-primary-dark: #bb3c55;
+  --color-link: #4c6bea;
+  --color-link-visited: #7c4cea;
+  --color-link-hover: #3c55bb;
+  --color-link-active: #bb3c55;
+  --color-black: #fff;
+  --color-gray1: #efeff0;
+  --color-gray2: #dededf;
+  --color-gray3: #cdcdce;
+  --color-gray4: #7d7d7e;
+  --color-gray5: #5a5a5b;
+  --color-gray6: #3c3c3d;
+  --color-white: #000; }
+
 /*
     Dashboard Basic Layout
 */
 .dashboard-layout {
   display: grid;
   grid-template-areas: "header     header" "navigation content";
-  grid-template-columns: 10em 1fr; }
+  grid-template-columns: 10em 1fr;
+  grid-template-rows: var(--rhythm-double) 1fr; }
 
 /* Header styles */
 .header {
