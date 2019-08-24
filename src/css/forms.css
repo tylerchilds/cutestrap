@@ -106,12 +106,6 @@ button[disabled] {
     z-index: 1;
 }
 
-.field *:focus {
-    border-color: var(--color-primary);
-    box-shadow: 0 var(--rhythm-sixteenth) var(--rhythm-eigth) 0 var(--color-gray5) inset;
-    outline: none;
-}
-
 /*
 
 Select
@@ -192,8 +186,8 @@ Styleguide 3.1
 
 .field [type=radio]:focus + .label::after,
 .field [type=checkbox]:focus + .label::after {
-    outline: var(--rhythm-twelfth) dotted #f00;
-    outline-offset: var(--rhythm-twelfth);
+    outline: var(--focus-outline);
+    outline-offset: var(--focus-outline-offset);
 }
 
 /*

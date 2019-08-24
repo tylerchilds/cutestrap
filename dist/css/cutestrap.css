@@ -22,11 +22,6 @@
 }
 
 html {
-    --font-family: 'Avenir', 'Avenir Next', 'Helvetica Neue', 'Segoe UI', 'Verdana', sans-serif;
-    --font-mono: 'Consolas', 'Monaco', 'Courier New', monospace;
-    --font-heading: var(--font-family);
-    --font-body: var(--font-family);
-    --font-mono: var(--font-mono);
     --border-radius: 4px;
     --color-primary: #ea4c6b;
     --color-primary-dark: #bb3c55;
@@ -42,6 +37,12 @@ html {
     --color-gray5: #dededf;
     --color-gray6: #efeff0;
     --color-white: #fff;
+    --focus-outline: var(--rhythm-twelfth) dotted #f00;
+    --focus-outline-offset: var(--rhythm-twelfth);
+    --font-family: 'Avenir', 'Avenir Next', 'Helvetica Neue', 'Segoe UI', 'Verdana', sans-serif;
+    --font-mono: 'Consolas', 'Monaco', 'Courier New', monospace;
+    --font-heading: var(--font-family);
+    --font-body: var(--font-family);
 }
 
 body {
@@ -55,6 +56,11 @@ body {
     margin: 0;
     padding: 0;
     text-rendering: geometricPrecision;
+}
+
+:focus {
+    outline: var(--focus-outline);
+    outline-offset: var(--focus-outline-offset);
 }
 
 html {
@@ -595,12 +601,6 @@ button[disabled] {
     z-index: 1;
 }
 
-.field *:focus {
-    border-color: var(--color-primary);
-    box-shadow: 0 var(--rhythm-sixteenth) var(--rhythm-eigth) 0 var(--color-gray5) inset;
-    outline: none;
-}
-
 /*
 
 Select
@@ -681,8 +681,8 @@ Styleguide 3.1
 
 .field [type=radio]:focus + .label::after,
 .field [type=checkbox]:focus + .label::after {
-    outline: var(--rhythm-twelfth) dotted #f00;
-    outline-offset: var(--rhythm-twelfth);
+    outline: var(--focus-outline);
+    outline-offset: var(--focus-outline-offset);
 }
 
 /*
