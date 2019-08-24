@@ -22,11 +22,6 @@
 }
 
 html {
-    --font-family: 'Avenir', 'Avenir Next', 'Helvetica Neue', 'Segoe UI', 'Verdana', sans-serif;
-    --font-mono: 'Consolas', 'Monaco', 'Courier New', monospace;
-    --font-heading: var(--font-family);
-    --font-body: var(--font-family);
-    --font-mono: var(--font-mono);
     --border-radius: 4px;
     --color-primary: #ea4c6b;
     --color-primary-dark: #bb3c55;
@@ -42,6 +37,12 @@ html {
     --color-gray5: #dededf;
     --color-gray6: #efeff0;
     --color-white: #fff;
+    --focus-outline: var(--rhythm-twelfth) dotted #f00;
+    --focus-outline-offset: var(--rhythm-twelfth);
+    --font-family: 'Avenir', 'Avenir Next', 'Helvetica Neue', 'Segoe UI', 'Verdana', sans-serif;
+    --font-mono: 'Consolas', 'Monaco', 'Courier New', monospace;
+    --font-heading: var(--font-family);
+    --font-body: var(--font-family);
 }
 
 body {
@@ -55,6 +56,11 @@ body {
     margin: 0;
     padding: 0;
     text-rendering: geometricPrecision;
+}
+
+:focus {
+    outline: var(--focus-outline);
+    outline-offset: var(--focus-outline-offset);
 }
 
 html {
@@ -77,6 +83,8 @@ h3,
 h4,
 h5,
 h6 {
+    --line-height-ratio: 1.2;
+
     font-family: var(--font-heading);
     font-size: var(--font-size);
     line-height: var(--line-height);
@@ -346,9 +354,11 @@ textarea {
     -moz-appearance: none;
 }
 
-select:-moz-focusring {
-    /* color: transparent;
-    text-shadow: 0 0 0 #f00; */
+/* Firefox detection for keeping exact rhythm */
+@-moz-document url-prefix() {
+    select {
+        line-height: calc(var(--rhythm) - 2px);
+    }
 }
 
 label {
@@ -397,7 +407,6 @@ Styleguide 2.0
     font-size: var(--font-size);
     justify-content: center;
     line-height: var(--rhythm);
-    margin: 0 var(--rhythm-twelfth);
     max-width: 100%;
     min-height: calc(2 * var(--rhythm));
     padding: calc(5 * var(--rhythm-twelfth)) var(--rhythm);
@@ -560,6 +569,7 @@ button[disabled] {
 .field [type=radio] + .label {
     color: var(--color-gray3);
     cursor: pointer;
+    display: inline-block;
     font-size: var(--rhythm-half);
     line-height: 1;
     padding-left: var(--rhythm);
@@ -591,12 +601,6 @@ button[disabled] {
 
 .field select {
     z-index: 1;
-}
-
-.field *:focus {
-    border-color: var(--color-primary);
-    box-shadow: 0 var(--rhythm-sixteenth) var(--rhythm-eigth) 0 var(--color-gray5) inset;
-    outline: none;
 }
 
 /*
@@ -679,8 +683,8 @@ Styleguide 3.1
 
 .field [type=radio]:focus + .label::after,
 .field [type=checkbox]:focus + .label::after {
-    outline: var(--rhythm-twelfth) dotted #f00;
-    outline-offset: var(--rhythm-twelfth);
+    outline: var(--focus-outline);
+    outline-offset: var(--focus-outline-offset);
 }
 
 /*
@@ -752,14 +756,8 @@ Styleguide 3.4
 */
 
 .field textarea {
+    margin-top: 0;
     min-height: calc(4 * var(--rhythm));
-}
-
-/* Firefox detection for keeping exact rhythm */
-@-moz-document url-prefix() {
-    .select {
-        margin-top: -2px;
-    }
 }
 
 /*

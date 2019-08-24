@@ -417,3 +417,16 @@ html {
 .post {
   margin-bottom: var(--rhythm-double);
 }
+
+/*
+  5: Examples
+*/
+
+.example-column::before {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    content: 'Column';
+    display: block;
+    margin-bottom: var(--rhythm);
+    text-align: center;
+}

@@ -26,39 +26,46 @@ description: A sassy, opinionated CSS Framework. A tiny alternative to Bootstrap
     <div>
       <h4>Themes</h4>
       <p>
-      </p>
-    </div>
-    <div>
-      <h4>Typography</h4>
-      <p>
-		All type has been set against a baseline grid for Vertical Rhythm
+        Built from the ground up to easily support theme customization
+        and sub-themes
       </p>
     </div>
     <div>
       <h4>Forms</h4>
       <p>
-		Beautiful, consistent form controls that don't compromise accessibility
+		Consistent form controls styles and syntax that don't compromise
+        accessibility
+      </p>
+    </div>
+    <div>
+      <h4>Typography</h4>
+      <p>
+        Adhears to a Baseline Grid to seamlessly provide rhythm throughout
+        your design
       </p>
     </div>
   </article>
   <article class="grid grid--medium">
     <div>
-      <h4>Pure CSS</h4>
+      <h4>Styleguide</h4>
+	  <p>
+		Leverages KSS to automatically generate documentation from CSS code
+        comments
+	  </p>
+    </div>
+    <div>
+      <h4>A La Carte</h4>
       <p>
-		Upgraded to not require a preprocessor for compilation and levaraging CSS Variables
+        Choose only the parts you need for your project, all that's required
+        is core.css
       </p>
     </div>
     <div>
       <h4>Popsicle</h4>
       <p>
-		Uses a new CSS naming convention for low-enough specificity and high readability
+		Uses a new CSS naming convention for low-enough specificity and high
+        readability
       </p>
-    </div>
-    <div>
-      <h4>Styleguide</h4>
-	  <p>
-		Leverage KSS to automatically generate documentation for your CSS
-	  </p>
     </div>
   </article>
 </section>
@@ -67,10 +74,18 @@ description: A sassy, opinionated CSS Framework. A tiny alternative to Bootstrap
 <section class="wrapper-small">
   <h3 class="ta-center">Another framework?</h3>
   <p>
-    There are plenty of amazing front end frameworks already, such as, <a href="http://getbootstrap.com/" target="_blank">Bootstrap</a> and <a href="http://foundation.zurb.com/" target="_blank">Foundation</a>. If you're looking for something feature rich with loads of components, those are both great choices.
+    There are plenty of amazing front end frameworks already, such as,
+    <a href="http://getbootstrap.com/" target="_blank">Bootstrap</a> and 
+    <a href="http://foundation.zurb.com/" target="_blank">Foundation</a>.
+    If you're looking for something feature rich with loads of components,
+    those are both great choices.
   </p>
   <p>
-    However, if you're looking for something in between <a href="https://necolas.github.io/normalize.css/" target="_blank">normalize.css</a> and a full blown framework, meet Cutestrap. <strong>Cutestrap is only 8kb of CSS.</strong>
+    However, if you're looking for something in between
+    <a href="https://necolas.github.io/normalize.css/" target="_blank">
+        normalize.css
+    </a> and a full blown framework, meet Cutestrap.
+    <strong>Cutestrap is only 8kb of CSS.</strong>
   </p>
 </section>
 
@@ -78,36 +93,14 @@ description: A sassy, opinionated CSS Framework. A tiny alternative to Bootstrap
 <section class="wrapper">
   <h2>Forms</h2>
   <p>
-    Form controls are unified in both their display and in their semantic markup. Because they are modified using only CSS, accessibility doesn't suffer.
+    Form controls are unified in both their display and in their semantic
+    markup. Because they are modified using only CSS, accessibility doesn't
+    suffer.
   </p>
   <form>
     <label class="field">
       <input type="text" />
       <span class="label">Your Name</span>
-    </label>
-    <label class="field">
-      <select>
-        <option disabled="disabled" selected="selected">Flavors</option>
-        <option>Chocolate</option>
-        <option>Vanilla</option>
-      </select>
-      <span class="label" for="select">Flavor</span>
-    </label>
-    <label class="field">
-      <select>
-        <option disabled="disabled" selected="selected">Flavors</option>
-        <option>Chocolate</option>
-        <option>Vanilla</option>
-      </select>
-      <span class="label" for="select">Flavor</span>
-    </label>
-    <label class="field">
-      <select>
-        <option disabled="disabled" selected="selected">Flavors</option>
-        <option>Chocolate</option>
-        <option>Vanilla</option>
-      </select>
-      <span class="label" for="select">Flavor</span>
     </label>
     <label class="field -inline">
       <input type="radio" name="example" />
@@ -163,22 +156,32 @@ description: A sassy, opinionated CSS Framework. A tiny alternative to Bootstrap
 
   <h3>Buttons</h3>
   <p>
-    A default button is applied with the <code>.btn</code> class or automatically on <code>button</code> tags or button/submit inputs.
+    A default button is applied with the <code>.button</code> class. 
+    Popsicle modifiers can be used for different button variations.
   </p>
   <p>
     <button class="button">Default</button>
     <button class="button -secondary">Secondary</button>
+    <button class="button -outlined">Outlined</button>
     <a class="button -link" href="#">Link</a>
   </p>
 
 <pre><xmp><button class="button">Default</button>
 <button class="button -secondary">Secondary</button>
+<button class="button -outlined">Outlined</button>
 <a class="button -link" href="#">Link</a></xmp></pre>
+  <p>
+    Complete list of modifiers are available in the
+    <a href="https://docs.cutestrap.com/section-2.html" target="_blank">
+      Buttons Documentation
+    </a>
+  </p>
   <hr />
 
   <h2>Grid</h2>
   <p>
-    The grid is completely implicit, so columns will size themselves to be equal width to their siblings.
+    The default grid is completely implicit, so columns will size themselves
+    to be equal amongst themeselves.
   </p>
   <section class="grid">
     <div class="example-column"></div>
@@ -196,75 +199,10 @@ description: A sassy, opinionated CSS Framework. A tiny alternative to Bootstrap
     <div class="example-column"></div>
   </section>
 <pre><xmp><section class="grid">
-  <div>25% Column</div>
-  <div>25% Column</div>
-  <div>25% Column</div>
-  <div>25% Column</div>
+  <div>Column</div>
+  <div>Column</div>
+  <div>Column</div>
 </section></xmp></pre>
-
-  <h3>Grid Modifiers</h3>
-  <p>
-    The grid will display on all screens by default. If you'd like the grid to only start on larger screens, you can use these modifier classes. Columns will be stacked on smaller screens.
-  </p>
-
-  <table>
-    <tr>
-      <td><p><code>.grid--medium</code></p></td>
-      <td><p>The grid will start 600px screen width.</p></td>
-    </tr>
-    <tr>
-      <td colspan="2">
-        <section class="grid grid--medium">
-          <div class="example-column"></div>
-          <div class="example-column"></div>
-        </section>
-      </td>
-    </tr>
-    <tr>
-      <td><p><code>.grid--large</code></p></td>
-      <td><p>The grid will start at 960px screen width.</p></td>
-    </tr>
-    <tr>
-      <td colspan="2">
-        <section class="grid grid--large">
-          <div class="example-column"></div>
-          <div class="example-column"></div>
-        </section>
-      </td>
-    </tr>
-  </table>
-
-  <h3>Column Modifiers</h3>
-  <p>
-    By adding these modifier classes, you will change the <code>flex-grow</code> property that the columns use to size themselves, effectively changing the <strong>"weight"</strong> of the column. Heavier weighted columns will be wider than lighter columns. If all the weights are equal, the column widths will be equal.
-  </p>
-
-  <table>
-    <tr>
-      <td><p><code>.column--light</code></p></td>
-      <td><p>Half the weight of the default column.</p></td>
-    </tr>
-    <tr>
-      <td colspan="2">
-        <section class="grid">
-          <div class="example-column column--light"></div>
-          <div class="example-column"></div>
-        </section>
-      </td>
-    </tr>
-    <tr>
-      <td><p><code>.column--heavy</code></p></td>
-      <td><p>Twice the weight of the default column.</p></td>
-    </tr>
-    <tr>
-      <td colspan="2">
-        <section class="grid">
-          <div class="example-column column--heavy"></div>
-          <div class="example-column"></div>
-        </section>
-      </td>
-    </tr>
-  </table>
 
   <h3>Wrappers</h3>
 
@@ -296,7 +234,10 @@ description: A sassy, opinionated CSS Framework. A tiny alternative to Bootstrap
   <h2>Typography</h2>
 
   <p>
-    All the typography is sized using rems (based on 62.5% by default, going up to 78.125% on screens larger than 960px), to a baseline of 2.4rem by default. Every element adheres to this baseline grid with perfect vertical rhythm.
+    All typography and base styles are set to use a Baseline Grid to provide
+    consistent Vertical Rhythm. The foundation of this is the <code>--rhythm</code> CSS Custom
+    Property. All typography hinges on this single variable. If you want to
+    customize the baseline grid, this is the single variable you will change.
   </p>
 
   <h1>Headline 1</h1>
