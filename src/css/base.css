@@ -31,6 +31,8 @@ h3,
 h4,
 h5,
 h6 {
+    --line-height-ratio: 1.2;
+
     font-family: var(--font-heading);
     font-size: var(--font-size);
     line-height: var(--line-height);

@@ -83,6 +83,8 @@ h3,
 h4,
 h5,
 h6 {
+    --line-height-ratio: 1.2;
+
     font-family: var(--font-heading);
     font-size: var(--font-size);
     line-height: var(--line-height);
@@ -867,7 +869,6 @@ Markup:
 
 .fw-light            - Changes the type to be 300 weight
 .fw-normal           - Changes the type to be 400 weight
-.fw-semibold         - Changes the type to be 600 weight
 .fw-bold             - Changes the type to be 700 weight
 
 Styleguide 5.1
@@ -880,10 +881,6 @@ Styleguide 5.1
 
 .fw-normal {
     font-weight: 400;
-}
-
-.fw-semibold {
-    font-weight: 600;
 }
 
 .fw-bold {
