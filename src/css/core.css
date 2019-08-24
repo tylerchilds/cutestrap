@@ -23,12 +23,21 @@
 
 html {
     --border-radius: 4px;
-    --color-primary: #ea4c6b;
-    --color-primary-dark: #bb3c55;
-    --color-link: #4c6bea;
-    --color-link-visited: #7c4cea;
-    --color-link-hover: #3c55bb;
-    --color-link-active: #bb3c55;
+    --color-primary: hsl(348, 79%, 61%);
+    --color-primary-dark: hsl(348, 51%, 48%);
+    --color-link: hsl(228, 79%, 61%);
+    --color-link-visited: hsl(288, 79%, 61%);
+    --color-link-hover: hsl(228, 51%, 48%);
+    --color-link-active: hsl(348, 51%, 48%);
+    --color-neutral-tinted: hsl(48, 10%, 94%);
+    --color-neutral-tint3: hsl(48, 9%, 83%);
+    --color-neutral-tint2: hsl(48, 7.5%, 72%);
+    --color-neutral-tint1: hsl(48, 6%, 61%);
+    --color-neutral: hsl(48, 5%, 50%);
+    --color-neutral-shade1: hsl(48, 6%, 39%);
+    --color-neutral-shade2: hsl(48, 7.5%, 28%);
+    --color-neutral-shade3: hsl(48, 9%, 17%);
+    --color-neutral-shaded: hsl(48, 10%, 6%);
     --color-black: #000;
     --color-gray1: #3c3c3d;
     --color-gray2: #5a5a5b;
@@ -37,7 +46,7 @@ html {
     --color-gray5: #dededf;
     --color-gray6: #efeff0;
     --color-white: #fff;
-    --focus-outline: var(--rhythm-twelfth) dotted #f00;
+    --focus-outline: var(--rhythm-twelfth) dotted var(--color-primary);
     --focus-outline-offset: var(--rhythm-twelfth);
     --font-family: 'Avenir', 'Avenir Next', 'Helvetica Neue', 'Segoe UI', 'Verdana', sans-serif;
     --font-mono: 'Consolas', 'Monaco', 'Courier New', monospace;

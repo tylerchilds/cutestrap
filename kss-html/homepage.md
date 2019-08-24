@@ -3,6 +3,24 @@
   <p>A sassy, opinionated CSS Framework. A tiny alternative to Bootstrap.</p>
 </div>
 
+<h2>Color Palette</h2>
+
+<h3>Primary</h3>
+
+<h3>Neutral</h3>
+
+<div class="grid palette">
+    <div class="item neutral -tinted"></div>
+    <div class="item neutral -tint3"></div>
+    <div class="item neutral -tint2"></div>
+    <div class="item neutral -tint1"></div>
+    <div class="item neutral"></div>
+    <div class="item neutral -shade1"></div>
+    <div class="item neutral -shade2"></div>
+    <div class="item neutral -shade3"></div>
+    <div class="item neutral -shaded"></div>
+</div>
+
 <h2>Typography</h2>
 
 <p>
