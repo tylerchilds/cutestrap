@@ -20,6 +20,7 @@ Markup:
         <select name="select">
             <option disabled="disabled" selected="selected">Flavors</option>
             <option>Chocolate</option>
+            <option>Vanilla</option>
         </select>
         <span class="label">Favorite Ice Cream</span>
     </label>
@@ -29,7 +30,11 @@ Markup:
     </label>
     <label class="field">
         <input type="checkbox" />
-        <span class="label">I Lied and i do not consent to have my whatever destroyed on the grounds of apple, facebook or google or whatever</span>
+        <span class="label">
+            I consent to my ice cream flavors being saved into a database for
+            eternity and understand and acknowledge this will have consequences
+            for all of my decendants for decades to come.
+        </span>
     </label>
 </form>
 
@@ -258,6 +263,7 @@ Markup:
         <select name="select" disabled>
             <option disabled="disabled" selected="selected">Flavors</option>
             <option>Chocolate</option>
+            <option>Vanilla</option>
         </select>
         <span class="label">Favorite Ice Cream</span>
     </label>
@@ -267,7 +273,11 @@ Markup:
     </label>
     <label class="field">
         <input type="checkbox" disabled />
-        <span class="label">I Lied and i do not consent to have my whatever destroyed on the grounds of apple, facebook or google or whatever</span>
+        <span class="label">
+            I consent to my ice cream flavors being saved into a database for
+            eternity and understand and acknowledge this will have consequences
+            for all of my decendants for decades to come.
+        </span>
     </label>
 </form>
 

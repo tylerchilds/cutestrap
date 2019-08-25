@@ -72,11 +72,11 @@ h6 {
 }
 
 p {
-    padding-bottom: var(--rhythm);
+    margin-bottom: var(--rhythm);
 }
 
 form {
-    padding: var(--rhythm) 0;
+    margin: var(--rhythm) 0;
 }
 
 pre,
@@ -157,8 +157,7 @@ hr::before {
 
 ol,
 ul {
-    margin-left: var(--rhythm);
-    padding: 0 0 var(--rhythm);
+    margin: 0 0 var(--rhythm) var(--rhythm);
 }
 
 ol {
@@ -166,7 +165,7 @@ ol {
 }
 
 ol ol {
-    padding-bottom: 0;
+    margin-bottom: 0;
 }
 
 ul {
@@ -174,7 +173,7 @@ ul {
 }
 
 ul ul {
-    padding-bottom: 0;
+    margin-bottom: 0;
 }
 
 dt {
@@ -182,7 +181,7 @@ dt {
 }
 
 dd {
-    padding-left: var(--rhythm);
+    margin-left: var(--rhythm);
 }
 
 blockquote {
@@ -192,12 +191,11 @@ blockquote {
 }
 
 blockquote p:last-child {
-    padding-bottom: 0;
+    margin-bottom: 0;
 }
 
 figure {
-    margin: 0 auto;
-    padding-bottom: var(--rhythm);
+    margin: 0 auto var(--rhythm);
 }
 
 figure img {
