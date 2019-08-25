@@ -210,7 +210,7 @@ Styleguide 3.2
 }
 
 .field [type=radio]:checked + .label::after { /* stylelint-disable-line */
-    color: var(--color-primary-dark);
+    color: var(--color-primary-shade);
     content: '\26ab';
     text-align: center;
 }
@@ -235,7 +235,7 @@ Styleguide 3.3
 }
 
 .field [type=checkbox]:checked + .label::after { /* stylelint-disable-line */
-    color: var(--color-primary-dark);
+    color: var(--color-primary-shade);
     content: '\2714';
     text-align: center;
 }

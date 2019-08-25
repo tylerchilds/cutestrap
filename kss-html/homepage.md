@@ -5,7 +5,17 @@
 
 <h2>Color Palette</h2>
 
-<h3>Primary</h3>
+<h3>Colors</h3>
+
+<div class="grid palette">
+    <div class="item primary -tint"></div>
+    <div class="item primary"></div>
+    <div class="item primary -shade"></div>
+    <div class="item accent"></div>
+    <div class="item link"></div>
+    <div class="item link -hover"></div>
+    <div class="item link -visited"></div>
+</div>
 
 <h3>Neutral</h3>
 

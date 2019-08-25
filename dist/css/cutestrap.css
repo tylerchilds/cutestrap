@@ -23,22 +23,24 @@
 
 html {
     --border-radius: 4px;
-    --color-primary: hsl(348, 79%, 61%);
-    --color-primary-dark: hsl(348, 51%, 48%);
-    --color-link: hsl(228, 79%, 61%);
-    --color-link-visited: hsl(288, 79%, 61%);
-    --color-link-hover: hsl(228, 51%, 48%);
-    --color-link-active: hsl(348, 51%, 48%);
-    --color-neutral-tinted: hsl(48, 10%, 94%);
-    --color-neutral-tint3: hsl(48, 9%, 83%);
-    --color-neutral-tint2: hsl(48, 7.5%, 72%);
-    --color-neutral-tint1: hsl(48, 6%, 61%);
-    --color-neutral: hsl(48, 5%, 50%);
-    --color-neutral-shade1: hsl(48, 6%, 39%);
-    --color-neutral-shade2: hsl(48, 7.5%, 28%);
-    --color-neutral-shade3: hsl(48, 9%, 17%);
-    --color-neutral-shaded: hsl(48, 10%, 6%);
-    --focus-outline: var(--rhythm-twelfth) dotted var(--color-primary);
+    --color-primary-tint: hsl(350, 100%, 70%);
+    --color-primary: hsl(350, 80%, 60%);
+    --color-primary-shade: hsl(350, 60%, 50%);
+    --color-accent: hsl(170, 60%, 50%);
+    --color-link: hsl(230, 60%, 50%);
+    --color-link-visited: hsl(290, 60%, 50%);
+    --color-link-hover: hsl(230, 80%, 60%);
+    --color-link-active: hsl(350, 60%, 50%);
+    --color-neutral-tinted: hsl(170, 10%, 98%);
+    --color-neutral-tint3: hsl(170, 10%, 86%);
+    --color-neutral-tint2: hsl(170, 10%, 74%);
+    --color-neutral-tint1: hsl(170, 10%, 62%);
+    --color-neutral: hsl(170, 10%, 50%);
+    --color-neutral-shade1: hsl(170, 10%, 38%);
+    --color-neutral-shade2: hsl(170, 10%, 26%);
+    --color-neutral-shade3: hsl(170, 10%, 14%);
+    --color-neutral-shaded: hsl(170, 10%, 2%);
+    --focus-outline: var(--rhythm-twelfth) dotted var(--color-neutral);
     --focus-outline-offset: var(--rhythm-twelfth);
     --font-family: 'Avenir', 'Avenir Next', 'Helvetica Neue', 'Segoe UI', 'Verdana', sans-serif;
     --font-mono: 'Consolas', 'Monaco', 'Courier New', monospace;
@@ -72,7 +74,7 @@ html {
 body {
     box-sizing: border-box;
     background-color: var(--color-neutral-tinted);
-    color: var(--color-neutral-shade3);
+    color: var(--color-neutral-shaded);
     font-family: var(--font-body);
     min-height: 100%;
     position: relative;
@@ -136,7 +138,7 @@ samp,
 kbd {
     background-color: var(--color-neutral-tint3);
     font-size: var(--font-size);
-    color: var(--color-primary-dark);
+    color: var(--color-primary-shade);
     font-family: var(--font-mono);
     line-height: 1;
 }
@@ -392,7 +394,7 @@ Styleguide 2.0
     --border-color-hover: transparent;
     --border-thickness: var(--rhythm-twelfth);
     --background-color: var(--color-primary);
-    --background-color-hover: var(--color-primary-dark);
+    --background-color-hover: var(--color-primary-shade);
     --text-color: var(--color-neutral-tinted);
     --text-color-hover: var(--color-neutral-tinted);
 
@@ -447,9 +449,9 @@ Styleguide 2.0
 
 .button.-outlined {
     --background-color: transparent;
-    --background-color-hover: var(--color-primary-dark);
+    --background-color-hover: var(--color-primary-shade);
     --border-color: var(--color-primary);
-    --border-color-hover: var(--color-primary-dark);
+    --border-color-hover: var(--color-primary-shade);
     --text-color: var(--color-primary);
 }
 
@@ -702,7 +704,7 @@ Styleguide 3.2
 }
 
 .field [type=radio]:checked + .label::after { /* stylelint-disable-line */
-    color: var(--color-primary-dark);
+    color: var(--color-primary-shade);
     content: '\26ab';
     text-align: center;
 }
@@ -727,7 +729,7 @@ Styleguide 3.3
 }
 
 .field [type=checkbox]:checked + .label::after { /* stylelint-disable-line */
-    color: var(--color-primary-dark);
+    color: var(--color-primary-shade);
     content: '\2714';
     text-align: center;
 }

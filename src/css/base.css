@@ -19,7 +19,7 @@ html {
 body {
     box-sizing: border-box;
     background-color: var(--color-neutral-tinted);
-    color: var(--color-neutral-shade3);
+    color: var(--color-neutral-shaded);
     font-family: var(--font-body);
     min-height: 100%;
     position: relative;
@@ -83,7 +83,7 @@ samp,
 kbd {
     background-color: var(--color-neutral-tint3);
     font-size: var(--font-size);
-    color: var(--color-primary-dark);
+    color: var(--color-primary-shade);
     font-family: var(--font-mono);
     line-height: 1;
 }

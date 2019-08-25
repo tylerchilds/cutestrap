@@ -68,6 +68,38 @@
     padding-top: 100%;
 }
 
+.primary {
+    --current-color: var(--color-primary);
+}
+
+.primary.-shade {
+    --current-color: var(--color-primary-shade);
+}
+
+.primary.-tint {
+    --current-color: var(--color-primary-tint);
+}
+
+.link {
+    --current-color: var(--color-link);
+}
+
+.link.-visited {
+    --current-color: var(--color-link-visited);
+}
+
+.link.-hover {
+    --current-color: var(--color-link-hover);
+}
+
+.link.-active {
+    --current-color: var(--color-link-active);
+}
+
+.accent {
+    --current-color: var(--color-accent);
+}
+
 .neutral {
     --current-color: var(--color-neutral);
 }

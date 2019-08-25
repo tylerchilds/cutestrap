@@ -23,7 +23,7 @@ Styleguide 2.0
     --border-color-hover: transparent;
     --border-thickness: var(--rhythm-twelfth);
     --background-color: var(--color-primary);
-    --background-color-hover: var(--color-primary-dark);
+    --background-color-hover: var(--color-primary-shade);
     --text-color: var(--color-neutral-tinted);
     --text-color-hover: var(--color-neutral-tinted);
 
@@ -78,9 +78,9 @@ Styleguide 2.0
 
 .button.-outlined {
     --background-color: transparent;
-    --background-color-hover: var(--color-primary-dark);
+    --background-color-hover: var(--color-primary-shade);
     --border-color: var(--color-primary);
-    --border-color-hover: var(--color-primary-dark);
+    --border-color-hover: var(--color-primary-shade);
     --text-color: var(--color-primary);
 }
 
