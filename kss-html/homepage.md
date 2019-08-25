@@ -31,11 +31,9 @@
     <div class="item neutral -shaded"></div>
 </div>
 
-<h2>Typography</h2>
+<hr />
 
-<p>
-  All the typography is <span class="fs-small">sized using rems</span> to baseline of <span class="fs-large">24px by default</span> and 30px above 960 width viewport. Every element adheres to this baseline grid with perfect vertical rhythm.
-</p>
+<h2>Typography</h2>
 
 <h1>Headline 1</h1>
 

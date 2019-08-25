@@ -9,8 +9,10 @@
 
 /* Header styles */
 .header {
-  /* --rhythm: 1.5rem; */
+  background: var(--color-neutral-tinted);
+  border-bottom: 1px solid var(--color-neutral-tint2);
   grid-area: header;
+  margin-top: -1px;
   padding: var(--rhythm-half); }
 
 .title {
@@ -21,13 +23,17 @@
 
 /* Navigation Styles */
 .navigation {
-  background-color: var(--color-neutral-tint3);
+  background: var(--color-neutral-tinted);
+  border-right: 1px solid var(--color-neutral-tint2);
   grid-area: navigation;
-  padding: var(--rhythm) var(--rhythm-half); }
+  padding: 0 var(--rhythm-half) var(--rhythm); }
 
-.navigation ul {
-  list-style-type: none;
-  margin-left: 0; }
+.navigation a {
+  text-decoration: none; }
+
+.navigation h6 {
+  color: var(--color-neutral-shade2);
+  margin: var(--rhythm) 0; }
 
 /* Content Styles */
 .content {
@@ -41,6 +47,12 @@
   background-image: none !important; }
 
 /*
+    KSS Specific Styles
+*/
+.kss-example {
+  margin-bottom: var(--rhythm); }
+
+/*
     Palette Specific Designs
 */
 .palette {
@@ -49,7 +61,7 @@
 
 .palette .item {
   background-color: var(--current-color);
-  padding-top: 100%; }
+  height: var(--rhythm-triple); }
 
 .primary {
   --current-color: var(--color-primary); }

@@ -1,5 +1,6 @@
 
 <nav class="navigation">
+  <h6>Components</h6>
   <ul>
     {{#eachRoot}}
       <li>
@@ -30,12 +31,12 @@
         {{#if markup}}
           <section class="example">
             <div class="kss-example">{{{markup}}}</div>
+<pre class="example-markup">{{markup}}</pre>
             {{#eachModifier}}
               <hr />
               <p class="clearfix kss-modifier-title"><code>{{{name}}}</code> <span class="f-right fs-small">{{description}}</span></p>
               <div class="kss-example">{{{markup}}}</div>
             {{/eachModifier}}
-<pre class="">{{markup}}</pre>
           </section>
         {{/if}}
       </article>
