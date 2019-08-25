@@ -15,12 +15,6 @@
     --line-height: var(--sub-rhythm, var(--rhythm));
 }
 
-@media (max-width: 65em) {
-    * {
-        --rhythm: 1.5rem;
-    }
-}
-
 html {
     --border-radius: 4px;
     --color-primary-tint: hsl(350, 100%, 70%);

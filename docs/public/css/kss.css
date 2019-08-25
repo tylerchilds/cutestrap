@@ -38,6 +38,7 @@
 /* Content Styles */
 .content {
   grid-area: content;
+  min-width: 0;
   padding: 0 var(--rhythm-half); }
 
 /*

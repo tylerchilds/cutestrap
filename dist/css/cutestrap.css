@@ -15,12 +15,6 @@
     --line-height: var(--sub-rhythm, var(--rhythm));
 }
 
-@media (max-width: 65em) {
-    * {
-        --rhythm: 1.5rem;
-    }
-}
-
 html {
     --border-radius: 4px;
     --color-primary-tint: hsl(350, 100%, 70%);
@@ -327,23 +321,12 @@ table {
 }
 
 table th {
-    background-color: var(--color-primary);
-    color: var(--color-neutral-tinted);
-    font-weight: 500;
     text-align: left;
 }
 
 table th,
 table td {
     padding: 0 var(--rhythm-fourth);
-}
-
-table tr:nth-child(odd) {
-    background-color: var(--color-neutral-tinted);
-}
-
-table tr:nth-child(even) {
-    background-color: var(--color-neutral-tint3);
 }
 
 input,
@@ -533,26 +516,12 @@ Styleguide 3.0
 
 */
 
-/*
-    Shared Styles
-    All form controls
-*/
-
-.field [disabled],
 .field [disabled] + *,
-[type=button][disabled],
-[type=reset][disabled],
-[type=submit][disabled],
-button[disabled] {
+[disabled] {
     cursor: default;
     opacity: .5;
     pointer-events: none;
 }
-
-/*
-    Shared Styles
-    Textfield and Select
-*/
 
 .field {
     display: block;
@@ -657,6 +626,7 @@ Styleguide 3.1
     left: 0;
     position: absolute;
     top: var(--rhythm-eighth);
+    transform: translateY(var(--rhythm-sixteenth));
     width: var(--rhythm-half);
 }
 
@@ -669,6 +639,7 @@ Styleguide 3.1
     left: var(--rhythm-eighth);
     position: absolute;
     top: var(--rhythm-fourth);
+    transform: translateY(var(--rhythm-sixteenth));
     width: var(--rhythm-fourth);
 }
 
@@ -743,6 +714,45 @@ Styleguide 3.4
     margin-top: 0;
     min-height: calc(4 * var(--rhythm));
 }
+
+/*
+
+Disabled Fields
+
+Markup:
+<form>
+    <label class="field">
+        <input type="text" value="Someone" disabled />
+        <span class="label">Name</span>
+    </label>
+    <label class="field -inline">
+        <input type="radio" name="example" disabled />
+        <span class="label">Cone</span>
+    </label>
+    <label class="field -inline">
+        <input type="radio" name="example" disabled />
+        <span class="label">Bowl</span>
+    </label>
+    <label for="select" class="field">
+        <select name="select" disabled>
+            <option disabled="disabled" selected="selected">Flavors</option>
+            <option>Chocolate</option>
+        </select>
+        <span class="label">Favorite Ice Cream</span>
+    </label>
+    <label class="field">
+        <textarea disabled>I am some comments</textarea>
+        <span class="label">Comments</span>
+    </label>
+    <label class="field">
+        <input type="checkbox" disabled />
+        <span class="label">I Lied and i do not consent to have my whatever destroyed on the grounds of apple, facebook or google or whatever</span>
+    </label>
+</form>
+
+Styleguide 3.5
+
+*/
 
 /*
 
