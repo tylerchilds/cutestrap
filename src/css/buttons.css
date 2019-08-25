@@ -24,8 +24,8 @@ Styleguide 2.0
     --border-thickness: var(--rhythm-twelfth);
     --background-color: var(--color-primary);
     --background-color-hover: var(--color-primary-dark);
-    --text-color: var(--color-white);
-    --text-color-hover: var(--color-white);
+    --text-color: var(--color-neutral-tinted);
+    --text-color-hover: var(--color-neutral-tinted);
 
     align-items: center;
     align-content: center;

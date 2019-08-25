@@ -38,14 +38,6 @@ html {
     --color-neutral-shade2: hsl(48, 7.5%, 28%);
     --color-neutral-shade3: hsl(48, 9%, 17%);
     --color-neutral-shaded: hsl(48, 10%, 6%);
-    --color-black: #000;
-    --color-gray1: #3c3c3d;
-    --color-gray2: #5a5a5b;
-    --color-gray3: #7d7d7e;
-    --color-gray4: #cdcdce;
-    --color-gray5: #dededf;
-    --color-gray6: #efeff0;
-    --color-white: #fff;
     --focus-outline: var(--rhythm-twelfth) dotted var(--color-primary);
     --focus-outline-offset: var(--rhythm-twelfth);
     --font-family: 'Avenir', 'Avenir Next', 'Helvetica Neue', 'Segoe UI', 'Verdana', sans-serif;
@@ -79,8 +71,8 @@ html {
 
 body {
     box-sizing: border-box;
-    background-color: var(--color-white);
-    color: var(--color-gray1);
+    background-color: var(--color-neutral-tinted);
+    color: var(--color-neutral-shade3);
     font-family: var(--font-body);
     min-height: 100%;
     position: relative;
@@ -142,7 +134,7 @@ pre,
 code,
 samp,
 kbd {
-    background-color: var(--color-gray6);
+    background-color: var(--color-neutral-tint3);
     font-size: var(--font-size);
     color: var(--color-primary-dark);
     font-family: var(--font-mono);
@@ -206,7 +198,7 @@ hr {
 }
 
 hr::before {
-    background-color: var(--color-gray4);
+    background-color: var(--color-neutral-tint1);
     content: '';
     height: 1px;
     position: absolute;
@@ -246,7 +238,7 @@ dd {
 
 blockquote {
     margin: 0 0 var(--rhythm) var(--rhythm-half);
-    border-left: var(--rhythm-eighth) solid var(--color-gray4);
+    border-left: var(--rhythm-eighth) solid var(--color-neutral-tint1);
     padding: var(--rhythm) var(--rhythm-half);
 }
 
@@ -318,7 +310,7 @@ q > q {
 
 dfn,
 abbr {
-    border-bottom: var(--rhythm-sixteenth) dotted var(--color-gray2);
+    border-bottom: var(--rhythm-sixteenth) dotted var(--color-neutral-shade2);
     cursor: default;
 }
 
@@ -332,7 +324,7 @@ table {
 
 table th {
     background-color: var(--color-primary);
-    color: var(--color-white);
+    color: var(--color-neutral-tinted);
     font-weight: 500;
     text-align: left;
 }
@@ -343,11 +335,11 @@ table td {
 }
 
 table tr:nth-child(odd) {
-    background-color: var(--color-white);
+    background-color: var(--color-neutral-tinted);
 }
 
 table tr:nth-child(even) {
-    background-color: var(--color-gray6);
+    background-color: var(--color-neutral-tint3);
 }
 
 input,
@@ -355,7 +347,7 @@ label,
 select,
 button,
 textarea {
-    color: var(--color-black);
+    color: var(--color-neutral-shaded);
     display: block;
     padding: var(--rhythm-half);
     resize: none;
@@ -371,7 +363,7 @@ textarea {
 }
 
 label {
-    color: var(--color-gray3);
+    color: var(--color-neutral-shade1);
     padding: 0;
 }
 
@@ -401,8 +393,8 @@ Styleguide 2.0
     --border-thickness: var(--rhythm-twelfth);
     --background-color: var(--color-primary);
     --background-color-hover: var(--color-primary-dark);
-    --text-color: var(--color-white);
-    --text-color-hover: var(--color-white);
+    --text-color: var(--color-neutral-tinted);
+    --text-color-hover: var(--color-neutral-tinted);
 
     align-items: center;
     align-content: center;
@@ -570,7 +562,7 @@ button[disabled] {
 
 .field [type=checkbox] + .label,
 .field [type=radio] + .label {
-    color: var(--color-gray3);
+    color: var(--color-neutral-shade1);
     cursor: pointer;
     display: inline-block;
     font-size: var(--rhythm-half);
@@ -579,7 +571,7 @@ button[disabled] {
 }
 
 .field *:not([type=radio]):not([type=checkbox]) + .label {
-    background-color: var(--color-white);
+    background-color: var(--color-neutral-tinted);
     font-size: var(--rhythm-half);
     position: absolute;
     left: var(--rhythm-sixteenth);
@@ -592,8 +584,8 @@ button[disabled] {
 .field input,
 .field textarea,
 .field select {
-    background-color: var(--color-white);
-    border: 1px solid var(--color-gray3);
+    background-color: var(--color-neutral-tinted);
+    border: 1px solid var(--color-neutral-shade1);
     border-radius: var(--border-radius);
     box-sizing: border-box;
     margin-top: -2px;
@@ -629,7 +621,7 @@ Styleguide 3.1
     content: '';
     border-left: var(--rhythm-fourth) solid transparent;
     border-right: var(--rhythm-fourth) solid transparent;
-    border-top: var(--rhythm-fourth) solid var(--color-gray3);
+    border-top: var(--rhythm-fourth) solid var(--color-neutral-shade1);
     height: 0;
     position: absolute;
     right: var(--rhythm-half);
@@ -638,8 +630,8 @@ Styleguide 3.1
 }
 
 .field option[disabled] {
-    background-color: var(--color-gray6);
-    color: var(--color-gray2);
+    background-color: var(--color-neutral-tint3);
+    color: var(--color-neutral-shade2);
 }
 
 /*
@@ -661,8 +653,8 @@ Styleguide 3.1
 
 .field [type=checkbox] + .label::before,
 .field [type=radio] + .label::before {
-    background-color: var(--color-white);
-    border: 2px solid var(--color-gray3);
+    background-color: var(--color-neutral-tinted);
+    border: 2px solid var(--color-neutral-shade1);
     content: '';
     height: var(--rhythm-half);
     left: 0;

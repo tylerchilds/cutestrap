@@ -18,8 +18,8 @@ html {
 
 body {
     box-sizing: border-box;
-    background-color: var(--color-white);
-    color: var(--color-gray1);
+    background-color: var(--color-neutral-tinted);
+    color: var(--color-neutral-shade3);
     font-family: var(--font-body);
     min-height: 100%;
     position: relative;
@@ -81,7 +81,7 @@ pre,
 code,
 samp,
 kbd {
-    background-color: var(--color-gray6);
+    background-color: var(--color-neutral-tint3);
     font-size: var(--font-size);
     color: var(--color-primary-dark);
     font-family: var(--font-mono);
@@ -145,7 +145,7 @@ hr {
 }
 
 hr::before {
-    background-color: var(--color-gray4);
+    background-color: var(--color-neutral-tint1);
     content: '';
     height: 1px;
     position: absolute;
@@ -185,7 +185,7 @@ dd {
 
 blockquote {
     margin: 0 0 var(--rhythm) var(--rhythm-half);
-    border-left: var(--rhythm-eighth) solid var(--color-gray4);
+    border-left: var(--rhythm-eighth) solid var(--color-neutral-tint1);
     padding: var(--rhythm) var(--rhythm-half);
 }
 
@@ -257,7 +257,7 @@ q > q {
 
 dfn,
 abbr {
-    border-bottom: var(--rhythm-sixteenth) dotted var(--color-gray2);
+    border-bottom: var(--rhythm-sixteenth) dotted var(--color-neutral-shade2);
     cursor: default;
 }
 
@@ -271,7 +271,7 @@ table {
 
 table th {
     background-color: var(--color-primary);
-    color: var(--color-white);
+    color: var(--color-neutral-tinted);
     font-weight: 500;
     text-align: left;
 }
@@ -282,11 +282,11 @@ table td {
 }
 
 table tr:nth-child(odd) {
-    background-color: var(--color-white);
+    background-color: var(--color-neutral-tinted);
 }
 
 table tr:nth-child(even) {
-    background-color: var(--color-gray6);
+    background-color: var(--color-neutral-tint3);
 }
 
 input,
@@ -294,7 +294,7 @@ label,
 select,
 button,
 textarea {
-    color: var(--color-black);
+    color: var(--color-neutral-shaded);
     display: block;
     padding: var(--rhythm-half);
     resize: none;
@@ -310,6 +310,6 @@ textarea {
 }
 
 label {
-    color: var(--color-gray3);
+    color: var(--color-neutral-shade1);
     padding: 0;
 }

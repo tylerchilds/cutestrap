@@ -70,7 +70,7 @@ button[disabled] {
 
 .field [type=checkbox] + .label,
 .field [type=radio] + .label {
-    color: var(--color-gray3);
+    color: var(--color-neutral-shade1);
     cursor: pointer;
     display: inline-block;
     font-size: var(--rhythm-half);
@@ -79,7 +79,7 @@ button[disabled] {
 }
 
 .field *:not([type=radio]):not([type=checkbox]) + .label {
-    background-color: var(--color-white);
+    background-color: var(--color-neutral-tinted);
     font-size: var(--rhythm-half);
     position: absolute;
     left: var(--rhythm-sixteenth);
@@ -92,8 +92,8 @@ button[disabled] {
 .field input,
 .field textarea,
 .field select {
-    background-color: var(--color-white);
-    border: 1px solid var(--color-gray3);
+    background-color: var(--color-neutral-tinted);
+    border: 1px solid var(--color-neutral-shade1);
     border-radius: var(--border-radius);
     box-sizing: border-box;
     margin-top: -2px;
@@ -129,7 +129,7 @@ Styleguide 3.1
     content: '';
     border-left: var(--rhythm-fourth) solid transparent;
     border-right: var(--rhythm-fourth) solid transparent;
-    border-top: var(--rhythm-fourth) solid var(--color-gray3);
+    border-top: var(--rhythm-fourth) solid var(--color-neutral-shade1);
     height: 0;
     position: absolute;
     right: var(--rhythm-half);
@@ -138,8 +138,8 @@ Styleguide 3.1
 }
 
 .field option[disabled] {
-    background-color: var(--color-gray6);
-    color: var(--color-gray2);
+    background-color: var(--color-neutral-tint3);
+    color: var(--color-neutral-shade2);
 }
 
 /*
@@ -161,8 +161,8 @@ Styleguide 3.1
 
 .field [type=checkbox] + .label::before,
 .field [type=radio] + .label::before {
-    background-color: var(--color-white);
-    border: 2px solid var(--color-gray3);
+    background-color: var(--color-neutral-tinted);
+    border: 2px solid var(--color-neutral-shade1);
     content: '';
     height: var(--rhythm-half);
     left: 0;
