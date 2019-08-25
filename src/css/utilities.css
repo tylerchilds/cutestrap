@@ -5,12 +5,11 @@ Utilities
 These utility classes have one or two CSS properties that are meant to save you from creating several identical classes to do the same thing, like just centering some text.
 
 Markup:
-<div class="{{modifier_class}}" style="background-color: #ddd">
+<div class="{{modifier_class}}">
     Example Text
 </div>
 
 .disabled                - Disable an Element
-.smooth                  - Smoothed font rendering
 .clearfix                - Clear floats to keep the parent container in shape
 .f-none                  - float: none;
 .f-left                  - float: left;
@@ -27,11 +26,6 @@ Styleguide 5.0
     cursor: default;
     opacity: .5;
     pointer-events: none;
-}
-
-.smooth {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 
 .f-none {

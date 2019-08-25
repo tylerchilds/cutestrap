@@ -569,8 +569,6 @@ button[disabled] {
     color: var(--color-neutral-shade1);
     cursor: pointer;
     display: inline-block;
-    font-size: var(--rhythm-half);
-    line-height: 1;
     padding-left: var(--rhythm);
 }
 
@@ -670,18 +668,20 @@ Styleguide 3.1
 
 .field [type=checkbox] + .label::after,
 .field [type=radio] + .label::after {
+    background-color: var(--color-primary-shade);
     border: 2px solid transparent;
+    color: var(--color-neutral-tinted);
     content: '';
-    height: var(--rhythm-half);
-    left: 0;
+    height: var(--rhythm-fourth);
+    left: var(--rhythm-eighth);
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: var(--rhythm-half);
+    width: var(--rhythm-fourth);
 }
 
-.field [type=radio]:focus + .label::after,
-.field [type=checkbox]:focus + .label::after {
+.field [type=radio]:focus + .label::before,
+.field [type=checkbox]:focus + .label::before {
     outline: var(--focus-outline);
     outline-offset: var(--focus-outline-offset);
 }
@@ -700,15 +700,14 @@ Styleguide 3.2
 
 */
 
-.field [type=radio] + .label::before,
+.field [type=radio] + .label::before, /* stylelint-disable-line */
 .field [type=radio] + .label::after { /* stylelint-disable-line */
     border-radius: var(--rhythm);
 }
 
+.field [type=checkbox]:checked + .label::after,
 .field [type=radio]:checked + .label::after { /* stylelint-disable-line */
-    color: var(--color-primary-shade);
-    content: '\26ab';
-    text-align: center;
+    content: '';
 }
 
 /*
@@ -725,15 +724,9 @@ Styleguide 3.3
 
 */
 
-.field [type=checkbox] + .label::before,
+.field [type=checkbox] + .label::before, /* stylelint-disable-line */
 .field [type=checkbox] + .label::after { /* stylelint-disable-line */
     border-radius: var(--border-radius);
-}
-
-.field [type=checkbox]:checked + .label::after { /* stylelint-disable-line */
-    color: var(--color-primary-shade);
-    content: '\2714';
-    text-align: center;
 }
 
 /*
@@ -797,12 +790,11 @@ Utilities
 These utility classes have one or two CSS properties that are meant to save you from creating several identical classes to do the same thing, like just centering some text.
 
 Markup:
-<div class="{{modifier_class}}" style="background-color: #ddd">
+<div class="{{modifier_class}}">
     Example Text
 </div>
 
 .disabled                - Disable an Element
-.smooth                  - Smoothed font rendering
 .clearfix                - Clear floats to keep the parent container in shape
 .f-none                  - float: none;
 .f-left                  - float: left;
@@ -819,11 +811,6 @@ Styleguide 5.0
     cursor: default;
     opacity: .5;
     pointer-events: none;
-}
-
-.smooth {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 
 .f-none {
