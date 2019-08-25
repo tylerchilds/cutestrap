@@ -10,11 +10,11 @@ Markup:
     </label>
     <label class="field -inline">
         <input type="radio" name="example" />
-        <span class="label">Desktop</span>
+        <span class="label">Cone</span>
     </label>
     <label class="field -inline">
         <input type="radio" name="example" />
-        <span class="label">Mobile</span>
+        <span class="label">Bowl</span>
     </label>
     <label for="select" class="field">
         <select name="select">
@@ -29,7 +29,7 @@ Markup:
     </label>
     <label class="field">
         <input type="checkbox" />
-        <span class="label">I Lied</span>
+        <span class="label">I Lied and i do not consent to have my whatever destroyed on the grounds of apple, facebook or google or whatever</span>
     </label>
 </form>
 
@@ -70,7 +70,7 @@ button[disabled] {
 
 .field [type=checkbox] + .label,
 .field [type=radio] + .label {
-    color: var(--color-neutral-shade1);
+    color: var(--color-neutral-shaded);
     cursor: pointer;
     display: inline-block;
     padding-left: var(--rhythm);
@@ -140,11 +140,6 @@ Styleguide 3.1
     color: var(--color-neutral-shade2);
 }
 
-/*
-    Shared Styles
-    Radio and Checkbox
-*/
-
 .field.-inline {
     display: inline-block;
     margin-right: var(--rhythm-half);
@@ -165,8 +160,7 @@ Styleguide 3.1
     height: var(--rhythm-half);
     left: 0;
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    top: var(--rhythm-eighth);
     width: var(--rhythm-half);
 }
 
@@ -175,43 +169,11 @@ Styleguide 3.1
     background-color: var(--color-primary-shade);
     border: 2px solid transparent;
     color: var(--color-neutral-tinted);
-    content: '';
     height: var(--rhythm-fourth);
     left: var(--rhythm-eighth);
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    top: var(--rhythm-fourth);
     width: var(--rhythm-fourth);
-}
-
-.field [type=radio]:focus + .label::before,
-.field [type=checkbox]:focus + .label::before {
-    outline: var(--focus-outline);
-    outline-offset: var(--focus-outline-offset);
-}
-
-/*
-
-Radio
-
-Markup:
-<label class="field {{modifier_class}}">
-    <input type="radio" />
-    <span class="label">Radio</span>
-</label>
-
-Styleguide 3.2
-
-*/
-
-.field [type=radio] + .label::before, /* stylelint-disable-line */
-.field [type=radio] + .label::after { /* stylelint-disable-line */
-    border-radius: var(--rhythm);
-}
-
-.field [type=checkbox]:checked + .label::after,
-.field [type=radio]:checked + .label::after { /* stylelint-disable-line */
-    content: '';
 }
 
 /*
@@ -224,13 +186,43 @@ Markup:
     <span class="label">Checkbox</span>
 </label>
 
+Styleguide 3.2
+
+*/
+
+.field [type=checkbox] + .label::before,
+.field [type=checkbox] + .label::after {
+    border-radius: var(--border-radius);
+}
+
+/*
+
+Radio
+
+Markup:
+<label class="field {{modifier_class}}">
+    <input type="radio" />
+    <span class="label">Radio</span>
+</label>
+
 Styleguide 3.3
 
 */
 
-.field [type=checkbox] + .label::before, /* stylelint-disable-line */
-.field [type=checkbox] + .label::after { /* stylelint-disable-line */
-    border-radius: var(--border-radius);
+.field [type=radio] + .label::before,
+.field [type=radio] + .label::after {
+    border-radius: var(--rhythm);
+}
+
+.field [type=radio]:focus + .label::before,
+.field [type=checkbox]:focus + .label::before {
+    outline: var(--focus-outline);
+    outline-offset: var(--focus-outline-offset);
+}
+
+.field [type=checkbox]:checked + .label::after,
+.field [type=radio]:checked + .label::after {
+    content: '';
 }
 
 /*
