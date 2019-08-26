@@ -6,23 +6,23 @@
 
 html[data-theme="dark"] {
   --color-primary: #ea4c6b;
-  --color-primary-dark: #bb3c55;
+  --color-primary-shade: #bb3c55;
 
   --color-link: #4c6bea;
   --color-link-visited: #7c4cea;
   --color-link-hover: #3c55bb;
   --color-link-active: #bb3c55;
 
-  --color-black: #fff;
+  --color-neutral-shaded: #fff;
 
-  --color-gray1: #efeff0;
-  --color-gray2: #dededf;
-  --color-gray3: #cdcdce;
-  --color-gray4: #7d7d7e;
-  --color-gray5: #5a5a5b;
-  --color-gray6: #3c3c3d;
+  --color-neutral-shade3: #efeff0;
+  --color-neutral-shade2: #dededf;
+  --color-neutral-shade1: #cdcdce;
+  --color-neutral-tint1: #7d7d7e;
+  --color-neutral-tint2: #5a5a5b;
+  --color-neutral-tint3: #3c3c3d;
 
-  --color-white: #000;
+  --color-neutral-tinted: #000;
 }
 
 [data-rhythm="small"] * {
@@ -75,7 +75,7 @@ footer {
 }
 
 .nav-item-wrapper {
-    border-bottom: 1px solid var(--color-gray5);
+    border-bottom: 1px solid var(--color-neutral-tint2);
     margin-bottom: -1px;
     text-align: center;
 }
@@ -184,7 +184,7 @@ footer {
 }
 .logo:hover,
 .logo:focus {
-    color: var(--color-primary-dark);
+    color: var(--color-primary-shade);
 }
 
 @media (max-width: 30em) {
@@ -214,8 +214,8 @@ html {
 }
 
 .toolbar {
-  background-color: var(--color-white);
-  border-bottom: 1px solid var(--color-gray4);
+  background-color: var(--color-neutral-tinted);
+  border-bottom: 1px solid var(--color-neutral-tint1);
   font-size: var(--font-size);
   line-height: var(--line-height);
   padding: var(--rhythm-half) var(--rhythm);
@@ -262,10 +262,10 @@ html {
 }
 
 .toolbar-button {
-  border: 1px solid var(--color-gray4);
-  background-color: var(--color-gray6);
+  border: 1px solid var(--color-neutral-tint1);
+  background-color: var(--color-neutral-tint3);
   border-radius: 2px;
-  color: var(--color-gray1);
+  color: var(--color-neutral-shade3);
   cursor: pointer;
   display: inline-block;
   padding: var(--rhythm-eighth) var(--rhythm-half);
@@ -274,7 +274,7 @@ html {
 
 .toolbar-button:hover,
 .toolbar-button:focus {
-  background-color: var(--color-gray5);
+  background-color: var(--color-neutral-tint2);
 }
 
 .toolbar-button.-small {
@@ -288,23 +288,23 @@ html {
 }
 
 .toolbar-button.-light {
-  background-color: var(--color-white);
-  color: var(--color-gray2);
+  background-color: var(--color-neutral-tinted);
+  color: var(--color-neutral-shade2);
 }
 
 .toolbar-button.-dark {
-  background-color: var(--color-gray2);
-  color: var(--color-white);
+  background-color: var(--color-neutral-shade2);
+  color: var(--color-neutral-tinted);
 }
 
 [data-theme="dark"] .toolbar-button.-light {
-  background-color: var(--color-gray2);
-  color: var(--color-white);
+  background-color: var(--color-neutral-shade2);
+  color: var(--color-neutral-tinted);
 }
 
 [data-theme="dark"] .toolbar-button.-dark {
-  background-color: var(--color-white);
-  color: var(--color-gray2);
+  background-color: var(--color-neutral-tinted);
+  color: var(--color-neutral-shade2);
 }
 
 [data-rhythm="small"] .toolbar-button.-small,
@@ -424,7 +424,7 @@ html {
 
 .example-column::before {
     background-color: var(--color-primary);
-    color: var(--color-white);
+    color: var(--color-neutral-tinted);
     content: 'Column';
     display: block;
     margin-bottom: var(--rhythm);

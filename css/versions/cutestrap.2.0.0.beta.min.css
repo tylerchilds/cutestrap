@@ -1,3 +1,22 @@
+/*
+
+Core
+
+The core of Cutestrap is a large set of Custom Properties. Some are set on an
+`html {}` ruleset and will be inherited by all children. Others are set on an
+`* {}` ruleset and are used as mixins. These are special because they rely on
+formulas. The only explicit styling performed here is setting `font-size` and
+`line-height` on a `body {}` ruleset.
+
+Markup:
+<p>
+    Example paragraph
+</p>
+
+Styleguide 1.0
+
+*/
+
 * {
     --rhythm: 2rem;
     --rhythm-quadruple: calc(4 * var(--rhythm));
@@ -15,29 +34,26 @@
     --line-height: var(--sub-rhythm, var(--rhythm));
 }
 
-@media (max-width: 65em) {
-    * {
-        --rhythm: 1.5rem;
-    }
-}
-
 html {
     --border-radius: 4px;
-    --color-primary: #ea4c6b;
-    --color-primary-dark: #bb3c55;
-    --color-link: #4c6bea;
-    --color-link-visited: #7c4cea;
-    --color-link-hover: #3c55bb;
-    --color-link-active: #bb3c55;
-    --color-black: #000;
-    --color-gray1: #3c3c3d;
-    --color-gray2: #5a5a5b;
-    --color-gray3: #7d7d7e;
-    --color-gray4: #cdcdce;
-    --color-gray5: #dededf;
-    --color-gray6: #efeff0;
-    --color-white: #fff;
-    --focus-outline: var(--rhythm-twelfth) dotted #f00;
+    --color-primary-tint: hsl(350, 100%, 70%);
+    --color-primary: hsl(350, 80%, 60%);
+    --color-primary-shade: hsl(350, 60%, 50%);
+    --color-accent: hsl(170, 60%, 50%);
+    --color-link: hsl(230, 60%, 50%);
+    --color-link-visited: hsl(290, 60%, 50%);
+    --color-link-hover: hsl(230, 80%, 60%);
+    --color-link-active: hsl(350, 60%, 50%);
+    --color-neutral-tinted: hsl(170, 10%, 98%);
+    --color-neutral-tint3: hsl(170, 10%, 92%);
+    --color-neutral-tint2: hsl(170, 10%, 80%);
+    --color-neutral-tint1: hsl(170, 10%, 65%);
+    --color-neutral: hsl(170, 10%, 53%);
+    --color-neutral-shade1: hsl(170, 10%, 42%);
+    --color-neutral-shade2: hsl(170, 10%, 30%);
+    --color-neutral-shade3: hsl(170, 10%, 18%);
+    --color-neutral-shaded: hsl(170, 10%, 2%);
+    --focus-outline: var(--rhythm-twelfth) dotted var(--color-neutral);
     --focus-outline-offset: var(--rhythm-twelfth);
     --font-family: 'Avenir', 'Avenir Next', 'Helvetica Neue', 'Segoe UI', 'Verdana', sans-serif;
     --font-mono: 'Consolas', 'Monaco', 'Courier New', monospace;
@@ -49,6 +65,54 @@ body {
     font-size: var(--font-size);
     line-height: var(--line-height);
 }
+
+/*
+
+Base
+
+The base stylesheet requires `core.css` and uses it to set all html elements
+to adhere to the Baseline Grid and gives them default styles.
+
+Markup:
+<div>
+  <h1>Headline 1</h1>
+  <p>
+    Paragraph
+  </p>
+  <h2>Headline 2</h2>
+  <ul>
+    <li>Unordered item</li>
+    <li>Unordered item</li>
+  </ul>
+  <h3>Headline 3</h3>
+  <ol>
+    <li>Ordered item</li>
+    <li>Ordered item</li>
+  </ol>
+  <h4>Headline 4</h4>
+<pre>
+  Preformatted
+</pre>
+  <h5>Headline 5</h5>
+  <blockquote>
+    Blockquote
+  </blockquote>
+  <h6>Headline 6</h6>
+  <table>
+    <tr>
+      <th>Table Header</th>
+      <th>Table Header</th>
+    </tr>
+    <tr>
+      <td>Table Cell</td>
+      <td>Table Cell</td>
+    </tr>
+  </table>
+</div>
+
+Styleguide 2.0
+
+*/
 
 * {
     border: 0;
@@ -70,8 +134,8 @@ html {
 
 body {
     box-sizing: border-box;
-    background-color: var(--color-white);
-    color: var(--color-gray1);
+    background-color: var(--color-neutral-tinted);
+    color: var(--color-neutral-shaded);
     font-family: var(--font-body);
     min-height: 100%;
     position: relative;
@@ -83,8 +147,6 @@ h3,
 h4,
 h5,
 h6 {
-    --line-height-ratio: 1.2;
-
     font-family: var(--font-heading);
     font-size: var(--font-size);
     line-height: var(--line-height);
@@ -92,22 +154,26 @@ h6 {
 }
 
 h1 {
+    --line-height-ratio: 1;
     --sub-rhythm: var(--rhythm-triple);
 
     font-weight: 700;
 }
 
 h2 {
+    --line-height-ratio: 1.1;
     --sub-rhythm: var(--rhythm-triple);
 }
 
 h3 {
+    --line-height-ratio: 1.2;
     --sub-rhythm: var(--rhythm-triple);
 
     font-weight: 100;
 }
 
 h4 {
+    --line-height-ratio: 1.3;
     --sub-rhythm: var(--rhythm-double);
 
     font-weight: 700;
@@ -122,20 +188,20 @@ h6 {
 }
 
 p {
-    padding-bottom: var(--rhythm);
+    margin-bottom: var(--rhythm);
 }
 
 form {
-    padding: var(--rhythm) 0;
+    margin: var(--rhythm) 0;
 }
 
 pre,
 code,
 samp,
 kbd {
-    background-color: var(--color-gray6);
+    background-color: var(--color-neutral-tint3);
     font-size: var(--font-size);
-    color: var(--color-primary-dark);
+    color: var(--color-primary-shade);
     font-family: var(--font-mono);
     line-height: 1;
 }
@@ -197,7 +263,7 @@ hr {
 }
 
 hr::before {
-    background-color: var(--color-gray4);
+    background-color: var(--color-neutral-tint1);
     content: '';
     height: 1px;
     position: absolute;
@@ -207,8 +273,7 @@ hr::before {
 
 ol,
 ul {
-    margin-left: var(--rhythm);
-    padding: 0 0 var(--rhythm);
+    margin: 0 0 var(--rhythm) var(--rhythm);
 }
 
 ol {
@@ -216,7 +281,7 @@ ol {
 }
 
 ol ol {
-    padding-bottom: 0;
+    margin-bottom: 0;
 }
 
 ul {
@@ -224,7 +289,7 @@ ul {
 }
 
 ul ul {
-    padding-bottom: 0;
+    margin-bottom: 0;
 }
 
 dt {
@@ -232,22 +297,21 @@ dt {
 }
 
 dd {
-    padding-left: var(--rhythm);
+    margin-left: var(--rhythm);
 }
 
 blockquote {
     margin: 0 0 var(--rhythm) var(--rhythm-half);
-    border-left: var(--rhythm-eighth) solid var(--color-gray4);
+    border-left: var(--rhythm-eighth) solid var(--color-neutral-tint1);
     padding: var(--rhythm) var(--rhythm-half);
 }
 
 blockquote p:last-child {
-    padding-bottom: 0;
+    margin-bottom: 0;
 }
 
 figure {
-    margin: 0 auto;
-    padding-bottom: var(--rhythm);
+    margin: 0 auto var(--rhythm);
 }
 
 figure img {
@@ -309,7 +373,7 @@ q > q {
 
 dfn,
 abbr {
-    border-bottom: var(--rhythm-sixteenth) dotted var(--color-gray2);
+    border-bottom: var(--rhythm-sixteenth) dotted var(--color-neutral-shade2);
     cursor: default;
 }
 
@@ -322,9 +386,6 @@ table {
 }
 
 table th {
-    background-color: var(--color-primary);
-    color: var(--color-white);
-    font-weight: 500;
     text-align: left;
 }
 
@@ -333,20 +394,12 @@ table td {
     padding: 0 var(--rhythm-fourth);
 }
 
-table tr:nth-child(odd) {
-    background-color: var(--color-white);
-}
-
-table tr:nth-child(even) {
-    background-color: var(--color-gray6);
-}
-
 input,
 label,
 select,
 button,
 textarea {
-    color: var(--color-black);
+    color: var(--color-neutral-shaded);
     display: block;
     padding: var(--rhythm-half);
     resize: none;
@@ -362,7 +415,7 @@ textarea {
 }
 
 label {
-    color: var(--color-gray3);
+    color: var(--color-neutral-shade1);
     padding: 0;
 }
 
@@ -382,7 +435,7 @@ Markup:
 .-small - A small button
 .-small.-outlined - A small, outlined button
 
-Styleguide 2.0
+Styleguide 3.0
 
 */
 
@@ -391,9 +444,9 @@ Styleguide 2.0
     --border-color-hover: transparent;
     --border-thickness: var(--rhythm-twelfth);
     --background-color: var(--color-primary);
-    --background-color-hover: var(--color-primary-dark);
-    --text-color: var(--color-white);
-    --text-color-hover: var(--color-white);
+    --background-color-hover: var(--color-primary-shade);
+    --text-color: var(--color-neutral-tinted);
+    --text-color-hover: var(--color-neutral-tinted);
 
     align-items: center;
     align-content: center;
@@ -434,11 +487,6 @@ Styleguide 2.0
     color: var(--text-color-hover);
 }
 
-.button:focus {
-    outline: var(--rhythm-twelfth) dotted #f00;
-    outline-offset: var(--rhythm-twelfth);
-}
-
 .button:active {
     background-color: var(--background-color);
     color: var(--text-color);
@@ -451,11 +499,10 @@ Styleguide 2.0
 
 .button.-outlined {
     --background-color: transparent;
-    --background-color-hover: var(--color-primary-dark);
+    --background-color-hover: var(--color-primary-shade);
     --border-color: var(--color-primary);
-    --border-color-hover: var(--color-primary-dark);
+    --border-color-hover: var(--color-primary-shade);
     --text-color: var(--color-primary);
-    --text-color-hover: #fff;
 }
 
 .button.-secondary {
@@ -507,16 +554,17 @@ Markup:
     </label>
     <label class="field -inline">
         <input type="radio" name="example" />
-        <span class="label">Desktop</span>
+        <span class="label">Cone</span>
     </label>
     <label class="field -inline">
         <input type="radio" name="example" />
-        <span class="label">Mobile</span>
+        <span class="label">Bowl</span>
     </label>
     <label for="select" class="field">
         <select name="select">
             <option disabled="disabled" selected="selected">Flavors</option>
             <option>Chocolate</option>
+            <option>Vanilla</option>
         </select>
         <span class="label">Favorite Ice Cream</span>
     </label>
@@ -526,34 +574,24 @@ Markup:
     </label>
     <label class="field">
         <input type="checkbox" />
-        <span class="label">I Lied</span>
+        <span class="label">
+            I consent to my ice cream flavors being saved into a database for
+            eternity and understand and acknowledge this will have consequences
+            for all of my decendants for decades to come.
+        </span>
     </label>
 </form>
 
-Styleguide 3.0
+Styleguide 4.0
 
 */
 
-/*
-    Shared Styles
-    All form controls
-*/
-
-.field [disabled],
 .field [disabled] + *,
-[type=button][disabled],
-[type=reset][disabled],
-[type=submit][disabled],
-button[disabled] {
+[disabled] {
     cursor: default;
     opacity: .5;
     pointer-events: none;
 }
-
-/*
-    Shared Styles
-    Textfield and Select
-*/
 
 .field {
     display: block;
@@ -567,16 +605,14 @@ button[disabled] {
 
 .field [type=checkbox] + .label,
 .field [type=radio] + .label {
-    color: var(--color-gray3);
+    color: var(--color-neutral-shaded);
     cursor: pointer;
     display: inline-block;
-    font-size: var(--rhythm-half);
-    line-height: 1;
     padding-left: var(--rhythm);
 }
 
 .field *:not([type=radio]):not([type=checkbox]) + .label {
-    background-color: var(--color-white);
+    background-color: var(--color-neutral-tinted);
     font-size: var(--rhythm-half);
     position: absolute;
     left: var(--rhythm-sixteenth);
@@ -589,8 +625,8 @@ button[disabled] {
 .field input,
 .field textarea,
 .field select {
-    background-color: var(--color-white);
-    border: 1px solid var(--color-gray3);
+    background-color: var(--color-neutral-tinted);
+    border: 1px solid var(--color-neutral-shade1);
     border-radius: var(--border-radius);
     box-sizing: border-box;
     margin-top: -2px;
@@ -618,7 +654,7 @@ Markup:
     <span class="label">Select Label</span>
 </label>
 
-Styleguide 3.1
+Styleguide 4.1
 
 */
 
@@ -626,7 +662,7 @@ Styleguide 3.1
     content: '';
     border-left: var(--rhythm-fourth) solid transparent;
     border-right: var(--rhythm-fourth) solid transparent;
-    border-top: var(--rhythm-fourth) solid var(--color-gray3);
+    border-top: var(--rhythm-fourth) solid var(--color-neutral-shade1);
     height: 0;
     position: absolute;
     right: var(--rhythm-half);
@@ -635,14 +671,9 @@ Styleguide 3.1
 }
 
 .field option[disabled] {
-    background-color: var(--color-gray6);
-    color: var(--color-gray2);
+    background-color: var(--color-neutral-tint3);
+    color: var(--color-neutral-shade2);
 }
-
-/*
-    Shared Styles
-    Radio and Checkbox
-*/
 
 .field.-inline {
     display: inline-block;
@@ -658,58 +689,28 @@ Styleguide 3.1
 
 .field [type=checkbox] + .label::before,
 .field [type=radio] + .label::before {
-    background-color: var(--color-white);
-    border: 2px solid var(--color-gray3);
+    background-color: var(--color-neutral-tinted);
+    border: 2px solid var(--color-neutral-shade1);
     content: '';
     height: var(--rhythm-half);
     left: 0;
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    top: var(--rhythm-eighth);
+    transform: translateY(var(--rhythm-sixteenth));
     width: var(--rhythm-half);
 }
 
 .field [type=checkbox] + .label::after,
 .field [type=radio] + .label::after {
+    background-color: var(--color-primary-shade);
     border: 2px solid transparent;
-    content: '';
-    height: var(--rhythm-half);
-    left: 0;
+    color: var(--color-neutral-tinted);
+    height: var(--rhythm-fourth);
+    left: var(--rhythm-eighth);
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: var(--rhythm-half);
-}
-
-.field [type=radio]:focus + .label::after,
-.field [type=checkbox]:focus + .label::after {
-    outline: var(--focus-outline);
-    outline-offset: var(--focus-outline-offset);
-}
-
-/*
-
-Radio
-
-Markup:
-<label class="field {{modifier_class}}">
-    <input type="radio" />
-    <span class="label">Radio</span>
-</label>
-
-Styleguide 3.2
-
-*/
-
-.field [type=radio] + .label::before,
-.field [type=radio] + .label::after { /* stylelint-disable-line */
-    border-radius: var(--rhythm);
-}
-
-.field [type=radio]:checked + .label::after { /* stylelint-disable-line */
-    color: var(--color-primary-dark);
-    content: '\26ab';
-    text-align: center;
+    top: var(--rhythm-fourth);
+    transform: translateY(var(--rhythm-sixteenth));
+    width: var(--rhythm-fourth);
 }
 
 /*
@@ -722,19 +723,43 @@ Markup:
     <span class="label">Checkbox</span>
 </label>
 
-Styleguide 3.3
+Styleguide 4.2
 
 */
 
 .field [type=checkbox] + .label::before,
-.field [type=checkbox] + .label::after { /* stylelint-disable-line */
+.field [type=checkbox] + .label::after {
     border-radius: var(--border-radius);
 }
 
-.field [type=checkbox]:checked + .label::after { /* stylelint-disable-line */
-    color: var(--color-primary-dark);
-    content: '\2714';
-    text-align: center;
+/*
+
+Radio
+
+Markup:
+<label class="field {{modifier_class}}">
+    <input type="radio" />
+    <span class="label">Radio</span>
+</label>
+
+Styleguide 4.3
+
+*/
+
+.field [type=radio] + .label::before,
+.field [type=radio] + .label::after {
+    border-radius: var(--rhythm);
+}
+
+.field [type=radio]:focus + .label::before,
+.field [type=checkbox]:focus + .label::before {
+    outline: var(--focus-outline);
+    outline-offset: var(--focus-outline-offset);
+}
+
+.field [type=checkbox]:checked + .label::after,
+.field [type=radio]:checked + .label::after {
+    content: '';
 }
 
 /*
@@ -751,7 +776,7 @@ Markup:
     <span class="label">Textarea</span>
 </label>
 
-Styleguide 3.4
+Styleguide 4.4
 
 */
 
@@ -759,6 +784,50 @@ Styleguide 3.4
     margin-top: 0;
     min-height: calc(4 * var(--rhythm));
 }
+
+/*
+
+Disabled Fields
+
+Markup:
+<form>
+    <label class="field">
+        <input type="text" value="Someone" disabled />
+        <span class="label">Name</span>
+    </label>
+    <label class="field -inline">
+        <input type="radio" name="example" disabled />
+        <span class="label">Cone</span>
+    </label>
+    <label class="field -inline">
+        <input type="radio" name="example" disabled />
+        <span class="label">Bowl</span>
+    </label>
+    <label for="select" class="field">
+        <select name="select" disabled>
+            <option disabled="disabled" selected="selected">Flavors</option>
+            <option>Chocolate</option>
+            <option>Vanilla</option>
+        </select>
+        <span class="label">Favorite Ice Cream</span>
+    </label>
+    <label class="field">
+        <textarea disabled>I am some comments</textarea>
+        <span class="label">Comments</span>
+    </label>
+    <label class="field">
+        <input type="checkbox" disabled />
+        <span class="label">
+            I consent to my ice cream flavors being saved into a database for
+            eternity and understand and acknowledge this will have consequences
+            for all of my decendants for decades to come.
+        </span>
+    </label>
+</form>
+
+Styleguide 4.5
+
+*/
 
 /*
 
@@ -775,7 +844,7 @@ Markup:
     <div>Column</div>
 </div>
 
-Styleguide 4.0
+Styleguide 5.0
 
 */
 
@@ -793,17 +862,57 @@ Styleguide 4.0
 
 /*
 
+Wrappers
+
+Elements with max widths and margins on top and bottom for collapsing, but
+padding on the sides for when the viewport is smaller than the max-width.
+
+Markup:
+<div class="wrapper {{modifier_class}}">
+    Wrapper
+</div>
+
+.-small - A smaller max-width
+.-large - A larger max-width
+.-flush - No vertical or horizontal spacing
+
+Styleguide 6.0
+
+*/
+
+.wrapper {
+    box-sizing: border-box;
+    margin: var(--rhythm) auto;
+    max-width: 60rem;
+    padding: 0 var(--rhythm-half);
+    width: 100%;
+}
+
+.wrapper.-small {
+    max-width: 45rem;
+}
+
+.wrapper.-large {
+    max-width: 80rem;
+}
+
+.wrapper.-flush {
+    margin: 0 auto;
+    padding: 0;
+}
+
+/*
+
 Utilities
 
 These utility classes have one or two CSS properties that are meant to save you from creating several identical classes to do the same thing, like just centering some text.
 
 Markup:
-<div class="{{modifier_class}}" style="background-color: #ddd">
+<div class="{{modifier_class}}">
     Example Text
 </div>
 
 .disabled                - Disable an Element
-.smooth                  - Smoothed font rendering
 .clearfix                - Clear floats to keep the parent container in shape
 .f-none                  - float: none;
 .f-left                  - float: left;
@@ -812,7 +921,7 @@ Markup:
 .ta-center               - text-align: center;
 .ta-right                - text-align: right;
 
-Styleguide 5.0
+Styleguide 7.0
 
 */
 
@@ -820,11 +929,6 @@ Styleguide 5.0
     cursor: default;
     opacity: .5;
     pointer-events: none;
-}
-
-.smooth {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 
 .f-none {
@@ -869,10 +973,9 @@ Markup:
 
 .fw-light            - Changes the type to be 300 weight
 .fw-normal           - Changes the type to be 400 weight
-.fw-semibold         - Changes the type to be 600 weight
 .fw-bold             - Changes the type to be 700 weight
 
-Styleguide 5.1
+Styleguide 7.1
 
 */
 
@@ -882,10 +985,6 @@ Styleguide 5.1
 
 .fw-normal {
     font-weight: 400;
-}
-
-.fw-semibold {
-    font-weight: 600;
 }
 
 .fw-bold {
