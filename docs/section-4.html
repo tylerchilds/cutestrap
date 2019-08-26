@@ -28,47 +28,258 @@
 
       
 
-
 <nav class="navigation">
-  <h6>Components</h6>
+  <h6>Files</h6>
   <ul>
       <li>
-        <a href="section-2.html">Buttons</a>
+        <a href="section-1.html">Core</a>
       </li>
       <li>
-        <a href="section-3.html">Forms</a>
+        <a href="section-2.html">Base</a>
       </li>
       <li>
-        <a href="section-4.html">Grid</a>
+        <a href="section-3.html">Buttons</a>
       </li>
       <li>
-        <a href="section-5.html">Utilities</a>
+        <a href="section-4.html">Forms</a>
+      </li>
+      <li>
+        <a href="section-5.html">Grid</a>
+      </li>
+      <li>
+        <a href="section-6.html">Wrappers</a>
+      </li>
+      <li>
+        <a href="section-7.html">Utilities</a>
       </li>
   </ul>
 </nav>
 
-
-<main class="content">
-
+<main class="wrapper content">
       <article class="pattern">
-          <h2 id="4">Grid</h2>
-          <div class="subtitle pattern-description"><p>A simple grid with automatic columns</p>
-</div>
+          <h2 id="4">Forms</h2>
           <section class="example">
-            <div class="kss-example"><div class="grid">
-    <div>Column</div>
-    <div>Column</div>
-    <div>Column</div>
-    <div>Column</div>
-    <div>Column</div>
-</div></div>
-<pre class="example-markup">&lt;div class=&quot;grid&quot;&gt;
-    &lt;div&gt;Column&lt;/div&gt;
-    &lt;div&gt;Column&lt;/div&gt;
-    &lt;div&gt;Column&lt;/div&gt;
-    &lt;div&gt;Column&lt;/div&gt;
-    &lt;div&gt;Column&lt;/div&gt;
-&lt;/div&gt;</pre>
+            <div class="kss-example"><form>
+    <label class="field">
+        <input type="text" />
+        <span class="label">Name</span>
+    </label>
+    <label class="field -inline">
+        <input type="radio" name="example" />
+        <span class="label">Cone</span>
+    </label>
+    <label class="field -inline">
+        <input type="radio" name="example" />
+        <span class="label">Bowl</span>
+    </label>
+    <label for="select" class="field">
+        <select name="select">
+            <option disabled="disabled" selected="selected">Flavors</option>
+            <option>Chocolate</option>
+            <option>Vanilla</option>
+        </select>
+        <span class="label">Favorite Ice Cream</span>
+    </label>
+    <label class="field">
+        <textarea></textarea>
+        <span class="label">Comments</span>
+    </label>
+    <label class="field">
+        <input type="checkbox" />
+        <span class="label">
+            I consent to my ice cream flavors being saved into a database for
+            eternity and understand and acknowledge this will have consequences
+            for all of my decendants for decades to come.
+        </span>
+    </label>
+</form></div>
+<pre class="example-markup">&lt;form&gt;
+    &lt;label class=&quot;field&quot;&gt;
+        &lt;input type=&quot;text&quot; /&gt;
+        &lt;span class=&quot;label&quot;&gt;Name&lt;/span&gt;
+    &lt;/label&gt;
+    &lt;label class=&quot;field -inline&quot;&gt;
+        &lt;input type=&quot;radio&quot; name=&quot;example&quot; /&gt;
+        &lt;span class=&quot;label&quot;&gt;Cone&lt;/span&gt;
+    &lt;/label&gt;
+    &lt;label class=&quot;field -inline&quot;&gt;
+        &lt;input type=&quot;radio&quot; name=&quot;example&quot; /&gt;
+        &lt;span class=&quot;label&quot;&gt;Bowl&lt;/span&gt;
+    &lt;/label&gt;
+    &lt;label for=&quot;select&quot; class=&quot;field&quot;&gt;
+        &lt;select name=&quot;select&quot;&gt;
+            &lt;option disabled=&quot;disabled&quot; selected=&quot;selected&quot;&gt;Flavors&lt;/option&gt;
+            &lt;option&gt;Chocolate&lt;/option&gt;
+            &lt;option&gt;Vanilla&lt;/option&gt;
+        &lt;/select&gt;
+        &lt;span class=&quot;label&quot;&gt;Favorite Ice Cream&lt;/span&gt;
+    &lt;/label&gt;
+    &lt;label class=&quot;field&quot;&gt;
+        &lt;textarea&gt;&lt;/textarea&gt;
+        &lt;span class=&quot;label&quot;&gt;Comments&lt;/span&gt;
+    &lt;/label&gt;
+    &lt;label class=&quot;field&quot;&gt;
+        &lt;input type=&quot;checkbox&quot; /&gt;
+        &lt;span class=&quot;label&quot;&gt;
+            I consent to my ice cream flavors being saved into a database for
+            eternity and understand and acknowledge this will have consequences
+            for all of my decendants for decades to come.
+        &lt;/span&gt;
+    &lt;/label&gt;
+&lt;/form&gt;</pre>
+          </section>
+      </article>
+      <article class="pattern">
+          <h2 class="kss-title" id="4-1">
+            <span class="kss-ref badge pull-right">4-1</span> Select
+          </h2>
+          <section class="example">
+            <div class="kss-example"><label class="field ">
+    <select>
+        <option disabled="disabled" selected="selected">Select</option>
+        <option>Option 1</option>
+        <option>Option 2</option>
+        <option>Option 3</option>
+    </select>
+    <span class="label">Select Label</span>
+</label></div>
+<pre class="example-markup">&lt;label class=&quot;field &quot;&gt;
+    &lt;select&gt;
+        &lt;option disabled=&quot;disabled&quot; selected=&quot;selected&quot;&gt;Select&lt;/option&gt;
+        &lt;option&gt;Option 1&lt;/option&gt;
+        &lt;option&gt;Option 2&lt;/option&gt;
+        &lt;option&gt;Option 3&lt;/option&gt;
+    &lt;/select&gt;
+    &lt;span class=&quot;label&quot;&gt;Select Label&lt;/span&gt;
+&lt;/label&gt;</pre>
+          </section>
+      </article>
+      <article class="pattern">
+          <h2 class="kss-title" id="4-2">
+            <span class="kss-ref badge pull-right">4-2</span> Checkbox
+          </h2>
+          <section class="example">
+            <div class="kss-example"><label class="field ">
+    <input type="checkbox" />
+    <span class="label">Checkbox</span>
+</label></div>
+<pre class="example-markup">&lt;label class=&quot;field &quot;&gt;
+    &lt;input type=&quot;checkbox&quot; /&gt;
+    &lt;span class=&quot;label&quot;&gt;Checkbox&lt;/span&gt;
+&lt;/label&gt;</pre>
+          </section>
+      </article>
+      <article class="pattern">
+          <h2 class="kss-title" id="4-3">
+            <span class="kss-ref badge pull-right">4-3</span> Radio
+          </h2>
+          <section class="example">
+            <div class="kss-example"><label class="field ">
+    <input type="radio" />
+    <span class="label">Radio</span>
+</label></div>
+<pre class="example-markup">&lt;label class=&quot;field &quot;&gt;
+    &lt;input type=&quot;radio&quot; /&gt;
+    &lt;span class=&quot;label&quot;&gt;Radio&lt;/span&gt;
+&lt;/label&gt;</pre>
+          </section>
+      </article>
+      <article class="pattern">
+          <h2 class="kss-title" id="4-4">
+            <span class="kss-ref badge pull-right">4-4</span> Input and text areas
+          </h2>
+          <section class="example">
+            <div class="kss-example"><label class="field ">
+    <input type="text" />
+    <span class="label">Input</span>
+</label>
+<label class="field ">
+    <textarea></textarea>
+    <span class="label">Textarea</span>
+</label></div>
+<pre class="example-markup">&lt;label class=&quot;field &quot;&gt;
+    &lt;input type=&quot;text&quot; /&gt;
+    &lt;span class=&quot;label&quot;&gt;Input&lt;/span&gt;
+&lt;/label&gt;
+&lt;label class=&quot;field &quot;&gt;
+    &lt;textarea&gt;&lt;/textarea&gt;
+    &lt;span class=&quot;label&quot;&gt;Textarea&lt;/span&gt;
+&lt;/label&gt;</pre>
+          </section>
+      </article>
+      <article class="pattern">
+          <h2 class="kss-title" id="4-5">
+            <span class="kss-ref badge pull-right">4-5</span> Disabled Fields
+          </h2>
+          <section class="example">
+            <div class="kss-example"><form>
+    <label class="field">
+        <input type="text" value="Someone" disabled />
+        <span class="label">Name</span>
+    </label>
+    <label class="field -inline">
+        <input type="radio" name="example" disabled />
+        <span class="label">Cone</span>
+    </label>
+    <label class="field -inline">
+        <input type="radio" name="example" disabled />
+        <span class="label">Bowl</span>
+    </label>
+    <label for="select" class="field">
+        <select name="select" disabled>
+            <option disabled="disabled" selected="selected">Flavors</option>
+            <option>Chocolate</option>
+            <option>Vanilla</option>
+        </select>
+        <span class="label">Favorite Ice Cream</span>
+    </label>
+    <label class="field">
+        <textarea disabled>I am some comments</textarea>
+        <span class="label">Comments</span>
+    </label>
+    <label class="field">
+        <input type="checkbox" disabled />
+        <span class="label">
+            I consent to my ice cream flavors being saved into a database for
+            eternity and understand and acknowledge this will have consequences
+            for all of my decendants for decades to come.
+        </span>
+    </label>
+</form></div>
+<pre class="example-markup">&lt;form&gt;
+    &lt;label class=&quot;field&quot;&gt;
+        &lt;input type=&quot;text&quot; value=&quot;Someone&quot; disabled /&gt;
+        &lt;span class=&quot;label&quot;&gt;Name&lt;/span&gt;
+    &lt;/label&gt;
+    &lt;label class=&quot;field -inline&quot;&gt;
+        &lt;input type=&quot;radio&quot; name=&quot;example&quot; disabled /&gt;
+        &lt;span class=&quot;label&quot;&gt;Cone&lt;/span&gt;
+    &lt;/label&gt;
+    &lt;label class=&quot;field -inline&quot;&gt;
+        &lt;input type=&quot;radio&quot; name=&quot;example&quot; disabled /&gt;
+        &lt;span class=&quot;label&quot;&gt;Bowl&lt;/span&gt;
+    &lt;/label&gt;
+    &lt;label for=&quot;select&quot; class=&quot;field&quot;&gt;
+        &lt;select name=&quot;select&quot; disabled&gt;
+            &lt;option disabled=&quot;disabled&quot; selected=&quot;selected&quot;&gt;Flavors&lt;/option&gt;
+            &lt;option&gt;Chocolate&lt;/option&gt;
+            &lt;option&gt;Vanilla&lt;/option&gt;
+        &lt;/select&gt;
+        &lt;span class=&quot;label&quot;&gt;Favorite Ice Cream&lt;/span&gt;
+    &lt;/label&gt;
+    &lt;label class=&quot;field&quot;&gt;
+        &lt;textarea disabled&gt;I am some comments&lt;/textarea&gt;
+        &lt;span class=&quot;label&quot;&gt;Comments&lt;/span&gt;
+    &lt;/label&gt;
+    &lt;label class=&quot;field&quot;&gt;
+        &lt;input type=&quot;checkbox&quot; disabled /&gt;
+        &lt;span class=&quot;label&quot;&gt;
+            I consent to my ice cream flavors being saved into a database for
+            eternity and understand and acknowledge this will have consequences
+            for all of my decendants for decades to come.
+        &lt;/span&gt;
+    &lt;/label&gt;
+&lt;/form&gt;</pre>
           </section>
       </article>
 </main>

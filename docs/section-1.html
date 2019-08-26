@@ -57,81 +57,20 @@
 
 <main class="wrapper content">
       <article class="pattern">
-          <h2 id="2">Base</h2>
-          <div class="subtitle pattern-description"><p>The base stylesheet requires <code>core.css</code> and uses it to set all html elements
-to adhere to the Baseline Grid and gives them default styles.</p>
+          <h2 id="1">Core</h2>
+          <div class="subtitle pattern-description"><p>The core of Cutestrap is a large set of Custom Properties. Some are set on an
+<code>html {}</code> ruleset and will be inherited by all children. Others are set on an
+<code>* {}</code> ruleset and are used as mixins. These are special because they rely on
+formulas. The only explicit styling performed here is setting <code>font-size</code> and
+<code>line-height</code> on a <code>body {}</code> ruleset.</p>
 </div>
           <section class="example">
-            <div class="kss-example"><div>
-  <h1>Headline 1</h1>
-  <p>
-    Paragraph
-  </p>
-  <h2>Headline 2</h2>
-  <ul>
-    <li>Unordered item</li>
-    <li>Unordered item</li>
-  </ul>
-  <h3>Headline 3</h3>
-  <ol>
-    <li>Ordered item</li>
-    <li>Ordered item</li>
-  </ol>
-  <h4>Headline 4</h4>
-<pre>
-  Preformatted
-</pre>
-  <h5>Headline 5</h5>
-  <blockquote>
-    Blockquote
-  </blockquote>
-  <h6>Headline 6</h6>
-  <table>
-    <tr>
-      <th>Table Header</th>
-      <th>Table Header</th>
-    </tr>
-    <tr>
-      <td>Table Cell</td>
-      <td>Table Cell</td>
-    </tr>
-  </table>
-</div></div>
-<pre class="example-markup">&lt;div&gt;
-  &lt;h1&gt;Headline 1&lt;/h1&gt;
-  &lt;p&gt;
-    Paragraph
-  &lt;/p&gt;
-  &lt;h2&gt;Headline 2&lt;/h2&gt;
-  &lt;ul&gt;
-    &lt;li&gt;Unordered item&lt;/li&gt;
-    &lt;li&gt;Unordered item&lt;/li&gt;
-  &lt;/ul&gt;
-  &lt;h3&gt;Headline 3&lt;/h3&gt;
-  &lt;ol&gt;
-    &lt;li&gt;Ordered item&lt;/li&gt;
-    &lt;li&gt;Ordered item&lt;/li&gt;
-  &lt;/ol&gt;
-  &lt;h4&gt;Headline 4&lt;/h4&gt;
-&lt;pre&gt;
-  Preformatted
-&lt;/pre&gt;
-  &lt;h5&gt;Headline 5&lt;/h5&gt;
-  &lt;blockquote&gt;
-    Blockquote
-  &lt;/blockquote&gt;
-  &lt;h6&gt;Headline 6&lt;/h6&gt;
-  &lt;table&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Table Header&lt;/th&gt;
-      &lt;th&gt;Table Header&lt;/th&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Table Cell&lt;/td&gt;
-      &lt;td&gt;Table Cell&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/table&gt;
-&lt;/div&gt;</pre>
+            <div class="kss-example"><p>
+    Example paragraph
+</p></div>
+<pre class="example-markup">&lt;p&gt;
+    Example paragraph
+&lt;/p&gt;</pre>
           </section>
       </article>
 </main>

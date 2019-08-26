@@ -130,6 +130,7 @@ gulp.task('distify', function() {
     'src/css/buttons.css',
     'src/css/forms.css',
     'src/css/grid.css',
+    'src/css/wrappers.css',
     'src/css/utilities.css',
   ]).pipe(concat('cutestrap.css'))
     .pipe(gulp.dest('./dist/css/'))

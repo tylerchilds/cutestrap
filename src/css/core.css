@@ -1,3 +1,22 @@
+/*
+
+Core
+
+The core of Cutestrap is a large set of Custom Properties. Some are set on an
+`html {}` ruleset and will be inherited by all children. Others are set on an
+`* {}` ruleset and are used as mixins. These are special because they rely on
+formulas. The only explicit styling performed here is setting `font-size` and
+`line-height` on a `body {}` ruleset.
+
+Markup:
+<p>
+    Example paragraph
+</p>
+
+Styleguide 1.0
+
+*/
+
 * {
     --rhythm: 2rem;
     --rhythm-quadruple: calc(4 * var(--rhythm));

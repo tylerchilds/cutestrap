@@ -1,3 +1,51 @@
+/*
+
+Base
+
+The base stylesheet requires `core.css` and uses it to set all html elements
+to adhere to the Baseline Grid and gives them default styles.
+
+Markup:
+<div>
+  <h1>Headline 1</h1>
+  <p>
+    Paragraph
+  </p>
+  <h2>Headline 2</h2>
+  <ul>
+    <li>Unordered item</li>
+    <li>Unordered item</li>
+  </ul>
+  <h3>Headline 3</h3>
+  <ol>
+    <li>Ordered item</li>
+    <li>Ordered item</li>
+  </ol>
+  <h4>Headline 4</h4>
+<pre>
+  Preformatted
+</pre>
+  <h5>Headline 5</h5>
+  <blockquote>
+    Blockquote
+  </blockquote>
+  <h6>Headline 6</h6>
+  <table>
+    <tr>
+      <th>Table Header</th>
+      <th>Table Header</th>
+    </tr>
+    <tr>
+      <td>Table Cell</td>
+      <td>Table Cell</td>
+    </tr>
+  </table>
+</div>
+
+Styleguide 2.0
+
+*/
+
 * {
     border: 0;
     font: inherit;

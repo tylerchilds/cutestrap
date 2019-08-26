@@ -1,3 +1,22 @@
+/*
+
+Core
+
+The core of Cutestrap is a large set of Custom Properties. Some are set on an
+`html {}` ruleset and will be inherited by all children. Others are set on an
+`* {}` ruleset and are used as mixins. These are special because they rely on
+formulas. The only explicit styling performed here is setting `font-size` and
+`line-height` on a `body {}` ruleset.
+
+Markup:
+<p>
+    Example paragraph
+</p>
+
+Styleguide 1.0
+
+*/
+
 * {
     --rhythm: 2rem;
     --rhythm-quadruple: calc(4 * var(--rhythm));
@@ -46,6 +65,54 @@ body {
     font-size: var(--font-size);
     line-height: var(--line-height);
 }
+
+/*
+
+Base
+
+The base stylesheet requires `core.css` and uses it to set all html elements
+to adhere to the Baseline Grid and gives them default styles.
+
+Markup:
+<div>
+  <h1>Headline 1</h1>
+  <p>
+    Paragraph
+  </p>
+  <h2>Headline 2</h2>
+  <ul>
+    <li>Unordered item</li>
+    <li>Unordered item</li>
+  </ul>
+  <h3>Headline 3</h3>
+  <ol>
+    <li>Ordered item</li>
+    <li>Ordered item</li>
+  </ol>
+  <h4>Headline 4</h4>
+<pre>
+  Preformatted
+</pre>
+  <h5>Headline 5</h5>
+  <blockquote>
+    Blockquote
+  </blockquote>
+  <h6>Headline 6</h6>
+  <table>
+    <tr>
+      <th>Table Header</th>
+      <th>Table Header</th>
+    </tr>
+    <tr>
+      <td>Table Cell</td>
+      <td>Table Cell</td>
+    </tr>
+  </table>
+</div>
+
+Styleguide 2.0
+
+*/
 
 * {
     border: 0;
@@ -368,7 +435,7 @@ Markup:
 .-small - A small button
 .-small.-outlined - A small, outlined button
 
-Styleguide 2.0
+Styleguide 3.0
 
 */
 
@@ -515,7 +582,7 @@ Markup:
     </label>
 </form>
 
-Styleguide 3.0
+Styleguide 4.0
 
 */
 
@@ -587,7 +654,7 @@ Markup:
     <span class="label">Select Label</span>
 </label>
 
-Styleguide 3.1
+Styleguide 4.1
 
 */
 
@@ -656,7 +723,7 @@ Markup:
     <span class="label">Checkbox</span>
 </label>
 
-Styleguide 3.2
+Styleguide 4.2
 
 */
 
@@ -675,7 +742,7 @@ Markup:
     <span class="label">Radio</span>
 </label>
 
-Styleguide 3.3
+Styleguide 4.3
 
 */
 
@@ -709,7 +776,7 @@ Markup:
     <span class="label">Textarea</span>
 </label>
 
-Styleguide 3.4
+Styleguide 4.4
 
 */
 
@@ -758,7 +825,7 @@ Markup:
     </label>
 </form>
 
-Styleguide 3.5
+Styleguide 4.5
 
 */
 
@@ -777,7 +844,7 @@ Markup:
     <div>Column</div>
 </div>
 
-Styleguide 4.0
+Styleguide 5.0
 
 */
 
@@ -791,6 +858,47 @@ Styleguide 4.0
             auto-fit,
             minmax(var(--grid-column-min), 1fr)
         );
+}
+
+/*
+
+Wrappers
+
+Elements with max widths and margins on top and bottom for collapsing, but
+padding on the sides for when the viewport is smaller than the max-width.
+
+Markup:
+<div class="wrapper {{modifier_class}}">
+    Wrapper
+</div>
+
+.-small - A smaller max-width
+.-large - A larger max-width
+.-flush - No vertical or horizontal spacing
+
+Styleguide 6.0
+
+*/
+
+.wrapper {
+    box-sizing: border-box;
+    margin: var(--rhythm) auto;
+    max-width: 60rem;
+    padding: 0 var(--rhythm-half);
+    width: 100%;
+}
+
+.wrapper.-small {
+    max-width: 45rem;
+}
+
+.wrapper.-large {
+    max-width: 80rem;
+}
+
+.wrapper.-flush {
+    margin: 0 auto;
+    padding: 0;
 }
 
 /*
@@ -813,7 +921,7 @@ Markup:
 .ta-center               - text-align: center;
 .ta-right                - text-align: right;
 
-Styleguide 5.0
+Styleguide 7.0
 
 */
 
@@ -867,7 +975,7 @@ Markup:
 .fw-normal           - Changes the type to be 400 weight
 .fw-bold             - Changes the type to be 700 weight
 
-Styleguide 5.1
+Styleguide 7.1
 
 */
 
