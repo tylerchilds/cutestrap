@@ -426,6 +426,7 @@ Markup:
 .-secondary - A button with secondary colors
 .-outlined - An outlined button
 .-link - A button that looks like a link
+.-block - Block level button
 .-large - A large button
 .-small - A small button
 .-small.-outlined - A small, outlined button
@@ -451,7 +452,7 @@ Styleguide 3.0
     box-sizing: border-box;
     color: var(--text-color);
     cursor: pointer;
-    display: inline-flex;
+    display: inline-block;
     font-size: var(--font-size);
     justify-content: center;
     line-height: var(--rhythm);
@@ -518,6 +519,11 @@ Styleguide 3.0
     --text-color-hover: var(--color-link-hover);
 
     text-decoration: underline;
+}
+
+.button.-block {
+    display: block;
+    width: 100%;
 }
 
 .button.-small {
