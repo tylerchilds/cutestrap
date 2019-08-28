@@ -15,7 +15,6 @@
   "scripts": {
     "start": "gulp",
     "setup": "npm install",
-    "zip": "gulp zip",
     "gulp": "gulp",
     "lint": "stylelint src/**/*.css",
     "lint-fix": "stylelint src/**/*.css --fix"

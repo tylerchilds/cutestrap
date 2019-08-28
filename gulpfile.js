@@ -143,20 +143,6 @@ gulp.task('kss-public', gulp.series('kss', function(){
     .pipe(gulp.dest('./docs/public/js'));
 }));
 
-gulp.task('compile',
-    gulp.series('clean', 'distify', 'kss-public')
-);
-
-// Watch Files For Changes
-gulp.task('watch', function() {
-  gulp.watch('./src/css/**/*.css', gulp.series('compile'));
-  gulp.watch('./kss-html/**/*.*', gulp.series('compile'));
-});
-
-gulp.task('default', gulp.series('compile', 'watch', function(done) {
-    done();
-}));
-
 gulp.task('zip-temp-docs', function(){
 
   return gulp.src('docs/**/*')
@@ -171,9 +157,23 @@ gulp.task('zip-temp-dist', function(){
 
 });
 
-gulp.task('zip', gulp.series('compile', 'zip-temp-dist', 'zip-temp-docs', function(){
+gulp.task('zip', gulp.series('zip-temp-dist', 'zip-temp-docs', function(){
   return gulp.src('temp/zip/**/*')
     .pipe(zip('cutestrap.zip'))
     .pipe(gulp.dest('./'));
 
 }));
+gulp.task('compile',
+    gulp.series('clean', 'distify', 'kss-public', 'zip')
+);
+
+// Watch Files For Changes
+gulp.task('watch', function() {
+  gulp.watch('./src/css/**/*.css', gulp.series('compile'));
+  gulp.watch('./kss-html/**/*.*', gulp.series('compile'));
+});
+
+gulp.task('default', gulp.series('compile', 'watch', function(done) {
+    done();
+}));
+
