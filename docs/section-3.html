@@ -16,189 +16,77 @@
   <link href="./public/css/kss.css" rel="stylesheet" />
 
   </head>
-  <body class="language-markup">
+  <body class="language-markup dashboard-layout">
 
-      <header>
-  <h3>
-    <a href="javascript:;" class="js-grid-toggle grid-toggle fs-base f-right">Grid</a>
+      <header class="header">
+  <a href="javascript:;" class="js-grid-toggle f-right">Grid</a>
+  <h2 class="title">
     <a href="./index.html">Cutestrap</a>
-  </h3>
+  </h2>
 </header>
 
 
       
 
-
-<nav>
+<nav class="navigation">
+  <h6>Files</h6>
   <ul>
       <li>
-        <a href="section-1.html">Grid</a>
+        <a href="section-1.html">Core</a>
       </li>
       <li>
-        <a href="section-2.html">Buttons</a>
+        <a href="section-2.html">Base</a>
       </li>
       <li>
-        <a href="section-3.html">Forms</a>
+        <a href="section-3.html">Buttons</a>
       </li>
       <li>
-        <a href="section-4.html">Utilities</a>
+        <a href="section-4.html">Forms</a>
+      </li>
+      <li>
+        <a href="section-5.html">Grid</a>
+      </li>
+      <li>
+        <a href="section-6.html">Wrappers</a>
+      </li>
+      <li>
+        <a href="section-7.html">Utilities</a>
       </li>
   </ul>
 </nav>
 
-
-<div class="wrapper">
-
+<main class="wrapper content">
       <article class="pattern">
-          <h2 id="3">Forms</h2>
-          <section class="example">
-<pre class="">&lt;form&gt;
-  &lt;label class=&quot;textfield&quot;&gt;
-    &lt;input type=&quot;text&quot; /&gt;
-    &lt;span class=&quot;textfield__label&quot;&gt;Name&lt;/span&gt;
-  &lt;/label&gt;
-  &lt;label class=&quot;radio&quot;&gt;
-    &lt;input type=&quot;radio&quot; name=&quot;example&quot; /&gt;
-    &lt;span class=&quot;radio__label&quot;&gt;Desktop&lt;/span&gt;
-  &lt;/label&gt;
-  &lt;label class=&quot;radio&quot;&gt;
-    &lt;input type=&quot;radio&quot; name=&quot;example&quot; /&gt;
-    &lt;span class=&quot;radio__label&quot;&gt;Mobile&lt;/span&gt;
-  &lt;/label&gt;
-  &lt;label class=&quot;select&quot;&gt;
-    &lt;select name=&quot;select&quot;&gt;
-      &lt;option disabled=&quot;disabled&quot; selected=&quot;selected&quot;&gt;Flavors&lt;/option&gt;
-      &lt;option&gt;Chocolate&lt;/option&gt;
-    &lt;/select&gt;
-    &lt;span class=&quot;select__label&quot; for=&quot;select&quot;&gt;Favorite Ice Cream&lt;/span&gt;
-  &lt;/label&gt;
-  &lt;label class=&quot;textfield&quot;&gt;
-    &lt;textarea&gt;&lt;/textarea&gt;
-    &lt;span class=&quot;textfield__label&quot;&gt;Comments&lt;/span&gt;
-  &lt;/label&gt;
-  &lt;label class=&quot;checkbox&quot;&gt;
-    &lt;input type=&quot;checkbox&quot; /&gt;
-    &lt;span class=&quot;checkbox__label&quot;&gt;I Lied&lt;/span&gt;
-  &lt;/label&gt;
-  &lt;br/&gt;
-  &lt;input type=&quot;submit&quot; value=&quot;Cross My Heart&quot; /&gt;
-  &lt;button&gt;okay&lt;/button&gt;
-  &lt;button&gt;not okay&lt;/button&gt;
-&lt;/form&gt;</pre>
-            <div class="kss-example"><form>
-  <label class="textfield">
-    <input type="text" />
-    <span class="textfield__label">Name</span>
-  </label>
-  <label class="radio">
-    <input type="radio" name="example" />
-    <span class="radio__label">Desktop</span>
-  </label>
-  <label class="radio">
-    <input type="radio" name="example" />
-    <span class="radio__label">Mobile</span>
-  </label>
-  <label class="select">
-    <select name="select">
-      <option disabled="disabled" selected="selected">Flavors</option>
-      <option>Chocolate</option>
-    </select>
-    <span class="select__label" for="select">Favorite Ice Cream</span>
-  </label>
-  <label class="textfield">
-    <textarea></textarea>
-    <span class="textfield__label">Comments</span>
-  </label>
-  <label class="checkbox">
-    <input type="checkbox" />
-    <span class="checkbox__label">I Lied</span>
-  </label>
-  <br/>
-  <input type="submit" value="Cross My Heart" />
-  <button>okay</button>
-  <button>not okay</button>
-</form></div>
-          </section>
-      </article>
-      <article class="pattern">
-          <h2 class="kss-title" id="3-1">
-            <span class="kss-ref badge pull-right">3-1</span> Radio
-          </h2>
-          <section class="example">
-<pre class="">&lt;label class=&quot;radio &quot;&gt;
-  &lt;input type=&quot;radio&quot; /&gt;
-  &lt;span class=&quot;radio__label&quot;&gt;Radio&lt;/span&gt;
-&lt;/label&gt;</pre>
-            <div class="kss-example"><label class="radio ">
-  <input type="radio" />
-  <span class="radio__label">Radio</span>
-</label></div>
-          </section>
-      </article>
-      <article class="pattern">
-          <h2 class="kss-title" id="3-2">
-            <span class="kss-ref badge pull-right">3-2</span> Checkbox
-          </h2>
-          <section class="example">
-<pre class="">&lt;label class=&quot;checkbox &quot;&gt;
-  &lt;input type=&quot;checkbox&quot; /&gt;
-  &lt;span class=&quot;checkbox__label&quot;&gt;Checkbox&lt;/span&gt;
-&lt;/label&gt;</pre>
-            <div class="kss-example"><label class="checkbox ">
-  <input type="checkbox" />
-  <span class="checkbox__label">Checkbox</span>
-</label></div>
-          </section>
-      </article>
-      <article class="pattern">
-          <h2 class="kss-title" id="3-3">
-            <span class="kss-ref badge pull-right">3-3</span> Input and text areas
-          </h2>
-          <section class="example">
-<pre class="">&lt;label class=&quot;textfield &quot;&gt;
-  &lt;input type=&quot;text&quot; /&gt;
-  &lt;span class=&quot;textfield__label&quot;&gt;Input&lt;/span&gt;
-&lt;/label&gt;
-&lt;label class=&quot;textfield &quot;&gt;
-  &lt;textarea&gt;&lt;/textarea&gt;
-  &lt;span class=&quot;textfield__label&quot;&gt;Textarea&lt;/span&gt;
-&lt;/label&gt;</pre>
-            <div class="kss-example"><label class="textfield ">
-  <input type="text" />
-  <span class="textfield__label">Input</span>
-</label>
-<label class="textfield ">
-  <textarea></textarea>
-  <span class="textfield__label">Textarea</span>
-</label></div>
-          </section>
-      </article>
-      <article class="pattern">
-          <h2 class="kss-title" id="3-4">
-            <span class="kss-ref badge pull-right">3-4</span> Select
-          </h2>
-          <section class="example">
-<pre class="">&lt;label class=&quot;select &quot;&gt;
-  &lt;select&gt;
-    &lt;option disabled=&quot;disabled&quot; selected=&quot;selected&quot;&gt;Select&lt;/option&gt;
-    &lt;option&gt;Option 1&lt;/option&gt;
-    &lt;option&gt;Option 2&lt;/option&gt;
-    &lt;option&gt;Option 3&lt;/option&gt;
-  &lt;/select&gt;
-  &lt;span class=&quot;select__label&quot;&gt;Select Label&lt;/span&gt;
-&lt;/label&gt;</pre>
-            <div class="kss-example"><label class="select ">
-  <select>
-    <option disabled="disabled" selected="selected">Select</option>
-    <option>Option 1</option>
-    <option>Option 2</option>
-    <option>Option 3</option>
-  </select>
-  <span class="select__label">Select Label</span>
-</label></div>
-          </section>
-      </article>
+          <h2 id="3">Buttons</h2>
+          <div class="subtitle pattern-description"><p>Buttons and their variations</p>
 </div>
+          <section class="example">
+            <div class="kss-example"><button class="button [modifier class]">Button</button></div>
+<pre class="example-markup">&lt;button class=&quot;button [modifier class]&quot;&gt;Button&lt;/button&gt;</pre>
+              <hr />
+              <p class="clearfix kss-modifier-title"><code>.-secondary</code> <span class="f-right">A button with secondary colors</span></p>
+              <div class="kss-example"><button class="button -secondary">Button</button></div>
+              <hr />
+              <p class="clearfix kss-modifier-title"><code>.-outlined</code> <span class="f-right">An outlined button</span></p>
+              <div class="kss-example"><button class="button -outlined">Button</button></div>
+              <hr />
+              <p class="clearfix kss-modifier-title"><code>.-link</code> <span class="f-right">A button that looks like a link</span></p>
+              <div class="kss-example"><button class="button -link">Button</button></div>
+              <hr />
+              <p class="clearfix kss-modifier-title"><code>.-block</code> <span class="f-right">Block level button</span></p>
+              <div class="kss-example"><button class="button -block">Button</button></div>
+              <hr />
+              <p class="clearfix kss-modifier-title"><code>.-large</code> <span class="f-right">A large button</span></p>
+              <div class="kss-example"><button class="button -large">Button</button></div>
+              <hr />
+              <p class="clearfix kss-modifier-title"><code>.-small</code> <span class="f-right">A small button</span></p>
+              <div class="kss-example"><button class="button -small">Button</button></div>
+              <hr />
+              <p class="clearfix kss-modifier-title"><code>.-small.-outlined</code> <span class="f-right">A small, outlined button</span></p>
+              <div class="kss-example"><button class="button -small -outlined">Button</button></div>
+          </section>
+      </article>
+</main>
 
 
 

@@ -16,55 +16,125 @@
   <link href="./public/css/kss.css" rel="stylesheet" />
 
   </head>
-  <body class="language-markup">
+  <body class="language-markup dashboard-layout">
 
-      <header>
-  <h3>
-    <a href="javascript:;" class="js-grid-toggle grid-toggle fs-base f-right">Grid</a>
+      <header class="header">
+  <a href="javascript:;" class="js-grid-toggle f-right">Grid</a>
+  <h2 class="title">
     <a href="./index.html">Cutestrap</a>
-  </h3>
+  </h2>
 </header>
 
 
       
 
-
-<nav>
+<nav class="navigation">
+  <h6>Files</h6>
   <ul>
       <li>
-        <a href="section-1.html">Grid</a>
+        <a href="section-1.html">Core</a>
       </li>
       <li>
-        <a href="section-2.html">Buttons</a>
+        <a href="section-2.html">Base</a>
       </li>
       <li>
-        <a href="section-3.html">Forms</a>
+        <a href="section-3.html">Buttons</a>
       </li>
       <li>
-        <a href="section-4.html">Utilities</a>
+        <a href="section-4.html">Forms</a>
+      </li>
+      <li>
+        <a href="section-5.html">Grid</a>
+      </li>
+      <li>
+        <a href="section-6.html">Wrappers</a>
+      </li>
+      <li>
+        <a href="section-7.html">Utilities</a>
       </li>
   </ul>
 </nav>
 
-
-<div class="wrapper">
-
+<main class="wrapper content">
       <article class="pattern">
-          <h2 id="2">Buttons</h2>
-          <div class="subtitle pattern-description"><p>Buttons and their variations</p>
+          <h2 id="2">Base</h2>
+          <div class="subtitle pattern-description"><p>The base stylesheet requires <code>core.css</code> and uses it to set all html elements
+to adhere to the Baseline Grid and gives them default styles.</p>
 </div>
           <section class="example">
-<pre class="">&lt;a href=&quot;#&quot; class=&quot;btn [modifier class]&quot;&gt;Button&lt;/a&gt;</pre>
-            <div class="kss-example"><a href="#" class="btn [modifier class]">Button</a></div>
-              <hr />
-              <p class="clearfix kss-modifier-title"><code>.btn--secondary</code> <span class="f-right fs-small">A link that&amp;#39;s sized like a button</span></p>
-              <div class="kss-example"><a href="#" class="btn btn--secondary">Button</a></div>
-              <hr />
-              <p class="clearfix kss-modifier-title"><code>.btn--link</code> <span class="f-right fs-small">A link that&amp;#39;s sized like a button</span></p>
-              <div class="kss-example"><a href="#" class="btn btn--link">Button</a></div>
+            <div class="kss-example"><div>
+  <h1>Headline 1</h1>
+  <p>
+    Paragraph
+  </p>
+  <h2>Headline 2</h2>
+  <ul>
+    <li>Unordered item</li>
+    <li>Unordered item</li>
+  </ul>
+  <h3>Headline 3</h3>
+  <ol>
+    <li>Ordered item</li>
+    <li>Ordered item</li>
+  </ol>
+  <h4>Headline 4</h4>
+<pre>
+  Preformatted
+</pre>
+  <h5>Headline 5</h5>
+  <blockquote>
+    Blockquote
+  </blockquote>
+  <h6>Headline 6</h6>
+  <table>
+    <tr>
+      <th>Table Header</th>
+      <th>Table Header</th>
+    </tr>
+    <tr>
+      <td>Table Cell</td>
+      <td>Table Cell</td>
+    </tr>
+  </table>
+</div></div>
+<pre class="example-markup">&lt;div&gt;
+  &lt;h1&gt;Headline 1&lt;/h1&gt;
+  &lt;p&gt;
+    Paragraph
+  &lt;/p&gt;
+  &lt;h2&gt;Headline 2&lt;/h2&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Unordered item&lt;/li&gt;
+    &lt;li&gt;Unordered item&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;h3&gt;Headline 3&lt;/h3&gt;
+  &lt;ol&gt;
+    &lt;li&gt;Ordered item&lt;/li&gt;
+    &lt;li&gt;Ordered item&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;h4&gt;Headline 4&lt;/h4&gt;
+&lt;pre&gt;
+  Preformatted
+&lt;/pre&gt;
+  &lt;h5&gt;Headline 5&lt;/h5&gt;
+  &lt;blockquote&gt;
+    Blockquote
+  &lt;/blockquote&gt;
+  &lt;h6&gt;Headline 6&lt;/h6&gt;
+  &lt;table&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Table Header&lt;/th&gt;
+      &lt;th&gt;Table Header&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Table Cell&lt;/td&gt;
+      &lt;td&gt;Table Cell&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/table&gt;
+&lt;/div&gt;</pre>
           </section>
       </article>
-</div>
+</main>
 
 
 

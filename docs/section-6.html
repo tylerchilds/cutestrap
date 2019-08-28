@@ -57,20 +57,31 @@
 
 <main class="wrapper content">
       <article class="pattern">
-          <h2 id="1">Core</h2>
-          <div class="subtitle pattern-description"><p>The core of Cutestrap is a large set of Custom Properties. Some are set on an
-<code>html {}</code> ruleset and will be inherited by all children. Others are set on an
-<code>* {}</code> ruleset and are used as mixins. These are special because they rely on
-formulas. The only explicit styling performed here is setting <code>font-size</code> and
-<code>line-height</code> on a <code>body {}</code> ruleset.</p>
+          <h2 id="6">Wrappers</h2>
+          <div class="subtitle pattern-description"><p>Elements with max widths and paddings that can be used to separate content</p>
 </div>
           <section class="example">
-            <div class="kss-example"><p>
-    Example paragraph
-</p></div>
-<pre class="example-markup">&lt;p&gt;
-    Example paragraph
-&lt;/p&gt;</pre>
+            <div class="kss-example"><div class="wrapper [modifier class]">
+    Wrapper
+</div></div>
+<pre class="example-markup">&lt;div class=&quot;wrapper [modifier class]&quot;&gt;
+    Wrapper
+&lt;/div&gt;</pre>
+              <hr />
+              <p class="clearfix kss-modifier-title"><code>.-small</code> <span class="f-right">A smaller max-width</span></p>
+              <div class="kss-example"><div class="wrapper -small">
+    Wrapper
+</div></div>
+              <hr />
+              <p class="clearfix kss-modifier-title"><code>.-large</code> <span class="f-right">A larger max-width</span></p>
+              <div class="kss-example"><div class="wrapper -large">
+    Wrapper
+</div></div>
+              <hr />
+              <p class="clearfix kss-modifier-title"><code>.-flush</code> <span class="f-right">No vertical or horizontal spacing</span></p>
+              <div class="kss-example"><div class="wrapper -flush">
+    Wrapper
+</div></div>
           </section>
       </article>
 </main>

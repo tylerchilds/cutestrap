@@ -1,5 +1,5 @@
-
-<nav>
+<nav class="navigation">
+  <h6>Files</h6>
   <ul>
     {{#eachRoot}}
       <li>
@@ -9,9 +9,7 @@
   </ul>
 </nav>
 
-
-<div class="wrapper">
-
+<main class="wrapper content">
   {{#if homepage}}
     {{{homepage}}}
   {{else}}
@@ -29,11 +27,11 @@
         {{/if}}
         {{#if markup}}
           <section class="example">
-<pre class="">{{markup}}</pre>
             <div class="kss-example">{{{markup}}}</div>
+<pre class="example-markup">{{markup}}</pre>
             {{#eachModifier}}
               <hr />
-              <p class="clearfix kss-modifier-title"><code>{{{name}}}</code> <span class="f-right fs-small">{{description}}</span></p>
+              <p class="clearfix kss-modifier-title"><code>{{{name}}}</code> <span class="f-right">{{description}}</span></p>
               <div class="kss-example">{{{markup}}}</div>
             {{/eachModifier}}
           </section>
@@ -41,4 +39,4 @@
       </article>
     {{/eachSection}}
   {{/if}}
-</div>
+</main>
