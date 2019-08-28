@@ -183,7 +183,7 @@ a:active {
 img,
 video {
     max-width: 100%;
-    display: table;
+    vertical-align: top;
 }
 
 hr {
@@ -242,11 +242,6 @@ blockquote p:last-child {
 
 figure {
     margin: 0 auto var(--rhythm);
-}
-
-figure img {
-    display: table;
-    margin: 0 auto;
 }
 
 small,

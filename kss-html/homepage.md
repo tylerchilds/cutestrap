@@ -222,7 +222,7 @@ p q r s t u v w x y z { | } ~</pre>
   <h3>Figures</h3>
   <p>Figures are usually used to refer to images:</p>
   <div class="example">
-    <figure>
+    <figure class="ta-center">
       <img src="http://www.fillmurray.com/300/224" alt="Example image"/>
       <figcaption>
         This is a placeholder image, with supporting caption.

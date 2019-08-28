@@ -100,6 +100,8 @@ Styleguide 3.0
     --border-color-hover: transparent;
     --text-color: var(--color-link);
     --text-color-hover: var(--color-link-hover);
+
+    text-decoration: underline;
 }
 
 .button.-small {
