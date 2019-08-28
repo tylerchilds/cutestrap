@@ -5,8 +5,8 @@ permalink: /
 description: A sassy, opinionated CSS Framework. A tiny alternative to Bootstrap.
 ---
 
-<header class="wrapper-large ta-center">
-  <h1 class="logo">
+<header class="wrapper -large ta-center">
+  <h1 class="logo -hero">
     Cutestrap Two
   </h1>
   <p>{{ page.description }}</p>
@@ -21,7 +21,7 @@ description: A sassy, opinionated CSS Framework. A tiny alternative to Bootstrap
 
 {% include nav.html %}
 
-<section class="wrapper">
+<section class="wrapper -large">
   <article class="grid grid--medium">
     <div>
       <h4>Themes</h4>
@@ -71,21 +71,12 @@ description: A sassy, opinionated CSS Framework. A tiny alternative to Bootstrap
 </section>
 
 
-<section class="wrapper-small">
-  <h3 class="ta-center">Another framework?</h3>
+<section class="wrapper -small">
+  <h3 class="ta-center">Why Cutestrap?</h3>
   <p>
-    There are plenty of amazing front end frameworks already, such as,
-    <a href="http://getbootstrap.com/" target="_blank">Bootstrap</a> and 
-    <a href="http://foundation.zurb.com/" target="_blank">Foundation</a>.
-    If you're looking for something feature rich with loads of components,
-    those are both great choices.
-  </p>
-  <p>
-    However, if you're looking for something in between
-    <a href="https://necolas.github.io/normalize.css/" target="_blank">
-        normalize.css
-    </a> and a full blown framework, meet Cutestrap.
-    <strong>Cutestrap is only 8kb of CSS.</strong>
+    There are a wide variety of CSS Frameworks available. Cutestrap stands out
+    with a tiny footprint <strong>(&lt; 3kb gzipped)</strong>, simple API,
+    robust customization, and a strict baseline grid.
   </p>
 </section>
 
@@ -127,7 +118,9 @@ description: A sassy, opinionated CSS Framework. A tiny alternative to Bootstrap
   </label>
   <label class="field">
     <select>
-      <option disabled="disabled" selected="selected">Flavors</option>
+      <option disabled="disabled" selected="selected">
+        Flavors
+      </option>
       <option>Chocolate</option>
       <option>Vanilla</option>
     </select>
@@ -214,7 +207,7 @@ description: A sassy, opinionated CSS Framework. A tiny alternative to Bootstrap
       <th>Effect</th>
     </tr>
     <tr>
-      <td><code>.wrapper-small</code></td>
+      <td><code>.wrapper.-small</code></td>
       <td>Max width of 640 with top/bottom padding equal to the baseline.</td>
     </tr>
     <tr>
@@ -222,7 +215,7 @@ description: A sassy, opinionated CSS Framework. A tiny alternative to Bootstrap
       <td>Max width of 960 with top/bottom padding of twice the baseline.</td>
     </tr>
     <tr>
-      <td><code>.wrapper-large</code></td>
+      <td><code>.wrapper.-large</code></td>
       <td>Max width of 1200 with top/bottom padding of three times the baseline.</td>
     </tr>
   </table>
@@ -345,7 +338,7 @@ description: A sassy, opinionated CSS Framework. A tiny alternative to Bootstrap
 
 </section>
 
-<section class="wrapper-small ta-center">
+<section class="wrapper -small ta-center">
   <h3>Feedback</h3>
   <p>
     If you notice something is broken or would like to request a feature, please <a href="https://github.com/cutestrap/cutestrap/issues" target="_blank">open an issue on Github</a>. You can also <a href="https://github.com/cutestrap/cutestrap#fork-destination-box">fork the repo</a> and open pull requests, just check the README for guidelines.

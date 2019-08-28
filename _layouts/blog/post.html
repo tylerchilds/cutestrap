@@ -2,25 +2,9 @@
 layout: default
 ---
 
-{% assign post = page %}
-{% if post.categories.size > 0 %}
-  {% for post_cat in post.categories %}
-    {% assign cat = site.data.cats[post_cat] %}
-    {% if cat %}
-      {% capture cats_content %}
-        {{ cats_content }}
-        <a href="/blog/category/{{ post_cat }}/">{{ cat.name }}</a>{% if forloop.last == false %}, {% endif %}
-      {% endcapture %}
-    {% endif %}
-  {% endfor %}
-{% else %}
-    {% assign cats_content = '' %}
-{% endif %}
-
 <article class="page" itemscope itemtype="https://schema.org/BlogPosting">
   <p class="page-meta">
-    {% include blog/meta.html post=post %}
-    in {{ cats_content }}
+    {% include blog/meta.html post=page %}
   </p>
 
   <div class="page-content" itemprop="articleBody">

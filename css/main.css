@@ -54,7 +54,6 @@ body {
 }
 
 main {
-  margin: 0 var(--rhythm-half);
 }
 
 footer {
@@ -111,23 +110,15 @@ nav a {
 */
 
 .page-header{
-  padding: var(--rhythm) 0;
   text-align: center;
 }
 
 .page-header h1 {
-  font-weight: 100;
-  letter-spacing: 2px;
-}
-
-@media (min-width: 55rem) {
-  .page-header h1 {
-    letter-spacing: 0;
-  }  
 }
 
 .page-meta {
-  color: var(--gray3);
+  color: var(--color-neutral-shade1);
+  text-align: right;
 }
 
 .page-navigation {
@@ -154,7 +145,7 @@ footer {
   display: grid;
   column-gap: var(--gutter-width);
   grid-template-columns: repeat(2, 1fr);
-  background-color: var(--gray6);
+  background-color: var(--color-neutral-tint3);
 }
 
 /*
@@ -166,7 +157,7 @@ footer {
 .site-title:hover,
 .site-title:focus,
 .site-title:active {
-  color: var(--gray1);
+  color: var(--color-neutral-shade3);
   font-family: monospace;
   text-decoration: none;
 }
@@ -177,13 +168,13 @@ footer {
   font-weight: normal;
 }
 
-.logo:link,
-.logo:visited,
-.logo:active {
+a.logo:link,
+a.logo:visited,
+a.logo:active {
     color: var(--color-primary);
 }
-.logo:hover,
-.logo:focus {
+a.logo:hover,
+a.logo:focus {
     color: var(--color-primary-shade);
 }
 
@@ -210,7 +201,7 @@ footer {
 */
 
 html {
-  margin-top: 3.5rem;
+  margin-top: 4rem;
 }
 
 .toolbar {
@@ -330,7 +321,7 @@ html {
 */
 
 .sidebar h4 {
-  color: var(--gray3);
+  color: var(--color-neutral-shade1);
   text-transform: uppercase;
   padding: 0 0 var(--rhythm-half);
 }
@@ -353,37 +344,6 @@ html {
 }
 
 /*
-  2.3: Homepage Layout
-*/
-
-.layout-homepage {
-  display: grid;
-  grid-template-areas: "promoted promoted recent"
-                       "featured basics categories";
-  grid-template-columns: 1fr 1fr 1fr;
-}
-
-.area-promoted {
-  grid-area: promoted;
-}
-
-.area-recent {
-  grid-area: recent;
-}
-
-.area-featured {
-  grid-area: featured;
-}
-
-.area-basics {
-  grid-area: basics;
-}
-
-.area-categories {
-  grid-area: categories;
-}
-
-/*
   3: Post Lists
 */  
 
@@ -397,7 +357,7 @@ html {
 }
 
 .snippet::after {
-  border-bottom: 1px solid var(--gray5);
+  border-bottom: 1px solid var(--color-neutral-tint2);
   content: '';
   display: block;
   position: absolute;

@@ -2,8 +2,7 @@
 layout: default
 ---
 
-<section class="wrapper"> 
-
+<section>
   {% for post in site.posts %}
     {% assign currentdate = post.date | date: "%Y" %}
     {% if currentdate != date %}
