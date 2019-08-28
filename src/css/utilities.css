@@ -65,12 +65,18 @@ These are specific typography related utilities
 
 Markup:
 <div class="type {{modifier_class}}">
-    The quick brown fox jumps over the lazy dog.
+    The quick<br />
+    brown fox<br />
+    jumps over<br />
+    the lazy dog.
 </div>
 
 .fw-light            - Changes the type to be 300 weight
 .fw-normal           - Changes the type to be 400 weight
 .fw-bold             - Changes the type to be 700 weight
+.fs-small            - Small font-size
+.fs-base             - Base font-size
+.fs-large            - Large font-size
 
 Styleguide 7.1
 
@@ -86,4 +92,23 @@ Styleguide 7.1
 
 .fw-bold {
     font-weight: 700;
+}
+
+.fs-small,
+.fs-base,
+.fs-large {
+    font-size: var(--font-size);
+    line-height: var(--line-height);
+}
+
+.fs-small {
+    --sub-rhythm: calc(.75 * var(--rhythm));
+}
+
+.fs-base {
+    --sub-rhythm: initial;
+}
+
+.fs-large {
+    --sub-rhythm: calc(1.25 * var(--rhythm));
 }

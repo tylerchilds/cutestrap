@@ -39,17 +39,19 @@ html {
     --color-primary-tint: hsl(350, 100%, 70%);
     --color-primary: hsl(350, 80%, 60%);
     --color-primary-shade: hsl(350, 60%, 50%);
-    --color-accent: hsl(170, 60%, 50%);
+    --color-accent-tint: hsl(170, 100%, 70%);
+    --color-accent: hsl(170, 80%, 60%);
+    --color-accent-shade: hsl(170, 60%, 50%);
     --color-link: hsl(230, 60%, 50%);
     --color-link-visited: hsl(290, 60%, 50%);
     --color-link-hover: hsl(230, 80%, 60%);
     --color-link-active: hsl(350, 60%, 50%);
     --color-neutral-tinted: hsl(170, 10%, 98%);
-    --color-neutral-tint3: hsl(170, 10%, 92%);
-    --color-neutral-tint2: hsl(170, 10%, 80%);
-    --color-neutral-tint1: hsl(170, 10%, 65%);
-    --color-neutral: hsl(170, 10%, 53%);
-    --color-neutral-shade1: hsl(170, 10%, 42%);
+    --color-neutral-tint3: hsl(170, 10%, 94%);
+    --color-neutral-tint2: hsl(170, 10%, 85%);
+    --color-neutral-tint1: hsl(170, 10%, 68%);
+    --color-neutral: hsl(170, 10%, 55%);
+    --color-neutral-shade1: hsl(170, 10%, 41%);
     --color-neutral-shade2: hsl(170, 10%, 30%);
     --color-neutral-shade3: hsl(170, 10%, 18%);
     --color-neutral-shaded: hsl(170, 10%, 2%);
@@ -154,37 +156,35 @@ h6 {
 }
 
 h1 {
-    --line-height-ratio: 1;
+    --line-height-ratio: 1.1;
     --sub-rhythm: var(--rhythm-triple);
 
     font-weight: 700;
+    margin-bottom: var(--rhythm-double);
 }
 
 h2 {
-    --line-height-ratio: 1.1;
+    --line-height-ratio: 1.2;
     --sub-rhythm: var(--rhythm-triple);
 }
 
 h3 {
-    --line-height-ratio: 1.2;
-    --sub-rhythm: var(--rhythm-triple);
-
-    font-weight: 100;
-}
-
-h4 {
     --line-height-ratio: 1.3;
     --sub-rhythm: var(--rhythm-double);
 
     font-weight: 700;
 }
 
-h5 {
+h4 {
     --sub-rhythm: var(--rhythm-double);
 }
 
-h6 {
+h5 {
     font-weight: 700;
+}
+
+h6 {
+    font-weight: 100;
 }
 
 p {
@@ -864,8 +864,7 @@ Styleguide 5.0
 
 Wrappers
 
-Elements with max widths and margins on top and bottom for collapsing, but
-padding on the sides for when the viewport is smaller than the max-width.
+Elements with max widths and paddings that can be used to separate content
 
 Markup:
 <div class="wrapper {{modifier_class}}">
@@ -882,23 +881,24 @@ Styleguide 6.0
 
 .wrapper {
     box-sizing: border-box;
-    margin: var(--rhythm) auto;
+    margin: 0 auto;
     max-width: 60rem;
-    padding: 0 var(--rhythm-half);
+    padding: var(--rhythm-double) var(--rhythm-half);
     width: 100%;
 }
 
 .wrapper.-small {
     max-width: 45rem;
+    padding: var(--rhythm) var(--rhythm-half);
 }
 
 .wrapper.-large {
     max-width: 80rem;
+    padding: var(--rhythm-triple) var(--rhythm-half);
 }
 
 .wrapper.-flush {
-    margin: 0 auto;
-    padding: 0;
+    padding: 0 var(--rhythm-half);
 }
 
 /*
@@ -968,12 +968,18 @@ These are specific typography related utilities
 
 Markup:
 <div class="type {{modifier_class}}">
-    The quick brown fox jumps over the lazy dog.
+    The quick<br />
+    brown fox<br />
+    jumps over<br />
+    the lazy dog.
 </div>
 
 .fw-light            - Changes the type to be 300 weight
 .fw-normal           - Changes the type to be 400 weight
 .fw-bold             - Changes the type to be 700 weight
+.fs-small            - Small font-size
+.fs-base             - Base font-size
+.fs-large            - Large font-size
 
 Styleguide 7.1
 
@@ -989,4 +995,23 @@ Styleguide 7.1
 
 .fw-bold {
     font-weight: 700;
+}
+
+.fs-small,
+.fs-base,
+.fs-large {
+    font-size: var(--font-size);
+    line-height: var(--line-height);
+}
+
+.fs-small {
+    --sub-rhythm: calc(.75 * var(--rhythm));
+}
+
+.fs-base {
+    --sub-rhythm: initial;
+}
+
+.fs-large {
+    --sub-rhythm: calc(1.25 * var(--rhythm));
 }
