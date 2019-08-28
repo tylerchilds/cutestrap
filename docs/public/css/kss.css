@@ -3,7 +3,7 @@
 */
 .dashboard-layout {
   display: grid;
-  grid-template-areas: "header     header" "navigation content";
+  grid-template-areas: "header     header" "navigation content";
   grid-template-columns: 10em 1fr;
   grid-template-rows: var(--rhythm-double) 1fr; }
 
