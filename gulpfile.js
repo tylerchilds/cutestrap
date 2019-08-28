@@ -41,10 +41,6 @@ gulp.task('bump', function() {
     .pipe(gulp.dest('./'));
 });
 
-gulp.task('compile', ['clean'], function(){
-  runSequence('distify', 'kss-html', 'kss', 'kss-public');
-});
-
 // Clean build
 gulp.task('clean', function() {
   return gulp.src([
@@ -52,16 +48,53 @@ gulp.task('clean', function() {
       './temp',
       './docs',
       './cutestrap.zip'
-    ])
-    .pipe(clean({force: true}));
+    ], {
+        allowEmpty: true
+    })
+    .pipe(clean({
+        force: true
+    }));
 });
 
-gulp.task('default', ['compile'], function(){
-  runSequence('watch');
+gulp.task('distify', function() {
+  return gulp.src([
+    'src/css/core.css',
+    'src/css/base.css',
+    'src/css/buttons.css',
+    'src/css/forms.css',
+    'src/css/grid.css',
+    'src/css/wrappers.css',
+    'src/css/utilities.css',
+  ]).pipe(concat('cutestrap.css'))
+    .pipe(gulp.dest('./dist/css/'))
+    .pipe(cssmin())
+		.pipe(rename({suffix: '.min'}))
+    .pipe(gulp.dest('./dist/css'));
 });
+
+// Move source over for compiling
+gulp.task('temp', function(){
+  // Sass
+  return gulp.src('./src/css/**/*.css')
+    .pipe(gulp.dest('./temp/css/'));
+
+});
+
+// Compile Templates
+gulp.task('kss-html', gulp.series('temp', function(){
+
+  return gulp.src('./kss-html/homepage.md')
+    .pipe(swig({
+      defaults: {
+        cache: false
+      }
+    }))
+    .pipe(rename("homepage.md"))
+    .pipe(gulp.dest('./temp/kss'));
+}));
 
 // KSS for CSS documentation
-gulp.task('kss', ['kss-html'], function(cb) {
+gulp.task('kss', gulp.series('kss-html', function(cb) {
   var options = {
     continueOnError: false,
     pipeStdout: true
@@ -91,22 +124,9 @@ gulp.task('kss', ['kss-html'], function(cb) {
     .pipe(concat('kss'))
     .pipe(exec('./node_modules/kss/bin/kss-node --config=.kss-node.json', options))
     .pipe(exec.reporter(reportOptions));
-});
+}));
 
-// Compile Templates
-gulp.task('kss-html', ['temp'], function(){
-
-  return gulp.src('./kss-html/homepage.md')
-    .pipe(swig({
-      defaults: {
-        cache: false
-      }
-    }))
-    .pipe(rename("homepage.md"))
-    .pipe(gulp.dest('./temp/kss'));
-});
-
-gulp.task('kss-public', ['kss'], function(){
+gulp.task('kss-public', gulp.series('kss', function(){
 
   gulp.src('./kss-html/sass/kss.scss')
     .pipe(sourcemaps.init())
@@ -121,45 +141,21 @@ gulp.task('kss-public', ['kss'], function(){
     ])
     .pipe(concat('kss.js'))
     .pipe(gulp.dest('./docs/public/js'));
-});
+}));
 
-gulp.task('distify', function() {
-  gulp.src([
-    'src/css/core.css',
-    'src/css/base.css',
-    'src/css/buttons.css',
-    'src/css/forms.css',
-    'src/css/grid.css',
-    'src/css/wrappers.css',
-    'src/css/utilities.css',
-  ]).pipe(concat('cutestrap.css'))
-    .pipe(gulp.dest('./dist/css/'))
-    .pipe(cssmin())
-		.pipe(rename({suffix: '.min'}))
-    .pipe(gulp.dest('./dist/css'));
-});
-
-// Move source over for compiling
-gulp.task('temp', function(){
-  // Sass
-  return gulp.src('./src/css/**/*.css')
-    .pipe(gulp.dest('./temp/css/'));
-
-});
+gulp.task('compile',
+    gulp.series('clean', 'distify', 'kss-public')
+);
 
 // Watch Files For Changes
 gulp.task('watch', function() {
-  gulp.watch('./src/css/**/*.css', ['compile']);
-  gulp.watch('./kss-html/**/*.*', ['compile']);
+  gulp.watch('./src/css/**/*.css', gulp.series('compile'));
+  gulp.watch('./kss-html/**/*.*', gulp.series('compile'));
 });
 
-gulp.task('zip', ['zip-temp-dist', 'zip-temp-docs'], function(){
-
-  return gulp.src('temp/zip/**/*')
-    .pipe(zip('cutestrap.zip'))
-    .pipe(gulp.dest('./'));
-
-});
+gulp.task('default', gulp.series('compile', 'watch', function(done) {
+    done();
+}));
 
 gulp.task('zip-temp-docs', function(){
 
@@ -174,3 +170,10 @@ gulp.task('zip-temp-dist', function(){
     .pipe(gulp.dest('./temp/zip/dist'));
 
 });
+
+gulp.task('zip', gulp.series('compile', 'zip-temp-dist', 'zip-temp-docs', function(){
+  return gulp.src('temp/zip/**/*')
+    .pipe(zip('cutestrap.zip'))
+    .pipe(gulp.dest('./'));
+
+}));

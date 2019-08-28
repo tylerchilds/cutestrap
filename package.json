@@ -15,12 +15,13 @@
   "scripts": {
     "start": "gulp",
     "setup": "npm install",
+    "zip": "gulp zip",
+    "gulp": "gulp",
     "lint": "stylelint src/**/*.css",
     "lint-fix": "stylelint src/**/*.css --fix"
   },
   "devDependencies": {
-    "bower": "latest",
-    "gulp": "^3.0.0",
+    "gulp": "^4.0.2",
     "gulp-autoprefixer": "latest",
     "gulp-bump": "latest",
     "gulp-clean": "latest",
@@ -37,7 +38,6 @@
     "gulp-swig": "latest",
     "gulp-tag-version": "latest",
     "gulp-zip": "latest",
-    "jquery": "latest",
     "kss": "^2.1.0",
     "minimist": "latest",
     "run-sequence": "latest",
