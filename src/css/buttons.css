@@ -58,6 +58,7 @@ Styleguide 3.0
 .button:link,
 .button:visited {
     color: var(--text-color);
+    text-decoration: none;
 }
 
 .button:focus,

@@ -27,7 +27,7 @@
 }
 
 .title {
-    --sub-rhythm: 2rem;
+    --sub-rhythm: var(--rhythm);
 
     font-size: var(--font-size);
     line-height: var(--line-height);

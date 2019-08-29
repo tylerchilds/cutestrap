@@ -112,3 +112,34 @@ Styleguide 7.1
 .fs-large {
     --sub-rhythm: calc(1.25 * var(--rhythm));
 }
+
+/*
+
+Margin Utilities
+
+These utilities allow you to easily remove margins that you don't want
+
+Markup:
+<h1 class="{{modifier_class}}">
+    Do you like margins?
+</h1>
+
+.m-zero - Remove margins
+.mt-zero - Remove top margin only
+.mb-zero - Remove bottom margin only
+
+Styleguide 7.2
+
+*/
+
+.m-zero {
+    margin: 0;
+}
+
+.mt-zero {
+    margin-top: 0;
+}
+
+.mb-zero {
+    margin-bottom: 0;
+}

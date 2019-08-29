@@ -5,7 +5,7 @@ Grid
 A simple grid with automatic columns
 
 Markup:
-<div class="grid">
+<div class="grid {{modifier_class}}">
     <div>Column</div>
     <div>Column</div>
     <div>Column</div>
@@ -13,18 +13,27 @@ Markup:
     <div>Column</div>
 </div>
 
+.-medium - start at 45rem
+.-large - start at 80rem
+
 Styleguide 5.0
 
 */
 
 .grid {
-    --grid-column-min: 15rem;
-
     display: grid;
     grid-gap: var(--rhythm);
-    grid-template-columns:
-        repeat(
-            auto-fit,
-            minmax(var(--grid-column-min), 1fr)
-        );
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+}
+
+@media (max-width: 45rem) {
+    .grid.-medium {
+        display: block;
+    }
+}
+
+@media (max-width: 80rem) {
+    .grid.-large {
+        display: block;
+    }
 }

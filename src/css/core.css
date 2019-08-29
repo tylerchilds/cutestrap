@@ -67,3 +67,9 @@ body {
     font-size: var(--font-size);
     line-height: var(--line-height);
 }
+
+@media (max-width: 65rem) {
+    * {
+        --rhythm: 1.5rem;
+    }
+}
