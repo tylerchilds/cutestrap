@@ -4,8 +4,17 @@
   {% include head.html %}
 
   <body>
+    {% include components/toolbar.html %}
+    {% include nav.html %}
 
-    {{ content }}
+    <article class="page wrapper">
+      <header class="page-header">
+        <h1 class="page-title" itemprop="name headline">{{ page.title }}</h1>
+      </header>
+      <main class="page-content wrapper">
+          {{ content }}
+      </main>
+    </article>
 
     {% include footer.html %}
     {% include scripts.html %}

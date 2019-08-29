@@ -1,0 +1,22 @@
+current directory: /home/tyler/github/tylerchilds.github.io/vendor/bundle/ruby/2.5.0/gems/RedCloth-4.2.9/ext/redcloth_scan
+/usr/bin/ruby2.5 -r ./siteconf20181220-26717-1qu94xd.rb extconf.rb
+checking for main() in -lc... yes
+creating Makefile
+
+current directory: /home/tyler/github/tylerchilds.github.io/vendor/bundle/ruby/2.5.0/gems/RedCloth-4.2.9/ext/redcloth_scan
+make "DESTDIR=" clean
+
+current directory: /home/tyler/github/tylerchilds.github.io/vendor/bundle/ruby/2.5.0/gems/RedCloth-4.2.9/ext/redcloth_scan
+make "DESTDIR="
+compiling redcloth_attributes.c
+ragel/redcloth_attributes.c.rl: In function ‘redcloth_attribute_parser’:
+ragel/redcloth_attributes.c.rl:27:11: warning: variable ‘act’ set but not used [-Wunused-but-set-variable]
+compiling redcloth_inline.c
+ragel/redcloth_inline.c.rl: In function ‘red_block’:
+ragel/redcloth_inline.c.rl:100:9: warning: variable ‘attr_regs’ set but not used [-Wunused-but-set-variable]
+compiling redcloth_scan.c
+linking shared-object redcloth_scan.so
+
+current directory: /home/tyler/github/tylerchilds.github.io/vendor/bundle/ruby/2.5.0/gems/RedCloth-4.2.9/ext/redcloth_scan
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 redcloth_scan.so ./.gem.20181220-26717-1bupbgp

@@ -1,0 +1,24 @@
+current directory: /home/tyler/github/bytesize/vendor/bundle/ruby/2.5.0/gems/json-1.8.3/ext/json/ext/generator
+/usr/bin/ruby2.5 -r ./siteconf20190225-9725-2ccs6e.rb extconf.rb
+creating Makefile
+
+current directory: /home/tyler/github/bytesize/vendor/bundle/ruby/2.5.0/gems/json-1.8.3/ext/json/ext/generator
+make "DESTDIR=" clean
+
+current directory: /home/tyler/github/bytesize/vendor/bundle/ruby/2.5.0/gems/json-1.8.3/ext/json/ext/generator
+make "DESTDIR="
+compiling generator.c
+generator.c: In function ‘generate_json’:
+generator.c:861:25: error: ‘rb_cFixnum’ undeclared (first use in this function); did you mean ‘mFixnum’?
+     } else if (klass == rb_cFixnum) {
+                         ^~~~~~~~~~
+                         mFixnum
+generator.c:861:25: note: each undeclared identifier is reported only once for each function it appears in
+generator.c:863:25: error: ‘rb_cBignum’ undeclared (first use in this function); did you mean ‘rb_cFixnum’?
+     } else if (klass == rb_cBignum) {
+                         ^~~~~~~~~~
+                         rb_cFixnum
+Makefile:242: recipe for target 'generator.o' failed
+make: *** [generator.o] Error 1
+
+make failed, exit code 2

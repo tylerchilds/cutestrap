@@ -1,8 +1,16 @@
-<footer class="grid wrapper">
-  <div class="copyright">
-    Cutestrap &copy;2016
+<footer>
+  <div>
+      <p>
+        Subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a><br />
+        <a href="https://github.com/tylerchilds/bytesize/issues" target="_blank">Report a Problem</a>
+      </p>
   </div>
   <div class="ta-right">
-    Made with &hearts; by <a href="https://www.tylerchilds.com" target="_blank">Tyler Childs</a>
+    With &hearts;, <a href="https://www.tylerchilds.com">Tyler Childs</a>
+    <p class="copyright">Cutestrap
+        &copy;2016-<script>
+        document.write(new Date().getFullYear());
+      </script>
+    </p>
   </div>
 </footer>

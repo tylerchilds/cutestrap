@@ -1,0 +1,29 @@
+---
+layout: default
+---
+
+<article class="page" itemscope itemtype="https://schema.org/BlogPosting">
+  <p class="page-meta">
+    {% include blog/meta.html post=page %}
+  </p>
+
+  <div class="page-content" itemprop="articleBody">
+    {{ content }}
+  </div>
+
+  <aside class="page-navigation">
+    <div class="page-next">
+      {% if page.next.url %}
+        <a href="{{page.next.url}}">&laquo; {{page.next.title}}</a>
+      {% endif %}
+    </div>
+
+    <div class="page-previous">
+      {% if page.previous.url %}
+        <a href="{{page.previous.url}}">{{page.previous.title}} &raquo;</a>
+      {% endif %}
+    </div>
+  </aside>
+
+  {% include components/author-detail.html %}
+</article>

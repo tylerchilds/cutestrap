@@ -1,54 +1,95 @@
-var $ = function(selector){
-  return document.querySelectorAll(selector);
-};
+const html = document.querySelector('html');
+const body = document.querySelector('body');
 
-$html = $('html')[0];
+initGridlineToggle();
+initThemeToggles();
+initRhythmToggles();
+updateRhythmBackgroundImage();
+blockForms();
 
-var demo = {
-  start: function(){
-    if(localStorage.getItem('gridlines') === "true"){
-      if ($html.classList)
-        $html.classList.add('grid--is_active');
-      else
-        $html.className += ' ' + 'grid--is_active';
+function initGridlineToggle() {
+    const target = document.querySelector('.js-grid-toggle');
+
+    if(localStorage.getItem('grid') === "true"){
+        body.classList.add('hide-gridlines');
     }
-  },
 
-  toggle_grid: function(){
-    
-    if ($html.classList) {
-      $html.classList.toggle('grid--is_active');
-      localStorage.setItem('gridlines', $html.classList.contains('grid--is_active'));
+    target.addEventListener('click', function(){
+        localStorage.setItem('grid', 
+            body.classList.toggle('hide-gridlines') // returns true or false
+        );
+        updateRhythmBackgroundImage();
+    });
+}
+
+function initThemeToggles() {
+    const toggles = [...document.querySelectorAll('.js-theme-toggle')];
+
+    const handleThemeToggle = ({target}) => {
+        const selectedTheme = target.dataset.theme;
+        html.dataset.theme = selectedTheme;
+
+        localStorage.setItem('theme', selectedTheme);
+        updateRhythmBackgroundImage();
+    };
+
+    toggles.map(toggle => {
+        toggle.addEventListener('click', handleThemeToggle);
+    });
+
+    if(localStorage.getItem('theme')){
+        html.dataset.theme = localStorage.getItem('theme');
     } else {
-      var classes = $html.className.split(' ');
-      var existingIndex = classes.indexOf('grid--is_active');
-
-      if (existingIndex >= 0)
-        classes.splice(existingIndex, 1);
-      else
-        classes.push('grid--is_active');
-
-      $html.className = classes.join(' ');
-      localStorage.setItem('gridlines', new RegExp('(^| )' + 'grid--is_active' + '( |$)', 'gi').test($html.className));
+        localStorage.setItem('theme', 'light');
     }
+}
 
-  },
+function initRhythmToggles() {
+    const html = document.querySelector('html');
+    const toggles = [...document.querySelectorAll('.js-rhythm-toggle')];
 
-  prevent_form_submission: function(e){
-    e.preventDefault();
-  }
-};
+    const handleRhythmToggle = ({target}) => {
+        const selectedRhythm = target.dataset.rhythm;
+        html.dataset.rhythm = selectedRhythm;
 
-(function(){
+        localStorage.setItem('rhythm', selectedRhythm);
+        updateRhythmBackgroundImage();
+    };
 
-  demo.start();
+    toggles.map(toggle => {
+        toggle.addEventListener('click', handleRhythmToggle);
+    });
 
-  for (var i = 0; i < $('form').length; i++) {
-    $('form')[i].addEventListener('submit', demo.prevent_form_submission);
-  }
+    if(localStorage.getItem('rhythm')){
+        html.dataset.rhythm = localStorage.getItem('rhythm');
+    } else {
+        localStorage.setItem('rhythm', 'normal');
+    }
+}
 
-  for (var i = 0; i < $('.js-grid-toggle').length; i++) {
-    $('.js-grid-toggle')[i].addEventListener('click', demo.toggle_grid);
-  }
+function updateRhythmBackgroundImage() {
+    const canvas = document.createElement("canvas");
+    const ctx = canvas.getContext('2d');
+  
+    const rhythm = parseFloat(window.getComputedStyle(body).getPropertyValue('line-height'));
+    const color =  window.getComputedStyle(body).getPropertyValue('--color-neutral-tint2');
+    canvas.height = rhythm;
+    console.log(rhythm)
+    canvas.width = rhythm;
+  
+    ctx.fillStyle = 'transparent';
+    ctx.fillRect(0, 0, rhythm, rhythm);
+  
+    ctx.fillStyle = color;
+    ctx.fillRect(0, rhythm - 1, rhythm, 1);
+  
+    return body.style.backgroundImage = `url(${canvas.toDataURL()}`;
+}
 
-})();
+function blockForms() {
+    document.querySelectorAll('form').forEach(function(node) {
+        node.addEventListener('submit', function(e){
+            e.preventDefault();
+        }); 
+    });
+}
