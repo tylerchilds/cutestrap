@@ -3,3 +3,4 @@
 {% if page.js %}
   <script src="{{ "/js/pages/" | prepend: site.baseurl }}{{ page.js }}?bustamove={{ site.cache_buster }}"></script>
 {% endif %}
+{% include analytics.html %}
