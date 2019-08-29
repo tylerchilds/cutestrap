@@ -136,6 +136,13 @@ gulp.task('kss-public', gulp.series('kss', function(){
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('./docs/public/css'));
 
+  gulp.src('./dist/css/cutestrap.css')
+    .pipe(gulp.dest('./docs/public/css'));
+
+
+  gulp.src('CNAME')
+    .pipe(gulp.dest('./docs'));
+
   return gulp.src([
       './kss-html/js/kss.js'
     ])
