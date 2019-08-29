@@ -34,6 +34,17 @@ html[data-theme="dark"] {
   --rhythm: 2.5rem;
 }
 
+@media (max-width: 65rem) {
+[data-rhythm="small"] * {
+  --rhythm: 1rem;
+}
+
+[data-rhythm="large"] * {
+  --rhythm: 2rem;
+}
+
+}
+
 .hide-gridlines {
   background-image: none !important;
 }
