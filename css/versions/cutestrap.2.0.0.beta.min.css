@@ -68,6 +68,12 @@ body {
     line-height: var(--line-height);
 }
 
+@media (max-width: 65rem) {
+    * {
+        --rhythm: 1.5rem;
+    }
+}
+
 /*
 
 Base
@@ -840,7 +846,7 @@ Grid
 A simple grid with automatic columns
 
 Markup:
-<div class="grid">
+<div class="grid {{modifier_class}}">
     <div>Column</div>
     <div>Column</div>
     <div>Column</div>
@@ -848,20 +854,29 @@ Markup:
     <div>Column</div>
 </div>
 
+.-medium - start at 45rem
+.-large - start at 80rem
+
 Styleguide 5.0
 
 */
 
 .grid {
-    --grid-column-min: 15rem;
-
     display: grid;
     grid-gap: var(--rhythm);
-    grid-template-columns:
-        repeat(
-            auto-fit,
-            minmax(var(--grid-column-min), 1fr)
-        );
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+}
+
+@media (max-width: 45rem) {
+    .grid.-medium {
+        display: block;
+    }
+}
+
+@media (max-width: 80rem) {
+    .grid.-large {
+        display: block;
+    }
 }
 
 /*
@@ -875,8 +890,8 @@ Markup:
     Wrapper
 </div>
 
-.-small - A smaller max-width
-.-large - A larger max-width
+.-small - A max-width of 45rem
+.-large - A max-width of 80rem
 .-flush - No vertical or horizontal spacing
 
 Styleguide 6.0
@@ -1018,4 +1033,35 @@ Styleguide 7.1
 
 .fs-large {
     --sub-rhythm: calc(1.25 * var(--rhythm));
+}
+
+/*
+
+Margin Utilities
+
+These utilities allow you to easily remove margins that you don't want
+
+Markup:
+<h1 class="{{modifier_class}}">
+    Do you like margins?
+</h1>
+
+.m-zero - Remove margins
+.mt-zero - Remove top margin only
+.mb-zero - Remove bottom margin only
+
+Styleguide 7.2
+
+*/
+
+.m-zero {
+    margin: 0;
+}
+
+.mt-zero {
+    margin-top: 0;
+}
+
+.mb-zero {
+    margin-bottom: 0;
 }

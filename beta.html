@@ -20,7 +20,10 @@ weight: 0
 </header>
 
 <section class="wrapper -large">
-  <article class="grid grid--medium">
+  <article
+    class="grid -medium"
+    style="grid-template-columns: repeat(3, minmax(0, 1fr));"
+  >
     <div>
       <h4>Themes</h4>
       <p>
@@ -191,6 +194,25 @@ weight: 0
   <div>Column</div>
 </section></xmp></pre>
 
+  <table>
+    <tr>
+      <th>Class</th>
+      <th>Effect</th>
+    </tr>
+    <tr>
+      <td><code>.grid</code></td>
+      <td>Grid will display at all screen sizes</td>
+    </tr>
+    <tr>
+      <td><code>.grid.-medium</code></td>
+      <td>Grid will start at 45rem</td>
+    </tr>
+    <tr>
+      <td><code>.grid.-large</code></td>
+      <td>Grid will start at 80rem</td>
+    </tr>
+  </table>
+
   <h3>Wrappers</h3>
 
   <p>
@@ -204,15 +226,15 @@ weight: 0
     </tr>
     <tr>
       <td><code>.wrapper.-small</code></td>
-      <td>Max width of 640 with top/bottom padding equal to the baseline.</td>
+      <td>Max width of 45rem with top/bottom padding equal to the baseline.</td>
     </tr>
     <tr>
       <td><code>.wrapper</code></td>
-      <td>Max width of 960 with top/bottom padding of twice the baseline.</td>
+      <td>Max width of 60rem with top/bottom padding of twice the baseline.</td>
     </tr>
     <tr>
       <td><code>.wrapper.-large</code></td>
-      <td>Max width of 1200 with top/bottom padding of three times the baseline.</td>
+      <td>Max width of 80rem with top/bottom padding of three times the baseline.</td>
     </tr>
   </table>
 
@@ -329,6 +351,18 @@ weight: 0
     <tr>
       <td><code>.fs-large</code></td>
       <td>Large font size</td>
+    </tr>
+    <tr>
+      <td><code>.m-zero</code></td>
+      <td>No margins</td>
+    </tr>
+    <tr>
+      <td><code>.mt-zero</code></td>
+      <td>No top margin</td>
+    </tr>
+    <tr>
+      <td><code>.mb-zero</code></td>
+      <td>No bottom margin</td>
     </tr>
   </table>
 

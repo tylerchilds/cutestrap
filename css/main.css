@@ -146,7 +146,6 @@ footer {
   display: grid;
   column-gap: var(--gutter-width);
   grid-template-columns: repeat(2, 1fr);
-  background-color: var(--color-neutral-tint3);
 }
 
 /*
@@ -390,4 +389,12 @@ html {
     display: block;
     margin-bottom: var(--rhythm);
     text-align: center;
+}
+
+/*
+  6: Homepage one-offs
+*/
+
+td:first-child {
+    white-space: nowrap;
 }
