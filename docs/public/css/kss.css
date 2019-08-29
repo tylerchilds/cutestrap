@@ -1,118 +1,153 @@
 /*
     Dashboard Basic Layout
 */
+
 .dashboard-layout {
-  display: grid;
-  grid-template-areas: "header     header" "navigation content";
-  grid-template-columns: 10em 1fr;
-  grid-template-rows: var(--rhythm-double) 1fr; }
+    display: grid;
+    grid-template-areas:
+        "header     header"
+        "navigation content";
+    grid-template-columns: 10em 1fr;
+    grid-template-rows: var(--rhythm-double) 1fr;
+}
 
 /* Header styles */
+
 .header {
-  background: var(--color-neutral-tinted);
-  border-bottom: 1px solid var(--color-neutral-tint2);
-  grid-area: header;
-  margin-top: -1px;
-  padding: var(--rhythm-half); }
+    background: var(--color-neutral-tinted);
+    border-bottom: 1px solid var(--color-neutral-tint2);
+    grid-area: header;
+    margin-top: -1px;
+    padding: var(--rhythm-half);
+}
 
 .title {
-  --sub-rhythm: 2rem;
-  font-size: var(--font-size);
-  line-height: var(--line-height);
-  margin: 0; }
+    --sub-rhythm: 2rem;
+
+    font-size: var(--font-size);
+    line-height: var(--line-height);
+    margin: 0;
+}
 
 /* Navigation Styles */
 .navigation {
-  background: var(--color-neutral-tinted);
-  border-right: 1px solid var(--color-neutral-tint2);
-  grid-area: navigation;
-  padding: 0 var(--rhythm-half) var(--rhythm); }
+    background: var(--color-neutral-tinted);
+    border-right: 1px solid var(--color-neutral-tint2);
+    grid-area: navigation;
+    padding: 0 var(--rhythm-half) var(--rhythm);
+}
 
 .navigation a {
-  text-decoration: none; }
+    text-decoration: none;
+}
 
 .navigation h6 {
-  color: var(--color-neutral-shade2);
-  margin: var(--rhythm) 0; }
+    color: var(--color-neutral-shade2);
+    margin: var(--rhythm) 0;
+}
 
 /* Content Styles */
 .content {
-  grid-area: content;
-  min-width: 0;
-  padding: 0 var(--rhythm-half); }
+    grid-area: content;
+    min-width: 0;
+    padding: 0 var(--rhythm-half);
+}
 
 /*
     Cutestrap Styleguide Specific Items
 */
+
 .hide-gridlines {
-  background-image: none !important; }
+    background-image: none !important;
+}
 
 /*
     KSS Specific Styles
 */
+
 .kss-example {
-  margin-bottom: var(--rhythm); }
+    margin-bottom: var(--rhythm);
+}
 
 /*
     Palette Specific Designs
 */
+
 .palette {
-  --grid-column-min: 0;
-  grid-gap: var(--rhythm-sixth); }
+    --grid-column-min: 0;
+
+    grid-gap: var(--rhythm-sixth);
+}
 
 .palette .item {
-  background-color: var(--current-color);
-  height: var(--rhythm-triple); }
+    background-color: var(--current-color);
+    height: var(--rhythm-triple);
+}
 
 .primary {
-  --current-color: var(--color-primary); }
+    --current-color: var(--color-primary);
+}
 
 .primary.-shade {
-  --current-color: var(--color-primary-shade); }
+    --current-color: var(--color-primary-shade);
+}
 
 .primary.-tint {
-  --current-color: var(--color-primary-tint); }
+    --current-color: var(--color-primary-tint);
+}
 
 .link {
-  --current-color: var(--color-link); }
+    --current-color: var(--color-link);
+}
 
 .link.-visited {
-  --current-color: var(--color-link-visited); }
+    --current-color: var(--color-link-visited);
+}
 
 .link.-hover {
-  --current-color: var(--color-link-hover); }
+    --current-color: var(--color-link-hover);
+}
 
 .link.-active {
-  --current-color: var(--color-link-active); }
+    --current-color: var(--color-link-active);
+}
 
 .accent {
-  --current-color: var(--color-accent); }
+    --current-color: var(--color-accent);
+}
 
 .neutral {
-  --current-color: var(--color-neutral); }
+    --current-color: var(--color-neutral);
+}
 
 .neutral.-shaded {
-  --current-color: var(--color-neutral-shaded); }
+    --current-color: var(--color-neutral-shaded);
+}
 
 .neutral.-shade1 {
-  --current-color: var(--color-neutral-shade1); }
+    --current-color: var(--color-neutral-shade1);
+}
 
 .neutral.-shade2 {
-  --current-color: var(--color-neutral-shade2); }
+    --current-color: var(--color-neutral-shade2);
+}
 
 .neutral.-shade3 {
-  --current-color: var(--color-neutral-shade3); }
+    --current-color: var(--color-neutral-shade3);
+}
 
 .neutral.-tinted {
-  --current-color: var(--color-neutral-tinted); }
+    --current-color: var(--color-neutral-tinted);
+}
 
 .neutral.-tint1 {
-  --current-color: var(--color-neutral-tint1); }
+    --current-color: var(--color-neutral-tint1);
+}
 
 .neutral.-tint2 {
-  --current-color: var(--color-neutral-tint2); }
+    --current-color: var(--color-neutral-tint2);
+}
 
 .neutral.-tint3 {
-  --current-color: var(--color-neutral-tint3); }
-
-/*# sourceMappingURL=kss.css.map */
+    --current-color: var(--color-neutral-tint3);
+}

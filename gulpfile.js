@@ -128,12 +128,7 @@ gulp.task('kss', gulp.series('kss-html', function(cb) {
 
 gulp.task('kss-public', gulp.series('kss', function(){
 
-  gulp.src('./kss-html/sass/kss.scss')
-    .pipe(sourcemaps.init())
-      .pipe(sass({
-          includePaths: ['./src/css']
-        }).on('error', sass.logError))
-    .pipe(sourcemaps.write('.'))
+  gulp.src('./kss-html/css/kss.css')
     .pipe(gulp.dest('./docs/public/css'));
 
   gulp.src('./dist/css/cutestrap.css')
