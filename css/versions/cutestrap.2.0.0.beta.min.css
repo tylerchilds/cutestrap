@@ -47,11 +47,11 @@ html {
     --color-link-hover: hsl(230, 80%, 60%);
     --color-link-active: hsl(350, 60%, 50%);
     --color-neutral-tinted: hsl(170, 10%, 98%);
-    --color-neutral-tint3: hsl(170, 10%, 92%);
-    --color-neutral-tint2: hsl(170, 10%, 80%);
-    --color-neutral-tint1: hsl(170, 10%, 65%);
-    --color-neutral: hsl(170, 10%, 53%);
-    --color-neutral-shade1: hsl(170, 10%, 42%);
+    --color-neutral-tint3: hsl(170, 10%, 94%);
+    --color-neutral-tint2: hsl(170, 10%, 85%);
+    --color-neutral-tint1: hsl(170, 10%, 68%);
+    --color-neutral: hsl(170, 10%, 55%);
+    --color-neutral-shade1: hsl(170, 10%, 41%);
     --color-neutral-shade2: hsl(170, 10%, 30%);
     --color-neutral-shade3: hsl(170, 10%, 18%);
     --color-neutral-shaded: hsl(170, 10%, 2%);
@@ -253,7 +253,7 @@ a:active {
 img,
 video {
     max-width: 100%;
-    display: table;
+    vertical-align: top;
 }
 
 hr {
@@ -312,11 +312,6 @@ blockquote p:last-child {
 
 figure {
     margin: 0 auto var(--rhythm);
-}
-
-figure img {
-    display: table;
-    margin: 0 auto;
 }
 
 small,
@@ -431,6 +426,7 @@ Markup:
 .-secondary - A button with secondary colors
 .-outlined - An outlined button
 .-link - A button that looks like a link
+.-block - Block level button
 .-large - A large button
 .-small - A small button
 .-small.-outlined - A small, outlined button
@@ -456,7 +452,7 @@ Styleguide 3.0
     box-sizing: border-box;
     color: var(--text-color);
     cursor: pointer;
-    display: inline-flex;
+    display: inline-block;
     font-size: var(--font-size);
     justify-content: center;
     line-height: var(--rhythm);
@@ -478,6 +474,7 @@ Styleguide 3.0
 .button:link,
 .button:visited {
     color: var(--text-color);
+    text-decoration: none;
 }
 
 .button:focus,
@@ -521,6 +518,13 @@ Styleguide 3.0
     --border-color-hover: transparent;
     --text-color: var(--color-link);
     --text-color-hover: var(--color-link-hover);
+
+    text-decoration: underline;
+}
+
+.button.-block {
+    display: block;
+    width: 100%;
 }
 
 .button.-small {
@@ -968,12 +972,18 @@ These are specific typography related utilities
 
 Markup:
 <div class="type {{modifier_class}}">
-    The quick brown fox jumps over the lazy dog.
+    The quick<br />
+    brown fox<br />
+    jumps over<br />
+    the lazy dog.
 </div>
 
 .fw-light            - Changes the type to be 300 weight
 .fw-normal           - Changes the type to be 400 weight
 .fw-bold             - Changes the type to be 700 weight
+.fs-small            - Small font-size
+.fs-base             - Base font-size
+.fs-large            - Large font-size
 
 Styleguide 7.1
 
@@ -989,4 +999,23 @@ Styleguide 7.1
 
 .fw-bold {
     font-weight: 700;
+}
+
+.fs-small,
+.fs-base,
+.fs-large {
+    font-size: var(--font-size);
+    line-height: var(--line-height);
+}
+
+.fs-small {
+    --sub-rhythm: calc(.75 * var(--rhythm));
+}
+
+.fs-base {
+    --sub-rhythm: initial;
+}
+
+.fs-large {
+    --sub-rhythm: calc(1.25 * var(--rhythm));
 }
