@@ -5,24 +5,25 @@
 */
 
 html[data-theme="dark"] {
-  --color-primary: #ea4c6b;
-  --color-primary-shade: #bb3c55;
-
-  --color-link: #4c6bea;
-  --color-link-visited: #7c4cea;
-  --color-link-hover: #3c55bb;
-  --color-link-active: #bb3c55;
-
-  --color-neutral-shaded: #fff;
-
-  --color-neutral-shade3: #efeff0;
-  --color-neutral-shade2: #dededf;
-  --color-neutral-shade1: #cdcdce;
-  --color-neutral-tint1: #7d7d7e;
-  --color-neutral-tint2: #5a5a5b;
-  --color-neutral-tint3: #3c3c3d;
-
-  --color-neutral-tinted: #000;
+    --color-primary-shade: hsl(350, 100%, 70%);
+    --color-primary: hsl(350, 80%, 60%);
+    --color-primary-tint: hsl(350, 60%, 50%);
+    --color-accent-shade: hsl(170, 100%, 70%);
+    --color-accent: hsl(170, 80%, 60%);
+    --color-accent-tint: hsl(170, 60%, 50%);
+    --color-link: hsl(230, 60%, 50%);
+    --color-link-visited: hsl(290, 60%, 50%);
+    --color-link-hover: hsl(230, 80%, 60%);
+    --color-link-active: hsl(350, 60%, 50%);
+    --color-neutral-shaded: hsl(170, 10%, 98%);
+    --color-neutral-shade3: hsl(170, 10%, 94%);
+    --color-neutral-shade2: hsl(170, 10%, 85%);
+    --color-neutral-shade1: hsl(170, 10%, 68%);
+    --color-neutral: hsl(170, 10%, 55%);
+    --color-neutral-tint1: hsl(170, 10%, 41%);
+    --color-neutral-tint2: hsl(170, 10%, 30%);
+    --color-neutral-tint3: hsl(170, 10%, 18%);
+    --color-neutral-tinted: hsl(170, 10%, 2%);
 }
 
 [data-rhythm="small"] * {
