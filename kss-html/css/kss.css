@@ -3,12 +3,17 @@
 */
 
 .dashboard-layout {
-    display: grid;
     grid-template-areas:
         "header     header"
         "navigation content";
     grid-template-columns: 10em 1fr;
     grid-template-rows: var(--rhythm-double) 1fr;
+}
+
+@media (min-width: 768px) {
+    .dashboard-layout {
+        display: grid;
+    }
 }
 
 /* Header styles */
@@ -34,6 +39,7 @@
     background: var(--color-neutral-tinted);
     border-right: 1px solid var(--color-neutral-tint2);
     grid-area: navigation;
+    margin-top: -1px;
     padding: 0 var(--rhythm-half) var(--rhythm);
 }
 
