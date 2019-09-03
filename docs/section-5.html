@@ -81,8 +81,10 @@
     <div>Column</div>
     <div>Column</div>
     <div>Column</div>
+    <div>Column</div>
 </div></div>
 <pre class="example-markup">&lt;div class=&quot;grid [modifier class]&quot;&gt;
+    &lt;div&gt;Column&lt;/div&gt;
     &lt;div&gt;Column&lt;/div&gt;
     &lt;div&gt;Column&lt;/div&gt;
     &lt;div&gt;Column&lt;/div&gt;
@@ -97,10 +99,69 @@
     <div>Column</div>
     <div>Column</div>
     <div>Column</div>
+    <div>Column</div>
 </div></div>
               <hr />
               <p class="clearfix kss-modifier-title"><code>.-large</code> <span class="f-right">start at 80rem</span></p>
               <div class="kss-example"><div class="grid -large">
+    <div>Column</div>
+    <div>Column</div>
+    <div>Column</div>
+    <div>Column</div>
+    <div>Column</div>
+    <div>Column</div>
+</div></div>
+          </section>
+      </article>
+      <article class="pattern">
+          <h2 class="kss-title" id="5-1">
+            <span class="kss-ref badge pull-right">5-1</span> Columns
+          </h2>
+          <div class="subtitle pattern-description"><p>Manually set column widths (Note: the syntax is passing a custom property with
+a number value. KSS Docs only support modified classes, so ignore the term
+[modifier class] and the dot before the number in the examples below).</p>
+</div>
+          <section class="example">
+            <div class="kss-example"><div class="grid" style="--columns: [modifier class]">
+    <div>Column</div>
+    <div>Column</div>
+    <div>Column</div>
+    <div>Column</div>
+    <div>Column</div>
+    <div>Column</div>
+</div></div>
+<pre class="example-markup">&lt;div class=&quot;grid&quot; style=&quot;--columns: [modifier class]&quot;&gt;
+    &lt;div&gt;Column&lt;/div&gt;
+    &lt;div&gt;Column&lt;/div&gt;
+    &lt;div&gt;Column&lt;/div&gt;
+    &lt;div&gt;Column&lt;/div&gt;
+    &lt;div&gt;Column&lt;/div&gt;
+    &lt;div&gt;Column&lt;/div&gt;
+&lt;/div&gt;</pre>
+              <hr />
+              <p class="clearfix kss-modifier-title"><code>.2</code> <span class="f-right">Two columns</span></p>
+              <div class="kss-example"><div class="grid" style="--columns: 2">
+    <div>Column</div>
+    <div>Column</div>
+    <div>Column</div>
+    <div>Column</div>
+    <div>Column</div>
+    <div>Column</div>
+</div></div>
+              <hr />
+              <p class="clearfix kss-modifier-title"><code>.3</code> <span class="f-right">Three columns</span></p>
+              <div class="kss-example"><div class="grid" style="--columns: 3">
+    <div>Column</div>
+    <div>Column</div>
+    <div>Column</div>
+    <div>Column</div>
+    <div>Column</div>
+    <div>Column</div>
+</div></div>
+              <hr />
+              <p class="clearfix kss-modifier-title"><code>.4</code> <span class="f-right">Four columns</span></p>
+              <div class="kss-example"><div class="grid" style="--columns: 4">
+    <div>Column</div>
     <div>Column</div>
     <div>Column</div>
     <div>Column</div>

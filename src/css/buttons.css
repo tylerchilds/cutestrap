@@ -87,12 +87,12 @@ Styleguide 3.0
 }
 
 .button.-secondary {
-    --background-color: #ccc;
-    --background-color-hover: #999;
-    --border-color: #ccc;
-    --border-color-hover: #999;
-    --text-color: #333;
-    --text-color-hover: #333;
+    --background-color: var(--color-neutral-tint1);
+    --background-color-hover: var(--color-neutral);
+    --border-color: var(--color-neutral-tint1);
+    --border-color-hover: var(--color-neutral);
+    --text-color: var(--color-shade3);
+    --text-color-hover: var(--color-shade3);
 }
 
 .button.-link {
