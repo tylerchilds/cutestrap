@@ -398,7 +398,6 @@ html {
     color: var(--color-neutral-tinted);
     content: 'Column';
     display: block;
-    margin-bottom: var(--rhythm);
     text-align: center;
 }
 

@@ -22,7 +22,7 @@ weight: 0
 <section class="wrapper -large">
   <article
     class="grid -medium"
-    style="grid-template-columns: repeat(3, minmax(0, 1fr));"
+    style="--columns: 3;"
   >
     <div>
       <h4>Themes</h4>
@@ -180,28 +180,27 @@ weight: 0
 
   <h2>Grid</h2>
   <p>
-    The default grid is completely implicit, so columns will size themselves
-    to be equal amongst themeselves.
+    The default grid creates equal width columns for every child.
   </p>
   <section class="grid">
-    <div class="example-column"></div>
-    <div class="example-column"></div>
+    <p class="example-column"></p>
+    <p class="example-column"></p>
   </section>
   <section class="grid">
-    <div class="example-column"></div>
-    <div class="example-column"></div>
-    <div class="example-column"></div>
+    <p class="example-column"></p>
+    <p class="example-column"></p>
+    <p class="example-column"></p>
   </section>
   <section class="grid">
-    <div class="example-column"></div>
-    <div class="example-column"></div>
-    <div class="example-column"></div>
-    <div class="example-column"></div>
+    <p class="example-column"></p>
+    <p class="example-column"></p>
+    <p class="example-column"></p>
+    <p class="example-column"></p>
   </section>
 <pre><xmp><section class="grid">
-  <div>Column</div>
-  <div>Column</div>
-  <div>Column</div>
+  <p>Column</p>
+  <p>Column</p>
+  <p>Column</p>
 </section></xmp></pre>
 
   <table>
@@ -223,7 +222,31 @@ weight: 0
     </tr>
   </table>
 
-  <h3>Wrappers</h3>
+  <h3>Columns</h3>
+  <p>
+    Columns can be fine tuned with the `--columns` custom property by setting
+    it to the number of desired columns
+  </p>
+
+  <section class="grid" style="--columns: 3;">
+    <p class="example-column"></p>
+    <p class="example-column"></p>
+    <p class="example-column"></p>
+    <p class="example-column"></p>
+    <p class="example-column"></p>
+    <p class="example-column"></p>
+  </section>
+<pre><xmp><section class="grid" style="--columns: 3;">
+  <p>Column</p>
+  <p>Column</p>
+  <p>Column</p>
+  <p>Column</p>
+  <p>Column</p>
+  <p>Column</p>
+</section></xmp></pre>
+
+  <hr />
+  <h2>Wrappers</h2>
 
   <p>
     Wrappers are classes that have a max-width and padding. The size of the wrapper, determines max-width and the padding.
