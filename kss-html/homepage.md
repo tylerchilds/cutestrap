@@ -11,7 +11,9 @@
     <div class="item primary -tint"></div>
     <div class="item primary"></div>
     <div class="item primary -shade"></div>
+    <div class="item accent -tint"></div>
     <div class="item accent"></div>
+    <div class="item accent -shade"></div>
     <div class="item link"></div>
     <div class="item link -hover"></div>
     <div class="item link -visited"></div>

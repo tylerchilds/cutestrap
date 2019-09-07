@@ -122,6 +122,14 @@
     --current-color: var(--color-accent);
 }
 
+.accent.-tint {
+    --current-color: var(--color-accent-tint);
+}
+
+.accent.-shade {
+    --current-color: var(--color-accent-shade);
+}
+
 .neutral {
     --current-color: var(--color-neutral);
 }

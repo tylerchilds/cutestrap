@@ -36,12 +36,12 @@ Styleguide 1.0
 
 html {
     --border-radius: 4px;
-    --color-primary-tint: hsl(350, 100%, 70%);
+    --color-primary-tint: hsl(350, 100%, 80%);
     --color-primary: hsl(350, 80%, 60%);
-    --color-primary-shade: hsl(350, 60%, 50%);
-    --color-accent-tint: hsl(170, 100%, 70%);
+    --color-primary-shade: hsl(350, 60%, 40%);
+    --color-accent-tint: hsl(170, 100%, 80%);
     --color-accent: hsl(170, 80%, 60%);
-    --color-accent-shade: hsl(170, 60%, 50%);
+    --color-accent-shade: hsl(170, 60%, 40%);
     --color-link: hsl(230, 60%, 50%);
     --color-link-visited: hsl(290, 60%, 50%);
     --color-link-hover: hsl(230, 80%, 60%);
@@ -55,7 +55,7 @@ html {
     --color-neutral-shade2: hsl(170, 10%, 30%);
     --color-neutral-shade3: hsl(170, 10%, 18%);
     --color-neutral-shaded: hsl(170, 10%, 2%);
-    --focus-outline: var(--rhythm-twelfth) dotted var(--color-neutral);
+    --focus-outline: var(--rhythm-twelfth) dotted var(--color-primary-tint);
     --focus-outline-offset: var(--rhythm-twelfth);
     --font-family: 'Avenir', 'Avenir Next', 'Helvetica Neue', 'Segoe UI', 'Verdana', sans-serif;
     --font-mono: 'Consolas', 'Monaco', 'Courier New', monospace;
@@ -712,7 +712,7 @@ Styleguide 4.1
 
 .field [type=checkbox] + .label::after,
 .field [type=radio] + .label::after {
-    background-color: var(--color-primary-shade);
+    background-color: var(--color-primary);
     border: 2px solid transparent;
     color: var(--color-neutral-tinted);
     height: var(--rhythm-fourth);

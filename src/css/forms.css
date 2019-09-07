@@ -158,7 +158,7 @@ Styleguide 4.1
 
 .field [type=checkbox] + .label::after,
 .field [type=radio] + .label::after {
-    background-color: var(--color-primary-shade);
+    background-color: var(--color-primary);
     border: 2px solid transparent;
     color: var(--color-neutral-tinted);
     height: var(--rhythm-fourth);
