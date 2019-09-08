@@ -102,7 +102,7 @@ html {
 #### Example
 
 The dark theme used for this site was really just swapping each variable with
-the respective counter-part, e.g. `--color-primary-shade` becomes `--color-primary-tint`
+the respective counter-part (e.g. `--color-primary-shade` becomes `--color-primary-tint`
 and `--color-neutral-tint3` becomes `--color-neutral-shade3`.
 
 ```
@@ -113,6 +113,10 @@ html {
     --color-accent-shade: hsl(170, 100%, 80%);
     --color-accent: hsl(170, 80%, 60%);
     --color-accent-tint: hsl(170, 60%, 40%);
+    --color-link: hsl(230, 60%, 50%);
+    --color-link-visited: hsl(290, 60%, 50%);
+    --color-link-hover: hsl(230, 80%, 60%);
+    --color-link-active: hsl(350, 60%, 50%);
     --color-neutral-shaded: hsl(170, 10%, 98%);
     --color-neutral-shade3: hsl(170, 10%, 94%);
     --color-neutral-shade2: hsl(170, 10%, 85%);
