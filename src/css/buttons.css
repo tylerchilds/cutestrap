@@ -87,10 +87,10 @@ Styleguide 3.0
 }
 
 .button.-secondary {
-    --background-color: var(--color-neutral-tint1);
-    --background-color-hover: var(--color-neutral);
-    --border-color: var(--color-neutral-tint1);
-    --border-color-hover: var(--color-neutral);
+    --background-color: var(--color-neutral-tint2);
+    --background-color-hover: var(--color-neutral-tint1);
+    --border-color: var(--color-neutral-tint2);
+    --border-color-hover: var(--color-neutral-tint1);
     --text-color: var(--color-shade3);
     --text-color-hover: var(--color-shade3);
 }

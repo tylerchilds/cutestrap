@@ -113,10 +113,6 @@ h5 {
     font-weight: 700;
 }
 
-h6 {
-    font-weight: 100;
-}
-
 p {
     margin-bottom: var(--rhythm);
 }

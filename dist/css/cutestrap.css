@@ -29,9 +29,9 @@ Styleguide 1.0
     --rhythm-eighth: calc((1/8) * var(--rhythm));
     --rhythm-twelfth: calc((1/12) * var(--rhythm));
     --rhythm-sixteenth: calc((1/16) * var(--rhythm));
-    --line-height-ratio: 1.4;
-    --font-size: calc(var(--sub-rhythm, var(--rhythm)) / var(--line-height-ratio));
     --line-height: var(--sub-rhythm, var(--rhythm));
+    --line-height-ratio: 1.4;
+    --font-size: calc(var(--line-height) / var(--line-height-ratio));
 }
 
 html {
@@ -187,10 +187,6 @@ h4 {
 
 h5 {
     font-weight: 700;
-}
-
-h6 {
-    font-weight: 100;
 }
 
 p {
@@ -509,10 +505,10 @@ Styleguide 3.0
 }
 
 .button.-secondary {
-    --background-color: var(--color-neutral-tint1);
-    --background-color-hover: var(--color-neutral);
-    --border-color: var(--color-neutral-tint1);
-    --border-color-hover: var(--color-neutral);
+    --background-color: var(--color-neutral-tint2);
+    --background-color-hover: var(--color-neutral-tint1);
+    --border-color: var(--color-neutral-tint2);
+    --border-color-hover: var(--color-neutral-tint1);
     --text-color: var(--color-shade3);
     --text-color-hover: var(--color-shade3);
 }
@@ -607,6 +603,7 @@ Styleguide 4.0
     display: block;
     margin-bottom: var(--rhythm);
     position: relative;
+    text-align: left;
 }
 
 .field .label {
@@ -919,8 +916,8 @@ Markup:
     Wrapper
 </div>
 
-.-small - A max-width of 45rem
-.-large - A max-width of 80rem
+.-thin - A max-width of 45rem
+.-wide - A max-width of 80rem
 .-flush - No vertical or horizontal spacing
 
 Styleguide 6.0
@@ -935,12 +932,12 @@ Styleguide 6.0
     width: 100%;
 }
 
-.wrapper.-small {
+.wrapper.-thin {
     max-width: 45rem;
     padding: var(--rhythm) var(--rhythm-half);
 }
 
-.wrapper.-large {
+.wrapper.-wide {
     max-width: 80rem;
     padding: var(--rhythm-triple) var(--rhythm-half);
 }

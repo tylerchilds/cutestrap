@@ -53,6 +53,7 @@ Styleguide 4.0
     display: block;
     margin-bottom: var(--rhythm);
     position: relative;
+    text-align: left;
 }
 
 .field .label {
