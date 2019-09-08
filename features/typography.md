@@ -2,7 +2,6 @@
 layout: page
 title: Typography
 permalink: /features/typography
-weight: 0
 ---
 
 ## Overview

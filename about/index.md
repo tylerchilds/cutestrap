@@ -2,7 +2,6 @@
 layout: page
 title: About
 permalink: /about/
-weight: 0
 ---
 
 Hi there. I'm Tyler and I've been working as a software engineer doing web development, specifically front-end, for over ten years. I've always been in favor of sharing information and knowledge freely via open-source code, most notably <a href="https://www.cutestrap.com/" target="_blank">Cutestrap</a>. However, I haven't figured out where I best fit into the overall in the web development community with regards to giving back.

@@ -2,7 +2,6 @@
 layout: page
 title: Forms
 permalink: /features/forms
-weight: 0
 ---
 
 ## Overview

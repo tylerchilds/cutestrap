@@ -2,7 +2,6 @@
 layout: page
 title: Tune Your Bundle
 permalink: /features/bundle
-weight: 0
 ---
 
 ## Overview
@@ -48,9 +47,9 @@ which is while you'll need this file at a minimum.
 
 ### Base
 
-This file is Cutestrap's [Normalize.css](https://necolas.github.io/normalize.css/)
-or [Reset.css](https://meyerweb.com/eric/tools/css/reset/), but it's more
-opinionated than either of those, since it follows the baseline grid.
+This file is Cutestrap's <a href="https://necolas.github.io/normalize.css/" target="_blank">Normalize.css</a>
+or <a href="https://meyerweb.com/eric/tools/css/reset/" target="_blank">Reset.css</a>,
+but it's more opinionated than either of those, since it follows the baseline grid.
 
 Base does not have any classes and styles HTML elements directly. It follows
 browser defaults and web standards, such as link colors and underlines, but

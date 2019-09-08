@@ -2,7 +2,6 @@
 layout: page
 title: Features
 permalink: /features/
-weight: 10
 ---
 
 ## Getting Started

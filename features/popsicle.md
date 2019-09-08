@@ -2,7 +2,6 @@
 layout: page
 title: Popsicle
 permalink: /features/popsicle
-weight: 0
 ---
 
 ## Overview
@@ -30,7 +29,7 @@ When using the Popsicle Paradigm, you have two types of rulesets:
 
 ---
 
-### Well Example
+### Example
 
 Let's create our first component. We're going to use some
 variables that come with Cutestrap.
