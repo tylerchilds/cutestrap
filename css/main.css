@@ -125,7 +125,8 @@ nav a {
   text-align: center;
 }
 
-.page-header h1 {
+.page-title {
+    margin-bottom: var(--rhythm);
 }
 
 .page-meta {
@@ -173,34 +174,34 @@ footer {
   text-decoration: none;
 }
 
-.logo {
+.title {
   color: var(--color-primary);
   font-family: 'Pacifico', 'Avenir', 'Avenir Next','Helvetica Neue','Segoe UI', 'Verdana', sans-serif;
   font-weight: normal;
 }
 
-a.logo:link,
-a.logo:visited,
-a.logo:active {
+a.title:link,
+a.title:visited,
+a.title:active {
     color: var(--color-primary);
 }
-a.logo:hover,
-a.logo:focus {
+a.title:hover,
+a.title:focus {
     color: var(--color-primary-shade);
 }
 
 @media (max-width: 30em) {
-    .logo.-hide-small {
+    .sublogo.-hide-small {
         display: none;
     }
 }
 
-.logo.-show-small {
+.sublogo.-show-small {
     display: none;
 }
 
 @media (max-width: 30em) {
-    .logo.-show-small {
+    .sublogo.-show-small {
         display: inline;
     }
 }

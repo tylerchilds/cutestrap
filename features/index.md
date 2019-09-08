@@ -39,13 +39,13 @@ KSS builds a styleguide using comments from CSS source code. If you fork
 Cutestrap, you can easily add your own components and generate living
 documentation of your styles.
 
-### [Choose Your Own Bundle](/features/bundle)
+### [Tune Your Bundle](/features/bundle)
 
-Instead of using the full version of Cutestrap, you can choose each piece a la
+Instead of using every feature of Cutestrap, you can choose each piece a la
 carte to get the smallest footprint for your project.
 
 
-### [Learn the Popsicle Convention](/features/popsicle)
+### [Learn the Popsicle Paradigm](/features/popsicle)
 
 There are a lot of great options and patterns available for naming your
 CSS Selectors, but Popsicle gives you concise, safe modifiers with only a
