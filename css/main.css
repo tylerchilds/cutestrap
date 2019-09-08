@@ -35,17 +35,16 @@ html[data-theme="dark"] {
 }
 
 @media (max-width: 65rem) {
-[data-rhythm="small"] * {
-  --rhythm: 1rem;
+    [data-rhythm="small"] * {
+        --rhythm: 1rem;
+    }
+
+    [data-rhythm="large"] * {
+        --rhythm: 2rem;
+    }
 }
 
-[data-rhythm="large"] * {
-  --rhythm: 2rem;
-}
-
-}
-
-.hide-gridlines {
+[data-grid="off"] body {
   background-image: none !important;
 }
 
@@ -193,7 +192,7 @@ body {
 }
 
 .title {
-  color: var(--color-primary);
+  color: var(--color-primary-tint);
   font-family: 'Pacifico', 'Avenir', 'Avenir Next','Helvetica Neue','Segoe UI', 'Verdana', sans-serif;
   font-weight: normal;
 }
@@ -201,14 +200,14 @@ body {
 a.title:link,
 a.title:visited,
 a.title:active {
-    color: var(--color-primary);
+    color: var(--color-primary-tint);
 }
 a.title:hover,
 a.title:focus {
-    color: var(--color-primary-shade);
+    color: var(--color-primary);
 }
 
-@media (max-width: 30em) {
+@media (max-width: 35rem) {
     .sublogo.-hide-small {
         display: none;
     }
@@ -218,7 +217,7 @@ a.title:focus {
     display: none;
 }
 
-@media (max-width: 30em) {
+@media (max-width: 35rem) {
     .sublogo.-show-small {
         display: inline;
     }
@@ -272,7 +271,13 @@ html {
     padding-left: var(--rhythm-half);
 }
 
-@media (min-width: 55rem) {
+@media (max-width: 28rem) {
+    .toolbar-size {
+      display: none;
+    }
+}
+
+@media (min-width: 50rem) {
     .toolbar-label {
       display: inline-block;
     }
@@ -318,6 +323,10 @@ html {
   color: var(--color-neutral-tinted);
 }
 
+.toolbar-button.-on {
+  text-decoration: underline overline;
+}
+
 [data-theme="dark"] .toolbar-button.-light {
   background-color: var(--color-neutral-shade2);
   color: var(--color-neutral-tinted);
@@ -332,18 +341,12 @@ html {
 [data-rhythm="normal"] .toolbar-button.-normal,
 [data-rhythm="large"] .toolbar-button.-large,
 [data-theme="light"] .toolbar-button.-light,
-[data-theme="dark"] .toolbar-button.-dark {
+[data-theme="dark"] .toolbar-button.-dark,
+[data-grid="on"] .toolbar-button.-on,
+[data-grid="off"] .toolbar-button.-off {
   cursor: normal;
   opacity: .5;
   pointer-events: none;
-}
-
-.toolbar-button.-grid {
-  text-decoration: none;
-}
-
-.hide-gridlines .toolbar-button.-grid {
-  text-decoration: underline overline;
 }
 
 /*

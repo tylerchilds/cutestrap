@@ -1,8 +1,9 @@
 <button
   aria-label="{{include.label}}"
   label="{{include.label}}"
-  class="toolbar-button {{include.classList}}"
-  {{include.attributes}}
+  class="toolbar-button js-toolbar-toggle {{include.classList}}"
+  data-key="{{include.key}}"
+  data-value="{{include.value}}"
 >
   A
 </button>
