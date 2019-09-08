@@ -63,7 +63,7 @@ keeps the padding.
 </form>
 
 ```
-<form class="wrapper -small" style="max-width: 25rem">
+<form class="wrapper" style="max-width: 25rem">
     <h4>Sign In</h4>
     <label class="field">
       <input type="text" value="leroyjenkins"/>
@@ -88,11 +88,11 @@ keeps the padding.
 ### Credit Card Form
 
 <p class="mb-zero">
-    This form shows off <code>.wrapper.-small</code> and the <code>--columns</code> custom property
+    This form shows off <code>.wrapper.-thin</code> and the <code>--columns</code> custom property
 that is used with the grid system. The grid also stacks on smaller screen widths.
 </p>
 
-<form class="wrapper -small">
+<form class="wrapper -thin">
     <h4 class="mt-zero">Payment Information</h4>
     <label class="field">
       <input type="text" value="Leroy Jenkins" />
@@ -135,7 +135,7 @@ that is used with the grid system. The grid also stacks on smaller screen widths
 </form>
 
 ```
-<form class="wrapper -small">
+<form class="wrapper -thin">
     <h4 class="mt-zero">Payment Information</h4>
     <label class="field">
       <input type="text" value="Leroy Jenkins" />

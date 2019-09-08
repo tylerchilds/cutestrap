@@ -154,10 +154,28 @@ body {
   max-width: initial;
 }
 
-footer {
-  display: grid;
-  column-gap: var(--gutter-width);
-  grid-template-columns: repeat(2, 1fr);
+.footer {
+    --columns: 4;
+    margin: 0 auto;
+    max-width: 80rem;
+    padding: var(--rhythm);
+}
+
+@media (max-width: 65rem) {
+    .footer {
+        --columns: 2;
+    }
+}
+
+@media (max-width: 35rem) {
+    .footer {
+        --columns: 1;
+    }
+}
+
+.footer ul {
+    list-style-type: none;
+    margin-left: 0;
 }
 
 /*

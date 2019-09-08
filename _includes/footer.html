@@ -1,16 +1,39 @@
-<footer>
-  <div>
-      <p>
-        Subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a><br />
-        <a href="https://github.com/tylerchilds/bytesize/issues" target="_blank">Report a Problem</a>
-      </p>
-  </div>
-  <div class="ta-right">
-    With &hearts;, <a href="https://www.tylerchilds.com">Tyler Childs</a>
-    <p class="copyright">Cutestrap
-        &copy;2016-<script>
-        document.write(new Date().getFullYear());
-      </script>
-    </p>
-  </div>
+<footer class="grid footer">
+    {% for item in site.data.footer %}
+        <div>
+            <h5>
+                {% if item.href %}
+                    <a href="{{ item.href }}">{{ item.text }}</a>
+                {% else %}
+                    {{ item.text }}
+                {% endif %}
+            </h5>
+            <ul>
+                {% for kid in item.kids %}
+                    <li>
+                        <a href="{{ kid.href }}">{{ kid.text }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endfor %}
+    <div>
+        <h5>Misc</h5>
+        <ul>
+            <li>
+                <a href="{{ "/feed.xml" | prepend: site.baseurl }}">Subscribe via RSS</a><br />
+            </li>
+            <li>
+                <a href="https://github.com/tylerchilds/bytesize/issues" target="_blank">Report a Problem</a>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                Made with &hearts;,<br /><a href="https://www.tylerchilds.com">Tyler Childs</a>
+            </li>
+            <li>
+                &copy;2016-<script>document.write(new Date().getFullYear());</script>
+            </li>
+        </ul>
+    </div>
 </footer>
