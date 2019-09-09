@@ -8,7 +8,6 @@
         "navigation content"
         "footer footer";
     grid-template-columns: 10em 1fr;
-    grid-template-rows: var(--rhythm-double) 1fr;
 }
 
 @media (min-width: 768px) {
@@ -29,7 +28,7 @@
     border-right: 1px solid var(--color-neutral-tint2);
     grid-area: navigation;
     margin-top: -1px;
-    padding: 0 var(--rhythm-half) var(--rhythm);
+    padding: var(--rhythm-double) var(--rhythm-half) var(--rhythm);
 }
 
 .navigation a {
@@ -45,7 +44,7 @@
 .content {
     grid-area: content;
     min-width: 0;
-    padding: 0 var(--rhythm-half);
+    padding: var(--rhythm-double) var(--rhythm-half);
 }
 
 /*
