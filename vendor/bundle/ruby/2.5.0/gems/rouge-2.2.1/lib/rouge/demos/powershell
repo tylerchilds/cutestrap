@@ -1,4 +1,4 @@
-﻿Function Get-IPv4Scopes
+Function Get-IPv4Scopes
 <#
 	.SYNOPSIS
 		Read IPv4Scopes from an array of servers

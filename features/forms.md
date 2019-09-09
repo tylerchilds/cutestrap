@@ -108,7 +108,7 @@ that is used with the grid system. The grid also stacks on smaller screen widths
           <select>
             <option selected="selected">04</option>
           </select>
-          <span class="label" for="select">Exp. Year</span>
+          <span class="label" for="select">Exp. Month</span>
         </label>
 
         <label class="field">
@@ -151,7 +151,7 @@ that is used with the grid system. The grid also stacks on smaller screen widths
           <select>
             <option selected="selected">04</option>
           </select>
-          <span class="label" for="select">Exp. Year</span>
+          <span class="label" for="select">Exp. Month</span>
         </label>
 
         <label class="field">

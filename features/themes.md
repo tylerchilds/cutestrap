@@ -17,7 +17,7 @@ they are declared down to all their descendants.
 ### Colors
 
 The most common customization for changing a theme is changing the colors. Just
-about all the colors in Cutestrap utilize a shading and tinting to get darker
+about all the colors in Cutestrap utilize shading and tinting to get darker
 and lighter variations respectively.
 
 All colors are also namespaced with a `--color-` prefix.

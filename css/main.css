@@ -5,15 +5,15 @@
 */
 
 html[data-theme="dark"] {
-    --color-primary-shade: hsl(350, 100%, 80%);
-    --color-primary: hsl(350, 80%, 60%);
-    --color-primary-tint: hsl(350, 60%, 40%);
-    --color-accent-shade: hsl(170, 100%, 80%);
-    --color-accent: hsl(170, 80%, 60%);
-    --color-accent-tint: hsl(170, 60%, 40%);
-    --color-link: hsl(230, 60%, 50%);
-    --color-link-visited: hsl(290, 60%, 50%);
-    --color-link-hover: hsl(230, 80%, 60%);
+    --color-primary-shade: hsl(350, 80%, 60%);
+    --color-primary: hsl(350, 80%, 45%);
+    --color-primary-tint: hsl(350, 80%, 35%);
+    --color-accent-shade: hsl(170, 80%, 60%);
+    --color-accent: hsl(170, 80%, 45%);
+    --color-accent-tint: hsl(170, 80%, 35%);
+    --color-link: hsl(230, 80%, 60%);
+    --color-link-visited: hsl(290, 80%, 60%);
+    --color-link-hover: hsl(230, 60%, 50%);
     --color-link-active: hsl(350, 60%, 50%);
     --color-neutral-shaded: hsl(170, 10%, 98%);
     --color-neutral-shade3: hsl(170, 10%, 94%);

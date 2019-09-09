@@ -40,7 +40,7 @@ one file as your entree.
 
 This is where all the magic happens for Cutestrap. We establish all of our
 rhythm and typographic mixins on all elements, set our global variables on `html`,
-andset our baseline typography on the `body`.
+and set our baseline typography on the `body`.
 
 The reason all the other files depend on core is for the variables and mixins,
 which is while you'll need this file at a minimum.
