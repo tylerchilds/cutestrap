@@ -1,7 +1,7 @@
 ---
 layout: blog/post
 title:  "Cutestrap Two Changelog"
-date:   2018-01-18 19:14:07 -0800
+date:   2038-01-18 19:14:07 -0800
 permalink: /cutelog/cutestrap-two-changelog
 ---
 

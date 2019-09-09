@@ -4,12 +4,42 @@ title: About
 permalink: /about/
 ---
 
-Hi there. I'm Tyler and I've been working as a software engineer doing web development, specifically front-end, for over ten years. I've always been in favor of sharing information and knowledge freely via open-source code, most notably <a href="https://www.cutestrap.com/" target="_blank">Cutestrap</a>. However, I haven't figured out where I best fit into the overall in the web development community with regards to giving back.
+Hi there. I'm Tyler and I've been working as a software engineer doing web
+development, specifically front-end, for over ten years. I've always been in
+favor of sharing information and knowledge freely via open-source code.
 
-When I started doing web development, I was armed with simply a text editor and a web browser and able to learn from any website by inspecting their source code. I would browse the web and anytime some cool thing caught my eye, I'd inspect it, investigate it, recreate it, improve it, and make it my own.
+When I first published Cutestrap back in May of 2016, it was mostly something
+I made for myself. I've always published the tools (or toys) I've built, but
+Cutestrap took off a little bit. I found out about Hacker News because someone
+posted Cutestrap there and then it got almost 1k stars on GitHub in one day.
 
-While the tools to write, inspect, and debug code has evolved greatly in the past decade, it's become much more difficult to learn from inspecting live code. For me, I tinker and I learn by poking, prodding, breaking and mending. This approach might not be for you, but I don't think I'm the only one that learns this way.
+I was somewhat mortified, honestly. It was like inviting a couple close friends
+over for a BBQ, but then everyone in town crashes the party and you totally
+didn't clean the house.
 
-The content is designed and created to last as long as the web exists by requiring zero dependencies other than a text editor and a web browser. All of the posts are focused on a single topic and aim to be clear, but not comprehensive. One of the greatest strengths of an engineer is knowing how to find answers. These posts aim to give enough context and straightforward code to help guide your searches if you'd like to learn more and expand on the examples.
+### Anyways...
 
-If this is your first time here and you're new to web development, I recommend checking out “Hello World”. It's the only tutorial on this site and will help you to get started and unlock the ability to explore the rest of the code.
+I felt like I could do better than the one step above
+normalize and two steps below Bootstrap version 1 I gave you. The reason I simultaneously
+put so much and so little effort into that landing page was because of the pun.
+
+Long story short, I knew I could do better and that _you_ deserve better from me.
+To anyone that opened up PRs, issues, sent me emails, I'm sorry. I appreciate you,
+but I was honestly super overwhelmed and just kinda shut down and focused on
+my life and my day job.
+
+But I never forgot about you. I've been thinking about you for years and what I
+could make that was practical, yet bleeding edge. Innovative, yet familiar.
+Complex, but approachable.
+
+I don't think Cutestrap will be for everyone, but if any of this project resonates
+with you and you get some value out of it: thank you. I've poured countless hours
+into this project and by the time you read this and I'm just glad you're here.
+
+### What's next?
+
+At this point, I'm not sure, but I do know that want the people using Cutestrap
+to tell me what they want. What's missing? What's confusing? What keeps you up
+at night?
+
+Reach out and let's make the future together.
