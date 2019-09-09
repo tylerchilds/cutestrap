@@ -19,8 +19,8 @@ didn't clean the house.
 
 ### Anyways...
 
-I felt like I could do better than the one step above
-normalize and two steps below Bootstrap version 1 I gave you. The reason I simultaneously
+I felt like I could do better than the, one step above
+normalize and two steps below Bootstrap, project that I gave you. The reason I simultaneously
 put so much and so little effort into that landing page was because of the pun.
 
 Long story short, I knew I could do better and that _you_ deserve better from me.
