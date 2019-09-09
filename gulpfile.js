@@ -128,7 +128,7 @@ gulp.task('kss', gulp.series('kss-html', function(cb) {
 
 gulp.task('kss-public', gulp.series('kss', function(){
 
-  gulp.src('./kss-html/css/kss.css')
+  gulp.src('./kss-html/css/**/*.*')
     .pipe(gulp.dest('./docs/public/css'));
 
   gulp.src('./dist/css/cutestrap.css')

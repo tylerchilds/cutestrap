@@ -1,6 +1,7 @@
-<div class="wrapper wrapper--large ta-center">
-  <h1>Cutestrap</h1>
-  <p>A sassy, opinionated CSS Framework. A tiny alternative to Bootstrap.</p>
+<div class="wrapper wrapper--large">
+  <h1>Styleguide</h1>
+  <p>This page is a collection of every HTML element to make sure everything looks good at an atomic level.</p>
+  <p>I have no idea where I copied this from originally, but I've been using it for years. If you know the original author, let me know, I'd love to credit and thank them.</p>
 </div>
 
 <h2>Color Palette</h2>

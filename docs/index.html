@@ -14,22 +14,92 @@
     
   <link href="./public/css/cutestrap.css" rel="stylesheet" />
   <link href="./public/css/kss.css" rel="stylesheet" />
+  <link href="./public/css/shared.css" rel="stylesheet" />
 
   </head>
   <body class="language-markup dashboard-layout">
 
       <header class="header">
-  <a href="https://www.cutestrap.com/" class="f-right">Main Docs</a>
-  <h2 class="title">
-    <a href="./index.html">Cutestrap</a>
-  </h2>
+    <div class="toolbar">
+        <h2 class="toolbar-logo">
+        <a href="/" class="title">C<span class="sublogo -hide-small">utestrap</span><span class="sublogo -show-small">s</span></a>
+        </h2>
+        <div class="toolbar-controls">
+            <span class="toolbar-size">
+                <span class="toolbar-label">Size:</span>
+                <button
+                    aria-label="Small"
+                    label="Small"
+                    class="toolbar-button js-toolbar-toggle -small"
+                    data-key="rhythm"
+                    data-value="small"
+                >A</button>
+
+                <button
+                    aria-label="Normal"
+                    label="Normal"
+                    class="toolbar-button js-toolbar-toggle -normal"
+                    data-key="rhythm"
+                    data-value="normal"
+                >A</button>
+
+                <button
+                    aria-label="Large"
+                    label="Large"
+                    class="toolbar-button js-toolbar-toggle -large"
+                    data-key="rhythm"
+                    data-value="large"
+                >A</button>
+
+            </span>
+            <span class="toolbar-rhythm">
+                <span class="toolbar-label">Theme:</span>
+                <button
+                    aria-label="Light"
+                    label="Light"
+                    class="toolbar-button js-toolbar-toggle -light"
+                    data-key="theme"
+                    data-value="light"
+                >A</button>
+
+                <button
+                    aria-label="Dark"
+                    label="Dark"
+                    class="toolbar-button js-toolbar-toggle -dark"
+                    data-key="theme"
+                    data-value="dark"
+                >A</button>
+
+            </span>
+            <span class="toolbar-grid">
+                <span class="toolbar-label">Gridlines:</span>
+                <button
+                    aria-label="Grid On"
+                    label="Grid On"
+                    class="toolbar-button js-toolbar-toggle -on"
+                    data-key="grid"
+                    data-value="on"
+                >A</button>
+
+                <button
+                    aria-label="Grid Off"
+                    label="Grid Off"
+                    class="toolbar-button js-toolbar-toggle -off"
+                    data-key="grid"
+                    data-value="off"
+                >A</button>
+            </span>
+        </div>
+    </div>
 </header>
 
 
       
 
 <nav class="navigation">
-  <h6>Files</h6>
+  <h6>
+    <a href="./index.html">Styleguide</a>
+  </h6>
   <ul>
       <li>
         <a href="section-1.html">Core</a>
@@ -53,26 +123,13 @@
         <a href="section-7.html">Utilities</a>
       </li>
   </ul>
-  <h6>
-    More
-  </h6>
-  <ul>
-    <li>
-        <a href="https://github.com/tylerchilds/cutestrap">Github</a>
-    </li>
-    <li>
-        <a href="https://github.com/cutestrap/cutestrap/raw/master/cutestrap.zip">Download</a>
-    </li>
-    <li>
-        <a href="javascript:;" class="js-grid-toggle">Toggle Grid</a>
-    </li>
-  </ul>
 </nav>
 
 <main class="wrapper content">
-     <div class="wrapper wrapper--large ta-center">
-  <h1>Cutestrap</h1>
-  <p>A sassy, opinionated CSS Framework. A tiny alternative to Bootstrap.</p>
+     <div class="wrapper wrapper--large">
+  <h1>Styleguide</h1>
+  <p>This page is a collection of every HTML element to make sure everything looks good at an atomic level.</p>
+  <p>I have no idea where I copied this from originally, but I&#39;ve been using it for years. If you know the original author, let me know, I&#39;d love to credit and thank them.</p>
 </div>
 
 <h2>Color Palette</h2>
@@ -522,7 +579,102 @@ p q r s t u v w x y z { | } ~</pre>
 
 
 
-      
+      <footer class="footer">
+    <div class="grid footer-content">
+        <div>
+            <h5>
+                <a href="https://www.cutestrap.com/features">Features</a>
+            </h5>
+            <ul>
+                <li>
+                    <a href="https://www.cutestrap.com/features/themes">Themes</a>
+                </li>
+                <li>
+                    <a href="https://www.cutestrap.com/features/forms">Forms</a>
+                </li>
+                <li>
+                    <a href="https://www.cutestrap.com/features/typography">Typography</a>
+                </li>
+                <li>
+                    <a href="https://www.cutestrap.com/features/styleguide">Styleguide</a>
+                </li>
+                <li>
+                    <a href="https://www.cutestrap.com/features/bundle">Bundle</a>
+                </li>
+                <li>
+                    <a href="https://www.cutestrap.com/features/popsicle">Popsicle</a>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <h5>
+                <a href="https://docs.cutestrap.com">Docs</a>
+            </h5>
+            <ul>
+                <li>
+                    <a href="https://docs.cutestrap.com/section-1.html">Core</a>
+                </li>
+                <li>
+                    <a href="https://docs.cutestrap.com/section-2.html">Base</a>
+                </li>
+                <li>
+                    <a href="https://docs.cutestrap.com/section-3.html">Buttons</a>
+                </li>
+                <li>
+                    <a href="https://docs.cutestrap.com/section-4.html">Forms</a>
+                </li>
+                <li>
+                    <a href="https://docs.cutestrap.com/section-5.html">Grid</a>
+                </li>
+                <li>
+                    <a href="https://docs.cutestrap.com/section-6.html">Wrappers</a>
+                </li>
+                <li>
+                    <a href="https://docs.cutestrap.com/section-7.html">Utilities</a>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <h5>
+                Pages
+            </h5>
+            <ul>
+                <li>
+                    <a href="https://www.cutestrap.com/cutelog">Cutelog</a>
+                </li>
+                <li>
+                    <a href="https://www.cutestrap.com/examples">Examples</a>
+                </li>
+                <li>
+                    <a href="https://www.cutestrap.com/about">About</a>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <h5>Misc</h5>
+            <ul>
+                <li>
+                    <a href="https://www.cutestrap.com/feed.xml">Subscribe via RSS</a><br>
+                </li>
+                <li>
+                    <a href="https://github.com/tylerchilds/bytesize/issues" target="_blank">Report a Problem</a>
+                </li>
+                </ul>
+            <ul>
+                <li>
+                    Made with ♥,<br><a href="https://www.tylerchilds.com">Tyler Childs</a>
+                </li>
+                <li>
+                    ©2016-<script>document.write(new Date().getFullYear());</script>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
 
     
   <script src="./public/js/kss.js"></script>
