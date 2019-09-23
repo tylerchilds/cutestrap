@@ -509,8 +509,8 @@ Styleguide 3.0
     --background-color-hover: var(--color-neutral-tint1);
     --border-color: var(--color-neutral-tint2);
     --border-color-hover: var(--color-neutral-tint1);
-    --text-color: var(--color-shade3);
-    --text-color-hover: var(--color-shade3);
+    --text-color: var(--color-neutral-shade3);
+    --text-color-hover: var(--color-neutral-shade3);
 }
 
 .button.-link {
@@ -541,9 +541,11 @@ Styleguide 3.0
 }
 
 .button.-large {
+    --sub-rhythm: calc(1.5 * var(--rhythm));
     --border-thickness: var(--rhythm-eighth);
 
-    font-size: var(--font-size-large);
+    font-size: var(--font-size);
+    line-height: var(--line-height);
     min-height: calc(3 * var(--rhythm));
     padding: calc(3 * var(--rhythm-eighth)) calc(2 * var(--rhythm));
 }

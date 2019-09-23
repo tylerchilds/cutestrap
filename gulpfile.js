@@ -1,14 +1,16 @@
 // Include Our Plugins
-const bump          = require('gulp-bump'),
+const bump        = require('gulp-bump'),
     clean         = require('gulp-clean'),
     concat        = require('gulp-concat'),
     cssmin        = require('gulp-cssmin'),
+    cssvariables  = require('postcss-css-variables'),
     exec          = require('gulp-exec'),
     fs            = require('fs'),
     gulp          = require('gulp'),
     minimist      = require('minimist'),
     rename        = require('gulp-rename'),
     replace       = require('gulp-replace'),
+    postcss       = require('gulp-postcss'),
     stylelint     = require('gulp-stylelint'),
     swig          = require('gulp-swig'),
     zip           = require('gulp-zip');;
@@ -49,7 +51,7 @@ gulp.task('clean', function() {
     }));
 });
 
-gulp.task('distify', function() {
+gulp.task('css', function() {
   return gulp.src([
     'src/css/core.css',
     'src/css/base.css',
@@ -65,6 +67,22 @@ gulp.task('distify', function() {
 		.pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('./dist/css'));
 });
+
+gulp.task('postcss', function() {
+  const plugins = [
+    cssvariables()
+  ];
+
+  return gulp.src('./dist/css/cutestrap.css')
+    .pipe(postcss(plugins))
+    .pipe(rename("cutestrap.compiled.css"))
+    .pipe(gulp.dest('./dist/css/experimental'))
+    .pipe(cssmin())
+		.pipe(rename({suffix: '.min'}))
+    .pipe(gulp.dest('./dist/css/experimental'));
+});
+
+gulp.task('distify', gulp.series('css', 'postcss'));
 
 // Move source over for compiling
 gulp.task('temp', function(){
@@ -124,7 +142,7 @@ gulp.task('kss-public', gulp.series('kss', function(){
   gulp.src('./kss-html/css/**/*.*')
     .pipe(gulp.dest('./docs/public/css'));
 
-  gulp.src('./dist/css/cutestrap.css')
+  gulp.src('./dist/css/**/*.*')
     .pipe(gulp.dest('./docs/public/css'));
 
 
