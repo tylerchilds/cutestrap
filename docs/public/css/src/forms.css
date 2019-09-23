@@ -50,7 +50,7 @@ Styleguide 4.0
 }
 
 .field {
-    display: block;
+    display: flex;
     margin-bottom: var(--rhythm);
     position: relative;
     text-align: left;
@@ -69,14 +69,13 @@ Styleguide 4.0
 }
 
 .field *:not([type=radio]):not([type=checkbox]) + .label {
-    background-color: var(--color-neutral-tint4);
     font-size: var(--rhythm-half);
     position: absolute;
     left: var(--rhythm-sixteenth);
     line-height: 1;
     padding: var(--rhythm-fourth) var(--rhythm-fourth) 0;
     right: var(--rhythm-sixteenth);
-    top: var(--rhythm-sixteenth);
+    top: 0;
 }
 
 .field input,

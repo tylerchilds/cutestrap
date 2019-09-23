@@ -1225,7 +1225,7 @@ Styleguide 4.0
 }
 
 .field {
-    display: block;
+    display: flex;
     margin-bottom: 2rem;
     position: relative;
     text-align: left;
@@ -1271,21 +1271,13 @@ Styleguide 4.0
 }
 
 .field *:not([type=radio]):not([type=checkbox]) + .label {
-    background-color: hsl(170, 10%, 98%);
     font-size: calc((1/2) * 2rem);
     position: absolute;
     left: calc((1/16) * 2rem);
     line-height: 1;
     padding: calc((1/4) * 2rem) calc((1/4) * 2rem) 0;
     right: calc((1/16) * 2rem);
-    top: calc((1/16) * 2rem);
-}
-
-@media (max-width: 65rem) {
-
-    .field *:not([type=radio]):not([type=checkbox]) + .label {
-    top: calc((1/16) * 1.5rem);
-    }
+    top: 0;
 }
 
 @media (max-width: 65rem) {
