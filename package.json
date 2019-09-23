@@ -14,6 +14,10 @@
   },
   "scripts": {
     "start": "bundle exec jekyll serve",
-    "copy": "cp ../cutestrap/dist/css/cutestrap.css ./css/versions/cutestrap.bleeding.css"
+    "copy": "cp ../cutestrap/dist/css/cutestrap.css ./css/versions/cutestrap.bleeding.css",
+    "postinstall": "cp -r ./node_modules/cutestrap/dist/css/* ./css/hotlinks"
+  },
+  "dependencies": {
+    "cutestrap": "^2.0.0-0"
   }
 }

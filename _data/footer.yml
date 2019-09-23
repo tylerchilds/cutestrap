@@ -32,12 +32,14 @@
           href: 'https://docs.cutestrap.com/section-7.html'
 - text: Pages
   kids:
-        - text: Cutelog
-          href: '/cutelog'
+        - text: About
+          href: '/about'
         - text: Customizations
           href: '/customizations'
         - text: Snippets
           href: '/snippets'
-        - text: About
-          href: '/about'
+        - text: Cutelog
+          href: '/cutelog'
+        - text: Legacy
+          href: '/legacy/v1'
 
