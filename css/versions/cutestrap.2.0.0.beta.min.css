@@ -36,17 +36,17 @@ Styleguide 1.0
 
 html {
     --border-radius: 4px;
-    --color-primary-tint: hsl(350, 80%, 60%);
+    --color-primary-tint1: hsl(350, 80%, 60%);
     --color-primary: hsl(350, 80%, 45%);
-    --color-primary-shade: hsl(350, 80%, 35%);
-    --color-accent-tint: hsl(170, 80%, 60%);
+    --color-primary-shade1: hsl(350, 80%, 35%);
+    --color-accent-tint1: hsl(170, 80%, 60%);
     --color-accent: hsl(170, 80%, 45%);
-    --color-accent-shade: hsl(170, 80%, 35%);
+    --color-accent-shade1: hsl(170, 80%, 35%);
     --color-link: hsl(230, 60%, 50%);
     --color-link-visited: hsl(290, 60%, 50%);
     --color-link-hover: hsl(230, 80%, 60%);
     --color-link-active: hsl(350, 60%, 50%);
-    --color-neutral-tinted: hsl(170, 10%, 98%);
+    --color-neutral-tint4: hsl(170, 10%, 98%);
     --color-neutral-tint3: hsl(170, 10%, 94%);
     --color-neutral-tint2: hsl(170, 10%, 85%);
     --color-neutral-tint1: hsl(170, 10%, 68%);
@@ -54,8 +54,8 @@ html {
     --color-neutral-shade1: hsl(170, 10%, 41%);
     --color-neutral-shade2: hsl(170, 10%, 30%);
     --color-neutral-shade3: hsl(170, 10%, 18%);
-    --color-neutral-shaded: hsl(170, 10%, 2%);
-    --focus-outline: var(--rhythm-twelfth) dotted var(--color-primary-tint);
+    --color-neutral-shade4: hsl(170, 10%, 2%);
+    --focus-outline: var(--rhythm-twelfth) dotted var(--color-primary-tint1);
     --focus-outline-offset: var(--rhythm-twelfth);
     --font-family: 'Avenir', 'Avenir Next', 'Helvetica Neue', 'Segoe UI', 'Verdana', sans-serif;
     --font-mono: 'Consolas', 'Monaco', 'Courier New', monospace;
@@ -142,8 +142,8 @@ html {
 
 body {
     box-sizing: border-box;
-    background-color: var(--color-neutral-tinted);
-    color: var(--color-neutral-shaded);
+    background-color: var(--color-neutral-tint4);
+    color: var(--color-neutral-shade4);
     font-family: var(--font-body);
     min-height: 100%;
     position: relative;
@@ -203,7 +203,7 @@ samp,
 kbd {
     background-color: var(--color-neutral-tint3);
     font-size: var(--font-size);
-    color: var(--color-primary-shade);
+    color: var(--color-primary-shade1);
     font-family: var(--font-mono);
     line-height: 1;
 }
@@ -396,7 +396,7 @@ label,
 select,
 button,
 textarea {
-    color: var(--color-neutral-shaded);
+    color: var(--color-neutral-shade4);
     display: block;
     padding: var(--rhythm-half);
     resize: none;
@@ -442,9 +442,9 @@ Styleguide 3.0
     --border-color-hover: transparent;
     --border-thickness: var(--rhythm-twelfth);
     --background-color: var(--color-primary);
-    --background-color-hover: var(--color-primary-shade);
-    --text-color: var(--color-neutral-tinted);
-    --text-color-hover: var(--color-neutral-tinted);
+    --background-color-hover: var(--color-primary-shade1);
+    --text-color: var(--color-neutral-tint4);
+    --text-color-hover: var(--color-neutral-tint4);
 
     align-items: center;
     align-content: center;
@@ -498,9 +498,9 @@ Styleguide 3.0
 
 .button.-outlined {
     --background-color: transparent;
-    --background-color-hover: var(--color-primary-shade);
+    --background-color-hover: var(--color-primary-shade1);
     --border-color: var(--color-primary);
-    --border-color-hover: var(--color-primary-shade);
+    --border-color-hover: var(--color-primary-shade1);
     --text-color: var(--color-primary);
 }
 
@@ -509,8 +509,8 @@ Styleguide 3.0
     --background-color-hover: var(--color-neutral-tint1);
     --border-color: var(--color-neutral-tint2);
     --border-color-hover: var(--color-neutral-tint1);
-    --text-color: var(--color-shade3);
-    --text-color-hover: var(--color-shade3);
+    --text-color: var(--color-neutral-shade3);
+    --text-color-hover: var(--color-neutral-shade3);
 }
 
 .button.-link {
@@ -541,9 +541,11 @@ Styleguide 3.0
 }
 
 .button.-large {
+    --sub-rhythm: calc(1.5 * var(--rhythm));
     --border-thickness: var(--rhythm-eighth);
 
-    font-size: var(--font-size-large);
+    font-size: var(--font-size);
+    line-height: var(--line-height);
     min-height: calc(3 * var(--rhythm));
     padding: calc(3 * var(--rhythm-eighth)) calc(2 * var(--rhythm));
 }
@@ -612,14 +614,14 @@ Styleguide 4.0
 
 .field [type=checkbox] + .label,
 .field [type=radio] + .label {
-    color: var(--color-neutral-shaded);
+    color: var(--color-neutral-shade4);
     cursor: pointer;
     display: inline-block;
     padding-left: var(--rhythm);
 }
 
 .field *:not([type=radio]):not([type=checkbox]) + .label {
-    background-color: var(--color-neutral-tinted);
+    background-color: var(--color-neutral-tint4);
     font-size: var(--rhythm-half);
     position: absolute;
     left: var(--rhythm-sixteenth);
@@ -632,7 +634,7 @@ Styleguide 4.0
 .field input,
 .field textarea,
 .field select {
-    background-color: var(--color-neutral-tinted);
+    background-color: var(--color-neutral-tint4);
     border: 1px solid var(--color-neutral-shade1);
     border-radius: var(--border-radius);
     box-sizing: border-box;
@@ -696,7 +698,7 @@ Styleguide 4.1
 
 .field [type=checkbox] + .label::before,
 .field [type=radio] + .label::before {
-    background-color: var(--color-neutral-tinted);
+    background-color: var(--color-neutral-tint4);
     border: 2px solid var(--color-neutral-shade1);
     content: '';
     height: var(--rhythm-half);
@@ -711,7 +713,7 @@ Styleguide 4.1
 .field [type=radio] + .label::after {
     background-color: var(--color-primary);
     border: 2px solid transparent;
-    color: var(--color-neutral-tinted);
+    color: var(--color-neutral-tint4);
     height: var(--rhythm-fourth);
     left: var(--rhythm-eighth);
     position: absolute;

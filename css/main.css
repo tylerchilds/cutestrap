@@ -5,17 +5,17 @@
 */
 
 html[data-theme="dark"] {
-    --color-primary-shade: hsl(350, 80%, 60%);
+    --color-primary-shade1: hsl(350, 80%, 60%);
     --color-primary: hsl(350, 80%, 45%);
-    --color-primary-tint: hsl(350, 80%, 35%);
-    --color-accent-shade: hsl(170, 80%, 60%);
+    --color-primary-tint1: hsl(350, 80%, 35%);
+    --color-accent-shade1: hsl(170, 80%, 60%);
     --color-accent: hsl(170, 80%, 45%);
-    --color-accent-tint: hsl(170, 80%, 35%);
+    --color-accent-tint1: hsl(170, 80%, 35%);
     --color-link: hsl(230, 80%, 60%);
     --color-link-visited: hsl(290, 80%, 60%);
     --color-link-hover: hsl(230, 60%, 50%);
     --color-link-active: hsl(350, 60%, 50%);
-    --color-neutral-shaded: hsl(170, 10%, 98%);
+    --color-neutral-shade4: hsl(170, 10%, 98%);
     --color-neutral-shade3: hsl(170, 10%, 94%);
     --color-neutral-shade2: hsl(170, 10%, 85%);
     --color-neutral-shade1: hsl(170, 10%, 68%);
@@ -23,7 +23,7 @@ html[data-theme="dark"] {
     --color-neutral-tint1: hsl(170, 10%, 41%);
     --color-neutral-tint2: hsl(170, 10%, 30%);
     --color-neutral-tint3: hsl(170, 10%, 18%);
-    --color-neutral-tinted: hsl(170, 10%, 2%);
+    --color-neutral-tint4: hsl(170, 10%, 2%);
 }
 
 [data-rhythm="small"] * {
@@ -192,7 +192,7 @@ body {
 }
 
 .title {
-  color: var(--color-primary-tint);
+  color: var(--color-primary-tint1);
   font-family: 'Pacifico', 'Avenir', 'Avenir Next','Helvetica Neue','Segoe UI', 'Verdana', sans-serif;
   font-weight: normal;
 }
@@ -200,7 +200,7 @@ body {
 a.title:link,
 a.title:visited,
 a.title:active {
-    color: var(--color-primary-tint);
+    color: var(--color-primary-tint1);
 }
 a.title:hover,
 a.title:focus {
@@ -234,7 +234,7 @@ html {
 }
 
 .toolbar {
-  background-color: var(--color-neutral-tinted);
+  background-color: var(--color-neutral-tint4);
   border-bottom: 1px solid var(--color-neutral-tint1);
   font-size: var(--font-size);
   line-height: var(--line-height);
@@ -314,13 +314,13 @@ html {
 }
 
 .toolbar-button.-light {
-  background-color: var(--color-neutral-tinted);
+  background-color: var(--color-neutral-tint4);
   color: var(--color-neutral-shade2);
 }
 
 .toolbar-button.-dark {
   background-color: var(--color-neutral-shade2);
-  color: var(--color-neutral-tinted);
+  color: var(--color-neutral-tint4);
 }
 
 .toolbar-button.-on {
@@ -329,11 +329,11 @@ html {
 
 [data-theme="dark"] .toolbar-button.-light {
   background-color: var(--color-neutral-shade2);
-  color: var(--color-neutral-tinted);
+  color: var(--color-neutral-tint4);
 }
 
 [data-theme="dark"] .toolbar-button.-dark {
-  background-color: var(--color-neutral-tinted);
+  background-color: var(--color-neutral-tint4);
   color: var(--color-neutral-shade2);
 }
 
@@ -417,7 +417,7 @@ html {
 
 .example-column::before {
     background-color: var(--color-primary);
-    color: var(--color-neutral-tinted);
+    color: var(--color-neutral-tint4);
     content: 'Column';
     display: block;
     text-align: center;
