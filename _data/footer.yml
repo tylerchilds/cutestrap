@@ -34,8 +34,10 @@
   kids:
         - text: Cutelog
           href: '/cutelog'
-        - text: Examples
-          href: '/examples'
+        - text: Customizations
+          href: '/customizations'
+        - text: Snippets
+          href: '/snippets'
         - text: About
           href: '/about'
 
