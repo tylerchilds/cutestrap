@@ -1,6 +1,5 @@
 // Include Our Plugins
-const bump        = require('gulp-bump'),
-    clean         = require('gulp-clean'),
+const clean       = require('gulp-clean'),
     concat        = require('gulp-concat'),
     cssmin        = require('gulp-cssmin'),
     cssvariables  = require('postcss-css-variables'),
@@ -13,28 +12,7 @@ const bump        = require('gulp-bump'),
     postcss       = require('gulp-postcss'),
     stylelint     = require('gulp-stylelint'),
     swig          = require('gulp-swig'),
-    zip           = require('gulp-zip');;
-
-const config = {
-  packages: './node_modules'
-};
-
-const args = {
-  string: 'defcon',
-  default: { defcon: process.env.NODE_ENV || 'patch' }
-};
-
-const options = minimist(process.argv.slice(2), args);
-
-gulp.task('bump', function() {
-  // bump the package version
-  // get all the files to bump version in
-  return gulp.src(['./package.json'])
-    // bump the version number in those files
-    .pipe(bump({type: options.semver}))
-    // save it back to filesystem
-    .pipe(gulp.dest('./'));
-});
+    zip           = require('gulp-zip');
 
 // Clean build
 gulp.task('clean', function() {
