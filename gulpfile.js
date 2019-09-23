@@ -1,23 +1,16 @@
 // Include Our Plugins
-var autoprefixer  = require('gulp-autoprefixer'),
-    bump          = require('gulp-bump'),
+var bump          = require('gulp-bump'),
     clean         = require('gulp-clean'),
     concat        = require('gulp-concat'),
     cssmin        = require('gulp-cssmin'),
     exec          = require('gulp-exec'),
     fs            = require('fs'),
-    git           = require('gulp-git'),
     gulp          = require('gulp'),
-    include       = require('gulp-include'),
     minimist      = require('minimist'),
     rename        = require('gulp-rename'),
     replace       = require('gulp-replace'),
-    runSequence   = require('run-sequence'),
-    sass          = require('gulp-sass'),
-    sourcemaps    = require('gulp-sourcemaps'),
     stylelint     = require('gulp-stylelint'),
     swig          = require('gulp-swig'),
-    tag_version   = require('gulp-tag-version'),
     zip           = require('gulp-zip');;
 
 var config = {
@@ -34,7 +27,7 @@ var options = minimist(process.argv.slice(2), args);
 gulp.task('bump', function() {
   // bump the package version
   // get all the files to bump version in
-  return gulp.src(['./package.json', './bower.json'])
+  return gulp.src(['./package.json'])
     // bump the version number in those files
     .pipe(bump({type: options.semver}))
     // save it back to filesystem
