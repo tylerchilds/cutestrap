@@ -66,8 +66,8 @@ html {
 
 body {
     box-sizing: border-box;
-    background-color: var(--color-neutral-tinted);
-    color: var(--color-neutral-shaded);
+    background-color: var(--color-neutral-tint4);
+    color: var(--color-neutral-shade4);
     font-family: var(--font-body);
     min-height: 100%;
     position: relative;
@@ -127,7 +127,7 @@ samp,
 kbd {
     background-color: var(--color-neutral-tint3);
     font-size: var(--font-size);
-    color: var(--color-primary-shade);
+    color: var(--color-primary-shade1);
     font-family: var(--font-mono);
     line-height: 1;
 }
@@ -320,7 +320,7 @@ label,
 select,
 button,
 textarea {
-    color: var(--color-neutral-shaded);
+    color: var(--color-neutral-shade4);
     display: block;
     padding: var(--rhythm-half);
     resize: none;

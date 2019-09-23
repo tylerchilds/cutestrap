@@ -62,14 +62,14 @@ Styleguide 4.0
 
 .field [type=checkbox] + .label,
 .field [type=radio] + .label {
-    color: var(--color-neutral-shaded);
+    color: var(--color-neutral-shade4);
     cursor: pointer;
     display: inline-block;
     padding-left: var(--rhythm);
 }
 
 .field *:not([type=radio]):not([type=checkbox]) + .label {
-    background-color: var(--color-neutral-tinted);
+    background-color: var(--color-neutral-tint4);
     font-size: var(--rhythm-half);
     position: absolute;
     left: var(--rhythm-sixteenth);
@@ -82,7 +82,7 @@ Styleguide 4.0
 .field input,
 .field textarea,
 .field select {
-    background-color: var(--color-neutral-tinted);
+    background-color: var(--color-neutral-tint4);
     border: 1px solid var(--color-neutral-shade1);
     border-radius: var(--border-radius);
     box-sizing: border-box;
@@ -146,7 +146,7 @@ Styleguide 4.1
 
 .field [type=checkbox] + .label::before,
 .field [type=radio] + .label::before {
-    background-color: var(--color-neutral-tinted);
+    background-color: var(--color-neutral-tint4);
     border: 2px solid var(--color-neutral-shade1);
     content: '';
     height: var(--rhythm-half);
@@ -161,7 +161,7 @@ Styleguide 4.1
 .field [type=radio] + .label::after {
     background-color: var(--color-primary);
     border: 2px solid transparent;
-    color: var(--color-neutral-tinted);
+    color: var(--color-neutral-tint4);
     height: var(--rhythm-fourth);
     left: var(--rhythm-eighth);
     position: absolute;

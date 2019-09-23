@@ -36,17 +36,17 @@ Styleguide 1.0
 
 html {
     --border-radius: 4px;
-    --color-primary-tint: hsl(350, 80%, 60%);
+    --color-primary-tint1: hsl(350, 80%, 60%);
     --color-primary: hsl(350, 80%, 45%);
-    --color-primary-shade: hsl(350, 80%, 35%);
-    --color-accent-tint: hsl(170, 80%, 60%);
+    --color-primary-shade1: hsl(350, 80%, 35%);
+    --color-accent-tint1: hsl(170, 80%, 60%);
     --color-accent: hsl(170, 80%, 45%);
-    --color-accent-shade: hsl(170, 80%, 35%);
+    --color-accent-shade1: hsl(170, 80%, 35%);
     --color-link: hsl(230, 60%, 50%);
     --color-link-visited: hsl(290, 60%, 50%);
     --color-link-hover: hsl(230, 80%, 60%);
     --color-link-active: hsl(350, 60%, 50%);
-    --color-neutral-tinted: hsl(170, 10%, 98%);
+    --color-neutral-tint4: hsl(170, 10%, 98%);
     --color-neutral-tint3: hsl(170, 10%, 94%);
     --color-neutral-tint2: hsl(170, 10%, 85%);
     --color-neutral-tint1: hsl(170, 10%, 68%);
@@ -54,8 +54,8 @@ html {
     --color-neutral-shade1: hsl(170, 10%, 41%);
     --color-neutral-shade2: hsl(170, 10%, 30%);
     --color-neutral-shade3: hsl(170, 10%, 18%);
-    --color-neutral-shaded: hsl(170, 10%, 2%);
-    --focus-outline: var(--rhythm-twelfth) dotted var(--color-primary-tint);
+    --color-neutral-shade4: hsl(170, 10%, 2%);
+    --focus-outline: var(--rhythm-twelfth) dotted var(--color-primary-tint1);
     --focus-outline-offset: var(--rhythm-twelfth);
     --font-family: 'Avenir', 'Avenir Next', 'Helvetica Neue', 'Segoe UI', 'Verdana', sans-serif;
     --font-mono: 'Consolas', 'Monaco', 'Courier New', monospace;

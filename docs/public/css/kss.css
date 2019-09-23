@@ -24,7 +24,7 @@
 
 /* Navigation Styles */
 .navigation {
-    background: var(--color-neutral-tinted);
+    background: var(--color-neutral-tint4);
     border-right: 1px solid var(--color-neutral-tint2);
     grid-area: navigation;
     margin-top: -1px;
@@ -57,7 +57,7 @@
 
 /* Content Styles */
 .footer {
-    background: var(--color-neutral-tinted);
+    background: var(--color-neutral-tint4);
     grid-area: footer;
     min-width: 0;
     padding: var(--rhythm);
@@ -91,11 +91,11 @@
 }
 
 .primary.-shade {
-    --current-color: var(--color-primary-shade);
+    --current-color: var(--color-primary-shade1);
 }
 
 .primary.-tint {
-    --current-color: var(--color-primary-tint);
+    --current-color: var(--color-primary-tint1);
 }
 
 .link {
@@ -119,11 +119,11 @@
 }
 
 .accent.-tint {
-    --current-color: var(--color-accent-tint);
+    --current-color: var(--color-accent-tint1);
 }
 
 .accent.-shade {
-    --current-color: var(--color-accent-shade);
+    --current-color: var(--color-accent-shade1);
 }
 
 .neutral {
@@ -131,7 +131,7 @@
 }
 
 .neutral.-shaded {
-    --current-color: var(--color-neutral-shaded);
+    --current-color: var(--color-neutral-shade4);
 }
 
 .neutral.-shade1 {
@@ -147,7 +147,7 @@
 }
 
 .neutral.-tinted {
-    --current-color: var(--color-neutral-tinted);
+    --current-color: var(--color-neutral-tint4);
 }
 
 .neutral.-tint1 {
