@@ -5,7 +5,7 @@
 
 	<title>{% if page.title %}{{ page.title }}{% endif %} | {{ site.title }}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-	<link rel="stylesheet" href="{{ "/css/versions/cutestrap.2.0.0.beta.min.css" | prepend: site.baseurl }}?bustamove={{ site.cache_buster }}">
+	<link rel="stylesheet" href="{{ "/css/versions/cutestrap.bleeding.css" | prepend: site.baseurl }}?bustamove={{ site.cache_buster }}">
 	<link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}?bustamove={{ site.cache_buster }}">
 	{% if page.css %}
 		<link rel="stylesheet" href="{{ "/css/pages/" | prepend: site.baseurl }}{{ page.css }}?bustamove={{ site.cache_buster }}">

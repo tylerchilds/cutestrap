@@ -13,6 +13,6 @@ description: >
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.cutestrap.com" # the base hostname & protocol for your site
 tagline: A sassy, opinionated CSS Framework. A tiny alternative to Bootstrap.
-
+cache_buster: 20190923_0
 # Build settings
 markdown: kramdown
