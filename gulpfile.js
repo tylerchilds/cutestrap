@@ -1,5 +1,5 @@
 // Include Our Plugins
-var bump          = require('gulp-bump'),
+const bump          = require('gulp-bump'),
     clean         = require('gulp-clean'),
     concat        = require('gulp-concat'),
     cssmin        = require('gulp-cssmin'),
@@ -13,16 +13,16 @@ var bump          = require('gulp-bump'),
     swig          = require('gulp-swig'),
     zip           = require('gulp-zip');;
 
-var config = {
+const config = {
   packages: './node_modules'
 };
 
-var args = {
+const args = {
   string: 'defcon',
   default: { defcon: process.env.NODE_ENV || 'patch' }
 };
 
-var options = minimist(process.argv.slice(2), args);
+const options = minimist(process.argv.slice(2), args);
 
 gulp.task('bump', function() {
   // bump the package version
@@ -88,11 +88,11 @@ gulp.task('kss-html', gulp.series('temp', function(){
 
 // KSS for CSS documentation
 gulp.task('kss', gulp.series('kss-html', function(cb) {
-  var options = {
+  const options = {
     continueOnError: false,
     pipeStdout: true
   };
-  var reportOptions = {
+  const reportOptions = {
     err: true,
     stderr: true,
     stdout: true
