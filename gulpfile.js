@@ -58,7 +58,8 @@ gulp.task('distify', function() {
     'src/css/grid.css',
     'src/css/wrappers.css',
     'src/css/utilities.css',
-  ]).pipe(concat('cutestrap.css'))
+  ]).pipe(gulp.dest('./dist/css/src'))
+    .pipe(concat('cutestrap.css'))
     .pipe(gulp.dest('./dist/css/'))
     .pipe(cssmin())
 		.pipe(rename({suffix: '.min'}))
@@ -67,7 +68,6 @@ gulp.task('distify', function() {
 
 // Move source over for compiling
 gulp.task('temp', function(){
-  // Sass
   return gulp.src('./src/css/**/*.css')
     .pipe(gulp.dest('./temp/css/'));
 
