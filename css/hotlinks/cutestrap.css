@@ -68,12 +68,6 @@ body {
     line-height: var(--line-height);
 }
 
-@media (max-width: 65rem) {
-    * {
-        --rhythm: 1.5rem;
-    }
-}
-
 /*
 
 Base
@@ -135,17 +129,16 @@ Styleguide 2.0
     outline-offset: var(--focus-outline-offset);
 }
 
-html {
+html,
+body {
     box-sizing: border-box;
-    height: 100%;
+    min-height: 100%;
 }
 
 body {
-    box-sizing: border-box;
     background-color: var(--color-neutral-tint4);
     color: var(--color-neutral-shade4);
     font-family: var(--font-body);
-    min-height: 100%;
     position: relative;
 }
 
@@ -602,7 +595,7 @@ Styleguide 4.0
 }
 
 .field {
-    display: block;
+    display: flex;
     margin-bottom: var(--rhythm);
     position: relative;
     text-align: left;
@@ -621,14 +614,13 @@ Styleguide 4.0
 }
 
 .field *:not([type=radio]):not([type=checkbox]) + .label {
-    background-color: var(--color-neutral-tint4);
     font-size: var(--rhythm-half);
     position: absolute;
     left: var(--rhythm-sixteenth);
     line-height: 1;
     padding: var(--rhythm-fourth) var(--rhythm-fourth) 0;
     right: var(--rhythm-sixteenth);
-    top: var(--rhythm-sixteenth);
+    top: 0;
 }
 
 .field input,

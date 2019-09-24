@@ -18,6 +18,6 @@
     "postinstall": "cp -r ./node_modules/cutestrap/dist/css/* ./css/hotlinks"
   },
   "dependencies": {
-    "cutestrap": "^2.0.0-0"
+    "cutestrap": "^2.0.0-2"
   }
 }
