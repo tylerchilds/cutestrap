@@ -30,3 +30,5 @@ Contributors are welcome, just follow these few guidelines:
 All versions below 2.\* are licensed under the MIT License, while everything after is GPLv3.
 
 If you would like to use Cutestrap in non GPLv3 projects, you may make a donation to charity and I'll grant you an MIT license.
+
+If you disagree, I'm open to discussion and [we can talk about it on this thread](https://github.com/tylerchilds/cutestrap/pull/48#issuecomment-525944427) where I've established my initial thoughts.
