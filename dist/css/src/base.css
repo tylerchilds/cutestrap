@@ -59,17 +59,16 @@ Styleguide 2.0
     outline-offset: var(--focus-outline-offset);
 }
 
-html {
+html,
+body {
     box-sizing: border-box;
-    height: 100%;
+    min-height: 100%;
 }
 
 body {
-    box-sizing: border-box;
     background-color: var(--color-neutral-tint4);
     color: var(--color-neutral-shade4);
     font-family: var(--font-body);
-    min-height: 100%;
     position: relative;
 }
 

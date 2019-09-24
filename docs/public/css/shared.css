@@ -1,5 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Pacifico);
 
+@media (max-width: 65rem) {
+    * {
+        --rhythm: 1.5rem;
+    }
+}
+
 html[data-theme="dark"] {
     --color-primary-shade1: hsl(350, 80%, 60%);
     --color-primary: hsl(350, 80%, 45%);
