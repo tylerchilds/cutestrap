@@ -1,0 +1,5 @@
+iframe {
+  border: var(--rhythm-half) solid var(--color-neutral-tint3);
+  height: calc(20 * var(--rhythm));
+  width: 100%;
+}
