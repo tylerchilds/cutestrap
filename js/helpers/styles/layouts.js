@@ -40,7 +40,6 @@ body {
 
 /* Navigation Styles */
 .navigation {
-  background: var(--color-neutral-tint4);
   grid-area: navigation;
   padding: var(--rhythm-double) var(--rhythm-half) var(--rhythm);
 }
