@@ -12,7 +12,7 @@ description: >
   A pure CSS framework with vertical rhythm, consistent form fields and a dead simple grid.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.cutestrap.com" # the base hostname & protocol for your site
-tagline: A strong, independent CSS Framework. Only 2.7Kb minified & gzipped.
+tagline: A strong, independent CSS Framework. Only 2.7KB minified & gzipped.
 cache_buster: 20190923_0
 # Build settings
 markdown: kramdown
