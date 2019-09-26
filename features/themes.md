@@ -87,7 +87,7 @@ html {
 
 ### Fonts
 
-The fonts for Cutestrap can be easily swapped out by updating the `--font-headeing`
+The fonts for Cutestrap can be easily swapped out by updating the `--font-heading`
 and `--font-body` custom properties with new values.
 
 ```
