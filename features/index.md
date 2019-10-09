@@ -6,7 +6,7 @@ permalink: /features/
 
 ## Getting Started
 
-Cutestrap Two has evolved in quite a few ways and packs a mighty punch for such
+Cutestrap has evolved in quite a few ways and packs a mighty punch for such
 a small project. It's best to imagine if it was an animal, it would be a Mantis
 Shrimp. I'll leave you to come up with metaphors for other CSS Frameworks.
 

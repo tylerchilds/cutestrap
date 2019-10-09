@@ -1,6 +1,7 @@
 const landing = `
 body{
   padding: var(--rhythm) var(--rhythm-half);
+  margin: 0 auto;
   max-width: 65rem;
 }
 .header {
