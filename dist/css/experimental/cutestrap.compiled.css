@@ -730,10 +730,11 @@ Styleguide 4.1
     border-left: calc((1/4) * 2rem) solid transparent;
     border-right: calc((1/4) * 2rem) solid transparent;
     border-top: calc((1/4) * 2rem) solid hsl(170, 10%, 41%);
+    bottom: calc(-2 * calc((1/3) * 2rem));
     height: 0;
+    pointer-events: none;
     position: absolute;
     right: calc((1/2) * 2rem);
-    bottom: calc(-2 * calc((1/3) * 2rem));
     width: 0;
 }
 

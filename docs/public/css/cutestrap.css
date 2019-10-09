@@ -664,10 +664,11 @@ Styleguide 4.1
     border-left: var(--rhythm-fourth) solid transparent;
     border-right: var(--rhythm-fourth) solid transparent;
     border-top: var(--rhythm-fourth) solid var(--color-neutral-shade1);
+    bottom: calc(-2 * var(--rhythm-third));
     height: 0;
+    pointer-events: none;
     position: absolute;
     right: var(--rhythm-half);
-    bottom: calc(-2 * var(--rhythm-third));
     width: 0;
 }
 
