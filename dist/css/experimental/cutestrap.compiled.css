@@ -83,6 +83,10 @@ Styleguide 2.0
     outline-offset: calc((1/12) * 2rem);
 }
 
+html {
+    overflow-x: hidden;
+}
+
 html,
 body {
     box-sizing: border-box;
@@ -268,6 +272,7 @@ hr::before {
     background-color: hsl(170, 10%, 68%);
     content: '';
     height: 1px;
+    left: 0;
     position: absolute;
     top: 50%;
     width: 100%;

@@ -59,6 +59,10 @@ Styleguide 2.0
     outline-offset: var(--focus-outline-offset);
 }
 
+html {
+    overflow-x: hidden;
+}
+
 html,
 body {
     box-sizing: border-box;
@@ -191,6 +195,7 @@ hr::before {
     background-color: var(--color-neutral-tint1);
     content: '';
     height: 1px;
+    left: 0;
     position: absolute;
     top: 50%;
     width: 100%;
