@@ -1,4 +1,4 @@
-# Cutestrap
+# Cutestrap - LOVE THIS PROJECT
 
 [Docs/Demo](https://www.cutestrap.com/)
 
