@@ -4,13 +4,13 @@
 
 ## Installation Steps
 
-To use the CSS as is, you can install using npm or just download cutestrap.zip:
+To use the CSS as it is, you can install using npm or just download cutestrap.zip:
 
 ```
 npm i cutestrap
 ```
 
-### Development
+### Development guide
 
 After cloning, you'll first need to install dependencies by running `npm run setup`.
 
