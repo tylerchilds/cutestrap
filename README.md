@@ -1,4 +1,4 @@
-# Cutestrap
+# Cutestrap v2
 
 [Docs/Demo](https://www.cutestrap.com/)
 
