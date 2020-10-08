@@ -2,15 +2,15 @@
 
 [Docs/Demo](https://www.cutestrap.com/)
 
-## Installation
+## Installation Steps
 
-To use the CSS as is, you can install using npm or just download cutestrap.zip:
+To use the CSS as it is, you can install using npm or just download cutestrap.zip:
 
 ```
-npm install cutestrap
+npm i cutestrap
 ```
 
-### Development
+### Development guide
 
 After cloning, you'll first need to install dependencies by running `npm run setup`.
 
@@ -25,7 +25,7 @@ Contributors are welcome, just follow these few guidelines:
 * Avoid checking in compiled files (dist and docs folders) as this will reduce merge conflicts with master
 * Pass stylelint checks
 
-### License
+### License Authentication
 
 All versions below 2.\* are licensed under the MIT License, while everything after is GPLv3.
 
