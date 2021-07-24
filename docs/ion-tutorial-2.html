@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Home</title>
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-touch-fullscreen" content="yes">
+
+    <link rel="stylesheet" href="demo.css?CACHEBUST">
+  </head>
+  <body>
+    <a href="./index.html">Back to Home</a>
+    <main id="main">
+      <h1>
+        Documentation: Ion Tutorial 2
+      </h1>
+      <p>
+        Sorry about the alert!
+      </p>
+
+      <p>
+        If you'll notice, we passed an alert function to our relay. Our relay called it immediately with the most recent state.
+      </p>
+
+      <p>
+        Starting from the top, we're setting a variable called `tag`. We then set our clicked state to be 0. That's the value from the alert.
+      </p>
+
+      <p>
+        Next, we've got an event that listens for a click on our button. After a click, it sets the clicked state to be 1. Every time the button is clicked, an alert will display with 1.
+      </p>
+
+      <button>Click Me</button>
+
+<pre><xmp><button>Click Me</button>
+
+<script type="module">
+  import {
+    set,
+    on,
+    relay
+  } from '../js/vendor/ion/app.js?CACHEBUST'
+
+  const tag = 'button'
+
+  set(tag, { clicked: 0 })
+
+  on('click', tag, ({ target }) => {
+    set(tag, { clicked: 1 })
+  })
+
+  relay(state => {
+    alert( JSON.stringify(state[tag]) )
+  })
+</script></xmp></pre>
+
+      <script type="module">
+        import {
+          set,
+          on,
+          relay
+        } from '../js/vendor/ion/app.js?CACHEBUST'
+
+        const tag = 'button'
+
+        set(tag, { clicked: 0 })
+
+        on('click', tag, ({ target }) => {
+          set(tag, { clicked: 1 })
+        })
+
+        relay(state => {
+          alert( JSON.stringify(state[tag]) )
+        })
+      </script>
+      <hr/>
+      <p>
+        <a href="./ion-tutorial-1.html">Back: Ion Tutorial 1</a>
+        <a href="./ion-tutorial-3.html">Next: Ion Tutorial 3</a>
+      </p>
+    </main>
+  </body>
+</html>

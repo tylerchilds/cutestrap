@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Home</title>
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-touch-fullscreen" content="yes">
+
+    <link rel="stylesheet" href="demo.css?CACHEBUST">
+  </head>
+  <body>
+    <a href="./index.html">Back to Home</a>
+    <main id="main">
+      <h1>
+        Documentation: Demo
+      </h1>
+
+      <p>
+        At this point, you might be asking "but why?" and it is a great question. There are so many frameworks already that are super battle tested.
+      </p>
+      <p>
+        The primary advantage is the ability to write Self-Aware HTML. In practice, this means HTML can be used to invoke JavaScript functions whenever the document has changed.
+      </p>
+      <p>
+        All custom elements from Cutestrap have been loaded onto this page for demonstration purposes. This demo provides a walk through of the <code>&lt;cute-reddit&gt;</code> tag.
+      </p>
+
+      <h2>Step 1: Select a Subreddit</h2>
+      <select class="reddit-list">
+        <option value="all">all</option>
+        <option value="ama">ama</option>
+        <option value="funny">funny</option>
+      </select>
+
+      <h2>Step 2: Select a sort mode</h2>
+      <p>
+        The <code>&lt;cute-reddit&gt;</code> tag takes optional attributes for <code>r</code> and  <code>sort</code>.
+      </p>
+
+      <fieldset>
+        <legend>Attributes</legend>
+        <sort-options></sort-options>
+      </fieldset>
+
+      <h2>Step 3: Explore</h2>
+      <p>
+        The code here is editable, try different HTML out.
+      </p>
+      <fieldset>
+        <legend>Input</legend>
+        <textarea style="width: 100%; height: 4rem"></textarea>
+      </fieldset>
+      <fieldset>
+        <legend>Output</legend>
+        <demoarea></demoarea>
+      </fieldset>
+
+      <hr/>
+      <details>
+        <summary>View Code</summary>
+        <script type="module" style="display: block;">
+import '../js/cutestrap.js?CACHEBUST';
+
+import {
+  get,
+  set,
+  on,
+  load
+} from '../js/vendor/ion/app.js?CACHEBUST'
+
+
+const initial = { content: '', sort: null, r: null, version: 0 }
+const code = () => (get('demo') || initial).content
+const version = () => (get('demo') || initial).version
+const props = () => (get('demo') || initial)
+
+const sortButtons = (active) => ['hot', 'top']
+  .map(key => 
+    `<button class="sort-option ${active === key ? 'active' : ''}">${key}</button>`
+  ).join('');
+
+function update() {
+  const { reddit, sort } = props()
+  const attributes = `r="${reddit}" ${ sort ? `sort="${sort}"` : '' }`
+
+  set('demo', {
+    content: `<cute-reddit ${attributes}></cute-reddit>`,
+    version: version() + 1
+  });
+}
+
+on('render', 'sort-options', ({target}) => {
+  const active = props().sort
+  target.innerHTML = sortButtons(active);
+});
+
+on('render', '.reddit-list', ({target}) => {
+  const active = props().reddit
+  target.value = active
+})
+
+on('click', '.sort-option', ({target}) => {
+  set('demo', {
+    sort: target.innerText
+  })
+  update()
+})
+
+on('change', '.reddit-list', ({ target }) => {
+  set('demo', {
+    reddit: target.value
+  })
+  update()
+})
+
+let lastVersion = 0;
+
+on('change', 'textarea', ({target}) => {
+  update(target.value);
+})
+
+on('render', 'textarea', ({target}) => {
+  if(version() !== lastVersion) {
+    target.value = code();
+  }
+});
+
+on('render', 'demoarea', ({target}) => {
+  if(version() !== lastVersion) {
+    lastVersion = version();
+    target.innerHTML = code();
+  }
+});
+
+load('demo');
+        </script>
+      </details>
+
+      <hr/>
+      <p>
+        <a href="./ion-tutorial-3.html">Last: Ion Tutorial 3</a>
+      </p>
+    </main>
+  </body>
+</html>
+

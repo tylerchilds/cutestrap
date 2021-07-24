@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Home</title>
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-touch-fullscreen" content="yes">
+
+    <link rel="stylesheet" href="demo.css?CACHEBUST">
+  </head>
+  <body>
+    <a href="./index.html">Back to Home</a>
+    <main id="main">
+      <h1>
+        Documentation: Ion
+      </h1>
+      <p>
+        Ion was written using modern web technologies. The core of the library was written as a portable, reusable web application called Ion.
+      </p>
+      <p>
+        The rationale for writing fresh code is two-fold:
+      </p>
+      <ul>
+        <li>
+          Build a lightweight solution to the two most common challenges in web development: Event Delegation and State Management.
+          <ul><li>
+            (We then crank these up to <a href="https://en.wikipedia.org/wiki/Eleven_(Stranger_Things)">Eleven</a>.)
+          </li></ul>
+        </li>
+        <li>
+          Do it with zero dependencies outside of a modern web browser.
+        </li>
+      </ul>
+
+      <p>
+      Browser Support: the most recent feature utilized is <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules">JavaScript Modules</a>. This leaves our support tail at Firefox 60, released 2018-05-09.
+      </p>
+
+      <h2>Event Delegation</h2>
+      <p>
+        Our event delegation is a thin wrapper around <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/matches">matches</a>. By combining the two, we get a single function call for delegating events to elements.
+      </p>
+      <p>
+        Modern web applications are expected to dynamically update content based on state changes. We've added a custom 'render' event to notify elements when the state changes.
+      </p>
+      <p>
+        We also utilize a <a href="https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver">MutationObserver</a> under the hood. Using the same 'render' event, an element is also notified when itself is updated. This enables our HTML to become self-aware. Self-aware HTML is able to make external network requests based on the document. (And that's just one example!)
+      </p>
+
+      <h2>State Management</h2>
+      <p>
+        Our state management is backed by <a href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">IndexedDB</a>. A string key is used to identify a piece of data within the storage mechanism.
+      </p>
+      <p>
+        Changes to state will notify any callback functions that have been provided. This is how we notify elements that are listening for our 'render' event.
+      </p>
+
+      <hr/>
+      <p>
+        <a href="./index.html">Last: Home</a>
+        <a href="./ion-core-api.html">Next: Ion Core API</a>
+      </p>
+    </main>
+  </body>
+</html>
+

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Home</title>
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-touch-fullscreen" content="yes">
+
+    <link rel="stylesheet" href="demo.css?CACHEBUST">
+  </head>
+  <body>
+    <a href="./index.html">Back to Home</a>
+    <main id="main">
+      <h1>
+        Documentation: Ion Core API
+      </h1>
+      <p>
+        The core API is five functions: on, get, set, load, relay.
+      </p>
+      <h2>
+        Event Delegation
+      </h2>
+
+      <h3>
+        on(<a href="https://developer.mozilla.org/en-US/docs/Web/API/Event">Event</a>, <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors">Selector</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/Events/Event_handlers">Event Handler</a>) : function
+      </h3>
+      <p>
+        Listens for an event on the document. During that event, if the target matches the selector, the event handler is called during the capture phase.
+      </p>
+
+      <h2>
+        State Management
+      </h2>
+
+      <h3>
+        get(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>) : <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a> | <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a>
+      </h3>
+      <p>
+        Looks into state and returns if the provided string is a key on the state object.
+      </p>
+      <h3>
+        set(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>, [<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions">function</a>])
+      </h3>
+      <p>
+        Merges the provided object with the portion of the state stored in the provided string. An optional function may be provided to manually merge the existing state with the new data.
+      </p>
+      <p>
+        The potion of the state is also backed up into IndexedDB with the string key as the identifier.
+      </p>
+      <h3>
+        relay(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions">function</a>)
+      </h3>
+      <p>
+        The provided callback function will be invoked whenever state changes and will be passed the latest state as the sole argument.
+      </p>
+      <h3>
+        load(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)
+      </h3>
+      <p>
+        Recovers a portion of state from IndexedDB. Any relays will be notified after the recovered state is ready.
+      </p>
+
+      <hr/>
+      <p>
+        <a href="./ion.html">Last: Ion</a>
+        <a href="./ion-tutorial-1.html">Next: Ion Tutorial 1</a>
+      </p>
+    </main>
+  </body>
+</html>
+

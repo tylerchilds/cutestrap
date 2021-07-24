@@ -1,0 +1,12 @@
+body {
+  margin: 2rem auto;
+  max-width: 720px;
+}
+
+carmen-tile {
+  display: block;
+}
+
+.active {
+  background: #bbbbbb;
+}
