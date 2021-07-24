@@ -1,259 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html class="no-js" lang="">
 
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Cutestrap: Custom Website Generator</title>
-    <meta name="description" content="A pure CSS framework with vertical rhythm, consistent form fields and a dead simple grid.
-                                       ">
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
 
-    <link rel="stylesheet" href="/css/hotlinks/cutestrap.min.css?bustamove=201909230">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
 
-    <link rel="stylesheet" href="/css/main.css?bustamove=201909230">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
 
-    <link rel="stylesheet" href="/css/pages/customizations.css?bustamove=201909230">
-  </head>
+  <meta name="theme-color" content="#fafafa">
+</head>
 
+<body>
 
-  <body>
-    <article class="page wrapper">
-      <header class="page-header">
-        <h1 class="page-title title" itemprop="name headline">Webpage Generator</h1>
-      </header>
-      <main class="page-content wrapper">
-        <h3 id="options">Options</h3>
+  <!-- Add your site or application content here -->
+  <p>Hello world! This is HTML5 Boilerplate.</p>
+  <script src="js/vendor/modernizr-3.11.7.min.js"></script>
+  <script src="js/app.js"></script>
 
-        <form id="customization-form">
-          <div class="grid -medium" style="--columns: 2;">
-            <label class="field">
-              <select id="theme">
-                <option selected="selected" value="default">
-                Default
-                </option>
-                <option value="dark">Dark</option>
-                <option value="legalpad">Legal Pad</option>
-                <option value="foobar">Foobar</option>
-              </select>
-              <span class="label" for="select">Theme</span>
-            </label>
-            <label class="field">
-              <select id="template">
-                <option selected="selected" value="default">
-                None
-                </option>
-                <option value="about">About</option>
-              </select>
-              <span class="label" for="select">Template</span>
-            </label>
-            <label class="field">
-              <select id="layout">
-                <option selected="selected" value="none">
-                None
-                </option>
-                <option value="landing">Landing</option>
-                <option value="sidebar">Sidebar</option>
-              </select>
-              <span class="label" for="select">Layout</span>
-            </label>
-            <label class="field" style="display: none;">
-              <select id="rhythm">
-                <option value="1.5rem">1.5rem</option>
-                <option value="1.6rem">1.6rem</option>
-                <option value="1.7rem">1.7rem</option>
-                <option value="1.8rem">1.8rem</option>
-                <option value="1.9rem">1.9rem</option>
-                <option selected="selected" value="2rem">
-                2rem
-                </option>
-                <option value="2.1rem">2.1rem</option>
-                <option value="2.2rem">2.2rem</option>
-                <option value="2.3rem">2.3rem</option>
-                <option value="2.4rem">2.4rem</option>
-                <option value="2.5rem">2.5rem</option>
-              </select>
-              <span class="label" for="select">Rhythm</span>
-            </label>
-            <label class="field" style="display: none;">
-              <select id="line-height">
-                <option value="1">1</option>
-                <option value="1.1">1.1</option>
-                <option value="1.2">1.2</option>
-                <option value="1.3">1.3</option>
-                <option selected="selected" value="1.4">
-                1.4 
-                </option>
-                <option value="1.5">1.5</option>
-                <option value="1.6">1.6</option>
-                <option value="1.7">1.7</option>
-                <option value="1.8">1.8</option>
-                <option value="1.9">1.9</option>
-                <option value="2">2</option>
-              </select>
-              <span class="label" for="select">Line Height</span>
-            </label>
-          </div>
-          <label class="field" style="display: none;">
-            <input type="checkbox" id="responsive" />
-            <span class="label">Responsive Rhythm</span>
-          </label>
-        </form>
-
-        <a class="button" href="javascript:;" id="customizer-demo">
-          Preview
-        </a>
-
-        <script src="/js/main.js?bustamove=201909230"></script>
-
-        <script>
-
-async function download(url) {
-  return await fetch(url)
-    .then(r => r.status < 300 ? r.text() : '' )
-    .catch(console.error);
-}
-
-function boilerplate(config, content) {
-  return `<!DOCTYPE html>
-    <html lang="en">
-    <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Cutestrap Customizer</title>
-
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="apple-touch-fullscreen" content="yes">
-
-    <link href="https://www.cutestrap.com/css/hotlinks/cutestrap.min.css" rel="stylesheet" type="text/css" />
-<style>
-  ${config.css}
-</style>
-    </head>
-    <body>
-      ${content}
-    </body>
-    </html>`;
-}
-
-function body(template) {
-
-  if(!template) {
-    return ``;
-  }
-
-  return `
-    <header class="header">
-    <h1><a href="#">Title</a></h1>
-    </header>
-
-    <nav class="navigation">
-    <ul>
-    <li>
-    <a href="#">Link 1</a>
-    </li>
-    <li>
-    <a href="#">Link 2</a>
-    </li>
-    <li>
-    <a href="#">Link 3</a>
-    </li>
-    </ul>
-    </nav>
-
-    <main class="main">
-      ${template}
-    </main>
-
-    <footer class="footer">
-    <section class="grid">
-    <p>
-    &hearts; <a href="https://www.tylerchilds.com">Tyler Childs</a>
-    </p>
-    <p class="ta-right">
-  ©2020
-    </p>
-    </section>
-    </footer>
-  `;
-}
-
-init();
-
-function init() {
-  const inputs = document.querySelectorAll('#customization-form select, #customization-form input');
-
-  [...inputs].map(el => {
-    el.addEventListener('change', render)
-  });
-
-  render();
-}
-
-async function render() {
-  const config = await getConfig();
-
-  const template = await download(`engine/templates/${config.template}.html`);
-  const content = body(template);
-  const webpage = boilerplate(config, content);
-
-  const blob = new Blob([webpage], { type: 'text/html' })
-  document.getElementById('customizer-demo').href = URL.createObjectURL(blob);
-}
-
-async function getConfig() {
-  const theme = document.getElementById('theme').value;
-  const template = document.getElementById('template').value;
-  const layout = document.getElementById('layout').value;
-  const rhythm = document.getElementById('rhythm').value;
-  const lineHeight = document.getElementById('line-height').value;
-  const responsive = document.getElementById('responsive').checked;
-
-  const css = await getStyles({
-    theme,
-    layout,
-    rhythm, 
-    lineHeight,
-    responsive
-  });
-
-  return { css, template }
-}
-
-async function getStyles({theme, layout, rhythm, lineHeight, responsive}) {
-  const rhythmFloat = parseFloat(rhythm);
-
-  const wildCardStyles = `* {
-    /* Sets our Baseline Grid */
-    --rhythm: ${rhythmFloat}rem;
-
-    /* Sets font-size relative to rhythm */
-    --line-height-ratio: ${lineHeight};
-  }
-  `;
-
-  const responsiveWildCard = `
-  @media (max-width: 55rem) {
-    * {
-      --rhythm: ${rhythmFloat - .3}rem;
-    }
-  }
-
-  @media (min-width: 110rem) {
-    * {
-      --rhythm: ${rhythmFloat + .3}rem;
-    }
-  }
-  `;
-
-  const responsiveStyles = responsive ? responsiveWildCard : '';
-  const themeStyles = await download(`engine/themes/${theme}.css`);
-  const layoutStyles = await download(`engine/layouts/${layout}.css`);
-  return `${wildCardStyles}${responsiveStyles}${themeStyles}${layoutStyles}`;
-}
-        </script>
-  </body>
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
 
 </html>
