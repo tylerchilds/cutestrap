@@ -1,0 +1,24 @@
+body{
+  padding: var(--rhythm) var(--rhythm-half);
+  margin: 0 auto;
+  max-width: 65rem;
+}
+.header {
+ text-align: center;
+}
+
+.navigation {
+  text-align: center;
+}
+
+.navigation ul {
+  display: flex;
+  list-style-type: none;
+  margin-left: 0;
+  justify-content: center;
+}
+
+.navigation li {
+  padding: 0 var(--rhythm-half);
+}
+

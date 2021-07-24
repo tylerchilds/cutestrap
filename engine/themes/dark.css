@@ -1,4 +1,3 @@
-const dark = `
 html {
   --color-primary-shade1: hsl(350, 80%, 60%);
   --color-primary: hsl(350, 80%, 45%);
@@ -20,28 +19,4 @@ html {
   --color-neutral-tint3: hsl(170, 10%, 18%);
   --color-neutral-tint4: hsl(170, 10%, 2%);
 }
-`;
 
-const legalpad = `
-html {
-  --color-primary-shade1: hsl(200, 80%, 60%);
-  --color-primary: hsl(200, 80%, 45%);
-  --color-primary-tint1: hsl(200, 80%, 35%);
-  --color-accent-shade1: hsl(50, 80%, 60%);
-  --color-accent: hsl(50, 80%, 45%);
-  --color-accent-tint1: hsl(50, 80%, 35%);
-}
-
-body {
-  background: hsl(50, 50%, 90%);
-  color: hsl(200, 50%, 10%);
-}
-`;
-
-const themes = {
-  dark,
-  legalpad
-};
-
-
-export default themes;

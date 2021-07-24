@@ -1,8 +1,0 @@
-<ul>
-  {% for category in site.categories %}
-    {% assign cat = category | first %}
-    <li>
-      <a href='/blog/category/{{ cat }}'>{{ site.data.cats[cat].name }}</a>
-    </li>
-  {% endfor %}
-</ul>

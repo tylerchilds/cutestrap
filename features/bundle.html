@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Tune Your Bundle | Cutestrap</title>
+  <meta name="description" content="A pure CSS framework with vertical rhythm, consistent form fields and a dead simple grid.
+">
+  
+    <link rel="stylesheet" href="/css/hotlinks/cutestrap.min.css?bustamove=201909230">
+  
+  <link rel="stylesheet" href="/css/main.css?bustamove=201909230">
+  
+  <link rel="canonical" href="http://localhost:4000/features/bundle">
+  <link rel="alternate" type="application/rss+xml" title="Cutestrap" href="http://localhost:4000/feed.xml">
+</head>
+
+
+  <body>
+    <div class="toolbar">
+  <h2 class="toolbar-logo">
+      <a href="/" class="title">C<span class="sublogo -hide-small">utestrap</span><span class="sublogo -show-small">s</span></a>
+  </h2>
+  <div class="toolbar-controls">
+    <span class="toolbar-size">
+        <span class="toolbar-label">Size:</span>
+        <button
+  aria-label="Small"
+  label="Small"
+  class="toolbar-button js-toolbar-toggle -small"
+  data-key="rhythm"
+  data-value="small"
+>
+  A
+</button>
+
+        <button
+  aria-label="Normal"
+  label="Normal"
+  class="toolbar-button js-toolbar-toggle -normal"
+  data-key="rhythm"
+  data-value="normal"
+>
+  A
+</button>
+
+        <button
+  aria-label="Large"
+  label="Large"
+  class="toolbar-button js-toolbar-toggle -large"
+  data-key="rhythm"
+  data-value="large"
+>
+  A
+</button>
+
+    </span>
+    <span class="toolbar-rhythm">
+        <span class="toolbar-label">Theme:</span>
+        <button
+  aria-label="Light"
+  label="Light"
+  class="toolbar-button js-toolbar-toggle -light"
+  data-key="theme"
+  data-value="light"
+>
+  A
+</button>
+
+        <button
+  aria-label="Dark"
+  label="Dark"
+  class="toolbar-button js-toolbar-toggle -dark"
+  data-key="theme"
+  data-value="dark"
+>
+  A
+</button>
+
+    </span>
+    <span class="toolbar-grid">
+        <span class="toolbar-label">Gridlines:</span>
+        <button
+  aria-label="Grid On"
+  label="Grid On"
+  class="toolbar-button js-toolbar-toggle -on"
+  data-key="grid"
+  data-value="on"
+>
+  A
+</button>
+
+        <button
+  aria-label="Grid Off"
+  label="Grid Off"
+  class="toolbar-button js-toolbar-toggle -off"
+  data-key="grid"
+  data-value="off"
+>
+  A
+</button>
+
+    </span>
+  </div>
+</div>
+
+
+    <article class="page wrapper">
+      <header class="page-header">
+        <h1 class="page-title title" itemprop="name headline">Tune Your Bundle</h1>
+      </header>
+      <main class="page-content wrapper">
+          <section class="page" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="page-content">
+    <h2 id="overview">Overview</h2>
+
+<p>Cutestrap is comprised of seven files, which come bundled as
+<a href="https://github.com/tylerchilds/cutestrap/blob/master/dist/css/cutestrap.css">cutestrap.css</a>.</p>
+
+<ul>
+  <li>core.css
+(<a href="https://docs.cutestrap.com/section-1.html">docs</a>,
+<a href="https://github.com/tylerchilds/cutestrap/blob/master/src/css/core.css">source</a>)</li>
+  <li>base.css
+(<a href="https://docs.cutestrap.com/section-2.html">docs</a>,
+<a href="https://github.com/tylerchilds/cutestrap/blob/master/src/css/base.css">source</a></li>
+  <li>buttons.css
+(<a href="https://docs.cutestrap.com/section-3.html">docs</a>,
+<a href="https://github.com/tylerchilds/cutestrap/blob/master/src/css/buttons.css">source</a>)</li>
+  <li>forms.css
+(<a href="https://docs.cutestrap.com/section-4.html">docs</a>,
+<a href="https://github.com/tylerchilds/cutestrap/blob/master/src/css/forms.css">source</a>)</li>
+  <li>grid.css
+(<a href="https://docs.cutestrap.com/section-5.html">docs</a>,
+<a href="https://github.com/tylerchilds/cutestrap/blob/master/src/css/grid.css">source</a>)</li>
+  <li>wrappers.css
+(<a href="https://docs.cutestrap.com/section-6.html">docs</a>,
+<a href="https://github.com/tylerchilds/cutestrap/blob/master/src/css/wrappers.css">source</a>)</li>
+  <li>utilities.css
+(<a href="https://docs.cutestrap.com/section-7.html">docs</a>,
+<a href="https://github.com/tylerchilds/cutestrap/blob/master/src/css/utilities.css">source</a>)</li>
+</ul>
+
+<p>If all of these features are overkill for your use case, you can pick and choose
+to use only the files you need. The only caveat is that all of the other files
+depend on <code class="highlighter-rouge">core.css</code>. So if you’re going an a la carte route, you’ll need that
+one file as your entree.</p>
+
+<h3 id="core">Core</h3>
+
+<p>This is where all the magic happens for Cutestrap. We establish all of our
+rhythm and typographic mixins on all elements, set our global variables on <code class="highlighter-rouge">html</code>,
+and set our baseline typography on the <code class="highlighter-rouge">body</code>.</p>
+
+<p>The reason all the other files depend on core is for the variables and mixins,
+which is while you’ll need this file at a minimum.</p>
+
+<h3 id="base">Base</h3>
+
+<p>This file is Cutestrap’s <a href="https://necolas.github.io/normalize.css/" target="_blank">Normalize.css</a>
+or <a href="https://meyerweb.com/eric/tools/css/reset/" target="_blank">Reset.css</a>,
+but it’s more opinionated than either of those, since it follows the baseline grid.</p>
+
+<p>Base does not have any classes and styles HTML elements directly. It follows
+browser defaults and web standards, such as link colors and underlines, but
+adds in its own flair.</p>
+
+<h3 id="buttons">Buttons</h3>
+
+<p>On the surface, this file provides out of the box classes for buttons, which
+you’ll need to use to get buttons to look like buttons. We don’t style button-like
+elements by default, since there are valid use cases where you might want to
+have button interactions on something that doesn’t look like a traditional button.</p>
+
+<p>Under the hood, the <code class="highlighter-rouge">.button</code> class is a powerful mixin using custom properties.
+Take a look at the source code for a better understanding to extend your own
+buttons.</p>
+
+<h3 id="forms">Forms</h3>
+
+<p>The one-form-class to rule them all is defined in this file: <code class="highlighter-rouge">.field</code>. This is
+a pretty overloaded class, but it is the main driver behind Cutestrap’s forms.
+It is the powerhouse that enables us to use the same syntax for the standard
+form controls.</p>
+
+<p>If you want forms that look nothing like what Cutestrap offers, you can leave
+this file out of your bundle.</p>
+
+<h3 id="grid">Grid</h3>
+
+<p>Our grids are really just a thin abstraction layer over CSS Grids. It really
+only supports equal sized columns by default, but also allows for control over
+the number of columns with a simple Custom Property. This should cover a vast
+majority of use cases without convoluting Cutestrap’s syntax and docs.</p>
+
+<p>If you need to do anything more advanced, definitely check out CSS Grid, because
+there are unlimited possibilities and too many to try and squeeze into some
+out-of-the-box grid system.</p>
+
+<h3 id="wrappers">Wrappers</h3>
+
+<p>The wrappers provide a simple way to bound and give white-space to your content.
+Their max-widths are sized using REMs, so they’ll be relative to the users
+zoom level or settings, but are optimized for visual pleasing line lengths
+that are conducive to reading.</p>
+
+<h3 id="utilities">Utilities</h3>
+
+<p>Sometimes a design calls for a minor one-off and it’s easy to add a new class
+for it to your CSS. But sometimes this makes your CSS messy or confusing when
+working with larger code-bases or larger teams.</p>
+
+<p>These are the least necessary items for Cutestrap, but they’re included because
+they are nice to have in real world workflows.</p>
+
+  </div>
+</section>
+
+      </main>
+    </article>
+
+    <footer class="grid footer">
+    
+        <div>
+            <h5>
+                
+                    <a href="/features">Features</a>
+                
+            </h5>
+            <ul>
+                
+                    <li>
+                        <a href="/features/themes">Themes</a>
+                    </li>
+                
+                    <li>
+                        <a href="/features/forms">Forms</a>
+                    </li>
+                
+                    <li>
+                        <a href="/features/typography">Typography</a>
+                    </li>
+                
+                    <li>
+                        <a href="/features/styleguide">Styleguide</a>
+                    </li>
+                
+                    <li>
+                        <a href="/features/bundle">Bundle</a>
+                    </li>
+                
+                    <li>
+                        <a href="/features/popsicle">Popsicle</a>
+                    </li>
+                
+            </ul>
+        </div>
+    
+        <div>
+            <h5>
+                
+                    <a href="https://docs.cutestrap.com">Docs</a>
+                
+            </h5>
+            <ul>
+                
+                    <li>
+                        <a href="https://docs.cutestrap.com/section-1.html">Core</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://docs.cutestrap.com/section-2.html">Base</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://docs.cutestrap.com/section-3.html">Buttons</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://docs.cutestrap.com/section-4.html">Forms</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://docs.cutestrap.com/section-5.html">Grid</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://docs.cutestrap.com/section-6.html">Wrappers</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://docs.cutestrap.com/section-7.html">Utilities</a>
+                    </li>
+                
+            </ul>
+        </div>
+    
+        <div>
+            <h5>
+                
+                    Pages
+                
+            </h5>
+            <ul>
+                
+                    <li>
+                        <a href="/about">About</a>
+                    </li>
+                
+                    <li>
+                        <a href="/customizations">Customizations</a>
+                    </li>
+                
+                    <li>
+                        <a href="/snippets">Snippets</a>
+                    </li>
+                
+                    <li>
+                        <a href="/cutelog">Cutelog</a>
+                    </li>
+                
+                    <li>
+                        <a href="/legacy/v1">Legacy</a>
+                    </li>
+                
+            </ul>
+        </div>
+    
+    <div>
+        <h5>Misc</h5>
+        <ul>
+            <li>
+                <a href="/feed.xml">Subscribe via RSS</a><br />
+            </li>
+            <li>
+                <a href="https://github.com/tylerchilds/cutestrap/issues" target="_blank">Report a Problem</a>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                Made with &hearts;,<br /><a href="https://www.tylerchilds.com">Tyler Childs</a>
+            </li>
+            <li>
+                &copy;2016-<script>document.write(new Date().getFullYear());</script>
+            </li>
+        </ul>
+    </div>
+</footer>
+
+    <script src="/js/main.js?bustamove=201909230"></script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-8248761-10', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+  </body>
+
+</html>

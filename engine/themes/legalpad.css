@@ -1,0 +1,14 @@
+html {
+  --color-primary-shade1: hsl(200, 80%, 60%);
+  --color-primary: hsl(200, 80%, 45%);
+  --color-primary-tint1: hsl(200, 80%, 35%);
+  --color-accent-shade1: hsl(50, 80%, 60%);
+  --color-accent: hsl(50, 80%, 45%);
+  --color-accent-tint1: hsl(50, 80%, 35%);
+}
+
+body {
+  background: hsl(50, 50%, 90%);
+  color: hsl(200, 50%, 10%);
+}
+

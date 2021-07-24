@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Customizations | Cutestrap</title>
+  <meta name="description" content="A pure CSS framework with vertical rhythm, consistent form fields and a dead simple grid.
+">
+  
+    <link rel="stylesheet" href="/css/hotlinks/cutestrap.min.css?bustamove=201909230">
+  
+  <link rel="stylesheet" href="/css/main.css?bustamove=201909230">
+  
+      <link rel="stylesheet" href="/css/pages/customizations.css?bustamove=201909230">
+  
+  <link rel="canonical" href="http://localhost:4000/customizations/">
+  <link rel="alternate" type="application/rss+xml" title="Cutestrap" href="http://localhost:4000/feed.xml">
+</head>
+
+
+  <body>
+    <div class="toolbar">
+  <h2 class="toolbar-logo">
+      <a href="/" class="title">C<span class="sublogo -hide-small">utestrap</span><span class="sublogo -show-small">s</span></a>
+  </h2>
+  <div class="toolbar-controls">
+    <span class="toolbar-size">
+        <span class="toolbar-label">Size:</span>
+        <button
+  aria-label="Small"
+  label="Small"
+  class="toolbar-button js-toolbar-toggle -small"
+  data-key="rhythm"
+  data-value="small"
+>
+  A
+</button>
+
+        <button
+  aria-label="Normal"
+  label="Normal"
+  class="toolbar-button js-toolbar-toggle -normal"
+  data-key="rhythm"
+  data-value="normal"
+>
+  A
+</button>
+
+        <button
+  aria-label="Large"
+  label="Large"
+  class="toolbar-button js-toolbar-toggle -large"
+  data-key="rhythm"
+  data-value="large"
+>
+  A
+</button>
+
+    </span>
+    <span class="toolbar-rhythm">
+        <span class="toolbar-label">Theme:</span>
+        <button
+  aria-label="Light"
+  label="Light"
+  class="toolbar-button js-toolbar-toggle -light"
+  data-key="theme"
+  data-value="light"
+>
+  A
+</button>
+
+        <button
+  aria-label="Dark"
+  label="Dark"
+  class="toolbar-button js-toolbar-toggle -dark"
+  data-key="theme"
+  data-value="dark"
+>
+  A
+</button>
+
+    </span>
+    <span class="toolbar-grid">
+        <span class="toolbar-label">Gridlines:</span>
+        <button
+  aria-label="Grid On"
+  label="Grid On"
+  class="toolbar-button js-toolbar-toggle -on"
+  data-key="grid"
+  data-value="on"
+>
+  A
+</button>
+
+        <button
+  aria-label="Grid Off"
+  label="Grid Off"
+  class="toolbar-button js-toolbar-toggle -off"
+  data-key="grid"
+  data-value="off"
+>
+  A
+</button>
+
+    </span>
+  </div>
+</div>
+
+
+    <article class="page wrapper">
+      <header class="page-header">
+        <h1 class="page-title title" itemprop="name headline">Customizations</h1>
+      </header>
+      <main class="page-content wrapper">
+          <section class="page" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="page-content">
+    <p>To demonstrate the power of Cutestrap and also provide custom out-of-the-box
+examples, you can use this form below to customize layout, themes, etc.</p>
+
+<p>You can copy and paste the code below to scaffold your project, but please
+replace the hotlinks with your own Cutestrap files.</p>
+
+<h3 id="options">Options</h3>
+
+<form id="customization-form">
+  <div class="grid -medium" style="--columns: 2;">
+    <label class="field">
+      <select id="theme">
+        <option selected="selected" value="default">
+          Default
+        </option>
+        <option value="dark">Dark</option>
+        <option value="legalpad">Legal Pad</option>
+      </select>
+      <span class="label" for="select">Theme</span>
+    </label>
+    <label class="field">
+      <select id="layout">
+        <option selected="selected" value="none">
+          None
+        </option>
+        <option value="landing">Landing</option>
+        <option value="sidebar">Sidebar</option>
+      </select>
+      <span class="label" for="select">Layout</span>
+    </label>
+    <label class="field">
+      <select id="rhythm">
+        <option value="1.5rem">1.5rem</option>
+        <option value="1.6rem">1.6rem</option>
+        <option value="1.7rem">1.7rem</option>
+        <option value="1.8rem">1.8rem</option>
+        <option value="1.9rem">1.9rem</option>
+        <option selected="selected" value="2rem">
+          2rem
+        </option>
+        <option value="2.1rem">2.1rem</option>
+        <option value="2.2rem">2.2rem</option>
+        <option value="2.3rem">2.3rem</option>
+        <option value="2.4rem">2.4rem</option>
+        <option value="2.5rem">2.5rem</option>
+      </select>
+      <span class="label" for="select">Rhythm</span>
+    </label>
+    <label class="field">
+      <select id="line-height">
+        <option value="1">1</option>
+        <option value="1.1">1.1</option>
+        <option value="1.2">1.2</option>
+        <option value="1.3">1.3</option>
+        <option selected="selected" value="1.4">
+          1.4 
+        </option>
+        <option value="1.5">1.5</option>
+        <option value="1.6">1.6</option>
+        <option value="1.7">1.7</option>
+        <option value="1.8">1.8</option>
+        <option value="1.9">1.9</option>
+        <option value="2">2</option>
+      </select>
+      <span class="label" for="select">Line Height</span>
+    </label>
+  </div>
+  <label class="field">
+    <input type="checkbox" id="responsive" />
+    <span class="label">Responsive Rhythm</span>
+  </label>
+</form>
+
+<h3 id="css-customizations">CSS Customizations</h3>
+
+<pre><xmp id="css-sourcecode"></xmp></pre>
+
+<h3 id="demo">Demo</h3>
+
+<iframe id="customizer-demo"></iframe>
+
+<h3 id="html-boilerplate">HTML Boilerplate</h3>
+
+<pre><xmp id="boilerplate-sourcecode"></xmp></pre>
+
+  </div>
+</section>
+
+      </main>
+    </article>
+
+    <footer class="grid footer">
+    
+        <div>
+            <h5>
+                
+                    <a href="/features">Features</a>
+                
+            </h5>
+            <ul>
+                
+                    <li>
+                        <a href="/features/themes">Themes</a>
+                    </li>
+                
+                    <li>
+                        <a href="/features/forms">Forms</a>
+                    </li>
+                
+                    <li>
+                        <a href="/features/typography">Typography</a>
+                    </li>
+                
+                    <li>
+                        <a href="/features/styleguide">Styleguide</a>
+                    </li>
+                
+                    <li>
+                        <a href="/features/bundle">Bundle</a>
+                    </li>
+                
+                    <li>
+                        <a href="/features/popsicle">Popsicle</a>
+                    </li>
+                
+            </ul>
+        </div>
+    
+        <div>
+            <h5>
+                
+                    <a href="https://docs.cutestrap.com">Docs</a>
+                
+            </h5>
+            <ul>
+                
+                    <li>
+                        <a href="https://docs.cutestrap.com/section-1.html">Core</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://docs.cutestrap.com/section-2.html">Base</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://docs.cutestrap.com/section-3.html">Buttons</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://docs.cutestrap.com/section-4.html">Forms</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://docs.cutestrap.com/section-5.html">Grid</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://docs.cutestrap.com/section-6.html">Wrappers</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://docs.cutestrap.com/section-7.html">Utilities</a>
+                    </li>
+                
+            </ul>
+        </div>
+    
+        <div>
+            <h5>
+                
+                    Pages
+                
+            </h5>
+            <ul>
+                
+                    <li>
+                        <a href="/about">About</a>
+                    </li>
+                
+                    <li>
+                        <a href="/customizations">Customizations</a>
+                    </li>
+                
+                    <li>
+                        <a href="/snippets">Snippets</a>
+                    </li>
+                
+                    <li>
+                        <a href="/cutelog">Cutelog</a>
+                    </li>
+                
+                    <li>
+                        <a href="/legacy/v1">Legacy</a>
+                    </li>
+                
+            </ul>
+        </div>
+    
+    <div>
+        <h5>Misc</h5>
+        <ul>
+            <li>
+                <a href="/feed.xml">Subscribe via RSS</a><br />
+            </li>
+            <li>
+                <a href="https://github.com/tylerchilds/cutestrap/issues" target="_blank">Report a Problem</a>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                Made with &hearts;,<br /><a href="https://www.tylerchilds.com">Tyler Childs</a>
+            </li>
+            <li>
+                &copy;2016-<script>document.write(new Date().getFullYear());</script>
+            </li>
+        </ul>
+    </div>
+</footer>
+
+    <script src="/js/main.js?bustamove=201909230"></script>
+
+
+  <script type="module" src="/js/pages/customizations.js?bustamove=201909230"></script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-8248761-10', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+  </body>
+
+</html>

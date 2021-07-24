@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Forms | Cutestrap</title>
+  <meta name="description" content="A pure CSS framework with vertical rhythm, consistent form fields and a dead simple grid.
+">
+  
+    <link rel="stylesheet" href="/css/hotlinks/cutestrap.min.css?bustamove=201909230">
+  
+  <link rel="stylesheet" href="/css/main.css?bustamove=201909230">
+  
+  <link rel="canonical" href="http://localhost:4000/features/forms">
+  <link rel="alternate" type="application/rss+xml" title="Cutestrap" href="http://localhost:4000/feed.xml">
+</head>
+
+
+  <body>
+    <div class="toolbar">
+  <h2 class="toolbar-logo">
+      <a href="/" class="title">C<span class="sublogo -hide-small">utestrap</span><span class="sublogo -show-small">s</span></a>
+  </h2>
+  <div class="toolbar-controls">
+    <span class="toolbar-size">
+        <span class="toolbar-label">Size:</span>
+        <button
+  aria-label="Small"
+  label="Small"
+  class="toolbar-button js-toolbar-toggle -small"
+  data-key="rhythm"
+  data-value="small"
+>
+  A
+</button>
+
+        <button
+  aria-label="Normal"
+  label="Normal"
+  class="toolbar-button js-toolbar-toggle -normal"
+  data-key="rhythm"
+  data-value="normal"
+>
+  A
+</button>
+
+        <button
+  aria-label="Large"
+  label="Large"
+  class="toolbar-button js-toolbar-toggle -large"
+  data-key="rhythm"
+  data-value="large"
+>
+  A
+</button>
+
+    </span>
+    <span class="toolbar-rhythm">
+        <span class="toolbar-label">Theme:</span>
+        <button
+  aria-label="Light"
+  label="Light"
+  class="toolbar-button js-toolbar-toggle -light"
+  data-key="theme"
+  data-value="light"
+>
+  A
+</button>
+
+        <button
+  aria-label="Dark"
+  label="Dark"
+  class="toolbar-button js-toolbar-toggle -dark"
+  data-key="theme"
+  data-value="dark"
+>
+  A
+</button>
+
+    </span>
+    <span class="toolbar-grid">
+        <span class="toolbar-label">Gridlines:</span>
+        <button
+  aria-label="Grid On"
+  label="Grid On"
+  class="toolbar-button js-toolbar-toggle -on"
+  data-key="grid"
+  data-value="on"
+>
+  A
+</button>
+
+        <button
+  aria-label="Grid Off"
+  label="Grid Off"
+  class="toolbar-button js-toolbar-toggle -off"
+  data-key="grid"
+  data-value="off"
+>
+  A
+</button>
+
+    </span>
+  </div>
+</div>
+
+
+    <article class="page wrapper">
+      <header class="page-header">
+        <h1 class="page-title title" itemprop="name headline">Forms</h1>
+      </header>
+      <main class="page-content wrapper">
+          <section class="page" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="page-content">
+    <h2 id="overview">Overview</h2>
+
+<p>Cutestrap’s forms are very opinionated, so they aren’t a perfect match for 
+everything you might need from a form. But the one thing they excel at is
+their consistent convention that lets you build quickly while looking sleek at
+the same time.</p>
+
+<h3 id="the-field-class">The <code class="highlighter-rouge">.field</code> Class</h3>
+
+<p>This is the silver bullet for getting the consistency in how we create our form
+controls and provides the flexibility needed to support the various form controls.</p>
+
+<p>You don’t need to know how it works under the hood, just that it will be your
+loyal sidekick when fighting form fatigue. The basic syntax is wrap your form
+control and then your label and you’re done!</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;label class="field"&gt;
+  &lt;input type="text" /&gt;
+  &lt;span class="label"&gt;Your Name&lt;/span&gt;
+&lt;/label&gt;
+</code></pre></div></div>
+
+<p>For a more comprehsive look into each form control, look at the
+<a href="https://docs.cutestrap.com/section-4.html">Forms Documentation</a>.</p>
+
+<hr />
+
+<h2 id="examples">Examples</h2>
+
+<p>To give you a launching point for your own forms, we’ve created a couple common
+example forms.</p>
+
+<h3 id="sign-in-form">Sign In Form</h3>
+
+<p class="mb-zero">
+    Simple, clean, sets a max-width manually to override the <code>.wrapper</code> max-width, but
+keeps the padding.
+</p>
+
+<form class="wrapper" style="max-width: 25rem">
+    <h4 class="mt-zero">Sign In</h4>
+    <label class="field">
+      <input type="text" value="leroyjenkins" />
+      <span class="label">Username</span>
+    </label>
+    <label class="field">
+      <input type="password" value="password" />
+      <span class="label">Password</span>
+    </label>
+    <label class="field">
+      <input type="checkbox" />
+      <span class="label">Remember Me</span>
+    </label>
+    <input type="submit" class="button -block" value="Sign In" />
+</form>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;form class="wrapper" style="max-width: 25rem"&gt;
+    &lt;h4&gt;Sign In&lt;/h4&gt;
+    &lt;label class="field"&gt;
+      &lt;input type="text" value="leroyjenkins"/&gt;
+      &lt;span class="label"&gt;Username&lt;/span&gt;
+    &lt;/label&gt;
+
+    &lt;label class="field"&gt;
+      &lt;input type="password" value="password"/&gt;
+      &lt;span class="label"&gt;Password&lt;/span&gt;
+    &lt;/label&gt;
+
+    &lt;label class="field"&gt;
+      &lt;input type="checkbox" /&gt;
+      &lt;span class="label"&gt;Remember Me&lt;/span&gt;
+    &lt;/label&gt;
+    &lt;input type="submit" class="button -block" value="Sign In" /&gt;
+&lt;/form&gt;
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="credit-card-form">Credit Card Form</h3>
+
+<p class="mb-zero">
+    This form shows off <code>.wrapper.-thin</code> and the <code>--columns</code> custom property
+that is used with the grid system. The grid also stacks on smaller screen widths.
+</p>
+
+<form class="wrapper -thin">
+    <h4 class="mt-zero">Payment Information</h4>
+    <label class="field">
+      <input type="text" value="Leroy Jenkins" />
+      <span class="label">Name on Card</span>
+    </label>
+
+    <label class="field">
+      <input type="text" value="1234 5678 9012 3456" />
+      <span class="label">Card Number</span>
+    </label>
+
+    <div class="grid -medium ta-right" style="--columns: 2;">
+        <label class="field">
+          <select>
+            <option selected="selected">04</option>
+          </select>
+          <span class="label" for="select">Exp. Month</span>
+        </label>
+
+        <label class="field">
+          <select>
+            <option selected="selected">2024</option>
+          </select>
+          <span class="label" for="select">Exp. Year</span>
+        </label>
+
+        <label class="field">
+          <input type="text" value="90210" />
+          <span class="label">Zipcode</span>
+        </label>
+
+        <label class="field">
+          <input type="text" value="123" />
+          <span class="label">CVV</span>
+        </label>
+
+        <input type="reset" class="button -secondary" value="Reset" />
+        <input type="submit" class="button" value="Submit" />
+    </div>
+</form>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;form class="wrapper -thin"&gt;
+    &lt;h4 class="mt-zero"&gt;Payment Information&lt;/h4&gt;
+    &lt;label class="field"&gt;
+      &lt;input type="text" value="Leroy Jenkins" /&gt;
+      &lt;span class="label"&gt;Name on Card&lt;/span&gt;
+    &lt;/label&gt;
+
+    &lt;label class="field"&gt;
+      &lt;input type="text" value="1234 5678 9012 3456" /&gt;
+      &lt;span class="label"&gt;Card Number&lt;/span&gt;
+    &lt;/label&gt;
+
+    &lt;div class="grid -medium ta-right" style="--columns: 2;"&gt;
+        &lt;label class="field"&gt;
+          &lt;select&gt;
+            &lt;option selected="selected"&gt;04&lt;/option&gt;
+          &lt;/select&gt;
+          &lt;span class="label" for="select"&gt;Exp. Month&lt;/span&gt;
+        &lt;/label&gt;
+
+        &lt;label class="field"&gt;
+          &lt;select&gt;
+            &lt;option selected="selected"&gt;2024&lt;/option&gt;
+          &lt;/select&gt;
+          &lt;span class="label" for="select"&gt;Exp. Year&lt;/span&gt;
+        &lt;/label&gt;
+
+        &lt;label class="field"&gt;
+          &lt;input type="text" value="90210" /&gt;
+          &lt;span class="label"&gt;Zipcode&lt;/span&gt;
+        &lt;/label&gt;
+
+        &lt;label class="field"&gt;
+          &lt;input type="text" value="123" /&gt;
+          &lt;span class="label"&gt;CVV&lt;/span&gt;
+        &lt;/label&gt;
+
+        &lt;input type="reset" class="button -secondary" value="Reset" /&gt;
+        &lt;input type="submit" class="button" value="Submit" /&gt;
+    &lt;/div&gt;
+&lt;/form&gt;
+</code></pre></div></div>
+
+  </div>
+</section>
+
+      </main>
+    </article>
+
+    <footer class="grid footer">
+    
+        <div>
+            <h5>
+                
+                    <a href="/features">Features</a>
+                
+            </h5>
+            <ul>
+                
+                    <li>
+                        <a href="/features/themes">Themes</a>
+                    </li>
+                
+                    <li>
+                        <a href="/features/forms">Forms</a>
+                    </li>
+                
+                    <li>
+                        <a href="/features/typography">Typography</a>
+                    </li>
+                
+                    <li>
+                        <a href="/features/styleguide">Styleguide</a>
+                    </li>
+                
+                    <li>
+                        <a href="/features/bundle">Bundle</a>
+                    </li>
+                
+                    <li>
+                        <a href="/features/popsicle">Popsicle</a>
+                    </li>
+                
+            </ul>
+        </div>
+    
+        <div>
+            <h5>
+                
+                    <a href="https://docs.cutestrap.com">Docs</a>
+                
+            </h5>
+            <ul>
+                
+                    <li>
+                        <a href="https://docs.cutestrap.com/section-1.html">Core</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://docs.cutestrap.com/section-2.html">Base</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://docs.cutestrap.com/section-3.html">Buttons</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://docs.cutestrap.com/section-4.html">Forms</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://docs.cutestrap.com/section-5.html">Grid</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://docs.cutestrap.com/section-6.html">Wrappers</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://docs.cutestrap.com/section-7.html">Utilities</a>
+                    </li>
+                
+            </ul>
+        </div>
+    
+        <div>
+            <h5>
+                
+                    Pages
+                
+            </h5>
+            <ul>
+                
+                    <li>
+                        <a href="/about">About</a>
+                    </li>
+                
+                    <li>
+                        <a href="/customizations">Customizations</a>
+                    </li>
+                
+                    <li>
+                        <a href="/snippets">Snippets</a>
+                    </li>
+                
+                    <li>
+                        <a href="/cutelog">Cutelog</a>
+                    </li>
+                
+                    <li>
+                        <a href="/legacy/v1">Legacy</a>
+                    </li>
+                
+            </ul>
+        </div>
+    
+    <div>
+        <h5>Misc</h5>
+        <ul>
+            <li>
+                <a href="/feed.xml">Subscribe via RSS</a><br />
+            </li>
+            <li>
+                <a href="https://github.com/tylerchilds/cutestrap/issues" target="_blank">Report a Problem</a>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                Made with &hearts;,<br /><a href="https://www.tylerchilds.com">Tyler Childs</a>
+            </li>
+            <li>
+                &copy;2016-<script>document.write(new Date().getFullYear());</script>
+            </li>
+        </ul>
+    </div>
+</footer>
+
+    <script src="/js/main.js?bustamove=201909230"></script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-8248761-10', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+  </body>
+
+</html>

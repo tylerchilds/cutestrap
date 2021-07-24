@@ -1,8 +1,0 @@
-Posted
-{% assign author = site.data.authors[include.post.author] %}
-{% if author %}
-  by
-  <a href="/authors/{{ author.slug }}" itemprop="author" itemscope itemtype="https://schema.org/Person">
-    <span itemprop="name">{{ author.fullname }}</span></a>
-{% endif %}
-on <time datetime="{{ include.post.date | date_to_xmlschema }}" itemprop="datePublished">{{ include.post.date | date: "%b %-d, %Y" }}</time>

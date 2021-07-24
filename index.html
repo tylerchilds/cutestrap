@@ -1,382 +1,259 @@
----
-layout: landing
-title: A powerful 2.7KB pure CSS framework
-permalink: /
----
+<!DOCTYPE html>
+<html lang="en">
 
-<header class="wrapper -wide ta-center">
-  <h1 class="title">
-    Cutestrap
-  </h1>
-  <p>A strong, independent CSS Framework. Only 2.7KB minified &amp; gzipped.</p>
-  <p>
-      <code>npm install cutestrap</code> (Release Candidate)
-  </p>
-  <p>
-    <a href="https://github.com/cutestrap/cutestrap/raw/master/cutestrap.zip">Download</a> | <a href="https://github.com/cutestrap/cutestrap" target="_blank">GitHub</a>
-  </p>
-</header>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Cutestrap: Custom Website Generator</title>
+    <meta name="description" content="A pure CSS framework with vertical rhythm, consistent form fields and a dead simple grid.
+                                       ">
+
+    <link rel="stylesheet" href="/css/hotlinks/cutestrap.min.css?bustamove=201909230">
+
+    <link rel="stylesheet" href="/css/main.css?bustamove=201909230">
+
+    <link rel="stylesheet" href="/css/pages/customizations.css?bustamove=201909230">
+  </head>
 
 
-<section class="wrapper -thin ta-center">
-  <h3>Why Cutestrap?</h3>
-  <p>
-    Cutestrap is a progressive CSS Framework built with modern techniques and
-    an eye towards the future with a simple API and robust customization options.
-  </p>
-  <div class="ta-center grid" style="column-gap: var(--rhythm-half)">
-    <div>
-      <a href="/customizations" class="button -block">Customize</a>
-    </div>
-    <div>
-      <a href="/features" class="button -outlined -block">Learn More</a>
-    </div>
-  </div>
-</section>
+  <body>
+    <article class="page wrapper">
+      <header class="page-header">
+        <h1 class="page-title title" itemprop="name headline">Webpage Generator</h1>
+      </header>
+      <main class="page-content wrapper">
+        <h3 id="options">Options</h3>
 
-<section class="wrapper">
-  <h2>Forms</h2>
-  <p>
-    Form controls are unified in both their display and in their semantic
-    markup. Because they are modified using only CSS, accessibility doesn't
-    suffer.
-  </p>
-  <form>
-    <label class="field">
-      <input type="text" />
-      <span class="label">Your Name</span>
-    </label>
-    <label class="field -inline">
-      <input type="radio" name="example" />
-      <span class="label">Cone</span>
-    </label>
-    <label class="field -inline">
-      <input type="radio" name="example" />
-      <span class="label">Bowl</span>
-    </label>
-    <label class="field">
-      <select>
-        <option disabled="disabled" selected="selected">
-          Flavors
-        </option>
-        <option>Chocolate</option>
-        <option>Vanilla</option>
-      </select>
-      <span class="label" for="select">Flavor</span>
-    </label>
-    <label class="field">
-      <textarea></textarea>
-      <span class="label">Special Requests</span>
-    </label>
-    <label class="field">
-      <input type="checkbox" />
-      <span class="label">Add Sprinkles</span>
-    </label>
-    <input type="submit" class="button" value="Place Order" />
-  </form>
-<pre><xmp><form>
-  <label class="field">
-    <input type="text" />
-    <span class="label">Your Name</span>
-  </label>
-  <label class="field">
-    <select>
-      <option disabled="disabled" selected="selected">
-        Flavors
-      </option>
-      <option>Chocolate</option>
-      <option>Vanilla</option>
-    </select>
-    <span class="label" for="select">Flavor</span>
-  </label>
-  <label class="field -inline">
-    <input type="radio" name="example" />
-    <span class="label">Cone</span>
-  </label>
-  <label class="field -inline">
-    <input type="radio" name="example" />
-    <span class="label">Bowl</span>
-  </label>
-  <label class="field">
-    <textarea></textarea>
-    <span class="label">Special Requests</span>
-  </label>
-  <label class="field">
-    <input type="checkbox" />
-    <span class="label">Add Sprinkles</span>
-  </label>
-  <input type="submit" class="button" value="Place Order" />
-</form></xmp></pre>
+        <form id="customization-form">
+          <div class="grid -medium" style="--columns: 2;">
+            <label class="field">
+              <select id="theme">
+                <option selected="selected" value="default">
+                Default
+                </option>
+                <option value="dark">Dark</option>
+                <option value="legalpad">Legal Pad</option>
+                <option value="foobar">Foobar</option>
+              </select>
+              <span class="label" for="select">Theme</span>
+            </label>
+            <label class="field">
+              <select id="template">
+                <option selected="selected" value="default">
+                None
+                </option>
+                <option value="about">About</option>
+              </select>
+              <span class="label" for="select">Template</span>
+            </label>
+            <label class="field">
+              <select id="layout">
+                <option selected="selected" value="none">
+                None
+                </option>
+                <option value="landing">Landing</option>
+                <option value="sidebar">Sidebar</option>
+              </select>
+              <span class="label" for="select">Layout</span>
+            </label>
+            <label class="field" style="display: none;">
+              <select id="rhythm">
+                <option value="1.5rem">1.5rem</option>
+                <option value="1.6rem">1.6rem</option>
+                <option value="1.7rem">1.7rem</option>
+                <option value="1.8rem">1.8rem</option>
+                <option value="1.9rem">1.9rem</option>
+                <option selected="selected" value="2rem">
+                2rem
+                </option>
+                <option value="2.1rem">2.1rem</option>
+                <option value="2.2rem">2.2rem</option>
+                <option value="2.3rem">2.3rem</option>
+                <option value="2.4rem">2.4rem</option>
+                <option value="2.5rem">2.5rem</option>
+              </select>
+              <span class="label" for="select">Rhythm</span>
+            </label>
+            <label class="field" style="display: none;">
+              <select id="line-height">
+                <option value="1">1</option>
+                <option value="1.1">1.1</option>
+                <option value="1.2">1.2</option>
+                <option value="1.3">1.3</option>
+                <option selected="selected" value="1.4">
+                1.4 
+                </option>
+                <option value="1.5">1.5</option>
+                <option value="1.6">1.6</option>
+                <option value="1.7">1.7</option>
+                <option value="1.8">1.8</option>
+                <option value="1.9">1.9</option>
+                <option value="2">2</option>
+              </select>
+              <span class="label" for="select">Line Height</span>
+            </label>
+          </div>
+          <label class="field" style="display: none;">
+            <input type="checkbox" id="responsive" />
+            <span class="label">Responsive Rhythm</span>
+          </label>
+        </form>
 
-  <h3>Buttons</h3>
-  <p>
-    A default button is applied with the <code>.button</code> class.
-    Popsicle modifiers can be used for different button variations.
-  </p>
-  <p>
-    <button class="button">Default</button>
-    <button class="button -secondary">Secondary</button>
-    <button class="button -outlined">Outlined</button>
-    <a class="button -link" href="#">Link</a>
-  </p>
+        <a class="button" href="javascript:;" id="customizer-demo">
+          Preview
+        </a>
 
-<pre><xmp><button class="button">Default</button>
-<button class="button -secondary">Secondary</button>
-<button class="button -outlined">Outlined</button>
-<a class="button -link" href="#">Link</a></xmp></pre>
-  <p>
-    Complete list of modifiers are available in the
-    <a href="https://docs.cutestrap.com/section-3.html" target="_blank">
-      Buttons Documentation
-    </a>
-  </p>
-  <hr />
+        <script src="/js/main.js?bustamove=201909230"></script>
 
-  <h2>Grid</h2>
-  <p>
-    The default grid creates equal width columns for every child.
-  </p>
-  <section class="grid">
-    <p class="example-column"></p>
-    <p class="example-column"></p>
-  </section>
-  <section class="grid">
-    <p class="example-column"></p>
-    <p class="example-column"></p>
-    <p class="example-column"></p>
-  </section>
-  <section class="grid">
-    <p class="example-column"></p>
-    <p class="example-column"></p>
-    <p class="example-column"></p>
-    <p class="example-column"></p>
-  </section>
-<pre><xmp><section class="grid">
-  <p>Column</p>
-  <p>Column</p>
-  <p>Column</p>
-</section></xmp></pre>
+        <script>
 
-  <table>
-    <tr>
-      <th>Class</th>
-      <th>Effect</th>
-    </tr>
-    <tr>
-      <td><code>.grid</code></td>
-      <td>Grid will display at all screen sizes</td>
-    </tr>
-    <tr>
-      <td><code>.grid.-medium</code></td>
-      <td>Grid will start at 45rem</td>
-    </tr>
-    <tr>
-      <td><code>.grid.-large</code></td>
-      <td>Grid will start at 80rem</td>
-    </tr>
-  </table>
+async function download(url) {
+  return await fetch(url)
+    .then(r => r.status < 300 ? r.text() : '' )
+    .catch(console.error);
+}
 
-  <h3>Columns</h3>
-  <p>
-    Columns can be fine tuned with the `--columns` custom property by setting
-    it to the number of desired columns
-  </p>
+function boilerplate(config, content) {
+  return `<!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Cutestrap Customizer</title>
 
-  <section class="grid" style="--columns: 3;">
-    <p class="example-column"></p>
-    <p class="example-column"></p>
-    <p class="example-column"></p>
-    <p class="example-column"></p>
-    <p class="example-column"></p>
-    <p class="example-column"></p>
-  </section>
-<pre><xmp><section class="grid" style="--columns: 3;">
-  <p>Column</p>
-  <p>Column</p>
-  <p>Column</p>
-  <p>Column</p>
-  <p>Column</p>
-  <p>Column</p>
-</section></xmp></pre>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-touch-fullscreen" content="yes">
 
-  <hr />
-  <h2>Wrappers</h2>
+    <link href="https://www.cutestrap.com/css/hotlinks/cutestrap.min.css" rel="stylesheet" type="text/css" />
+<style>
+  ${config.css}
+</style>
+    </head>
+    <body>
+      ${content}
+    </body>
+    </html>`;
+}
 
-  <p>
-    Wrappers are classes that have a max-width and padding. The size of the wrapper, determines max-width and the padding.
-  </p>
+function body(template) {
 
-  <table>
-    <tr>
-      <th>Class</th>
-      <th>Effect</th>
-    </tr>
-    <tr>
-      <td><code>.wrapper.-thin</code></td>
-      <td>Max width of 45rem with top/bottom padding equal to the baseline.</td>
-    </tr>
-    <tr>
-      <td><code>.wrapper</code></td>
-      <td>Max width of 60rem with top/bottom padding of twice the baseline.</td>
-    </tr>
-    <tr>
-      <td><code>.wrapper.-wide</code></td>
-      <td>Max width of 80rem with top/bottom padding of three times the baseline.</td>
-    </tr>
-  </table>
+  if(!template) {
+    return ``;
+  }
 
-  <hr />
+  return `
+    <header class="header">
+    <h1><a href="#">Title</a></h1>
+    </header>
 
-  <h2>Typography</h2>
+    <nav class="navigation">
+    <ul>
+    <li>
+    <a href="#">Link 1</a>
+    </li>
+    <li>
+    <a href="#">Link 2</a>
+    </li>
+    <li>
+    <a href="#">Link 3</a>
+    </li>
+    </ul>
+    </nav>
 
-  <p>
-    All typography and base styles are set to use a Baseline Grid to provide
-    consistent Vertical Rhythm. The foundation of this is the <code>--rhythm</code> CSS Custom
-    Property. All typography hinges on this single variable. If you want to
-    customize the baseline grid, this is the single variable you will change.
-  </p>
+    <main class="main">
+      ${template}
+    </main>
 
-  <h1>Headline 1</h1>
-  <p>
-    Paragraph
-  </p>
-  <h2>Headline 2</h2>
-  <ul>
-    <li>Unordered item</li>
-    <li>Unordered item</li>
-  </ul>
-  <h3>Headline 3</h3>
-  <ol>
-    <li>Ordered item</li>
-    <li>Ordered item</li>
-  </ol>
-  <h4>Headline 4</h4>
-<pre>
-  Preformatted
-</pre>
-  <h5>Headline 5</h5>
-  <blockquote>
-    Blockquote
-  </blockquote>
-  <h6>Headline 6</h6>
-  <table>
-    <tr>
-      <th>Table Header</th>
-      <th>Table Header</th>
-    </tr>
-    <tr>
-      <td>Table Cell</td>
-      <td>Table Cell</td>
-    </tr>
-  </table>
+    <footer class="footer">
+    <section class="grid">
+    <p>
+    &hearts; <a href="https://www.tylerchilds.com">Tyler Childs</a>
+    </p>
+    <p class="ta-right">
+  ©2020
+    </p>
+    </section>
+    </footer>
+  `;
+}
 
-  <hr />
+init();
 
-  <h2>Utilities</h2>
+function init() {
+  const inputs = document.querySelectorAll('#customization-form select, #customization-form input');
 
-  <table>
-    <tr>
-      <th>Class</th>
-      <th>Effect</th>
-    </tr>
-    <tr>
-      <td><code>.disabled</code></td>
-      <td>Disables pointer events and lowers the opacity</td>
-    </tr>
-    <tr>
-      <td><code>.clearfix</code></td>
-      <td>Force an element to self clear its children</td>
-    </tr>
-    <tr>
-      <td><code>.f-none</code></td>
-      <td>Set the float property to none</td>
-    </tr>
-    <tr>
-      <td><code>.f-left</code></td>
-      <td>Set the float property to left</td>
-    </tr>
-    <tr>
-      <td><code>.f-right</code></td>
-      <td>Set the float property to right</td>
-    </tr>
-    <tr>
-      <td><code>.ta-left</code></td>
-      <td>Left align the text</td>
-    </tr>
-    <tr>
-      <td><code>.ta-center</code></td>
-      <td>Center align the text</td>
-    </tr>
-    <tr>
-      <td><code>.ta-right</code></td>
-      <td>Right align the text</td>
-    </tr>
-    <tr>
-      <td><code>.fw-light</code></td>
-      <td>Light (300) font weight</td>
-    </tr>
-    <tr>
-      <td><code>.fw-normal</code></td>
-      <td>Normal (400) font weight</td>
-    </tr>
-    <tr>
-      <td><code>.fw-semibold</code></td>
-      <td>Semibold (500) font weight</td>
-    </tr>
-    <tr>
-      <td><code>.fw-bold</code></td>
-      <td>Bold (600) font weight</td>
-    </tr>
-    <tr>
-      <td><code>.fs-small</code></td>
-      <td>Small font size</td>
-    </tr>
-    <tr>
-      <td><code>.fs-base</code></td>
-      <td>Default font size</td>
-    </tr>
-    <tr>
-      <td><code>.fs-large</code></td>
-      <td>Large font size</td>
-    </tr>
-    <tr>
-      <td><code>.m-zero</code></td>
-      <td>No margins</td>
-    </tr>
-    <tr>
-      <td><code>.mt-zero</code></td>
-      <td>No top margin</td>
-    </tr>
-    <tr>
-      <td><code>.mb-zero</code></td>
-      <td>No bottom margin</td>
-    </tr>
-  </table>
+  [...inputs].map(el => {
+    el.addEventListener('change', render)
+  });
 
-</section>
+  render();
+}
 
-<section class="wrapper">
-  <h4>Browser Support</h4>
-  <p>
-    Cutestrap is supported by modern browsers with a
-    <a href="https://www.netmarketshare.com/browser-market-share.asp" target="_blank">global market share of 85%</a>
-    (Chrome + Firefox + Edge + Safari + Opera), but you should cross-reference
-    <a href="https://caniuse.com/#search=custom%20properties" target="_blank">caniuse</a>
-    with your user base to determine how much and where you should progressively
-    enhance your project.
-  </p>
+async function render() {
+  const config = await getConfig();
 
-  <p>
-    The two constraints for browser support are Custom Properties and CSS Grid.
-  </p>
-</section>
+  const template = await download(`engine/templates/${config.template}.html`);
+  const content = body(template);
+  const webpage = boilerplate(config, content);
 
-<section class="wrapper -thin ta-center">
-  <h4>Feedback</h4>
-  <p>
-    If you notice something is broken or would like to request a feature, please <a href="https://github.com/cutestrap/cutestrap/issues" target="_blank">open an issue on Github</a>. You can also <a href="https://github.com/cutestrap/cutestrap#fork-destination-box">fork the repo</a> and open pull requests, just check the README for guidelines.
-  </p>
-  <p>
-    If you want to chat, <a href="mailto:cutestrap@bamzap.pw">Shoot me an email</a>.
-  </p>
-</section>
+  const blob = new Blob([webpage], { type: 'text/html' })
+  document.getElementById('customizer-demo').href = URL.createObjectURL(blob);
+}
+
+async function getConfig() {
+  const theme = document.getElementById('theme').value;
+  const template = document.getElementById('template').value;
+  const layout = document.getElementById('layout').value;
+  const rhythm = document.getElementById('rhythm').value;
+  const lineHeight = document.getElementById('line-height').value;
+  const responsive = document.getElementById('responsive').checked;
+
+  const css = await getStyles({
+    theme,
+    layout,
+    rhythm, 
+    lineHeight,
+    responsive
+  });
+
+  return { css, template }
+}
+
+async function getStyles({theme, layout, rhythm, lineHeight, responsive}) {
+  const rhythmFloat = parseFloat(rhythm);
+
+  const wildCardStyles = `* {
+    /* Sets our Baseline Grid */
+    --rhythm: ${rhythmFloat}rem;
+
+    /* Sets font-size relative to rhythm */
+    --line-height-ratio: ${lineHeight};
+  }
+  `;
+
+  const responsiveWildCard = `
+  @media (max-width: 55rem) {
+    * {
+      --rhythm: ${rhythmFloat - .3}rem;
+    }
+  }
+
+  @media (min-width: 110rem) {
+    * {
+      --rhythm: ${rhythmFloat + .3}rem;
+    }
+  }
+  `;
+
+  const responsiveStyles = responsive ? responsiveWildCard : '';
+  const themeStyles = await download(`engine/themes/${theme}.css`);
+  const layoutStyles = await download(`engine/layouts/${layout}.css`);
+  return `${wildCardStyles}${responsiveStyles}${themeStyles}${layoutStyles}`;
+}
+        </script>
+  </body>
+
+</html>

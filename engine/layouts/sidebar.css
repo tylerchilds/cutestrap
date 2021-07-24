@@ -1,0 +1,32 @@
+body {
+  display: grid;
+  grid-template-areas:
+  "header     header"
+  "navigation main"
+  "footer footer";
+  grid-template-columns: 10em 1fr;
+}
+
+.header {
+  grid-area: header;
+  padding: 0 var(--rhythm-half);
+}
+
+/* Navigation Styles */
+.navigation {
+  grid-area: navigation;
+  padding: var(--rhythm-double) var(--rhythm-half) var(--rhythm);
+}
+
+.main {
+  grid-area: main;
+  min-width: 0;
+  padding: 0 var(--rhythm-half);
+}
+
+.footer {
+  grid-area: footer;
+  min-width: 0;
+  padding: var(--rhythm);
+}
+

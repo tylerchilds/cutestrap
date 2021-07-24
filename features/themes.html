@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Themes | Cutestrap</title>
+  <meta name="description" content="A pure CSS framework with vertical rhythm, consistent form fields and a dead simple grid.
+">
+  
+    <link rel="stylesheet" href="/css/hotlinks/cutestrap.min.css?bustamove=201909230">
+  
+  <link rel="stylesheet" href="/css/main.css?bustamove=201909230">
+  
+  <link rel="canonical" href="http://localhost:4000/features/themes">
+  <link rel="alternate" type="application/rss+xml" title="Cutestrap" href="http://localhost:4000/feed.xml">
+</head>
+
+
+  <body>
+    <div class="toolbar">
+  <h2 class="toolbar-logo">
+      <a href="/" class="title">C<span class="sublogo -hide-small">utestrap</span><span class="sublogo -show-small">s</span></a>
+  </h2>
+  <div class="toolbar-controls">
+    <span class="toolbar-size">
+        <span class="toolbar-label">Size:</span>
+        <button
+  aria-label="Small"
+  label="Small"
+  class="toolbar-button js-toolbar-toggle -small"
+  data-key="rhythm"
+  data-value="small"
+>
+  A
+</button>
+
+        <button
+  aria-label="Normal"
+  label="Normal"
+  class="toolbar-button js-toolbar-toggle -normal"
+  data-key="rhythm"
+  data-value="normal"
+>
+  A
+</button>
+
+        <button
+  aria-label="Large"
+  label="Large"
+  class="toolbar-button js-toolbar-toggle -large"
+  data-key="rhythm"
+  data-value="large"
+>
+  A
+</button>
+
+    </span>
+    <span class="toolbar-rhythm">
+        <span class="toolbar-label">Theme:</span>
+        <button
+  aria-label="Light"
+  label="Light"
+  class="toolbar-button js-toolbar-toggle -light"
+  data-key="theme"
+  data-value="light"
+>
+  A
+</button>
+
+        <button
+  aria-label="Dark"
+  label="Dark"
+  class="toolbar-button js-toolbar-toggle -dark"
+  data-key="theme"
+  data-value="dark"
+>
+  A
+</button>
+
+    </span>
+    <span class="toolbar-grid">
+        <span class="toolbar-label">Gridlines:</span>
+        <button
+  aria-label="Grid On"
+  label="Grid On"
+  class="toolbar-button js-toolbar-toggle -on"
+  data-key="grid"
+  data-value="on"
+>
+  A
+</button>
+
+        <button
+  aria-label="Grid Off"
+  label="Grid Off"
+  class="toolbar-button js-toolbar-toggle -off"
+  data-key="grid"
+  data-value="off"
+>
+  A
+</button>
+
+    </span>
+  </div>
+</div>
+
+
+    <article class="page wrapper">
+      <header class="page-header">
+        <h1 class="page-title title" itemprop="name headline">Themes</h1>
+      </header>
+      <main class="page-content wrapper">
+          <section class="page" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="page-content">
+    <h2 id="overview">Overview</h2>
+
+<p>Themeing can be done in Cutestrap by just overridding the various custom properties
+that get set inside of <a href="https://docs.cutestrap.com/section-1.html">core.css</a>. By
+default, all of the theme related variables are set in an <code class="highlighter-rouge">html</code> ruleset, but
+it is also possible to sub-theme by declaring theme styles inside of any ruleset.</p>
+
+<p>Since we’re utilizing custom properties, the values will cascade down from where
+they are declared down to all their descendants.</p>
+
+<h3 id="colors">Colors</h3>
+
+<p>The most common customization for changing a theme is changing the colors. Just
+about all the colors in Cutestrap utilize shading and tinting to get darker
+and lighter variations respectively.</p>
+
+<p>All colors are also namespaced with a <code class="highlighter-rouge">--color-</code> prefix.</p>
+
+<h4 id="primary">Primary</h4>
+
+<p>The primary color has a single tint and a single shade.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>html {
+    --color-primary-tint: hsl(350, 100%, 80%);
+    --color-primary: hsl(350, 80%, 60%);
+    --color-primary-shade: hsl(350, 60%, 40%);
+}
+</code></pre></div></div>
+
+<h4 id="accent">Accent</h4>
+
+<p>Like the primary color, the accent color also comes with a tint and a shade.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>html {
+    --color-accent-tint: hsl(170, 100%, 80%);
+    --color-accent: hsl(170, 80%, 60%);
+    --color-accent-shade: hsl(170, 60%, 40%);
+}
+</code></pre></div></div>
+
+<h4 id="links">Links</h4>
+
+<p>By default, links are blue and visited links are purple. This follows the web
+default and also gives readers indication of which links they have already
+been to.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>html {
+    --color-link: hsl(230, 60%, 50%);
+    --color-link-visited: hsl(290, 60%, 50%);
+    --color-link-hover: hsl(230, 80%, 60%);
+    --color-link-active: hsl(350, 60%, 50%);
+}
+</code></pre></div></div>
+
+<h4 id="neutral">Neutral</h4>
+
+<p>The neutral colors come with four tints and four shades. <code class="highlighter-rouge">--color-neutral</code> is the
+mid-point, <code class="highlighter-rouge">--color-neutral-tinted</code> is basically white, and <code class="highlighter-rouge">--color-neutral-shaded</code>
+is basically black.</p>
+
+<p>In between the mid-point and the two extremes are the other tints and shades. The
+higher the number, the closer their are to their respective extreme.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>html {
+    --color-neutral-tinted: hsl(170, 10%, 98%);
+    --color-neutral-tint3: hsl(170, 10%, 94%);
+    --color-neutral-tint2: hsl(170, 10%, 85%);
+    --color-neutral-tint1: hsl(170, 10%, 68%);
+    --color-neutral: hsl(170, 10%, 55%);
+    --color-neutral-shade1: hsl(170, 10%, 41%);
+    --color-neutral-shade2: hsl(170, 10%, 30%);
+    --color-neutral-shade3: hsl(170, 10%, 18%);
+    --color-neutral-shaded: hsl(170, 10%, 2%);
+}
+</code></pre></div></div>
+
+<h3 id="fonts">Fonts</h3>
+
+<p>The fonts for Cutestrap can be easily swapped out by updating the <code class="highlighter-rouge">--font-heading</code>
+and <code class="highlighter-rouge">--font-body</code> custom properties with new values.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>html {
+    --font-family: 'Avenir', 'Avenir Next', 'Helvetica Neue', 'Segoe UI', 'Verdana', sans-serif;
+    --font-mono: 'Consolas', 'Monaco', 'Courier New', monospace;
+    --font-heading: var(--font-family);
+    --font-body: var(--font-family);
+}
+</code></pre></div></div>
+
+<h4 id="example">Example</h4>
+
+<p>The dark theme used for this site was really just swapping each variable with
+the respective counter-part (e.g. <code class="highlighter-rouge">--color-primary-shade</code> becomes <code class="highlighter-rouge">--color-primary-tint</code>
+and <code class="highlighter-rouge">--color-neutral-tint3</code> becomes <code class="highlighter-rouge">--color-neutral-shade3</code>.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>html {
+    --color-primary-shade: hsl(350, 100%, 80%);
+    --color-primary: hsl(350, 80%, 60%);
+    --color-primary-tint: hsl(350, 60%, 40%);
+    --color-accent-shade: hsl(170, 100%, 80%);
+    --color-accent: hsl(170, 80%, 60%);
+    --color-accent-tint: hsl(170, 60%, 40%);
+    --color-link: hsl(230, 60%, 50%);
+    --color-link-visited: hsl(290, 60%, 50%);
+    --color-link-hover: hsl(230, 80%, 60%);
+    --color-link-active: hsl(350, 60%, 50%);
+    --color-neutral-shaded: hsl(170, 10%, 98%);
+    --color-neutral-shade3: hsl(170, 10%, 94%);
+    --color-neutral-shade2: hsl(170, 10%, 85%);
+    --color-neutral-shade1: hsl(170, 10%, 68%);
+    --color-neutral: hsl(170, 10%, 55%);
+    --color-neutral-tint1: hsl(170, 10%, 41%);
+    --color-neutral-tint2: hsl(170, 10%, 30%);
+    --color-neutral-tint3: hsl(170, 10%, 18%);
+    --color-neutral-tinted: hsl(170, 10%, 2%);
+
+}
+</code></pre></div></div>
+
+  </div>
+</section>
+
+      </main>
+    </article>
+
+    <footer class="grid footer">
+    
+        <div>
+            <h5>
+                
+                    <a href="/features">Features</a>
+                
+            </h5>
+            <ul>
+                
+                    <li>
+                        <a href="/features/themes">Themes</a>
+                    </li>
+                
+                    <li>
+                        <a href="/features/forms">Forms</a>
+                    </li>
+                
+                    <li>
+                        <a href="/features/typography">Typography</a>
+                    </li>
+                
+                    <li>
+                        <a href="/features/styleguide">Styleguide</a>
+                    </li>
+                
+                    <li>
+                        <a href="/features/bundle">Bundle</a>
+                    </li>
+                
+                    <li>
+                        <a href="/features/popsicle">Popsicle</a>
+                    </li>
+                
+            </ul>
+        </div>
+    
+        <div>
+            <h5>
+                
+                    <a href="https://docs.cutestrap.com">Docs</a>
+                
+            </h5>
+            <ul>
+                
+                    <li>
+                        <a href="https://docs.cutestrap.com/section-1.html">Core</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://docs.cutestrap.com/section-2.html">Base</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://docs.cutestrap.com/section-3.html">Buttons</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://docs.cutestrap.com/section-4.html">Forms</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://docs.cutestrap.com/section-5.html">Grid</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://docs.cutestrap.com/section-6.html">Wrappers</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://docs.cutestrap.com/section-7.html">Utilities</a>
+                    </li>
+                
+            </ul>
+        </div>
+    
+        <div>
+            <h5>
+                
+                    Pages
+                
+            </h5>
+            <ul>
+                
+                    <li>
+                        <a href="/about">About</a>
+                    </li>
+                
+                    <li>
+                        <a href="/customizations">Customizations</a>
+                    </li>
+                
+                    <li>
+                        <a href="/snippets">Snippets</a>
+                    </li>
+                
+                    <li>
+                        <a href="/cutelog">Cutelog</a>
+                    </li>
+                
+                    <li>
+                        <a href="/legacy/v1">Legacy</a>
+                    </li>
+                
+            </ul>
+        </div>
+    
+    <div>
+        <h5>Misc</h5>
+        <ul>
+            <li>
+                <a href="/feed.xml">Subscribe via RSS</a><br />
+            </li>
+            <li>
+                <a href="https://github.com/tylerchilds/cutestrap/issues" target="_blank">Report a Problem</a>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                Made with &hearts;,<br /><a href="https://www.tylerchilds.com">Tyler Childs</a>
+            </li>
+            <li>
+                &copy;2016-<script>document.write(new Date().getFullYear());</script>
+            </li>
+        </ul>
+    </div>
+</footer>
+
+    <script src="/js/main.js?bustamove=201909230"></script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-8248761-10', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+  </body>
+
+</html>

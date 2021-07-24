@@ -1,9 +1,3 @@
----
-layout: empty
-title: Cutestrap
-permalink: /legacy/v1
-description: A sassy, opinionated CSS Framework. A tiny alternative to Bootstrap.
----
 <!DOCTYPE html>
 <html>
 
@@ -12,12 +6,13 @@ description: A sassy, opinionated CSS Framework. A tiny alternative to Bootstrap
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>{% if page.title %}{{ page.title }}{% endif %} | {{ site.title }}</title>
-    <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    <title>Cutestrap | Cutestrap</title>
+    <meta name="description" content="A pure CSS framework with vertical rhythm, consistent form fields and a dead simple grid.
+">
     </style>
-    <link rel="stylesheet" href="{{ "/css/legacy.css" | prepend: site.baseurl }}?bustamove={{ site.cache_buster }}">
-    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+    <link rel="stylesheet" href="/css/legacy.css?bustamove=201909230">
+    <link rel="canonical" href="http://localhost:4000/legacy/v1">
+    <link rel="alternate" type="application/rss+xml" title="Cutestrap" href="http://localhost:4000/feed.xml">
   </head>
 
   <body>
@@ -27,9 +22,9 @@ description: A sassy, opinionated CSS Framework. A tiny alternative to Bootstrap
     </div>
     <header class="wrapper-large ta-center">
       <h1>
-        {{ page.title }}
+        Cutestrap
       </h1>
-      <p>{{ page.description }}</p>
+      <p>A sassy, opinionated CSS Framework. A tiny alternative to Bootstrap.</p>
       <p>
         <code class="fs-large">npm install cutestrap@1.3.1</code>
       </p>
@@ -416,8 +411,16 @@ description: A sassy, opinionated CSS Framework. A tiny alternative to Bootstrap
       </p>
     </section>    
 
-    <script src="{{ "/js/legacy.js" | prepend: site.baseurl }}"></script>
-    {% include analytics.html %}
+    <script src="/js/legacy.js"></script>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-8248761-10', 'auto');
+  ga('send', 'pageview');
+</script>
   </body>
 
 </html>
