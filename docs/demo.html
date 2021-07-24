@@ -63,7 +63,60 @@ const code = () => {
   return `<cute-reddit ${attributes}></cute-reddit>`;
 }
 
-const sortButtons = (active) => ['hot', 'top']
+const subreddits = [
+  "popular",
+  "all",
+  "random",
+  "AskReddit",
+  "movies",
+  "funny",
+  "explainlikeimfive",
+  "gaming",
+  "todayilearned",
+  "pics",
+  "tifu",
+  "videos",
+  "news",
+  "IAmA",
+  "worldnews",
+  "aww",
+  "askscience",
+  "Jokes",
+  "science",
+  "LifeProTips",
+  "mildlyinteresting",
+  "nottheonion",
+  "dataisbeautiful",
+  "TwoXChromosomes",
+  "Showerthoughts",
+  "books",
+  "OldSchoolCool",
+  "sports",
+  "Music",
+  "history",
+  "gifs",
+  "food",
+  "DIY",
+  "space",
+  "nosleep",
+  "Futurology",
+  "Art",
+  "Documentaries",
+  "UpliftingNews",
+  "EarthPorn",
+  "photoshopbattles",
+  "GetMotivated",
+  "WritingPrompts",
+  "philosophy",
+  "gadgets",
+  "InternetIsBeautiful",
+  "creepy",
+  "announcements",
+  "listentothis",
+  "blog"
+]
+
+const sortButtons = (active) => ['hot', 'new', 'rising', 'top', 'controversial']
   .map(key => 
     `<button class="sort-option ${active === key ? 'active' : ''}">${key}</button>`
   ).join('');
@@ -71,7 +124,7 @@ const sortButtons = (active) => ['hot', 'top']
 const redditSelect = (active) => {
   return `
     <select class="reddit-list">
-      ${['all', 'ama', 'funny'].map(options(active)).join('')}
+      ${subreddits.map(options(active)).join('')}
     </select>
   `;
 }
