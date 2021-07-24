@@ -31,8 +31,20 @@ render(({ target }) => {
 
 css(`
   & {
+    border: 1px solid black;
+    border-radius: 2px;
     display: block;
-    background: red;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  & li {
+    margin-bottom: 1rem;
+  }
+
+  & .more {
+    display: block;
+    margin: 0 auto;
   }
 `);
 
