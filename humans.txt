@@ -3,11 +3,11 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    Tyler Childs -- contributor -- @tychi@smallcamp.art
 
 # THANKS
 
-    <name>
+    Ru Singh -- collaborator -- https://rusingh.com/
 
 # TECHNOLOGY COLOPHON
 
