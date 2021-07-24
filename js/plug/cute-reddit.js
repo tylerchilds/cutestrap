@@ -30,7 +30,7 @@ render(({ target }) => {
 })
 
 css(`
-  {
+  & {
     display: block;
     background: red;
   }
@@ -69,7 +69,6 @@ async function askReddit({
   return await fetch(`https://www.reddit.com/r/${r}/${sort}/.json?count=25&after=${after}`)
     .then(res => res.json())
     .then(json => json.data);
-
 }
 
 function middleware(id) {

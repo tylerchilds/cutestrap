@@ -1,30 +1,31 @@
-import { innerHTML } from 'https://diffhtml.org/es';
-import ion, { on } from '../vendor/ion/app.js?CACHEBUST';
+import tag from '../cutestrap-core.js';
 
-const set = ion.set.bind(null, 'cute-share');
-const get = ion.get.bind(null, 'cute-share');
-const render = ion.on.bind(null, 'render', 'cute-share');
+const {
+  render,
+  css,
+  set,
+  get,
+  on
+} = tag('cute-share');
 
 const toast = () => set({ toasting: true });
 const untoast = () => set({ toasting: false });
 
-initializeStyles();
-
 render(function renderLiteShare({target}) {
   const { toasting } = get() || { toasting: false };
 
-  const share = '<icon-link></icon-link> Share Link to Dashboard';
-  const copied = 'Link Copied to Clipboard!';
+  const share = 'Share Link';
+  const copied = 'Link Copied';
 
-  innerHTML(target, `
-    <button id="cute-share-copy-button" ${toasting ? 'disabled' : ''}>
+  return `
+    <button class="copy" ${toasting ? 'disabled' : ''}>
       ${toasting ? copied : share}
     </button>
     <input type="text" id="cute-share-copy-hidden-input" style="position: fixed; bottom: 0; right: 0; display: none;"/>
-  `);
+  `;
 });
 
-on('click', '#cute-share-copy-button', copy);
+on('click', '.copy', copy);
 
 async function copy() {
   const input =  document.getElementById('cute-share-copy-hidden-input');
@@ -46,17 +47,9 @@ async function copy() {
   setTimeout(untoast, 2500);
 }
 
-function initializeStyles() {
-  const styles = `
-    <style type="text/css">
-      cute-share {
-        position: relative;
-        z-index: 2;
-      }
-    </style>
-  `;
-
-  document
-    .body
-      .insertAdjacentHTML("beforeend", styles);
-}
+css(`
+  & {
+    position: relative;
+    z-index: 2;
+  }
+`)

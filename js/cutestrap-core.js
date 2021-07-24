@@ -15,7 +15,15 @@ function render(slug, callback) {
 }
 
 function css(slug, stylesheet) {
-  console.log(slug, 'sheet {}')
+  const styles = `
+    <style type="text/css" data-tag=${slug}>
+      ${stylesheet.replaceAll('&', slug)}
+    </style>
+  `;
+
+  document
+    .body
+      .insertAdjacentHTML("beforeend", styles);
 }
 
 function get(slug) {
