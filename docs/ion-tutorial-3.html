@@ -104,10 +104,10 @@
         } from '../js/vendor/ion/app.js?CACHEBUST'
 
         on('render', 'guesser', ({ target }) => {
-          const { clicks = 0 } = (get('button') || {})
+          const { clicks = 0 } = (get('super-button') || {})
           switch(clicks) {
             case 0:
-              target.innerHTML = "You did not click the button in the last tutorial..."
+              target.innerHTML = "You did not click the button..."
               break;
             case 1:
               target.innerHTML = "It's a 1..."
