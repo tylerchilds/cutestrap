@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="">
+<head>
+  <meta charset="utf-8">
+  <title>Hello World</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+  <hello-world></hello-world>
+
+  <script type="module">
+    import tag from './tag.js'
+
+    const element = tag('hello-world')
+
+    element.html(() => `
+      Hello World
+    `)
+  </script>
+</body>
+
+</html>

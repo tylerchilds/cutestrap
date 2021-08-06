@@ -1,14 +1,14 @@
-import tag from '../cutestrap-core.js';
+import tag from '../tag.js';
 
 const {
-  render,
+  html,
   css,
   set,
   get,
   on
 } = tag('cute-reddit');
 
-render(({ target }) => {
+html(target => {
   const { children = [], after = '' } = query(target);
 
   const list = children
@@ -45,6 +45,10 @@ css(`
   & .more {
     display: block;
     margin: 0 auto;
+  }
+
+  & img {
+    max-width: 100%;
   }
 `);
 

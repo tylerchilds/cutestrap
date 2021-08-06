@@ -1,7 +1,7 @@
-import tag from '../cutestrap-core.js';
+import tag from '../tag.js';
 
 const {
-  render,
+  html,
   css,
   set,
   get,
@@ -11,7 +11,7 @@ const {
 const toast = () => set({ toasting: true });
 const untoast = () => set({ toasting: false });
 
-render(function renderLiteShare({target}) {
+html(function renderLiteShare(target) {
   const { toasting } = get() || { toasting: false };
 
   const share = 'Share Link';

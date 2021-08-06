@@ -31,6 +31,13 @@ const ion = {
         rows.map(({schema, data}) => store.set(schema, data));
       });
   },
+  restore: function restore(schema) {
+    return database.load(schema)
+      .then(function restoreFromCache(rows) {
+        const row = rows.find(x => x.schema === schema) || { data: {} }
+        return row.data;
+      });
+  },
   relay: function relay(subscriber) {
     subscribers = [...subscribers, subscriber];
     subscriber(lastState);

@@ -1,4 +1,4 @@
-import './plug/icon-.js';
-import './plug/cute-share.js';
-import './plug/cute-modal.js';
-import './plug/cute-reddit.js';
+import '../tag/tags/icon-.js';
+import '../tag/tags/cute-share.js';
+import '../tag/tags/cute-modal.js';
+import '../tag/tags/cute-reddit.js';

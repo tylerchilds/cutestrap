@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="">
+<head>
+  <meta charset="utf-8">
+  <title>Tag Index</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+  <h1>Tag</h1>
+  <p>
+    Tag is a simple interface built for  writing complex JavaScript appliactions.
+  </p>
+
+  <h2>Examples</h2>
+  <p>
+    The best way to learn how tag works is by exploring examples. All the examples are single html files that import the tag library.
+  </p>
+  <p>
+    This page is also an example. Right-click to view the page source.
+  </p>
+  <tag-examples></tag-examples>
+
+  <script type="module">
+    import tag from './tag.js'
+
+    const demos = [
+      { title: 'Hello World', url: './hello-world.html' },
+      { title: 'Hello Dave', url: './hello-dave.html' },
+      { title: 'Hello Nickname', url: './hello-nickname.html' },
+      { title: 'Hello Universe', url: './hello-universe.html' },
+    ]
+
+    const { html } = tag('tag-examples')
+
+    html(() => `
+      <ul>
+        ${links()}
+      </ul>
+    `)
+
+    function links() {
+      return demos
+        .map(x => `<li><a href="${x.url}">${x.title}</a></li>`)
+        .join('')
+    }
+  </script>
+</body>
+
+</html>
