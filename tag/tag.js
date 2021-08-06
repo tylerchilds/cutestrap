@@ -49,7 +49,6 @@ export default function tag(slug, initialState = {}) {
   return {
     css: css.bind(null, slug),
     get: get.bind(null, slug),
-    restore: restore.bind(null, slug),
     on: on.bind(null, slug),
     html: html.bind(null, slug),
     set: set.bind(null, slug)

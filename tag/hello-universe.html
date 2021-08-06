@@ -6,6 +6,7 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- define critial styles inline the head of the document -->
   <style type="text/css">
     html {
       height: 100%;
@@ -29,6 +30,7 @@
 
 <body>
   <h1 style="margin: 0;">Hello Universe</h1>
+  <!-- optionally set a zero state in between the tags -->
   <hello-universe>
     Application is loading...
   </hello-universe>
@@ -43,6 +45,7 @@
       set,
       css
     } = tag('hello-universe', {
+      // set an initial array of planets
       'planets': [
         {
           'id': 'mercury',
@@ -85,19 +88,26 @@
           'background': 'darkturquoise'
         }
       ],
+      // an incrementable integer for looping through planets
       'tick': 0,
+      // a boolean value to control visibility of the admin view
       'showAdmin': false
     })
 
+    // increase our tick twice a second (once every 500 milliseconds)
     setInterval(function tick() {
       const { tick } = get()
       set({ tick: tick + 1 })
     }, 500)
 
     html(() => {
+      // pluck our current values from our current state
       const { planets, tick, showAdmin } = get()
+
+      // get the current planet by modulo of current tick by # of planets
       const current = planets[tick % planets.length]
 
+      // save html for displaying the current planet
       const view = `
         <button class="admin-toggle">
           Manage Planets
@@ -107,6 +117,7 @@
         </planet>
       `
 
+      // save html for displaying the admin view
       const admin = `
         <button class="admin-toggle">
           View Planets
@@ -117,14 +128,17 @@
         </admin>
       `
 
+      // determine which html is visible
       return showAdmin ? admin : view
     })
 
+    // toggle the showAdmin variable on button click
     on('click', 'button.admin-toggle', () => {
       const showAdmin = ! get().showAdmin
       set({ showAdmin })
     })
 
+    // create a random planet with the current tick as a seed
     on('click', 'button.add-planet', () => {
       const { tick } = get()
       set({
@@ -134,6 +148,7 @@
       }, addPlanet)
     })
 
+    // surgically add a new planet to our tag's state
     function addPlanet(state, payload) {
       return {
         ...state,
@@ -144,6 +159,7 @@
       }
     }
 
+    // update planet information when input values have been changed
     on('keyup', 'admin input', (event) => {
       const { value, dataset } = event.target
       const { id, attribute } = dataset
@@ -155,7 +171,7 @@
       }, updatePlanet)
     })
 
-
+    // return the index of the planet with a given id
     function getPlanetIndexById(id) {
       const index = get().planets
         .findIndex(x => x.id === id)
@@ -163,6 +179,7 @@
       return index
     }
 
+    // surgically update planet information in our tag's state
     function updatePlanet(state, payload){
       const { id, attribute, value } = payload
 
@@ -179,6 +196,7 @@
       }
     }
 
+    // loop over the planets array to create a complex form to manage values
     function renderAdministrationTable(planets) {
       const rows = planets.map(x => `
         <input type="text" data-id="${x.id}"
@@ -201,6 +219,7 @@
       `
     }
 
+    // create scoped rulesets for all of our content
     css(`
       & {
         display: block;

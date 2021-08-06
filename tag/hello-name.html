@@ -1,0 +1,21 @@
+<!-- hello-name.html -->
+<hello-name></hello-name>
+
+<script type="module">
+  // import the tag library
+  import tag from './tag.js'
+
+  // create a new tag called hello-name
+  // and set the initial state
+  const { html, get } = tag('hello-name', {
+    'name': 'Earth'
+  })
+
+  html(() => {
+    // get the name from current state
+    const { name } = get()
+
+    // interpolate the name variable into tag content
+    return `Hello ${name}`
+  })
+</script>

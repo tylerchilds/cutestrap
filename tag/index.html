@@ -2,53 +2,167 @@
 <html lang="">
 <head>
   <meta charset="utf-8">
-  <title>Tag Index</title>
+  <title>Tag</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="stylesheet" href="../css/normalize.css">
-  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="./vendor/normalize.css">
+  <link rel="stylesheet" href="./vendor/style.css">
+  <style type="text/css">
+    body {
+      max-width: 45rem;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+
+    nav {
+      margin: 2rem;
+      font-style: italic;
+    }
+
+    pre {
+      padding: 1rem 2rem;
+      border: 1px dashed black;
+      margin-bottom: 4rem;
+    }
+
+    dt {
+      font-weight: bold;
+    }
+
+    dd {
+      margin-bottom: 1rem;
+    }
+  </style>
 </head>
 
 <body>
-  <h1>Tag</h1>
+  <center>
+    <h1>Tag</h1>
+    <p>
+      Write complex JavaScript applications without complexity.
+    </p>
+
+    <a href="./tag.zip">
+      Download
+    </a>
+
+    <nav>
+      View <a href="#usage">Usage</a> and
+      <a href="#documentation">Documenation</a>
+    </nav>
+  </center>
+	
+  <a name="usage"></a>
+	<h2>Usage</h2>
+	<p>
+		Hello World shows how to add custom text to a custom tag.
+		(<a href="./hello-world.html">View Demo</a>)
+	</p>
+	<pre><xmp><!-- hello-world.html -->
+<hello-world></hello-world>
+
+<script type="module">
+  // import the tag library
+  import tag from './tag.js'
+
+  // create a new tag called hello-world
+  const element = tag('hello-world')
+
+  // set the contents of the tag
+  element.html(() => `Hello World`)
+</script></xmp></pre>
+
+	<h3>Advanced Usage</h3>
+	<p>
+		The Hello Name example shows the fundamentals of incorporating variables into the tag's state.
+		(<a href="./hello-name.html">View Demo</a>)
+	</p>
+
+<pre><xmp><!-- hello-name.html -->
+<hello-name></hello-name>
+
+<script type="module">
+  // import the tag library
+  import tag from './tag.js'
+
+  // create a new tag called hello-name
+  // and set the initial state
+  const { html, get } = tag('hello-name', {
+    'name': 'Earth'
+  })
+
+  html(() => {
+    // get the name from current state
+    const { name } = get()
+
+    // interpolate the name variable into tag content
+    return `Hello ${name}`
+  })
+</script></xmp></pre>
+
+  
+	<h4>More Examples</h4>
+	<p>
+    The best way to learn how tag works is by exploring more complex demos.
+	</p>
+	<dl>
+		<dt>Hello Nickname (<a href="./hello-nickname.html">View Demo</a>)</dt>
+		<dd>
+			Demonstrates local two-way data binding and persisting updates across page reloads.
+		</dd>
+		<dt>Hello Universe (<a href="./hello-universe.html">View Demo</a>)</dt>
+		<dd>
+			An application for managing planet information and viewing a sequential representation of our solar system.
+		</dd>
+	</dl>
+
+  <a name="documentation"></a>
+	<h2>Documentation</h2>
+  <strong>tag(string [, object]) : object</strong>
   <p>
-    Tag is a simple interface built for  writing complex JavaScript appliactions.
-  </p>
+    The <code>tag</code> function requires a string to be used as a custom HTML tag. An optional second argument may be passed for seeding the initial state. It will return an object with the following namespaced functions.
+	</p>
+	<dl>
+		<dt>html(function) : string | falsey</dt>
+		<dd>
+			Expects a function that returns HTML as a string to be rendered into the tag. A falsey return will leave the node untouched.
+		</dd>
+		<dt>css(string)</dt>
+		<dd>
+			Expects a CSS stylesheet as a string. The ampersand (&amp;) symbol may be used to scope rulesets.
+		</dd>
+		<dt>on(string, string, function) : function</dt>
+		<dd>
+			An event delegator that expects three arguments. An event type, a css selector, and a handler. Returns a function to remove the listener when invoked.
+		</dd>
+		<dt>get() : object</dt>
+		<dd>
+			Returns the current state.
+		</dd>
+		<dt>set(object [, function])</dt>
+		<dd>
+			Updates the current state. An optional second argument for managing the state update may be provided. That function will be called with the current state and the payload provided as the required first argument.
+		</dd>
+	</dl>
 
-  <h2>Examples</h2>
+	<h2>Dependencies</h2>
+	<p>
+		There is one third-party dependency, <a href="https://diffhtml.org/">diffHTML</a>.
+	</p>
+
+	<h2>LICENSE</h2>
+	<p>
+		MIT
+	</p>
+
+  <h2>About the Author</h2>
   <p>
-    The best way to learn how tag works is by exploring examples. All the examples are single html files that import the tag library.
+    <a href="https://tylerchilds.com">Tyler Childs</a> is a netizen with a deep passion for the open web and radical transparency. He believes everyone can go further together and sharing knowledge is of the utmost importance.
   </p>
   <p>
-    This page is also an example. Right-click to view the page source.
+    Previously, he built <a href="https://cutestrap.com">Cutestrap</a>.
   </p>
-  <tag-examples></tag-examples>
-
-  <script type="module">
-    import tag from './tag.js'
-
-    const demos = [
-      { title: 'Hello World', url: './hello-world.html' },
-      { title: 'Hello Dave', url: './hello-dave.html' },
-      { title: 'Hello Nickname', url: './hello-nickname.html' },
-      { title: 'Hello Universe', url: './hello-universe.html' },
-    ]
-
-    const { html } = tag('tag-examples')
-
-    html(() => `
-      <ul>
-        ${links()}
-      </ul>
-    `)
-
-    function links() {
-      return demos
-        .map(x => `<li><a href="${x.url}">${x.title}</a></li>`)
-        .join('')
-    }
-  </script>
 </body>
 
 </html>
